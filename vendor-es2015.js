@@ -71145,6 +71145,1663 @@ const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('9.1.1
 
 /***/ }),
 
+/***/ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js ***!
+  \*************************************************************************************/
+/*! exports provided: ButtonComponent, ButtonModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonComponent", function() { return ButtonComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonModule", function() { return ButtonModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+
+
+
+
+
+const _c0 = ["*"];
+let ButtonComponent = class ButtonComponent {
+    constructor() {
+        this.type = 'button';
+        this.size = 'medium';
+        this.buttonType = 'primary';
+        this.disabled = false;
+        this.destructive = false;
+        this.clickEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+    }
+    get classes() {
+        const CLASS_NAME = 'sds-button';
+        return {
+            [`${CLASS_NAME}-${this.buttonType}`]: this.buttonType,
+            [`${CLASS_NAME}--${this.size}`]: this.size,
+            [`${CLASS_NAME}--disabled`]: this.disabled,
+            [`${CLASS_NAME}--destructive`]: this.destructive
+        };
+    }
+    /**
+     * @description
+     * Emits event click if button is not disabled
+     */
+    handleEvent() {
+        if (!this.disabled) {
+            this.clickEvent.emit();
+        }
+    }
+};
+ButtonComponent.ɵfac = function ButtonComponent_Factory(t) { return new (t || ButtonComponent)(); };
+ButtonComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: ButtonComponent, selectors: [["sds-button"]], inputs: { type: "type", size: "size", buttonType: "buttonType", disabled: "disabled", destructive: "destructive" }, outputs: { clickEvent: "clickEvent" }, ngContentSelectors: _c0, decls: 2, vars: 3, consts: [[1, "sds-button", 3, "type", "disabled", "ngClass", "click", "keypress.enter"]], template: function ButtonComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function ButtonComponent_Template_button_click_0_listener() { return ctx.handleEvent(); })("keypress.enter", function ButtonComponent_Template_button_keypress_enter_0_listener() { return ctx.handleEvent(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("type", ctx.type)("disabled", ctx.disabled)("ngClass", ctx.classes);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]], styles: [".sds-button[_ngcontent-%COMP%]{font-size:1em;cursor:pointer;border-radius:0;font-weight:600;display:inline-block;color:var(--color-white);padding:0 1.7142857143em;line-height:2.5714285714em;border:2px solid transparent;background:var(--button-color);font-family:var(--font-default-body)}.sds-button[_ngcontent-%COMP%]:focus, .sds-button[_ngcontent-%COMP%]:hover{--button-color:var(--color-hover)}.sds-button[_ngcontent-%COMP%]:disabled, .sds-button[aria-disabled=true][_ngcontent-%COMP%]{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button[_ngcontent-%COMP%]:disabled:focus, .sds-button[_ngcontent-%COMP%]:disabled:hover, .sds-button[aria-disabled=true][_ngcontent-%COMP%]:focus, .sds-button[aria-disabled=true][_ngcontent-%COMP%]:hover{--button-color:var(--color-slate-90);color:var(--color-black-30);cursor:not-allowed}.sds-button[_ngcontent-%COMP%]:focus{outline:3px solid var(--color-focus)}.sds-button.sds-button--small[_ngcontent-%COMP%]{line-height:2em;padding:0 1.1428571429em}.sds-button.sds-button--large[_ngcontent-%COMP%]{font-size:1.1428571429em;line-height:2.75em;padding:0 2em}.sds-button-primary[_ngcontent-%COMP%]{color:var(--color-white);background:var(--button-color)}.sds-button-secondary[_ngcontent-%COMP%]{border-color:currentColor;color:var(--button-color);background:var(--color-white)}.sds-button-secondary[_ngcontent-%COMP%]:focus, .sds-button-secondary[_ngcontent-%COMP%]:hover{--button-color:var(--color-hover);color:var(--color-white);border-color:var(--button-color);background:var(--button-color)}.sds-button-secondary[_ngcontent-%COMP%]:disabled, .sds-button-secondary[aria-disabled=true][_ngcontent-%COMP%]{cursor:not-allowed;color:var(--color-black-30);border-color:var(--color-slate-90);background:var(--color-white)}.sds-button-tertiary[_ngcontent-%COMP%]{color:var(--button-color);background:0 0;border-color:transparent}.sds-button.sds-button--destructive[_ngcontent-%COMP%]{--button-color:var(--color-red)}.sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover{--button-color:var(--color-red-shade-10)}.sds-button.sds-button--disabled[_ngcontent-%COMP%]{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button.sds-button--disabled[_ngcontent-%COMP%]:focus, .sds-button.sds-button--disabled[_ngcontent-%COMP%]:hover{cursor:not-allowed}.sds-button-bar[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], .sds-button-bar   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]{margin-left:-2px}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], sds-split-button-options[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], sds-split-button-options   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]{width:100%;text-align:inherit;--button-color:var(--button-color--hover)}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover, sds-split-button-options[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, sds-split-button-options   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, sds-split-button-options[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover, sds-split-button-options   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover{--button-color:var(--button-color--hover-2);z-index:2}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%], .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%], sds-split-button-options[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%], sds-split-button-options   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]{--button-color:var(--button-color-destructive--hover)}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover, sds-split-button-options[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, sds-split-button-options   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, sds-split-button-options[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover, sds-split-button-options   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover{--button-color:var(--button-color-destructive--hover-2)}"] });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], ButtonComponent.prototype, "type", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], ButtonComponent.prototype, "size", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], ButtonComponent.prototype, "buttonType", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], ButtonComponent.prototype, "disabled", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], ButtonComponent.prototype, "destructive", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"])
+], ButtonComponent.prototype, "clickEvent", void 0);
+
+let ButtonModule = class ButtonModule {
+};
+ButtonModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: ButtonModule });
+ButtonModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function ButtonModule_Factory(t) { return new (t || ButtonModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](ButtonComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+                selector: 'sds-button',
+                template: `
+    <button [type]="type" [disabled]="disabled" [ngClass]="classes" class="sds-button" (click)="handleEvent()" (keypress.enter)="handleEvent()">
+      <ng-content></ng-content>
+    </button>
+  `,
+                styles: [".sds-button{font-size:1em;cursor:pointer;border-radius:0;font-weight:600;display:inline-block;color:var(--color-white);padding:0 1.7142857143em;line-height:2.5714285714em;border:2px solid transparent;background:var(--button-color);font-family:var(--font-default-body)}.sds-button:focus,.sds-button:hover{--button-color:var(--color-hover)}.sds-button:disabled,.sds-button[aria-disabled=true]{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button:disabled:focus,.sds-button:disabled:hover,.sds-button[aria-disabled=true]:focus,.sds-button[aria-disabled=true]:hover{--button-color:var(--color-slate-90);color:var(--color-black-30);cursor:not-allowed}.sds-button:focus{outline:3px solid var(--color-focus)}.sds-button.sds-button--small{line-height:2em;padding:0 1.1428571429em}.sds-button.sds-button--large{font-size:1.1428571429em;line-height:2.75em;padding:0 2em}.sds-button-primary{color:var(--color-white);background:var(--button-color)}.sds-button-secondary{border-color:currentColor;color:var(--button-color);background:var(--color-white)}.sds-button-secondary:focus,.sds-button-secondary:hover{--button-color:var(--color-hover);color:var(--color-white);border-color:var(--button-color);background:var(--button-color)}.sds-button-secondary:disabled,.sds-button-secondary[aria-disabled=true]{cursor:not-allowed;color:var(--color-black-30);border-color:var(--color-slate-90);background:var(--color-white)}.sds-button-tertiary{color:var(--button-color);background:0 0;border-color:transparent}.sds-button.sds-button--destructive{--button-color:var(--color-red)}.sds-button.sds-button--destructive:focus,.sds-button.sds-button--destructive:hover{--button-color:var(--color-red-shade-10)}.sds-button.sds-button--disabled{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button.sds-button--disabled:focus,.sds-button.sds-button--disabled:hover{cursor:not-allowed}:host-context(.sds-button-bar) .sds-button{margin-left:-2px}:host-context(.sds-multi-action-button__expandable) .sds-button,:host-context(sds-split-button-options) .sds-button{width:100%;text-align:inherit;--button-color:var(--button-color--hover)}:host-context(.sds-multi-action-button__expandable) .sds-button:focus,:host-context(.sds-multi-action-button__expandable) .sds-button:hover,:host-context(sds-split-button-options) .sds-button:focus,:host-context(sds-split-button-options) .sds-button:hover{--button-color:var(--button-color--hover-2);z-index:2}:host-context(.sds-multi-action-button__expandable) .sds-button.sds-button--destructive,:host-context(sds-split-button-options) .sds-button.sds-button--destructive{--button-color:var(--button-color-destructive--hover)}:host-context(.sds-multi-action-button__expandable) .sds-button.sds-button--destructive:focus,:host-context(.sds-multi-action-button__expandable) .sds-button.sds-button--destructive:hover,:host-context(sds-split-button-options) .sds-button.sds-button--destructive:focus,:host-context(sds-split-button-options) .sds-button.sds-button--destructive:hover{--button-color:var(--button-color-destructive--hover-2)}"]
+            }]
+    }], function () { return []; }, { type: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], size: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], buttonType: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], disabled: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], destructive: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], clickEvent: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](ButtonModule, { declarations: function () { return [ButtonComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]; }, exports: function () { return [ButtonComponent]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](ButtonModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+                exports: [ButtonComponent],
+                declarations: [ButtonComponent]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=sage-ng-carbon-button.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-checkbox.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-checkbox.js ***!
+  \***************************************************************************************/
+/*! exports provided: CheckboxComponent, CheckboxModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckboxComponent", function() { return CheckboxComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckboxModule", function() { return CheckboxModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+
+
+
+
+
+
+
+
+
+const _c0 = ["*"];
+var CheckboxComponent_1;
+let CheckboxComponent = CheckboxComponent_1 = class CheckboxComponent {
+    constructor() {
+        this.size = 'small';
+        this.error = false;
+        this.identifier = `checkbox-${Math.random()
+            .toString()
+            .substring(2, 10) +
+            Math.random()
+                .toString()
+                .substring(2, 10)}`;
+        /**
+         * @description
+         * Invoked when the model has been changed
+         */
+        this.onChange = (_) => { };
+        /**
+         * @description
+         * Invoked when the model has been touched
+         */
+        this.onTouched = () => { };
+    }
+    get value() {
+        return this._value;
+    }
+    set value(v) {
+        this._value = v;
+        this.onChange(this._value);
+        this.onTouched();
+    }
+    get classes() {
+        const CLASS_NAME = 'sds-checkbox';
+        return {
+            [`${CLASS_NAME}--error`]: this.error,
+            [`${CLASS_NAME}--${this.size}`]: this.size,
+            [`${CLASS_NAME}--disabled`]: this.disabled
+        };
+    }
+    /**
+     * @description
+     * Writes a new item to the element.
+     */
+    writeValue(value) {
+        if (value !== undefined) {
+            this._value = value;
+        }
+    }
+    /**
+     * @description
+     * Registers a callback function that should be called when the control's value changes in the UI.
+     */
+    registerOnChange(fn) {
+        this.onChange = fn;
+    }
+    /**
+     * @description
+     * Registers a callback function that should be called when the control receives a blur event.
+     */
+    registerOnTouched(fn) {
+        this.onTouched = fn;
+    }
+    /**
+     * @description
+     * Function that is called by the forms API when the control status changes.
+     * Depending on the status, it enables or disables the appropriate DOM element.
+     */
+    setDisabledState(isDisabled) {
+        this.disabled = isDisabled;
+    }
+};
+CheckboxComponent.ɵfac = function CheckboxComponent_Factory(t) { return new (t || CheckboxComponent)(); };
+CheckboxComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: CheckboxComponent, selectors: [["sds-checkbox"]], inputs: { size: "size", error: "error", identifier: "identifier", disabled: "disabled" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵProvidersFeature"]([
+            {
+                provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+                useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(() => CheckboxComponent_1),
+                multi: true
+            }
+        ])], ngContentSelectors: _c0, decls: 4, vars: 6, consts: [[1, "sds-checkbox", 3, "ngClass"], ["type", "checkbox", 1, "sds-checkbox__input", 3, "id", "ngModel", "ngModelChange"], [3, "for"]], template: function CheckboxComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "input", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function CheckboxComponent_Template_input_ngModelChange_1_listener($event) { return ctx.value = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "label", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx.classes);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", ctx.identifier);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngModel", ctx.value);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("aria-checked", ctx.value)("disabled", ctx.disabled ? ctx.disabled : null);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("for", ctx.identifier);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"]], styles: [".sds-checkbox[_ngcontent-%COMP%]{position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:inline-block}.sds-checkbox--disabled[_ngcontent-%COMP%]{cursor:not-allowed}.sds-checkbox--small[_ngcontent-%COMP%]{--checkbox-size:16px}.sds-checkbox--small[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]{margin-left:2px;line-height:var(--checkbox-size)}.sds-checkbox--small[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]::after{height:8px;width:4px;top:1px;left:5px}.sds-checkbox--large[_ngcontent-%COMP%]{--checkbox-size:24px}.sds-checkbox--large[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]{margin-left:10px;line-height:var(--checkbox-size)}.sds-checkbox--large[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]::after{height:10px;width:5px;top:4px;left:8px}.sds-checkbox__input[_ngcontent-%COMP%]{opacity:0}.sds-checkbox__input[_ngcontent-%COMP%] + label[_ngcontent-%COMP%]{cursor:pointer;display:inline-block}.sds-checkbox__input[_ngcontent-%COMP%] + label[_ngcontent-%COMP%]::before{border:1px solid var(--color-slate-40);background:var(--color-white);content:\"\";-webkit-box-sizing:border-box;box-sizing:border-box;height:var(--checkbox-size);width:var(--checkbox-size);left:0;top:0;position:absolute}.sds-checkbox__input[_ngcontent-%COMP%] + label[_ngcontent-%COMP%]::after{border:1px solid;border-width:0 3px 3px 0;content:\"\";position:absolute;-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0}.sds-checkbox__input[_ngcontent-%COMP%]:checked + label[_ngcontent-%COMP%]::after{opacity:1}.sds-checkbox__input[_ngcontent-%COMP%]:focus + label[_ngcontent-%COMP%]::before, .sds-checkbox__input[_ngcontent-%COMP%]:hover + label[_ngcontent-%COMP%]::before{outline:2px solid var(--color-focus)}.sds-checkbox__input[_ngcontent-%COMP%]:disabled + label[_ngcontent-%COMP%]{cursor:not-allowed;color:var(--color-black-55)}.sds-checkbox__input[_ngcontent-%COMP%]:disabled + label[_ngcontent-%COMP%]::after{background:var(--color-slate-95);border:1px solid var(--color-slate-80);border-width:0 3px 3px 0}.sds-checkbox__input[_ngcontent-%COMP%]:disabled + label[_ngcontent-%COMP%]::before{background:var(--color-slate-95);border:1px solid var(--color-slate-80)}.sds-checkbox__input[_ngcontent-%COMP%]:disabled:hover + label[_ngcontent-%COMP%]::before{outline:0}.sds-checkbox--error[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]::before{border:1px solid var(--color-red)}"] });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], CheckboxComponent.prototype, "size", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], CheckboxComponent.prototype, "disabled", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], CheckboxComponent.prototype, "error", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], CheckboxComponent.prototype, "identifier", void 0);
+
+let CheckboxModule = class CheckboxModule {
+};
+CheckboxModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: CheckboxModule });
+CheckboxModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function CheckboxModule_Factory(t) { return new (t || CheckboxModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]]] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](CheckboxComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+                selector: 'sds-checkbox',
+                template: `
+    <div class="sds-checkbox" [ngClass]="classes">
+      <input
+        type="checkbox"
+        id="{{ identifier }}"
+        class="sds-checkbox__input"
+        [attr.aria-checked]="value"
+        [(ngModel)]="value"
+        [attr.disabled]="disabled ? disabled : null"
+      />
+      <label for="{{ identifier }}"><ng-content></ng-content></label>
+    </div>
+  `,
+                providers: [
+                    {
+                        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+                        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(() => CheckboxComponent_1),
+                        multi: true
+                    }
+                ],
+                styles: [".sds-checkbox{position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:inline-block}.sds-checkbox--disabled{cursor:not-allowed}.sds-checkbox--small{--checkbox-size:16px}.sds-checkbox--small>label{margin-left:2px;line-height:var(--checkbox-size)}.sds-checkbox--small>label::after{height:8px;width:4px;top:1px;left:5px}.sds-checkbox--large{--checkbox-size:24px}.sds-checkbox--large>label{margin-left:10px;line-height:var(--checkbox-size)}.sds-checkbox--large>label::after{height:10px;width:5px;top:4px;left:8px}.sds-checkbox__input{opacity:0}.sds-checkbox__input+label{cursor:pointer;display:inline-block}.sds-checkbox__input+label::before{border:1px solid var(--color-slate-40);background:var(--color-white);content:\"\";-webkit-box-sizing:border-box;box-sizing:border-box;height:var(--checkbox-size);width:var(--checkbox-size);left:0;top:0;position:absolute}.sds-checkbox__input+label::after{border:1px solid;border-width:0 3px 3px 0;content:\"\";position:absolute;-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0}.sds-checkbox__input:checked+label::after{opacity:1}.sds-checkbox__input:focus+label::before,.sds-checkbox__input:hover+label::before{outline:2px solid var(--color-focus)}.sds-checkbox__input:disabled+label{cursor:not-allowed;color:var(--color-black-55)}.sds-checkbox__input:disabled+label::after{background:var(--color-slate-95);border:1px solid var(--color-slate-80);border-width:0 3px 3px 0}.sds-checkbox__input:disabled+label::before{background:var(--color-slate-95);border:1px solid var(--color-slate-80)}.sds-checkbox__input:disabled:hover+label::before{outline:0}.sds-checkbox--error label::before{border:1px solid var(--color-red)}"]
+            }]
+    }], function () { return []; }, { size: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], error: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], identifier: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], disabled: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](CheckboxModule, { declarations: function () { return [CheckboxComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]]; }, exports: function () { return [CheckboxComponent]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](CheckboxModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]],
+                exports: [CheckboxComponent],
+                declarations: [CheckboxComponent]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=sage-ng-carbon-checkbox.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js ***!
+  \***************************************************************************************/
+/*! exports provided: DropdownComponent, DropdownModule, DropdownOptionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DropdownComponent", function() { return DropdownComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DropdownModule", function() { return DropdownModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DropdownOptionComponent", function() { return DropdownOptionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @sage/ng-carbon/icon */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js");
+/* harmony import */ var _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @sage/ng-carbon/tooltip */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const _c0 = ["ele"];
+const _c1 = ["*"];
+const _c2 = [[["sds-dropdown-option"]]];
+const _c3 = ["sds-dropdown-option"];
+let DropdownOptionComponent = class DropdownOptionComponent {
+    constructor() {
+        /**
+         * @description
+         * When this item is clicked. Passes components value and the native mouse event
+         */
+        this.clickEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"]();
+    }
+    get isFocused() {
+        return this._isFocused;
+    }
+    set isFocused(value) {
+        this._isFocused = value;
+        // Scrolls focused value into view
+        if (value && this.elementRef) {
+            this.elementRef.nativeElement.scrollIntoView({
+                behaviour: 'auto',
+                block: 'nearest',
+                inline: 'nearest'
+            });
+        }
+    }
+    /**
+     * @description
+     * The label of the element
+     */
+    get label() {
+        var _a;
+        return (_a = this.elementRef) === null || _a === void 0 ? void 0 : _a.nativeElement.textContent;
+    }
+    /**
+     * @description
+     * Handles the click event
+     */
+    clicked(nativeEvent) {
+        nativeEvent.preventDefault();
+        this.clickEvent.emit([this.value, this.index, nativeEvent]);
+    }
+    /**
+     * @description
+     * Builds the classes for the component
+     */
+    get classes() {
+        const CLASS_NAME = 'sds-dropdown-option';
+        return {
+            [`${CLASS_NAME}--focused`]: this.isFocused,
+            [`${CLASS_NAME}--selected`]: this.selected
+        };
+    }
+};
+DropdownOptionComponent.ɵfac = function DropdownOptionComponent_Factory(t) { return new (t || DropdownOptionComponent)(); };
+DropdownOptionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: DropdownOptionComponent, selectors: [["sds-dropdown-option"]], viewQuery: function DropdownOptionComponent_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵstaticViewQuery"](_c0, true);
+    } if (rf & 2) {
+        var _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.elementRef = _t.first);
+    } }, inputs: { value: "value", identifier: "identifier", selected: "selected", disabled: "disabled", index: "index", setsize: "setsize" }, outputs: { clickEvent: "clickEvent" }, ngContentSelectors: _c1, decls: 3, vars: 6, consts: [["role", "option", 1, "sds-dropdown-option", 3, "ngClass", "id", "mousedown"], ["ele", ""]], template: function DropdownOptionComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojectionDef"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("mousedown", function DropdownOptionComponent_Template_div_mousedown_0_listener($event) { return ctx.clicked($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojection"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngClass", ctx.classes)("id", ctx.identifier);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("selected", ctx.selected)("aria-disabled", ctx.disabled)("aria-setsize", ctx.setsize)("aria-aria-posinset", ctx.index);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]], styles: [".sds-dropdown-option[_ngcontent-%COMP%]{line-height:var(--select-height);padding:0 20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:var(--input-color-background);font-family:var(--font-default-body);text-align:inherit;cursor:pointer}.sds-dropdown-option[_ngcontent-%COMP%]:hover{background-color:var(--color-slate-95)}.sds-dropdown-option--focused[_ngcontent-%COMP%], .sds-dropdown-option--focused[_ngcontent-%COMP%]:hover{background-color:var(--color-slate-90)}"], changeDetection: 0 });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"])('ele', { static: true }),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"])
+], DropdownOptionComponent.prototype, "elementRef", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], DropdownOptionComponent.prototype, "value", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], DropdownOptionComponent.prototype, "identifier", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+], DropdownOptionComponent.prototype, "selected", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+], DropdownOptionComponent.prototype, "disabled", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Output"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"])
+], DropdownOptionComponent.prototype, "clickEvent", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)
+], DropdownOptionComponent.prototype, "index", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)
+], DropdownOptionComponent.prototype, "setsize", void 0);
+
+var DropdownComponent_1;
+let DropdownComponent = DropdownComponent_1 = class DropdownComponent {
+    constructor() {
+        // Used to close subscriptions with takeUntil operator
+        this._unsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
+        this.isOpen = false;
+        this.readOnly = false;
+        this.placeholder = 'Please select...';
+        this.size = 'medium';
+        this.align = 'left';
+        this.identifier = `dropdown-${Math.random()
+            .toString()
+            .substring(2, 10) +
+            Math.random()
+                .toString()
+                .substring(2, 10)}`;
+        this.errorType = 'error';
+        /**
+         * @description
+         * Invoked when the model has been changed
+         */
+        this.onChange = (_) => { };
+        /**
+         * @description
+         * Invoked when the model has been touched
+         */
+        this.onTouched = () => { };
+    }
+    /**
+     * @description
+     * Writes a new value to the component via reactive forms
+     */
+    writeValue(value) {
+        // If value isn't set then reset the form
+        this._value = value !== null ? value : null;
+        // Update the state of the options
+        this._setSelectionOptionByValue(this._value);
+    }
+    /**
+     * @description
+     * Registers a callback function that should be called when the control's value changes in the UI.
+     */
+    registerOnChange(fn) {
+        this.onChange = fn;
+    }
+    /**
+     * @description
+     * Registers a callback function that should be called when the control receives a blur event.
+     */
+    registerOnTouched(fn) {
+        this.onTouched = fn;
+    }
+    /**
+     * @description
+     * Runs after options initialised
+     */
+    ngAfterContentInit() {
+        if (!this.optionsComponents) {
+            return;
+        }
+        // Initial set up
+        this._setupOptionsSelectedSubscription(this.optionsComponents);
+        // If the components changes after the initial rendering this is run again
+        this.optionsComponents.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this._unsubscribe)).subscribe(newOptions => {
+            // This subscription runs after content checked, so this needs to be deffered until the next render
+            requestAnimationFrame(() => this._setupOptionsSelectedSubscription(newOptions));
+        });
+    }
+    /**
+     * @description
+     * Runs on the onDestroy angular lifecycle hook.
+     * Unsubscribes the option change listener.
+     */
+    ngOnDestroy() {
+        this._unsubscribe.complete();
+    }
+    get selectedOptionIndex() {
+        return this._selectedOptionIndex;
+    }
+    set selectedOptionIndex(optionIndex) {
+        var _a;
+        this._selectedOptionIndex = optionIndex;
+        (_a = this.optionsComponents) === null || _a === void 0 ? void 0 : _a.forEach((option, index) => {
+            option.isFocused = index === optionIndex;
+        });
+    }
+    /**
+     * @description
+     * Selects an option by index
+     */
+    selectOption(index) {
+        this.value = this.optionsComponents.toArray()[index].value;
+    }
+    /**
+     * @description
+     * Search through the list and find the correct list item to select
+     */
+    changeFocusByKey(key) {
+        const firstMatchingOptionIndex = this.optionsComponents
+            .toArray()
+            .findIndex((option) => option.label.toLowerCase().startsWith(key.toLowerCase()));
+        // This will be -1 if there are no matches
+        if (firstMatchingOptionIndex !== -1) {
+            this.selectedOptionIndex = firstMatchingOptionIndex;
+        }
+    }
+    /**
+     * @description
+     * Focus the next item
+     */
+    focusNext() {
+        // If none are focused then focus the first in the list
+        if (!Number.isInteger(this.selectedOptionIndex)) {
+            this.selectedOptionIndex = 0;
+            return;
+        }
+        if (this.selectedOptionIndex >= this.optionsComponents.length - 1) {
+            return;
+        }
+        this.selectedOptionIndex = this.selectedOptionIndex + 1;
+    }
+    /**
+     * @description
+     * Focus the previous item
+     */
+    focusPrev() {
+        // If none are focused then focus the last in the list
+        if (!Number.isInteger(this.selectedOptionIndex)) {
+            this.selectedOptionIndex = this.optionsComponents.length - 1;
+            return;
+        }
+        if (this.selectedOptionIndex < 1)
+            return;
+        this.selectedOptionIndex = this.selectedOptionIndex - 1;
+    }
+    /**
+     * @description
+     * Opens and closes the dropdown
+     */
+    toggleOpen(open) {
+        this.isOpen = open;
+    }
+    /**
+     * @description
+     * CSS classes for the parent element
+     */
+    get classes() {
+        const CLASS_NAME = 'sds-dropdown';
+        return {
+            [`${CLASS_NAME}--${this.align}`]: this.align,
+            [`${CLASS_NAME}--${this.size}`]: this.size,
+            [`${CLASS_NAME}--disabled`]: this.disabled,
+            [`${CLASS_NAME}--read-only`]: this.readOnly,
+            [`${CLASS_NAME}--placeholder`]: !this.value,
+            [`${CLASS_NAME}--open`]: this.isOpen
+        };
+    }
+    /**
+     * @description
+     * The label to show within the button element
+     */
+    get label() {
+        var _a;
+        // If no options
+        if (this.optionsComponents && this.optionsComponents.length) {
+            const optionsArray = this.optionsComponents.toArray();
+            return ((_a = optionsArray[this.selectedOptionIndex]) === null || _a === void 0 ? void 0 : _a.label) ? optionsArray[this.selectedOptionIndex].label : this.placeholder;
+        }
+        return this.placeholder;
+    }
+    /**
+     * @description
+     * The active descendant from the dropdown
+     */
+    get activeDescendant() {
+        if (this.optionsComponents && this.optionsComponents.length && this.optionsComponents[this.selectedOptionIndex]) {
+            return this.optionsComponents[this.selectedOptionIndex].identifier;
+        }
+        return false;
+    }
+    /**
+     * @description
+     * The selected value of the select component
+     */
+    get value() {
+        return this._value;
+    }
+    /**
+     * @description
+     * Set the value of the select component
+     */
+    set value(v) {
+        this._value = v;
+        this.onChange(this._value);
+        this.onTouched();
+    }
+    /**
+     * @description
+     * Handles the click event
+     */
+    onClick(nativeEvent) {
+        if (this.disabled || this.readOnly) {
+            nativeEvent.preventDefault();
+            return false;
+        }
+        this.toggleOpen(!this.isOpen);
+    }
+    /**
+     * @description
+     * Handles the blur event
+     */
+    onBlur() {
+        // Ensures that the click event is registered before the element closes
+        requestAnimationFrame(() => {
+            this.toggleOpen(false);
+        });
+    }
+    /**
+     * @description
+     * Handles the keydown event
+     */
+    onKeyDown(nativeEvent) {
+        const { key } = nativeEvent;
+        // Don't do anything if disabled or read-only
+        if (this.disabled || this.readOnly) {
+            nativeEvent.preventDefault();
+            return false;
+        }
+        if (key === 'Enter') {
+            this.toggleOpen(!this.isOpen);
+            nativeEvent.preventDefault();
+        }
+        else if (key === 'Tab' && this.isOpen) {
+            this.toggleOpen(false);
+            nativeEvent.preventDefault();
+            // number or letters
+        }
+        else if (/^[a-zA-Z0-9]$/.test(key)) {
+            // Change focus
+            this.changeFocusByKey(key);
+        }
+        else if (key === 'ArrowDown') {
+            // Focus the next item (don't loop)
+            nativeEvent.preventDefault();
+            this.focusNext();
+            this.selectOption(this.selectedOptionIndex);
+        }
+        else if (key === 'ArrowUp') {
+            // Focus the previous item (don't loop)
+            nativeEvent.preventDefault();
+            this.focusPrev();
+            this.selectOption(this.selectedOptionIndex);
+        }
+    }
+    /**
+     * @description
+     * Sets up subscription on the options
+     */
+    _setupOptionsSelectedSubscription(optionsComponents) {
+        var _a;
+        // Add all of the options outputs into an array of observables
+        let optionsEvents = [];
+        // Also sets some properties on the option
+        optionsComponents.toArray().forEach((option, index) => {
+            // Get the clickevent observable
+            optionsEvents.push(option.clickEvent);
+            // Sets the index and setsize on the option component
+            option.index = index;
+            option.setsize = optionsComponents.length;
+            option.identifier = `${this.identifier}__option_${index}`;
+            // If one of the children is selected then set the value of the dropdown
+            if (option.selected === true) {
+                this.value = option.value;
+                this.selectedOptionIndex = index;
+                return;
+            }
+            // If the value of the option is the same as the value already set, then set it to selected
+            if (this.value == option.value) {
+                this.selectedOptionIndex = index;
+                option.selected = true;
+                return;
+            }
+        });
+        // Remove options changes subscription if it already exists
+        (_a = this._optionsChangedSubscription) === null || _a === void 0 ? void 0 : _a.unsubscribe();
+        // Merge the clickevent observables together into one stream
+        this._optionsChangedSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["merge"])(...optionsEvents)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this._unsubscribe))
+            .subscribe(args => this._handleOptionClicked(optionsComponents, args));
+    }
+    /**
+     * @description
+     * Handles the output from the dropdownOptionComponents
+     */
+    _handleOptionClicked(optionsComponents, [optionValue, index, _]) {
+        this.value = optionValue;
+        this.selectedOptionIndex = index;
+        optionsComponents.forEach((option) => {
+            option.selected = option.value === this.value;
+        });
+        this.toggleOpen(false);
+    }
+    /**
+     * @description
+     * Search through the options and change the selected one by value
+     * Selects the first option with the selected value
+     */
+    _setSelectionOptionByValue(value) {
+        var _a;
+        // Turn it into an array
+        const optionsArray = (_a = this.optionsComponents) === null || _a === void 0 ? void 0 : _a.toArray();
+        // Do nothing if there are no options
+        if (!optionsArray) {
+            this.selectedOptionIndex = null;
+            return;
+        }
+        // Get the first matching option
+        const firstMatchingOptionIndex = optionsArray.findIndex((option) => option.value === value);
+        this.selectedOptionIndex = firstMatchingOptionIndex !== -1 ? firstMatchingOptionIndex : null;
+        // Set which option is selected
+        optionsArray.forEach((item, index) => {
+            item.selected = index === firstMatchingOptionIndex;
+        });
+    }
+    /**
+     * @description
+     * Function that is called by the forms API when the control status changes.
+     * Depending on the status, it enables or disables the appropriate DOM element.
+     */
+    setDisabledState(isDisabled) {
+        this.disabled = isDisabled;
+    }
+};
+DropdownComponent.ɵfac = function DropdownComponent_Factory(t) { return new (t || DropdownComponent)(); };
+DropdownComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: DropdownComponent, selectors: [["sds-dropdown"]], contentQueries: function DropdownComponent_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵcontentQuery"](dirIndex, DropdownOptionComponent, false);
+    } if (rf & 2) {
+        var _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.optionsComponents = _t);
+    } }, inputs: { readOnly: "readOnly", placeholder: "placeholder", size: "size", align: "align", identifier: "identifier", errorType: "errorType", disabled: "disabled", labelledBy: "labelledBy", errors: "errors" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵProvidersFeature"]([
+            {
+                provide: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NG_VALUE_ACCESSOR"],
+                useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["forwardRef"])(() => DropdownComponent_1),
+                multi: true
+            }
+        ])], ngContentSelectors: _c3, decls: 7, vars: 10, consts: [["sds-tooltip", "", "position", "right", 1, "sds-dropdown", 3, "error", "identifier", "tooltipContent", "ngClass"], ["aria-haspopup", "listbox", "type", "button", 1, "sds-dropdown__button", 3, "click", "blur", "keydown"], [1, "sds-dropdown__button-label"], ["iconType", "dropdown"], ["role", "listbox", "tabindex", "-1", 1, "sds-dropdown__dropdown-list"]], template: function DropdownComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojectionDef"](_c2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "button", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function DropdownComponent_Template_button_click_1_listener($event) { return ctx.onClick($event); })("blur", function DropdownComponent_Template_button_blur_1_listener() { return ctx.onBlur(); })("keydown", function DropdownComponent_Template_button_keydown_1_listener($event) { return ctx.onKeyDown($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "span", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](4, "sds-icon", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojection"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("error", ctx.errorType === "error")("identifier", ctx.identifier + "__tooltip")("tooltipContent", ctx.errors)("ngClass", ctx.classes);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("aria-expanded", ctx.isOpen)("tabindex", ctx.disabled ? "-1" : "0")("aria-disabled", ctx.disabled)("aria-labelledby", ctx.labelledBy);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](ctx.label);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("aria-activedescendant", ctx.activeDescendant);
+    } }, directives: [_sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconComponent"]], styles: [".sds-dropdown[_ngcontent-%COMP%]{--select-height:2.85714286em;position:relative}.sds-dropdown[_ngcontent-%COMP%]   .hidden[_ngcontent-%COMP%]{display:none}.sds-dropdown__button-label[_ngcontent-%COMP%]{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:pre;margin-right:1ch}.sds-dropdown__button[_ngcontent-%COMP%]{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;text-align:inherit;cursor:pointer;width:100%;z-index:1;padding:0 .5714285714em;position:relative;height:var(--select-height);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:var(--font-default-body);color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-dropdown__button[_ngcontent-%COMP%]:focus{outline:3px solid var(--color-focus)}.sds-dropdown--open[_ngcontent-%COMP%]   .sds-dropdown__dropdown-list[_ngcontent-%COMP%]{display:block}.sds-dropdown__dropdown-list[_ngcontent-%COMP%]{padding:10px 0;margin:0;display:none;position:absolute;top:calc(100% + 3px);left:-10px;right:-10px;background:var(--input-color-background);width:calc(100% + 20px);z-index:999;overflow-y:scroll;max-height:220px;-webkit-box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1);box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1)}.sds-dropdown--small[_ngcontent-%COMP%]{--select-height:2.28571429em}.sds-dropdown--large[_ngcontent-%COMP%]{--select-height:3em;font-size:1.1428571429em}.sds-dropdown--left[_ngcontent-%COMP%]{text-align:left}.sds-dropdown--right[_ngcontent-%COMP%]{text-align:right}.sds-dropdown--right[_ngcontent-%COMP%]   .sds-dropdown__button-label[_ngcontent-%COMP%]{margin-left:auto}.sds-dropdown--placeholder[_ngcontent-%COMP%]   .sds-dropdown__button-label[_ngcontent-%COMP%]{color:var(--color-black-60)}.sds-dropdown--read-only[_ngcontent-%COMP%]{cursor:not-allowed}.sds-dropdown--read-only[_ngcontent-%COMP%]   .sds-dropdown__button[_ngcontent-%COMP%]{cursor:inherit;color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-dropdown--disabled[_ngcontent-%COMP%]{cursor:not-allowed}.sds-dropdown--disabled[_ngcontent-%COMP%]   .sds-dropdown__button[_ngcontent-%COMP%]{cursor:inherit;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-dropdown--error[_ngcontent-%COMP%]{border:2px solid var(--color-error)}"] });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ContentChildren"])(DropdownOptionComponent),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_3__["QueryList"])
+], DropdownComponent.prototype, "optionsComponents", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+], DropdownComponent.prototype, "disabled", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], DropdownComponent.prototype, "readOnly", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], DropdownComponent.prototype, "placeholder", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], DropdownComponent.prototype, "size", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], DropdownComponent.prototype, "labelledBy", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], DropdownComponent.prototype, "align", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], DropdownComponent.prototype, "identifier", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], DropdownComponent.prototype, "errors", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], DropdownComponent.prototype, "errorType", void 0);
+
+let DropdownModule = class DropdownModule {
+};
+DropdownModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({ type: DropdownModule });
+DropdownModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ factory: function DropdownModule_Factory(t) { return new (t || DropdownModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipModule"]]] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](DropdownOptionComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"],
+        args: [{
+                selector: 'sds-dropdown-option',
+                template: `
+    <div
+      #ele
+      role="option"
+      class="sds-dropdown-option"
+      [ngClass]="classes"
+      [id]="identifier"
+      (mousedown)="clicked($event)"
+      [attr.selected]="selected"
+      [attr.aria-disabled]="disabled"
+      [attr.aria-setsize]="setsize"
+      [attr.aria-aria-posinset]="index"
+    >
+      <ng-content></ng-content>
+    </div>
+  `,
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ChangeDetectionStrategy"].OnPush,
+                styles: [".sds-dropdown-option{line-height:var(--select-height);padding:0 20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:var(--input-color-background);font-family:var(--font-default-body);text-align:inherit;cursor:pointer}.sds-dropdown-option:hover{background-color:var(--color-slate-95)}.sds-dropdown-option--focused,.sds-dropdown-option--focused:hover{background-color:var(--color-slate-90)}"]
+            }]
+    }], function () { return []; }, { clickEvent: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Output"]
+        }], elementRef: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+            args: ['ele', { static: true }]
+        }], value: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], identifier: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], selected: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], disabled: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], index: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], setsize: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }] }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](DropdownComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"],
+        args: [{
+                selector: 'sds-dropdown',
+                template: `
+    <div
+      sds-tooltip
+      position="right"
+      class="sds-dropdown"
+      [error]="errorType === 'error'"
+      [identifier]="identifier + '__tooltip'"
+      [tooltipContent]="errors"
+      [ngClass]="classes"
+    >
+      <button
+        class="sds-dropdown__button"
+        aria-haspopup="listbox"
+        type="button"
+        [attr.aria-expanded]="isOpen"
+        [attr.tabindex]="disabled ? '-1' : '0'"
+        [attr.aria-disabled]="disabled"
+        [attr.aria-labelledby]="labelledBy"
+        (click)="onClick($event)"
+        (blur)="onBlur()"
+        (keydown)="onKeyDown($event)"
+      >
+        <span class="sds-dropdown__button-label">{{ label }}</span>
+        <sds-icon iconType="dropdown"></sds-icon>
+      </button>
+      <div role="listbox" class="sds-dropdown__dropdown-list" [attr.aria-activedescendant]="activeDescendant" tabindex="-1">
+        <ng-content select="sds-dropdown-option"></ng-content>
+      </div>
+    </div>
+  `,
+                providers: [
+                    {
+                        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NG_VALUE_ACCESSOR"],
+                        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["forwardRef"])(() => DropdownComponent_1),
+                        multi: true
+                    }
+                ],
+                styles: [".sds-dropdown{--select-height:2.85714286em;position:relative}.sds-dropdown .hidden{display:none}.sds-dropdown__button-label{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:pre;margin-right:1ch}.sds-dropdown__button{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;text-align:inherit;cursor:pointer;width:100%;z-index:1;padding:0 .5714285714em;position:relative;height:var(--select-height);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:var(--font-default-body);color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-dropdown__button:focus{outline:3px solid var(--color-focus)}.sds-dropdown--open .sds-dropdown__dropdown-list{display:block}.sds-dropdown__dropdown-list{padding:10px 0;margin:0;display:none;position:absolute;top:calc(100% + 3px);left:-10px;right:-10px;background:var(--input-color-background);width:calc(100% + 20px);z-index:999;overflow-y:scroll;max-height:220px;-webkit-box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1);box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1)}.sds-dropdown--small{--select-height:2.28571429em}.sds-dropdown--large{--select-height:3em;font-size:1.1428571429em}.sds-dropdown--left{text-align:left}.sds-dropdown--right{text-align:right}.sds-dropdown--right .sds-dropdown__button-label{margin-left:auto}.sds-dropdown--placeholder .sds-dropdown__button-label{color:var(--color-black-60)}.sds-dropdown--read-only{cursor:not-allowed}.sds-dropdown--read-only .sds-dropdown__button{cursor:inherit;color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-dropdown--disabled{cursor:not-allowed}.sds-dropdown--disabled .sds-dropdown__button{cursor:inherit;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-dropdown--error{border:2px solid var(--color-error)}"]
+            }]
+    }], function () { return []; }, { readOnly: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], placeholder: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], size: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], align: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], identifier: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], errorType: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], disabled: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], optionsComponents: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ContentChildren"],
+            args: [DropdownOptionComponent]
+        }], labelledBy: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }], errors: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](DropdownModule, { declarations: function () { return [DropdownComponent,
+        DropdownOptionComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipModule"]]; }, exports: function () { return [DropdownComponent,
+        DropdownOptionComponent]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](DropdownModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipModule"]],
+                exports: [DropdownComponent, DropdownOptionComponent],
+                declarations: [DropdownComponent, DropdownOptionComponent]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=sage-ng-carbon-dropdown.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js ***!
+  \***********************************************************************************/
+/*! exports provided: ICON_TYPES, IconComponent, IconModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ICON_TYPES", function() { return ICON_TYPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IconComponent", function() { return IconComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IconModule", function() { return IconModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+
+
+
+
+let IconComponent = class IconComponent {
+    get classes() {
+        return {
+            [`sds-icon-${this.iconType}`]: this.iconType,
+            [`sds-icon--${this.type}`]: this.type
+        };
+    }
+};
+IconComponent.ɵfac = function IconComponent_Factory(t) { return new (t || IconComponent)(); };
+IconComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: IconComponent, selectors: [["sds-icon"]], inputs: { iconType: "iconType", type: "type" }, decls: 1, vars: 1, consts: [[1, "sds-icon", 3, "ngClass"]], template: function IconComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "span", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx.classes);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]], styles: ["@charset \"UTF-8\";.sds-icon[_ngcontent-%COMP%]{color:inherit}.sds-icon--input[_ngcontent-%COMP%]{color:var(--color-black-55)}.sds-icon--input[_ngcontent-%COMP%]:hover{color:var(--color-black-90)}.sds-icon--info[_ngcontent-%COMP%], .sds-icon--info[_ngcontent-%COMP%]:hover{color:var(--color-info)}.sds-icon--error[_ngcontent-%COMP%], .sds-icon--error[_ngcontent-%COMP%]:hover{color:var(--color-error)}.sds-icon--warning[_ngcontent-%COMP%], .sds-icon--warning[_ngcontent-%COMP%]:hover{color:var(--color-warning)}.sds-icon--disabled[_ngcontent-%COMP%], .sds-icon--disabled[_ngcontent-%COMP%]:hover{color:var(--color-black-30)}.sds-icon--dark-background[_ngcontent-%COMP%], .sds-icon--dark-background[_ngcontent-%COMP%]:hover{color:var(--color-white)}.sds-icon--light-background[_ngcontent-%COMP%]{color:var(--color-slate-40)}.sds-icon--light-background[_ngcontent-%COMP%]:hover{color:var(--color-slate-20)}[class*=sds-icon-][_ngcontent-%COMP%]:before, [class^=sds-icon-][_ngcontent-%COMP%]:before{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:var(--font-default-icon);font-style:normal;font-weight:400}.sds-icon-feedback[_ngcontent-%COMP%]:before{content:\"\uE930\"}.sds-icon-info[_ngcontent-%COMP%]:before{content:\"\uE92A\"}.sds-icon-help[_ngcontent-%COMP%]:before{content:\"\uE951\"}.sds-icon-settings[_ngcontent-%COMP%]:before{content:\"\uE91A\"}.sds-icon-logout[_ngcontent-%COMP%]:before{content:\"\uE92E\"}.sds-icon-pdf[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE91F\"}.sds-icon-csv[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE94A\"}.sds-icon-copy[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE91B\"}.sds-icon-error[_ngcontent-%COMP%]:before{content:\"\uE923\"}.sds-icon-calendar[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE90E\"}.sds-icon-analysis[_ngcontent-%COMP%]:before{content:\"\uE912\"}.sds-icon-people[_ngcontent-%COMP%]:before{content:\"\uE93B\"}.sds-icon-dropdown[_ngcontent-%COMP%]:before{content:\"\uE910\"}.sds-icon-alert[_ngcontent-%COMP%]:before{content:\"\uE90B\"}.sds-icon-person[_ngcontent-%COMP%]:before{content:\"\uE93C\"}.sds-icon-search[_ngcontent-%COMP%]:before{content:\"\uE92F\"}.sds-icon-cross[_ngcontent-%COMP%]:before{content:\"\uE91D\"}.sds-icon-close[_ngcontent-%COMP%]:before{content:\"\uE91E\"}.sds-icon-delete[_ngcontent-%COMP%]:before{content:\"\uE90C\"}.sds-icon-email[_ngcontent-%COMP%]:before, .sds-icon-message[_ngcontent-%COMP%]:before, .sds-icon-messages[_ngcontent-%COMP%]:before{content:\"\uE922\"}.sds-icon-edit[_ngcontent-%COMP%]:before{content:\"\uE93A\"}.sds-icon-print[_ngcontent-%COMP%]:before{content:\"\uE942\"}.sds-icon-clock[_ngcontent-%COMP%]:before{content:\"\uE919\"}.sds-icon-euro[_ngcontent-%COMP%]:before{content:\"t\"}.sds-icon-home[_ngcontent-%COMP%]:before{content:\"\uE929\"}.sds-icon-cart[_ngcontent-%COMP%]:before{content:\"\uE90A\"}.sds-icon-bulk_destroy[_ngcontent-%COMP%]:before{content:\"\uE90C\"}.sds-icon-hide[_ngcontent-%COMP%]:before{content:\"w\"}.sds-icon-warning[_ngcontent-%COMP%]:before{content:\"\uE924\"}.sds-icon-question[_ngcontent-%COMP%]:before{content:\"\uE943\"}.sds-icon-question_hollow[_ngcontent-%COMP%]:before{content:\"\uE95E\"}.sds-icon-tick[_ngcontent-%COMP%]:before{content:\"\uE950\"}.sds-icon-none[_ngcontent-%COMP%]:before{content:\" \"}.sds-icon-add[_ngcontent-%COMP%]:before{content:\"\uE940\"}.sds-icon-services[_ngcontent-%COMP%]:before{content:\"+\"}.sds-icon-collaborate[_ngcontent-%COMP%]:before{content:\"\uE946\"}.sds-icon-graph[_ngcontent-%COMP%]:before{content:\"\uE912\"}.sds-icon-plus[_ngcontent-%COMP%]:before{content:\"\uE940\"}.sds-icon-arrow[_ngcontent-%COMP%]:before{content:\"\uE904\"}.sds-icon-pound[_ngcontent-%COMP%]:before{content:\"\u00A3\"}.sds-icon-go[_ngcontent-%COMP%]:before{content:\"\uE903\"}.sds-icon-question_mark[_ngcontent-%COMP%]:before{content:\"\uE943\"}.sds-icon-admin[_ngcontent-%COMP%]:before{content:\"\uE94F\"}.sds-icon-contacts[_ngcontent-%COMP%]:before{content:\"\uE93B\"}.sds-icon-create[_ngcontent-%COMP%]:before{content:\"\uE940\"}.sds-icon-piggy_bank[_ngcontent-%COMP%]:before{content:\"\uE926\"}.sds-icon-entry[_ngcontent-%COMP%]:before{content:\"\uE92C\"}.sds-icon-edited[_ngcontent-%COMP%]:before{content:\"\uE938\"}.sds-icon-refresh[_ngcontent-%COMP%]:before{content:\"\uE945\"}.sds-icon-sync[_ngcontent-%COMP%]:before{content:\"\uE944\"}.sds-icon-fax[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE925\"}.sds-icon-shop[_ngcontent-%COMP%]:before{content:\"\uE947\"}.sds-icon-attach[_ngcontent-%COMP%]:before{content:\"\uE937\"}.sds-icon-filter[_ngcontent-%COMP%]:before{content:\"\uE928\"}.sds-icon-chat[_ngcontent-%COMP%]:before{content:\"\uE914\"}.sds-icon-duplicate[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE921\"}.sds-icon-call[_ngcontent-%COMP%]:before, .sds-icon-phone[_ngcontent-%COMP%]:before{content:\"\uE93D\"}.sds-icon-favourite[_ngcontent-%COMP%]:before{content:\"\uE94F\"}.sds-icon-favourite_lined[_ngcontent-%COMP%]:before{content:\"\uE94E\"}.sds-icon-sort_up[_ngcontent-%COMP%]:before{content:\"\uE949\"}.sds-icon-sort_down[_ngcontent-%COMP%]:before{content:\"\uE948\"}.sds-icon-link[_ngcontent-%COMP%]:before{content:\"\uE92D\"}.sds-icon-locked[_ngcontent-%COMP%]:before{content:\"\uE935\"}.sds-icon-unlocked[_ngcontent-%COMP%]:before{content:\"\uE936\"}.sds-icon-caret_down[_ngcontent-%COMP%]:before{content:\"\uE910\"}.sds-icon-draft[_ngcontent-%COMP%]:before{content:\"\uE939\"}.sds-icon-chart_line[_ngcontent-%COMP%]:before{content:\"\uE912\"}.sds-icon-chart_bar[_ngcontent-%COMP%]:before{content:\"\uE911\"}.sds-icon-chart_pie[_ngcontent-%COMP%]:before{content:\"\uE913\"}.sds-icon-in_progress[_ngcontent-%COMP%]:before{content:\"\uE920\"}.sds-icon-progressed[_ngcontent-%COMP%]:before{content:\"\uE903\"}.sds-icon-save[_ngcontent-%COMP%]:before{content:\"\uE926\"}.sds-icon-image[_ngcontent-%COMP%]:before{content:\"\uE93E\"}.sds-icon-camera[_ngcontent-%COMP%]:before{content:\"\uE90F\"}.sds-icon-arrow_up[_ngcontent-%COMP%]:before{content:\"\uE907\"}.sds-icon-arrow_down[_ngcontent-%COMP%]:before{content:\"\uE901\"}.sds-icon-arrow_left[_ngcontent-%COMP%]:before{content:\"\uE902\"}.sds-icon-arrow_right[_ngcontent-%COMP%]:before{content:\"\uE904\"}.sds-icon-chevron_up[_ngcontent-%COMP%]:before{content:\"\uE918\"}.sds-icon-chevron_down[_ngcontent-%COMP%]:before{content:\"\uE915\"}.sds-icon-chevron_left[_ngcontent-%COMP%]:before{content:\"\uE916\"}.sds-icon-chevron_right[_ngcontent-%COMP%]:before{content:\"\uE917\"}.sds-icon-download[_ngcontent-%COMP%]:before{content:\"\uE900\"}.sds-icon-upload[_ngcontent-%COMP%]:before{content:\"\uE906\"}.sds-icon-uploaded[_ngcontent-%COMP%]:before{content:\"\uE905\"}.sds-icon-folder[_ngcontent-%COMP%]:before{content:\"\uE927\"}.sds-icon-share[_ngcontent-%COMP%]:before{content:\"\uE946\"}.sds-icon-gift[_ngcontent-%COMP%]:before{content:\"\uE941\"}.sds-icon-mobile[_ngcontent-%COMP%]:before{content:\"\uE932\"}.sds-icon-grid[_ngcontent-%COMP%]:before{content:\"\uE952\"}.sds-icon-fit_height[_ngcontent-%COMP%]:before{content:\"\uE909\"}.sds-icon-fit_width[_ngcontent-%COMP%]:before{content:\"\uE908\"}.sds-icon-blocked[_ngcontent-%COMP%]:before{content:\"\uE933\"}.sds-icon-blocked_square[_ngcontent-%COMP%]:before{content:\"\uE934\"}.sds-icon-drag[_ngcontent-%COMP%]:before{content:\"\uE94C\"}.sds-icon-drag_vertical[_ngcontent-%COMP%]:before{content:\"\uE94D\"}.sds-icon-list_view[_ngcontent-%COMP%]:before{content:\"\uE92C\"}.sds-icon-card_view[_ngcontent-%COMP%]:before{content:\"\uE94B\"}.sds-icon-minus[_ngcontent-%COMP%]:before{content:\"\uE931\"}.sds-icon-business[_ngcontent-%COMP%]:before{content:\"\uE90D\"}.sds-icon-key[_ngcontent-%COMP%]:before{content:\"\uE92B\"}.sds-icon-credit_card[_ngcontent-%COMP%]:before{content:\"\uE91C\"}.sds-icon-marker[_ngcontent-%COMP%]:before{content:\"\uE93F\"}.sds-icon-delivery[_ngcontent-%COMP%]:before{content:\"\uE959\"}.sds-icon-filter_new[_ngcontent-%COMP%]:before{content:\"\uE954\"}.sds-icon-view[_ngcontent-%COMP%]:before{content:\"\uE957\"}.sds-icon-disputed[_ngcontent-%COMP%]:before{content:\"\uE958\"}.sds-icon-connect[_ngcontent-%COMP%]:before{content:\"\uE955\"}.sds-icon-chat_notes[_ngcontent-%COMP%]:before{content:\"\uE956\"}.sds-icon-talk[_ngcontent-%COMP%]:before{content:\"\uE95A\"}.sds-icon-split[_ngcontent-%COMP%]:before{content:\"\uE952\"}.sds-icon-disconnect[_ngcontent-%COMP%]:before{content:\"\uE953\"}.sds-icon-bullet_list[_ngcontent-%COMP%]:before{content:\"\uE95B\"}.sds-icon-lightbulb_on[_ngcontent-%COMP%]:before{content:\"\uE95D\"}.sds-icon-lightbulb_off[_ngcontent-%COMP%]:before{content:\"\uE95C\"}.sds-icon-accounts[_ngcontent-%COMP%]:before, .sds-icon-accounts_extra[_ngcontent-%COMP%]:before, .sds-icon-cashbook[_ngcontent-%COMP%]:before{content:\"1\"}.sds-icon-payroll[_ngcontent-%COMP%]:before{content:\"2\"}.sds-icon-insert_row[_ngcontent-%COMP%]:before{content:\"A\"}.sds-icon-book[_ngcontent-%COMP%]:before{content:\"D\"}.sds-icon-bank[_ngcontent-%COMP%]:before{content:\"G\"}.sds-icon-new[_ngcontent-%COMP%]:before{content:\"k\"}.sds-icon-video[_ngcontent-%COMP%]:before{content:\"\uE95E\"}.sds-icon-play[_ngcontent-%COMP%]:before{content:\"\uE95F\"}.sds-icon-ellipsis_horizontal[_ngcontent-%COMP%]:before{content:\"\uE960\"}.sds-icon-ellipsis_vertical[_ngcontent-%COMP%]:before{content:\"\uE961\"}"], changeDetection: 0 });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], IconComponent.prototype, "iconType", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], IconComponent.prototype, "type", void 0);
+
+let IconModule = class IconModule {
+};
+IconModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: IconModule });
+IconModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function IconModule_Factory(t) { return new (t || IconModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](IconComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+                selector: 'sds-icon',
+                template: `
+    <span class="sds-icon" [ngClass]="classes"></span>
+  `,
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectionStrategy"].OnPush,
+                styles: ["@charset \"UTF-8\";.sds-icon{color:inherit}.sds-icon--input{color:var(--color-black-55)}.sds-icon--input:hover{color:var(--color-black-90)}.sds-icon--info,.sds-icon--info:hover{color:var(--color-info)}.sds-icon--error,.sds-icon--error:hover{color:var(--color-error)}.sds-icon--warning,.sds-icon--warning:hover{color:var(--color-warning)}.sds-icon--disabled,.sds-icon--disabled:hover{color:var(--color-black-30)}.sds-icon--dark-background,.sds-icon--dark-background:hover{color:var(--color-white)}.sds-icon--light-background{color:var(--color-slate-40)}.sds-icon--light-background:hover{color:var(--color-slate-20)}[class*=sds-icon-]:before,[class^=sds-icon-]:before{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:var(--font-default-icon);font-style:normal;font-weight:400}.sds-icon-feedback:before{content:\"\uE930\"}.sds-icon-info:before{content:\"\uE92A\"}.sds-icon-help:before{content:\"\uE951\"}.sds-icon-settings:before{content:\"\uE91A\"}.sds-icon-logout:before{content:\"\uE92E\"}.sds-icon-pdf:before{-webkit-font-smoothing:none;content:\"\uE91F\"}.sds-icon-csv:before{-webkit-font-smoothing:none;content:\"\uE94A\"}.sds-icon-copy:before{-webkit-font-smoothing:none;content:\"\uE91B\"}.sds-icon-error:before{content:\"\uE923\"}.sds-icon-calendar:before{-webkit-font-smoothing:none;content:\"\uE90E\"}.sds-icon-analysis:before{content:\"\uE912\"}.sds-icon-people:before{content:\"\uE93B\"}.sds-icon-dropdown:before{content:\"\uE910\"}.sds-icon-alert:before{content:\"\uE90B\"}.sds-icon-person:before{content:\"\uE93C\"}.sds-icon-search:before{content:\"\uE92F\"}.sds-icon-cross:before{content:\"\uE91D\"}.sds-icon-close:before{content:\"\uE91E\"}.sds-icon-delete:before{content:\"\uE90C\"}.sds-icon-email:before,.sds-icon-message:before,.sds-icon-messages:before{content:\"\uE922\"}.sds-icon-edit:before{content:\"\uE93A\"}.sds-icon-print:before{content:\"\uE942\"}.sds-icon-clock:before{content:\"\uE919\"}.sds-icon-euro:before{content:\"t\"}.sds-icon-home:before{content:\"\uE929\"}.sds-icon-cart:before{content:\"\uE90A\"}.sds-icon-bulk_destroy:before{content:\"\uE90C\"}.sds-icon-hide:before{content:\"w\"}.sds-icon-warning:before{content:\"\uE924\"}.sds-icon-question:before{content:\"\uE943\"}.sds-icon-question_hollow:before{content:\"\uE95E\"}.sds-icon-tick:before{content:\"\uE950\"}.sds-icon-none:before{content:\" \"}.sds-icon-add:before{content:\"\uE940\"}.sds-icon-services:before{content:\"+\"}.sds-icon-collaborate:before{content:\"\uE946\"}.sds-icon-graph:before{content:\"\uE912\"}.sds-icon-plus:before{content:\"\uE940\"}.sds-icon-arrow:before{content:\"\uE904\"}.sds-icon-pound:before{content:\"\u00A3\"}.sds-icon-go:before{content:\"\uE903\"}.sds-icon-question_mark:before{content:\"\uE943\"}.sds-icon-admin:before{content:\"\uE94F\"}.sds-icon-contacts:before{content:\"\uE93B\"}.sds-icon-create:before{content:\"\uE940\"}.sds-icon-piggy_bank:before{content:\"\uE926\"}.sds-icon-entry:before{content:\"\uE92C\"}.sds-icon-edited:before{content:\"\uE938\"}.sds-icon-refresh:before{content:\"\uE945\"}.sds-icon-sync:before{content:\"\uE944\"}.sds-icon-fax:before{-webkit-font-smoothing:none;content:\"\uE925\"}.sds-icon-shop:before{content:\"\uE947\"}.sds-icon-attach:before{content:\"\uE937\"}.sds-icon-filter:before{content:\"\uE928\"}.sds-icon-chat:before{content:\"\uE914\"}.sds-icon-duplicate:before{-webkit-font-smoothing:none;content:\"\uE921\"}.sds-icon-call:before,.sds-icon-phone:before{content:\"\uE93D\"}.sds-icon-favourite:before{content:\"\uE94F\"}.sds-icon-favourite_lined:before{content:\"\uE94E\"}.sds-icon-sort_up:before{content:\"\uE949\"}.sds-icon-sort_down:before{content:\"\uE948\"}.sds-icon-link:before{content:\"\uE92D\"}.sds-icon-locked:before{content:\"\uE935\"}.sds-icon-unlocked:before{content:\"\uE936\"}.sds-icon-caret_down:before{content:\"\uE910\"}.sds-icon-draft:before{content:\"\uE939\"}.sds-icon-chart_line:before{content:\"\uE912\"}.sds-icon-chart_bar:before{content:\"\uE911\"}.sds-icon-chart_pie:before{content:\"\uE913\"}.sds-icon-in_progress:before{content:\"\uE920\"}.sds-icon-progressed:before{content:\"\uE903\"}.sds-icon-save:before{content:\"\uE926\"}.sds-icon-image:before{content:\"\uE93E\"}.sds-icon-camera:before{content:\"\uE90F\"}.sds-icon-arrow_up:before{content:\"\uE907\"}.sds-icon-arrow_down:before{content:\"\uE901\"}.sds-icon-arrow_left:before{content:\"\uE902\"}.sds-icon-arrow_right:before{content:\"\uE904\"}.sds-icon-chevron_up:before{content:\"\uE918\"}.sds-icon-chevron_down:before{content:\"\uE915\"}.sds-icon-chevron_left:before{content:\"\uE916\"}.sds-icon-chevron_right:before{content:\"\uE917\"}.sds-icon-download:before{content:\"\uE900\"}.sds-icon-upload:before{content:\"\uE906\"}.sds-icon-uploaded:before{content:\"\uE905\"}.sds-icon-folder:before{content:\"\uE927\"}.sds-icon-share:before{content:\"\uE946\"}.sds-icon-gift:before{content:\"\uE941\"}.sds-icon-mobile:before{content:\"\uE932\"}.sds-icon-grid:before{content:\"\uE952\"}.sds-icon-fit_height:before{content:\"\uE909\"}.sds-icon-fit_width:before{content:\"\uE908\"}.sds-icon-blocked:before{content:\"\uE933\"}.sds-icon-blocked_square:before{content:\"\uE934\"}.sds-icon-drag:before{content:\"\uE94C\"}.sds-icon-drag_vertical:before{content:\"\uE94D\"}.sds-icon-list_view:before{content:\"\uE92C\"}.sds-icon-card_view:before{content:\"\uE94B\"}.sds-icon-minus:before{content:\"\uE931\"}.sds-icon-business:before{content:\"\uE90D\"}.sds-icon-key:before{content:\"\uE92B\"}.sds-icon-credit_card:before{content:\"\uE91C\"}.sds-icon-marker:before{content:\"\uE93F\"}.sds-icon-delivery:before{content:\"\uE959\"}.sds-icon-filter_new:before{content:\"\uE954\"}.sds-icon-view:before{content:\"\uE957\"}.sds-icon-disputed:before{content:\"\uE958\"}.sds-icon-connect:before{content:\"\uE955\"}.sds-icon-chat_notes:before{content:\"\uE956\"}.sds-icon-talk:before{content:\"\uE95A\"}.sds-icon-split:before{content:\"\uE952\"}.sds-icon-disconnect:before{content:\"\uE953\"}.sds-icon-bullet_list:before{content:\"\uE95B\"}.sds-icon-lightbulb_on:before{content:\"\uE95D\"}.sds-icon-lightbulb_off:before{content:\"\uE95C\"}.sds-icon-accounts:before,.sds-icon-accounts_extra:before,.sds-icon-cashbook:before{content:\"1\"}.sds-icon-payroll:before{content:\"2\"}.sds-icon-insert_row:before{content:\"A\"}.sds-icon-book:before{content:\"D\"}.sds-icon-bank:before{content:\"G\"}.sds-icon-new:before{content:\"k\"}.sds-icon-video:before{content:\"\uE95E\"}.sds-icon-play:before{content:\"\uE95F\"}.sds-icon-ellipsis_horizontal:before{content:\"\uE960\"}.sds-icon-ellipsis_vertical:before{content:\"\uE961\"}"]
+            }]
+    }], null, { iconType: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], type: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](IconModule, { declarations: function () { return [IconComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]; }, exports: function () { return [IconComponent]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](IconModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+                exports: [IconComponent],
+                declarations: [IconComponent]
+            }]
+    }], null, null); })();
+
+const ICON_TYPES = [
+    'add',
+    'admin',
+    'alert',
+    'analysis',
+    'arrow',
+    'arrow_down',
+    'arrow_left',
+    'arrow_left_small',
+    'arrow_right',
+    'arrow_right_small',
+    'arrow_up',
+    'attach',
+    'basket',
+    'bin',
+    'blocked',
+    'blocked_square',
+    'bulk_destroy',
+    'bullet_list',
+    'business',
+    'calendar',
+    'call',
+    'camera',
+    'card_view',
+    'caret_down',
+    'cart',
+    'chart_bar',
+    'chart_line',
+    'chart_pie',
+    'chat',
+    'chat_notes',
+    'chevron_down',
+    'chevron_left',
+    'chevron_right',
+    'chevron_up',
+    'clock',
+    'close',
+    'coins',
+    'collaborate',
+    'connect',
+    'contacts',
+    'copy',
+    'create',
+    'credit_card',
+    'credit_card_slash',
+    'cross',
+    'csv',
+    'delete',
+    'delivery',
+    'disconnect',
+    'disputed',
+    'download',
+    'draft',
+    'drag',
+    'drag_vertical',
+    'dropdown',
+    'duplicate',
+    'edit',
+    'edited',
+    'ellipsis_horizontal',
+    'ellipsis_vertical',
+    'email',
+    'entry',
+    'error',
+    'euro',
+    'favourite',
+    'favourite_lined',
+    'fax',
+    'feedback',
+    'filter',
+    'filter_new',
+    'fit_height',
+    'fit_width',
+    'folder',
+    'gift',
+    'go',
+    'graph',
+    'grid',
+    'help',
+    'home',
+    'image',
+    'in_progress',
+    'in_transit',
+    'individual',
+    'info',
+    'key',
+    'lightbulb_off',
+    'lightbulb_on',
+    'link',
+    'list_view',
+    'location',
+    'locked',
+    'logout',
+    'marker',
+    'message',
+    'minus',
+    'minus_large',
+    'mobile',
+    'none',
+    'pdf',
+    'people',
+    'person',
+    'phone',
+    'piggy_bank',
+    'play',
+    'plus',
+    'plus_large',
+    'pound',
+    'print',
+    'progress',
+    'progressed',
+    'question',
+    'question_hollow',
+    'question_mark',
+    'refresh',
+    'remove',
+    'save',
+    'search',
+    'services',
+    'settings',
+    'share',
+    'shop',
+    'sort_down',
+    'sort_up',
+    'split',
+    'submitted',
+    'sync',
+    'talk',
+    'tick',
+    'unlocked',
+    'upload',
+    'uploaded',
+    'video',
+    'view',
+    'warning'
+];
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=sage-ng-carbon-icon.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-input-text.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-input-text.js ***!
+  \*****************************************************************************************/
+/*! exports provided: InputTextComponent, InputTextModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InputTextComponent", function() { return InputTextComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InputTextModule", function() { return InputTextModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @sage/ng-carbon/tooltip */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js");
+/* harmony import */ var _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @sage/ng-carbon/icon */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+function InputTextComponent_div_3_ng_container_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](0);
+} }
+function InputTextComponent_div_3_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "sds-icon", 7);
+} if (rf & 2) {
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("type", ctx_r3.errorType)("iconType", ctx_r3.errorType);
+} }
+function InputTextComponent_div_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, InputTextComponent_div_3_ng_container_1_Template, 1, 0, "ng-container", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, InputTextComponent_div_3_ng_template_2_Template, 1, 2, "ng-template", null, 6, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](3);
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", ctx_r0.icon ? ctx_r0.icon : _r2);
+} }
+var InputTextComponent_1;
+let InputTextComponent = InputTextComponent_1 = class InputTextComponent {
+    constructor() {
+        this.size = 'medium';
+        this.disabled = false;
+        this.readOnly = false;
+        this.errorType = 'warning';
+        this.inputFocus = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        this.inputBlur = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        this.identifier = `input-text-${Math.random()
+            .toString()
+            .substring(2, 10) +
+            Math.random()
+                .toString()
+                .substring(2, 10)}`;
+        /**
+         * @description
+         * Invoked when the model has been changed
+         */
+        this.onChange = (_) => { };
+        /**
+         * @description
+         * Invoked when the model has been touched
+         */
+        this.onTouched = () => { };
+    }
+    get value() {
+        return this._value;
+    }
+    set value(v) {
+        this._value = v;
+        this.onChange(this._value);
+        this.onTouched();
+    }
+    get classes() {
+        const CLASS_NAME = 'sds-input-text__field';
+        return {
+            [`${CLASS_NAME}--${this.size}`]: this.size,
+            [`${CLASS_NAME}--error`]: this.errorType === 'error' && this.errors,
+            [`${CLASS_NAME}--read-only`]: this.readOnly
+        };
+    }
+    /**
+     * @description
+     * Returns the disable state
+     */
+    get isDisabled() {
+        return this.disabled ? this.disabled : null;
+    }
+    /**
+     * @description
+     * Displays the icon if there are errors and not readonly and not disable
+     * Or if there is an icon available
+     */
+    get showIcon() {
+        return (this.errors && !this.readOnly && !this.disabled) || this.icon;
+    }
+    /**
+     * @description
+     * Handles the focus
+     */
+    handleFocus($event) {
+        this.inputFocus.emit($event);
+    }
+    /**
+     * @description
+     * Handles the blur event
+     */
+    handleBlur($event) {
+        this.inputBlur.emit($event);
+    }
+    /**
+     * @description
+     * Writes a new item to the element.
+     */
+    writeValue(value) {
+        if (value !== undefined) {
+            this._value = value;
+        }
+    }
+    /**
+     * @description
+     * Registers a callback function that should be called when the control's value changes in the UI.
+     */
+    registerOnChange(fn) {
+        this.onChange = fn;
+    }
+    /**
+     * @description
+     * Registers a callback function that should be called when the control receives a blur event.
+     */
+    registerOnTouched(fn) {
+        this.onTouched = fn;
+    }
+};
+InputTextComponent.ɵfac = function InputTextComponent_Factory(t) { return new (t || InputTextComponent)(); };
+InputTextComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: InputTextComponent, selectors: [["sds-input-text"]], inputs: { size: "size", disabled: "disabled", readOnly: "readOnly", errorType: "errorType", identifier: "identifier", errors: "errors", icon: "icon", placeholderText: "placeholderText" }, outputs: { inputFocus: "inputFocus", inputBlur: "inputBlur" }, features: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵProvidersFeature"]([
+            {
+                provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+                useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(() => InputTextComponent_1),
+                multi: true
+            }
+        ])], decls: 4, vars: 10, consts: [["sds-tooltip", "", "position", "right", 3, "tooltipContent", "error"], [1, "sds-input-text"], ["type", "text", 1, "sds-input-text__field", 3, "id", "ngModel", "ngClass", "readonly", "ngModelChange", "focus", "blur"], ["class", "sds-input-text__icon", 4, "ngIf"], [1, "sds-input-text__icon"], [4, "ngTemplateOutlet"], ["defaultIcon", ""], [3, "type", "iconType"]], template: function InputTextComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "input", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function InputTextComponent_Template_input_ngModelChange_2_listener($event) { return ctx.value = $event; })("focus", function InputTextComponent_Template_input_focus_2_listener($event) { return ctx.handleFocus($event); })("blur", function InputTextComponent_Template_input_blur_2_listener($event) { return ctx.handleBlur($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, InputTextComponent_div_3_Template, 4, 1, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("tooltipContent", ctx.errors)("error", ctx.errorType === "error");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", ctx.identifier);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngModel", ctx.value)("ngClass", ctx.classes)("readonly", ctx.readOnly);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("aria-disabled", ctx.isDisabled)("disabled", ctx.isDisabled)("placeholder", ctx.placeholderText);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.showIcon);
+    } }, directives: [_sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgTemplateOutlet"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconComponent"]], styles: [".sds-input-text[_ngcontent-%COMP%]{position:relative}.sds-input-text__field[_ngcontent-%COMP%]{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;width:100%;color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-input-text__field--compact[_ngcontent-%COMP%]{padding:0 8px;line-height:1.8461538462em}.sds-input-text__field--small[_ngcontent-%COMP%]{padding:0 8px;line-height:2.1428571429em}.sds-input-text__field--medium[_ngcontent-%COMP%]{padding:0 11px;line-height:2.7142857143em}.sds-input-text__field--large[_ngcontent-%COMP%]{padding:0 11px;line-height:2.875em;font-size:1.1428571429em}.sds-input-text__field[_ngcontent-%COMP%]:focus{outline:3px solid var(--color-focus);outline-offset:0}.sds-input-text__field--read-only[_ngcontent-%COMP%]{color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-input-text__field[_ngcontent-%COMP%]:disabled{cursor:not-allowed;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-input-text__field--error[_ngcontent-%COMP%]{border:2px solid var(--color-error)}.sds-input-text__icon[_ngcontent-%COMP%]{top:0;right:0;position:absolute;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:40px}"] });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], InputTextComponent.prototype, "size", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], InputTextComponent.prototype, "disabled", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], InputTextComponent.prototype, "readOnly", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], InputTextComponent.prototype, "errors", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], InputTextComponent.prototype, "errorType", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"])
+], InputTextComponent.prototype, "icon", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"])
+], InputTextComponent.prototype, "inputFocus", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"])
+], InputTextComponent.prototype, "inputBlur", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], InputTextComponent.prototype, "placeholderText", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+], InputTextComponent.prototype, "identifier", void 0);
+
+let InputTextModule = class InputTextModule {
+};
+InputTextModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: InputTextModule });
+InputTextModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function InputTextModule_Factory(t) { return new (t || InputTextModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconModule"]],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](InputTextComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+                selector: 'sds-input-text',
+                template: `
+    <div sds-tooltip position="right" [tooltipContent]="errors" [error]="errorType === 'error'">
+      <div class="sds-input-text">
+        <input
+          id="{{ identifier }}"
+          class="sds-input-text__field"
+          [(ngModel)]="value"
+          type="text"
+          [ngClass]="classes"
+          [attr.aria-disabled]="isDisabled"
+          [attr.disabled]="isDisabled"
+          [readonly]="readOnly"
+          (focus)="handleFocus($event)"
+          (blur)="handleBlur($event)"
+          [attr.placeholder]="placeholderText"
+        />
+        <div class="sds-input-text__icon" *ngIf="showIcon">
+          <ng-container *ngTemplateOutlet="icon ? icon : defaultIcon"> </ng-container>
+          <ng-template #defaultIcon>
+            <sds-icon [type]="errorType" [iconType]="errorType"></sds-icon>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  `,
+                providers: [
+                    {
+                        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+                        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(() => InputTextComponent_1),
+                        multi: true
+                    }
+                ],
+                styles: [".sds-input-text{position:relative}.sds-input-text__field{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;width:100%;color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-input-text__field--compact{padding:0 8px;line-height:1.8461538462em}.sds-input-text__field--small{padding:0 8px;line-height:2.1428571429em}.sds-input-text__field--medium{padding:0 11px;line-height:2.7142857143em}.sds-input-text__field--large{padding:0 11px;line-height:2.875em;font-size:1.1428571429em}.sds-input-text__field:focus{outline:3px solid var(--color-focus);outline-offset:0}.sds-input-text__field--read-only{color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-input-text__field:disabled{cursor:not-allowed;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-input-text__field--error{border:2px solid var(--color-error)}.sds-input-text__icon{top:0;right:0;position:absolute;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:40px}"]
+            }]
+    }], function () { return []; }, { size: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], disabled: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], readOnly: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], errorType: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], inputFocus: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"]
+        }], inputBlur: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"]
+        }], identifier: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], errors: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], icon: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], placeholderText: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](InputTextModule, { declarations: function () { return [InputTextComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconModule"]]; }, exports: function () { return [InputTextComponent,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](InputTextModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconModule"]],
+                exports: [InputTextComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]],
+                declarations: [InputTextComponent]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=sage-ng-carbon-input-text.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js ***!
+  \**************************************************************************************/
+/*! exports provided: TooltipComponent, TooltipModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TooltipComponent", function() { return TooltipComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TooltipModule", function() { return TooltipModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+
+
+
+
+
+const _c0 = ["sds-tooltip", ""];
+function TooltipComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "div", 1);
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", ctx_r0.identifier);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx_r0.classes)("innerHTML", ctx_r0.tooltipContent, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeHtml"]);
+} }
+const _c1 = ["*"];
+let TooltipComponent = class TooltipComponent {
+    constructor() {
+        this.identifier = `tooltip-${Math.random()
+            .toString()
+            .substring(2, 10) +
+            Math.random()
+                .toString()
+                .substring(2, 10)}`;
+        this.position = 'top';
+    }
+    /**
+     * @description
+     * Returns the id of the tooltip element if will be rendered
+     */
+    get describedBy() {
+        return this.tooltipContent ? this.identifier : null;
+    }
+    /**
+     * @description
+     * Builds the classes to add to the tooltip
+     */
+    get classes() {
+        return {
+            [`sds-tooltip--${this.position}`]: this.position,
+            [`sds-tooltip--error`]: this.error
+        };
+    }
+};
+TooltipComponent.ɵfac = function TooltipComponent_Factory(t) { return new (t || TooltipComponent)(); };
+TooltipComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: TooltipComponent, selectors: [["", "sds-tooltip", ""]], inputs: { identifier: "identifier", position: "position", error: "error", tooltipContent: "tooltipContent" }, attrs: _c0, ngContentSelectors: _c1, decls: 3, vars: 2, consts: [["class", "sds-tooltip", "role", "tooltip", 3, "id", "ngClass", "innerHTML", 4, "ngIf"], ["role", "tooltip", 1, "sds-tooltip", 3, "id", "ngClass", "innerHTML"]], template: function TooltipComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, TooltipComponent_div_2_Template, 1, 3, "div", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("aria-describedby", ctx.describedBy);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.tooltipContent);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]], styles: ["[_nghost-%COMP%]{position:relative}[_nghost-%COMP%]:focus   .sds-tooltip[_ngcontent-%COMP%], [_nghost-%COMP%]:focus-within   .sds-tooltip[_ngcontent-%COMP%], [_nghost-%COMP%]:hover   .sds-tooltip[_ngcontent-%COMP%]{visibility:visible}[_nghost-%COMP%]:focus{outline:3px solid var(--color-focus)}.sds-tooltip[_ngcontent-%COMP%]{--tooltip-color:rgba(0, 0, 0);font-family:var(--font-default-body);visibility:hidden;position:absolute;background:var(--tooltip-color);color:var(--color-white);padding:10px 15px;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:300px;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:var(--tooltip-z-index)}.sds-tooltip[_ngcontent-%COMP%]::after{content:\"\";position:absolute;width:0;height:0;border-top:8px solid var(--tooltip-color);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--right[_ngcontent-%COMP%]{top:50%;left:100%;margin-left:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--right[_ngcontent-%COMP%]::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:-16px;border-top:8px solid transparent;border-right:8px solid var(--tooltip-color);border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--top[_ngcontent-%COMP%]{bottom:100%;margin-bottom:10px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--top[_ngcontent-%COMP%]::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:100%}.sds-tooltip--left[_ngcontent-%COMP%]{top:50%;right:100%;margin-right:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--left[_ngcontent-%COMP%]::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);right:-16px;border-top:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid var(--tooltip-color)}.sds-tooltip--bottom[_ngcontent-%COMP%]{left:50%;top:100%;margin-top:10px;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--bottom[_ngcontent-%COMP%]::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:-16px;border-right:8px solid transparent;border-left:8px solid transparent;border-bottom:8px solid #000;border-top:8px solid transparent;border-bottom:8px solid var(--tooltip-color)}.sds-tooltip--error[_ngcontent-%COMP%]{--tooltip-color:var(--color-red)}"], changeDetection: 0 });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], TooltipComponent.prototype, "identifier", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+], TooltipComponent.prototype, "error", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], TooltipComponent.prototype, "tooltipContent", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(),
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)
+], TooltipComponent.prototype, "position", void 0);
+
+let TooltipModule = class TooltipModule {
+};
+TooltipModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: TooltipModule });
+TooltipModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ factory: function TooltipModule_Factory(t) { return new (t || TooltipModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TooltipComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+                selector: '[sds-tooltip]',
+                template: `
+    <span [attr.aria-describedby]="describedBy">
+      <ng-content></ng-content>
+    </span>
+    <div *ngIf="tooltipContent" id="{{ identifier }}" class="sds-tooltip" [ngClass]="classes" role="tooltip" [innerHTML]="tooltipContent"></div>
+  `,
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectionStrategy"].OnPush,
+                styles: [":host{position:relative}:host:focus .sds-tooltip,:host:focus-within .sds-tooltip,:host:hover .sds-tooltip{visibility:visible}:host:focus{outline:3px solid var(--color-focus)}.sds-tooltip{--tooltip-color:rgba(0, 0, 0);font-family:var(--font-default-body);visibility:hidden;position:absolute;background:var(--tooltip-color);color:var(--color-white);padding:10px 15px;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:300px;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:var(--tooltip-z-index)}.sds-tooltip::after{content:\"\";position:absolute;width:0;height:0;border-top:8px solid var(--tooltip-color);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--right{top:50%;left:100%;margin-left:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--right::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:-16px;border-top:8px solid transparent;border-right:8px solid var(--tooltip-color);border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--top{bottom:100%;margin-bottom:10px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--top::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:100%}.sds-tooltip--left{top:50%;right:100%;margin-right:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--left::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);right:-16px;border-top:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid var(--tooltip-color)}.sds-tooltip--bottom{left:50%;top:100%;margin-top:10px;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--bottom::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:-16px;border-right:8px solid transparent;border-left:8px solid transparent;border-bottom:8px solid #000;border-top:8px solid transparent;border-bottom:8px solid var(--tooltip-color)}.sds-tooltip--error{--tooltip-color:var(--color-red)}"]
+            }]
+    }], function () { return []; }, { identifier: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], position: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], error: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }], tooltipContent: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](TooltipModule, { declarations: function () { return [TooltipComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]; }, exports: function () { return [TooltipComponent]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TooltipModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+                exports: [TooltipComponent],
+                declarations: [TooltipComponent]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=sage-ng-carbon-tooltip.js.map
+
+/***/ }),
+
 /***/ "./node_modules/rxjs/_esm2015/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/rxjs/_esm2015/index.js ***!
@@ -82214,6 +83871,260 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/tslib/tslib.es6.js":
+/*!*****************************************!*\
+  !*** ./node_modules/tslib/tslib.es6.js ***!
+  \*****************************************/
+/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __createBinding(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
 
 /***/ })
 

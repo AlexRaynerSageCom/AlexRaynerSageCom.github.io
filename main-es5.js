@@ -1,3 +1,15 @@
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
@@ -231,7 +243,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
           selector: 'app-root',
-          template: "\n    <div>\n      <div class=\"text\">Grid Layout Builder</div>\n      <app-builder-form\n        [grid]=\"grid\"\n        (gridChanged)=\"updateGrid($event)\"\n      >\n      </app-builder-form>\n      <app-grid-view [grid]=\"grid\">\n      </app-grid-view>\n    </div>\n  ",
+          template: "\n    <div>\n      <div class=\"text\">Grid Layout Builder</div>\n      <app-builder-form\n        [grid]=\"grid\"\n        (gridChanged)=\"updateGrid($event)\"\n      >\n      </app-builder-form>\n\n      <app-grid-view [grid]=\"grid\">\n      </app-grid-view>\n    </div>\n  ",
           styleUrls: ['./app.component.scss']
         }]
       }], null, null);
@@ -295,6 +307,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./components */
     "./src/app/components/index.ts");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @sage/ng-carbon/button */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @sage/ng-carbon/dropdown */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! @sage/ng-carbon/input-text */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-input-text.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! @sage/ng-carbon/checkbox */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-checkbox.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -309,13 +351,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return new (t || AppModule)();
       },
       providers: [],
-      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]]]
+      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_6__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_7__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_8__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_9__["CheckboxModule"]]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _components__WEBPACK_IMPORTED_MODULE_5__["BuilderFormComponent"], _components__WEBPACK_IMPORTED_MODULE_5__["GridViewComponent"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]]
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_6__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_7__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_8__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_9__["CheckboxModule"]]
       });
     })();
     /*@__PURE__*/
@@ -325,7 +367,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"]],
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_6__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_7__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_8__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_9__["CheckboxModule"]],
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _components__WEBPACK_IMPORTED_MODULE_5__["BuilderFormComponent"], _components__WEBPACK_IMPORTED_MODULE_5__["GridViewComponent"]],
           providers: [],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -367,6 +409,196 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @sage/ng-carbon/button */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @sage/ng-carbon/checkbox */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-checkbox.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @sage/ng-carbon/input-text */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-input-text.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @sage/ng-carbon/dropdown */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js");
+
+    function BuilderFormComponent_form_15_sds_dropdown_option_6_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-dropdown-option", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var option_r3 = ctx.$implicit;
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", option_r3);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", option_r3, " ");
+      }
+    }
+
+    function BuilderFormComponent_form_15_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function BuilderFormComponent_form_15_Template_form_ngSubmit_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
+
+          var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r4.addColumn();
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "label");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " New Column: ");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "sds-input-text", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "sds-dropdown", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, BuilderFormComponent_form_15_sds_dropdown_option_6_Template, 2, 2, "sds-dropdown-option", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "sds-button", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Add");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx_r0.columnForm);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("errors", ctx_r0.isFieldInvalid(ctx_r0.columnForm, "size"));
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("errors", ctx_r0.isFieldInvalid(ctx_r0.columnForm, "unit"));
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.axisUnits);
+      }
+    }
+
+    function BuilderFormComponent_form_16_sds_dropdown_option_6_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-dropdown-option", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var option_r7 = ctx.$implicit;
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", option_r7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", option_r7, " ");
+      }
+    }
+
+    function BuilderFormComponent_form_16_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function BuilderFormComponent_form_16_Template_form_ngSubmit_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9);
+
+          var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r8.addRow();
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "label");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " New Row: ");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "sds-input-text", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "sds-dropdown", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, BuilderFormComponent_form_16_sds_dropdown_option_6_Template, 2, 2, "sds-dropdown-option", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "sds-button", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Add");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx_r1.rowForm);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("errors", ctx_r1.isFieldInvalid(ctx_r1.rowForm, "size"));
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("errors", ctx_r1.isFieldInvalid(ctx_r1.rowForm, "unit"));
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.axisUnits);
+      }
+    }
 
     var BuilderFormComponent = /*#__PURE__*/function () {
       function BuilderFormComponent(fb) {
@@ -374,6 +606,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.fb = fb;
         this.gridChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.showColumnForm = false;
+        this.showRowForm = false;
+        this.axisUnits = ['fr', '%', 'px', 'auto'];
       }
 
       _createClass(BuilderFormComponent, [{
@@ -383,38 +618,69 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.form = this.fb.group({
             columnGap: this.grid.columnGap,
-            rowGap: this.grid.rowGap
+            rowGap: this.grid.rowGap,
+            fillGrid: this.grid.fillGrid
           });
-          this.form.get('columnGap').valueChanges.subscribe(function (value) {
-            var newGrid = Object.assign(Object.assign({}, _this.grid), {
-              columnGap: value
-            });
+          this.columnForm = this.fb.group({
+            size: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            unit: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
+          });
+          this.rowForm = this.fb.group({
+            size: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            unit: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
+          });
+          this.form.valueChanges.subscribe(function (value) {
+            var newGrid = Object.assign(Object.assign({}, _this.grid), value);
 
             _this.gridChanged.emit(newGrid);
-          });
-          this.form.get('rowGap').valueChanges.subscribe(function (value) {
-            var newGrid = Object.assign(Object.assign({}, _this.grid), {
-              rowGap: value
-            });
 
-            _this.gridChanged.emit(newGrid);
+            console.log(newGrid);
           });
         }
       }, {
-        key: "updateColumns",
-        value: function updateColumns(value) {
-          var newGrid = Object.assign(Object.assign({}, this.grid), {
-            columns: value
-          });
-          this.gridChanged.emit(newGrid);
+        key: "isFieldInvalid",
+        value: function isFieldInvalid(form, field) {
+          return form.get(field).touched && form.get(field).errors ? 'This field is required.' : null;
         }
       }, {
-        key: "updateRows",
-        value: function updateRows(value) {
+        key: "addColumn",
+        value: function addColumn() {
+          this.columnForm.markAllAsTouched();
+
+          if (!this.columnForm.valid) {
+            return;
+          }
+
+          var newColumn = {
+            size: this.columnForm.get('size').value,
+            unit: this.columnForm.get('unit').value
+          };
           var newGrid = Object.assign(Object.assign({}, this.grid), {
-            rows: value
+            columns: [].concat(_toConsumableArray(this.grid.columns), [newColumn])
           });
           this.gridChanged.emit(newGrid);
+          this.columnForm.reset();
+          this.showColumnForm = false;
+        }
+      }, {
+        key: "addRow",
+        value: function addRow() {
+          this.rowForm.markAllAsTouched();
+
+          if (!this.rowForm.valid) {
+            return;
+          }
+
+          var newRow = {
+            size: this.rowForm.get('size').value,
+            unit: this.rowForm.get('unit').value
+          };
+          var newGrid = Object.assign(Object.assign({}, this.grid), {
+            rows: [].concat(_toConsumableArray(this.grid.rows), [newRow])
+          });
+          this.gridChanged.emit(newGrid);
+          this.rowForm.reset();
+          this.showRowForm = false;
         }
       }]);
 
@@ -436,56 +702,48 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 17,
       vars: 3,
-      consts: [[1, "builder-form", 3, "formGroup"], ["type", "button", 3, "click"], ["type", "button", 3, "disabled", "click"], [1, "input-field"], ["type", "number", "min", "0", "formControlName", "columnGap"], ["type", "number", "min", "0", "formControlName", "rowGap"]],
+      consts: [[1, "builder-form", 3, "formGroup"], ["type", "button", 3, "clickEvent"], [1, "input-field"], ["type", "number", "min", "0", "formControlName", "columnGap"], ["type", "number", "min", "0", "formControlName", "rowGap"], ["formControlName", "fillGrid", "size", "large"], [3, "formGroup", "ngSubmit", 4, "ngIf"], [3, "formGroup", "ngSubmit"], ["formControlName", "size", "placeholderText", "size..", "errorType", "error", 3, "errors"], ["formControlName", "unit", "placeholder", "unit..", "errorType", "error", 3, "errors"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "submit"], [3, "value"]],
       template: function BuilderFormComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "sds-button", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BuilderFormComponent_Template_button_click_1_listener() {
-            return ctx.updateColumns(ctx.grid.columns + 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickEvent", function BuilderFormComponent_Template_sds_button_clickEvent_1_listener() {
+            return ctx.showColumnForm = true;
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Add Column ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "button", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "sds-button", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BuilderFormComponent_Template_button_click_3_listener() {
-            return ctx.updateColumns(ctx.grid.columns - 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickEvent", function BuilderFormComponent_Template_sds_button_clickEvent_3_listener() {
+            return ctx.showRowForm = true;
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " Remove Column ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " Add Row ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "button", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BuilderFormComponent_Template_button_click_5_listener() {
-            return ctx.updateRows(ctx.grid.rows + 1);
-          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "label");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Add Row ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Column Gap (px): ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "button", 2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function BuilderFormComponent_Template_button_click_7_listener() {
-            return ctx.updateRows(ctx.grid.rows - 1);
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Remove Row ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "input", 3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "label");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " Column Gap (px): ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " Row Gap (px): ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "input", 4);
 
@@ -493,35 +751,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "sds-checkbox", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "label");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " Row Gap (px): ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "input", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, " Fill grid? ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, BuilderFormComponent_form_15_Template, 9, 4, "form", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, BuilderFormComponent_form_16_Template, 9, 4, "form", 6);
         }
 
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.form);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx.grid.columns === 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.showColumnForm);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx.grid.rows === 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.showRowForm);
         }
       },
-      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"]],
-      styles: [".builder-form[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n\n.input-field[_ngcontent-%COMP%] {\n  display: inline-block;\n  padding: 8px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9idWlsZGVyLWZvcm0vQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxidWlsZGVyLWZvcm1cXGJ1aWxkZXItZm9ybS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9idWlsZGVyLWZvcm0vYnVpbGRlci1mb3JtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UscUJBQUE7QUNDRjs7QURFQTtFQUNFLHFCQUFBO0VBQ0EsWUFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9idWlsZGVyLWZvcm0vYnVpbGRlci1mb3JtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ1aWxkZXItZm9ybSB7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59XHJcblxyXG4uaW5wdXQtZmllbGQge1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBwYWRkaW5nOiA4cHg7XHJcbn1cclxuIiwiLmJ1aWxkZXItZm9ybSB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmlucHV0LWZpZWxkIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBwYWRkaW5nOiA4cHg7XG59Il19 */"]
+      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_2__["ButtonComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_3__["CheckboxComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_5__["InputTextComponent"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_6__["DropdownComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_6__["DropdownOptionComponent"]],
+      styles: [".builder-form[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n\n.input-field[_ngcontent-%COMP%] {\n  display: inline-block;\n  padding: 8px;\n}\n\n.input-field[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  display: inline-block;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9idWlsZGVyLWZvcm0vQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxidWlsZGVyLWZvcm1cXGJ1aWxkZXItZm9ybS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9idWlsZGVyLWZvcm0vYnVpbGRlci1mb3JtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UscUJBQUE7QUNDRjs7QURFQTtFQUNFLHFCQUFBO0VBQ0EsWUFBQTtBQ0NGOztBRENFO0VBQ0UscUJBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYnVpbGRlci1mb3JtL2J1aWxkZXItZm9ybS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idWlsZGVyLWZvcm0ge1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxufVxyXG5cclxuLmlucHV0LWZpZWxkIHtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgcGFkZGluZzogOHB4O1xyXG5cclxuICBsYWJlbCA+ICoge1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIH1cclxufVxyXG4iLCIuYnVpbGRlci1mb3JtIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4uaW5wdXQtZmllbGQge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHBhZGRpbmc6IDhweDtcbn1cbi5pbnB1dC1maWVsZCBsYWJlbCA+ICoge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -530,7 +786,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
           selector: 'app-builder-form',
-          template: "\n    <form class=\"builder-form\" [formGroup]=\"form\">\n      <button\n        type=\"button\"\n        (click)=\"updateColumns(grid.columns + 1)\"\n      >\n        Add Column\n      </button>\n      <button\n        type=\"button\"\n        [disabled]=\"grid.columns === 0\"\n        (click)=\"updateColumns(grid.columns - 1)\"\n      >\n        Remove Column\n      </button>\n\n      <button\n        type=\"button\"\n        (click)=\"updateRows(grid.rows + 1)\"\n      >\n        Add Row\n      </button>\n      <button\n        type=\"button\"\n        [disabled]=\"grid.rows === 0\"\n        (click)=\"updateRows(grid.rows - 1)\"\n      >\n        Remove Row\n      </button>\n\n      <div class=\"input-field\">\n        <label>\n          Column Gap (px):\n          <input type=\"number\" min=\"0\" formControlName=\"columnGap\"/>\n        </label>\n      </div>\n\n      <div class=\"input-field\">\n        <label>\n          Row Gap (px):\n          <input type=\"number\" min=\"0\" formControlName=\"rowGap\"/>\n        </label>\n      </div>\n    </form>\n  ",
+          template: "\n    <form class=\"builder-form\" [formGroup]=\"form\">\n      <sds-button\n        type=\"button\"\n        (clickEvent)=\"showColumnForm = true\"\n      >\n        Add Column\n      </sds-button>\n\n      <sds-button\n        type=\"button\"\n        (clickEvent)=\"showRowForm = true\"\n      >\n        Add Row\n      </sds-button>\n\n      <div class=\"input-field\">\n        <label>\n          Column Gap (px):\n          <input type=\"number\" min=\"0\" formControlName=\"columnGap\"/>\n        </label>\n      </div>\n\n      <div class=\"input-field\">\n        <label>\n          Row Gap (px):\n          <input type=\"number\" min=\"0\" formControlName=\"rowGap\"/>\n        </label>\n      </div>\n\n      <sds-checkbox\n        formControlName=\"fillGrid\"\n        size=\"large\"\n      >\n        Fill grid?\n      </sds-checkbox>\n    </form>\n\n    <form\n      *ngIf=\"showColumnForm\"\n      [formGroup]=\"columnForm\"\n      (ngSubmit)=\"addColumn()\"\n    >\n      <div class=\"input-field\">\n        <label>\n          New Column:\n          <sds-input-text\n            formControlName=\"size\"\n            placeholderText=\"size..\"\n            errorType=\"error\"\n            [errors]=\"isFieldInvalid(columnForm, 'size')\"\n          >\n          </sds-input-text>\n          <sds-dropdown\n            formControlName=\"unit\"\n            placeholder=\"unit..\"\n            errorType=\"error\"\n            [errors]=\"isFieldInvalid(columnForm, 'unit')\"\n          >\n            <sds-dropdown-option\n              *ngFor=\"let option of axisUnits\"\n              [value]=\"option\"\n            >\n              {{ option }}\n            </sds-dropdown-option>\n          </sds-dropdown>\n        </label>\n      </div>\n\n      <sds-button type=\"submit\">Add</sds-button>\n    </form>\n\n    <form\n      *ngIf=\"showRowForm\"\n      [formGroup]=\"rowForm\"\n      (ngSubmit)=\"addRow()\"\n    >\n      <div class=\"input-field\">\n        <label>\n          New Row:\n          <sds-input-text\n            formControlName=\"size\"\n            placeholderText=\"size..\"\n            errorType=\"error\"\n            [errors]=\"isFieldInvalid(rowForm, 'size')\"\n          >\n          </sds-input-text>\n          <sds-dropdown\n            formControlName=\"unit\"\n            placeholder=\"unit..\"\n            errorType=\"error\"\n            [errors]=\"isFieldInvalid(rowForm, 'unit')\"\n          >\n            <sds-dropdown-option\n              *ngFor=\"let option of axisUnits\"\n              [value]=\"option\"\n            >\n              {{ option }}\n            </sds-dropdown-option>\n          </sds-dropdown>\n        </label>\n      </div>\n\n      <sds-button type=\"submit\">Add</sds-button>\n    </form>\n  ",
           styleUrls: ['./builder-form.component.scss']
         }]
       }], function () {
@@ -578,15 +834,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @sage/ng-carbon/button */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var _c0 = ["grid"];
+    var _c0 = ["gridElem"];
 
     function GridViewComponent_pre_2_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "pre", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "pre", 8);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -602,13 +864,111 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function GridViewComponent_div_5_Template(rf, ctx) {
+    function GridViewComponent_div_4_div_1_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 6);
+        var _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " ITEM ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridViewComponent_div_4_div_1_Template_div_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9);
+
+          var i_r7 = ctx.index;
+
+          var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r8.removeColumn(i_r7);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " DELETE ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    function GridViewComponent_div_4_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridViewComponent_div_4_div_1_Template, 2, 0, "div", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx_r1.columnStyles);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.columnCount);
+      }
+    }
+
+    function GridViewComponent_div_5_div_1_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridViewComponent_div_5_div_1_Template_div_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14);
+
+          var i_r12 = ctx.index;
+
+          var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r13.removeRow(i_r12);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " DELETE ");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    function GridViewComponent_div_5_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridViewComponent_div_5_div_1_Template, 2, 0, "div", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx_r2.rowStyles);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r2.rowCount);
+      }
+    }
+
+    function GridViewComponent_ng_container_8_div_1_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "div", 14);
+      }
+    }
+
+    function GridViewComponent_ng_container_8_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridViewComponent_ng_container_8_div_1_Template, 1, 0, "div", 13);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r4.count);
       }
     }
 
@@ -629,20 +989,54 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.generatedStyles = styles.replace(/; /g, ';\n    ');
         }
       }, {
-        key: "size",
+        key: "removeColumn",
+        value: function removeColumn(index) {
+          this.grid.columns.splice(index, 1);
+        }
+      }, {
+        key: "removeRow",
+        value: function removeRow(index) {
+          this.grid.rows.splice(index, 1);
+        }
+      }, {
+        key: "columnCount",
         get: function get() {
-          return new Array(this.grid.columns * Math.max(1, this.grid.rows));
+          return new Array(this.grid.columns.length);
+        }
+      }, {
+        key: "rowCount",
+        get: function get() {
+          return new Array(this.grid.rows.length);
+        }
+      }, {
+        key: "count",
+        get: function get() {
+          return new Array(this.grid.columns.length * Math.max(1, this.grid.rows.length));
+        }
+      }, {
+        key: "columnStyles",
+        get: function get() {
+          return {
+            gridTemplateColumns: this.grid.columns.map(function (column) {
+              return "".concat(column.size).concat(column.unit);
+            }).join(' '),
+            gridColumnGap: this.grid.columnGap + 'px'
+          };
+        }
+      }, {
+        key: "rowStyles",
+        get: function get() {
+          return {
+            gridTemplateRows: this.grid.rows.map(function (row) {
+              return "".concat(row.size).concat(row.unit);
+            }).join(' '),
+            gridRowGap: this.grid.rowGap + 'px'
+          };
         }
       }, {
         key: "styles",
         get: function get() {
-          var fr = '1fr ';
-          return {
-            gridTemplateColumns: fr.repeat(this.grid.columns),
-            gridTemplateRows: fr.repeat(this.grid.rows),
-            gridColumnGap: this.grid.columnGap + 'px',
-            gridRowGap: this.grid.rowGap + 'px'
-          };
+          return Object.assign(Object.assign({}, this.columnStyles), this.rowStyles);
         }
       }]);
 
@@ -670,14 +1064,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       inputs: {
         grid: "grid"
       },
-      decls: 6,
-      vars: 4,
-      consts: [[3, "click"], ["class", "output-styles", 4, "ngIf"], ["id", "grid", 1, "grid"], ["grid", ""], ["class", "grid__item", 4, "ngFor", "ngForOf"], [1, "output-styles"], [1, "grid__item"]],
+      decls: 9,
+      vars: 6,
+      consts: [[3, "clickEvent"], ["class", "output-styles", 4, "ngIf"], [1, "grid-view"], ["class", "columns", 3, "style", 4, "ngIf"], ["class", "rows", 3, "style", 4, "ngIf"], [1, "grid"], ["gridElem", ""], [4, "ngIf"], [1, "output-styles"], [1, "columns"], ["tabIndex", "0", 3, "click", 4, "ngFor", "ngForOf"], ["tabIndex", "0", 3, "click"], [1, "rows"], ["class", "grid__item", 4, "ngFor", "ngForOf"], [1, "grid__item"]],
       template: function GridViewComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-button", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridViewComponent_Template_button_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickEvent", function GridViewComponent_Template_sds_button_clickEvent_0_listener() {
             return ctx.getStyles();
           });
 
@@ -687,9 +1081,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, GridViewComponent_pre_2_Template, 2, 1, "pre", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2, 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, GridViewComponent_div_5_Template, 2, 0, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, GridViewComponent_div_4_Template, 2, 3, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, GridViewComponent_div_5_Template, 2, 3, "div", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 5, 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, GridViewComponent_ng_container_8_Template, 2, 1, "ng-container", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -699,17 +1101,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.generatedStyles);
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.grid.columns.length > 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.grid.rows.length > 0);
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](ctx.styles);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.size);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.grid == null ? null : ctx.grid.fillGrid);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]],
-      styles: ["[_nghost-%COMP%] {\n  display: block;\n}\n\n.grid[_ngcontent-%COMP%] {\n  padding: 16px;\n  height: 600px;\n}\n\n.grid__item[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  font-weight: bold;\n  background-color: #008200;\n}\n\n.output-styles[_ngcontent-%COMP%] {\n  padding: 16px;\n  background-color: #F2F5F6;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLXZpZXdcXGdyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtBQ0NGOztBREVBO0VBQ0UsYUFBQTtFQUNBLGFBQUE7QUNDRjs7QURDRTtFQUNFLFdBQUE7RUFDQSxZQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtBQ0NKOztBREdBO0VBQ0UsYUFBQTtFQUNBLHlCQUFBO0FDQUYiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2dyaWQtdmlldy9ncmlkLXZpZXcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbn1cclxuXHJcbi5ncmlkIHtcclxuICBwYWRkaW5nOiAxNnB4O1xyXG4gIGhlaWdodDogNjAwcHg7XHJcblxyXG4gICZfX2l0ZW0ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDgyMDA7XHJcbiAgfVxyXG59XHJcblxyXG4ub3V0cHV0LXN0eWxlcyB7XHJcbiAgcGFkZGluZzogMTZweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjJGNUY2O1xyXG59XHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG59XG5cbi5ncmlkIHtcbiAgcGFkZGluZzogMTZweDtcbiAgaGVpZ2h0OiA2MDBweDtcbn1cbi5ncmlkX19pdGVtIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDgyMDA7XG59XG5cbi5vdXRwdXQtc3R5bGVzIHtcbiAgcGFkZGluZzogMTZweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0YyRjVGNjtcbn0iXX0= */"]
+      directives: [_sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_1__["ButtonComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]],
+      styles: ["[_nghost-%COMP%] {\n  display: block;\n}\n\n.grid-view[_ngcontent-%COMP%] {\n  padding: 16px;\n  display: grid;\n  grid-template-columns: auto 1fr;\n  grid-template-rows: auto 1fr;\n  gap: 10px;\n}\n\n.columns[_ngcontent-%COMP%], .rows[_ngcontent-%COMP%] {\n  display: grid;\n  font-weight: bold;\n  color: #C7384F;\n  text-align: center;\n  cursor: pointer;\n}\n\n.columns[_ngcontent-%COMP%] {\n  grid-column: 2;\n  grid-row: 1;\n}\n\n.rows[_ngcontent-%COMP%] {\n  grid-template-columns: -webkit-min-content;\n  grid-template-columns: min-content;\n  grid-column: 1;\n  grid-row: 2;\n}\n\n.rows[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  writing-mode: vertical-lr;\n  transform: rotate(-180deg);\n}\n\n.grid[_ngcontent-%COMP%] {\n  grid-column: 2;\n  grid-row: 2;\n  height: 550px;\n}\n\n.grid__item[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  background-color: #008200;\n}\n\n.output-styles[_ngcontent-%COMP%] {\n  padding: 16px;\n  background-color: #F2F5F6;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLXZpZXdcXGdyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtBQ0NGOztBREVBO0VBQ0UsYUFBQTtFQUNBLGFBQUE7RUFDQSwrQkFBQTtFQUNBLDRCQUFBO0VBQ0EsU0FBQTtBQ0NGOztBREVBO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtBQ0NGOztBREVBO0VBQ0UsY0FBQTtFQUNBLFdBQUE7QUNDRjs7QURFQTtFQUNFLDBDQUFBO0VBQUEsa0NBQUE7RUFDQSxjQUFBO0VBQ0EsV0FBQTtBQ0NGOztBRENFO0VBQ0UseUJBQUE7RUFDQSwwQkFBQTtBQ0NKOztBREdBO0VBQ0UsY0FBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0FDQUY7O0FERUU7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLHlCQUFBO0FDQUo7O0FESUE7RUFDRSxhQUFBO0VBQ0EseUJBQUE7QUNERiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZ3JpZC12aWV3L2dyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcclxuICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxuLmdyaWQtdmlldyB7XHJcbiAgcGFkZGluZzogMTZweDtcclxuICBkaXNwbGF5OiBncmlkO1xyXG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byAxZnI7XHJcbiAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiBhdXRvIDFmcjtcclxuICBnYXA6IDEwcHg7XHJcbn1cclxuXHJcbi5jb2x1bW5zLCAucm93cyB7XHJcbiAgZGlzcGxheTogZ3JpZDtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBjb2xvcjogI0M3Mzg0RjtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uY29sdW1ucyB7XHJcbiAgZ3JpZC1jb2x1bW46IDI7XHJcbiAgZ3JpZC1yb3c6IDE7XHJcbn1cclxuXHJcbi5yb3dzIHtcclxuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IG1pbi1jb250ZW50O1xyXG4gIGdyaWQtY29sdW1uOiAxO1xyXG4gIGdyaWQtcm93OiAyO1xyXG4gIFxyXG4gID4gKiB7XHJcbiAgICB3cml0aW5nLW1vZGU6IHZlcnRpY2FsLWxyO1xyXG4gICAgdHJhbnNmb3JtOiByb3RhdGUoLTE4MGRlZyk7XHJcbiAgfVxyXG59XHJcblxyXG4uZ3JpZCB7XHJcbiAgZ3JpZC1jb2x1bW46IDI7XHJcbiAgZ3JpZC1yb3c6IDI7XHJcbiAgaGVpZ2h0OiA1NTBweDtcclxuXHJcbiAgJl9faXRlbSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDgyMDA7XHJcbiAgfVxyXG59XHJcblxyXG4ub3V0cHV0LXN0eWxlcyB7XHJcbiAgcGFkZGluZzogMTZweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjJGNUY2O1xyXG59XHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG59XG5cbi5ncmlkLXZpZXcge1xuICBwYWRkaW5nOiAxNnB4O1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG8gMWZyO1xuICBncmlkLXRlbXBsYXRlLXJvd3M6IGF1dG8gMWZyO1xuICBnYXA6IDEwcHg7XG59XG5cbi5jb2x1bW5zLCAucm93cyB7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBjb2xvcjogI0M3Mzg0RjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5jb2x1bW5zIHtcbiAgZ3JpZC1jb2x1bW46IDI7XG4gIGdyaWQtcm93OiAxO1xufVxuXG4ucm93cyB7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogbWluLWNvbnRlbnQ7XG4gIGdyaWQtY29sdW1uOiAxO1xuICBncmlkLXJvdzogMjtcbn1cbi5yb3dzID4gKiB7XG4gIHdyaXRpbmctbW9kZTogdmVydGljYWwtbHI7XG4gIHRyYW5zZm9ybTogcm90YXRlKC0xODBkZWcpO1xufVxuXG4uZ3JpZCB7XG4gIGdyaWQtY29sdW1uOiAyO1xuICBncmlkLXJvdzogMjtcbiAgaGVpZ2h0OiA1NTBweDtcbn1cbi5ncmlkX19pdGVtIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwODIwMDtcbn1cblxuLm91dHB1dC1zdHlsZXMge1xuICBwYWRkaW5nOiAxNnB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjJGNUY2O1xufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -718,13 +1128,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
           selector: 'app-grid-view',
-          template: "\n    <button (click)=\"getStyles()\">\n      Get Styles\n    </button>\n\n    <pre\n      *ngIf=\"generatedStyles\"\n      class=\"output-styles\"\n    >\n.grid &#123;\n    {{ generatedStyles }}\n&#125;\n</pre>\n\n    <div\n      #grid\n      id=\"grid\"\n      class=\"grid\"\n      [style]=\"styles\"\n    >\n      <div\n        class=\"grid__item\"\n        *ngFor=\"let item of size\"\n      >\n        ITEM\n      </div>\n    </div>\n  ",
+          template: "\n    <sds-button (clickEvent)=\"getStyles()\">\n      Get Styles\n    </sds-button>\n\n    <pre\n      *ngIf=\"generatedStyles\"\n      class=\"output-styles\"\n    >\n.grid &#123;\n    {{ generatedStyles }}\n&#125;\n</pre>\n\n    <div class=\"grid-view\">\n\n      <div\n        *ngIf=\"grid.columns.length > 0\"\n        class=\"columns\"\n        [style]=\"columnStyles\"\n      >\n        <div\n          *ngFor=\"let col of columnCount; let i = index\"\n          tabIndex=\"0\"\n          (click)=\"removeColumn(i)\"\n        >\n          DELETE\n        </div>\n      </div>\n\n      <div\n        *ngIf=\"grid.rows.length > 0\"\n        class=\"rows\"\n        [style]=\"rowStyles\"\n      >\n        <div\n          *ngFor=\"let row of rowCount; let i = index\"\n          tabIndex=\"0\"\n          (click)=\"removeRow(i)\"\n        >\n          DELETE\n        </div>\n      </div>\n\n      <div\n        #gridElem\n        class=\"grid\"\n        [style]=\"styles\"\n      >\n        <ng-container *ngIf=\"grid?.fillGrid\">\n          <div\n            *ngFor=\"let item of count\"\n            class=\"grid__item\"\n          ></div>\n        </ng-container>\n      </div>\n    </div>\n  ",
           styleUrls: ['./grid-view.component.scss']
         }]
       }], null, {
         gridElem: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
-          args: ['grid']
+          args: ['gridElem']
         }],
         grid: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
@@ -798,10 +1208,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var getInitialGrid = function getInitialGrid() {
       return {
-        columns: 2,
-        rows: 2,
+        columns: [{
+          size: '1',
+          unit: 'fr'
+        }, {
+          size: '1',
+          unit: 'fr'
+        }],
+        rows: [{
+          size: '1',
+          unit: 'fr'
+        }, {
+          size: '1',
+          unit: 'fr'
+        }],
         columnGap: 10,
-        rowGap: 10
+        rowGap: 10,
+        fillGrid: true
       };
     };
     /***/

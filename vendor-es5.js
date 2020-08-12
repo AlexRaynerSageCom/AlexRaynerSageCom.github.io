@@ -98584,6 +98584,2218 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js":
+  /*!*************************************************************************************!*\
+    !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js ***!
+    \*************************************************************************************/
+
+  /*! exports provided: ButtonComponent, ButtonModule */
+
+  /***/
+  function node_modulesSageNgCarbon__ivy_ngcc__Fesm2015SageNgCarbonButtonJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ButtonComponent", function () {
+      return ButtonComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ButtonModule", function () {
+      return ButtonModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var _c0 = ["*"];
+
+    var ButtonComponent = /*#__PURE__*/function () {
+      function ButtonComponent() {
+        _classCallCheck(this, ButtonComponent);
+
+        this.type = 'button';
+        this.size = 'medium';
+        this.buttonType = 'primary';
+        this.disabled = false;
+        this.destructive = false;
+        this.clickEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+      }
+
+      _createClass2(ButtonComponent, [{
+        key: "handleEvent",
+
+        /**
+         * @description
+         * Emits event click if button is not disabled
+         */
+        value: function handleEvent() {
+          if (!this.disabled) {
+            this.clickEvent.emit();
+          }
+        }
+      }, {
+        key: "classes",
+        get: function get() {
+          var _ref12;
+
+          var CLASS_NAME = 'sds-button';
+          return _ref12 = {}, _defineProperty(_ref12, "".concat(CLASS_NAME, "-").concat(this.buttonType), this.buttonType), _defineProperty(_ref12, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref12, "".concat(CLASS_NAME, "--disabled"), this.disabled), _defineProperty(_ref12, "".concat(CLASS_NAME, "--destructive"), this.destructive), _ref12;
+        }
+      }]);
+
+      return ButtonComponent;
+    }();
+
+    ButtonComponent.ɵfac = function ButtonComponent_Factory(t) {
+      return new (t || ButtonComponent)();
+    };
+
+    ButtonComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: ButtonComponent,
+      selectors: [["sds-button"]],
+      inputs: {
+        type: "type",
+        size: "size",
+        buttonType: "buttonType",
+        disabled: "disabled",
+        destructive: "destructive"
+      },
+      outputs: {
+        clickEvent: "clickEvent"
+      },
+      ngContentSelectors: _c0,
+      decls: 2,
+      vars: 3,
+      consts: [[1, "sds-button", 3, "type", "disabled", "ngClass", "click", "keypress.enter"]],
+      template: function ButtonComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function ButtonComponent_Template_button_click_0_listener() {
+            return ctx.handleEvent();
+          })("keypress.enter", function ButtonComponent_Template_button_keypress_enter_0_listener() {
+            return ctx.handleEvent();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("type", ctx.type)("disabled", ctx.disabled)("ngClass", ctx.classes);
+        }
+      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]],
+      styles: [".sds-button[_ngcontent-%COMP%]{font-size:1em;cursor:pointer;border-radius:0;font-weight:600;display:inline-block;color:var(--color-white);padding:0 1.7142857143em;line-height:2.5714285714em;border:2px solid transparent;background:var(--button-color);font-family:var(--font-default-body)}.sds-button[_ngcontent-%COMP%]:focus, .sds-button[_ngcontent-%COMP%]:hover{--button-color:var(--color-hover)}.sds-button[_ngcontent-%COMP%]:disabled, .sds-button[aria-disabled=true][_ngcontent-%COMP%]{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button[_ngcontent-%COMP%]:disabled:focus, .sds-button[_ngcontent-%COMP%]:disabled:hover, .sds-button[aria-disabled=true][_ngcontent-%COMP%]:focus, .sds-button[aria-disabled=true][_ngcontent-%COMP%]:hover{--button-color:var(--color-slate-90);color:var(--color-black-30);cursor:not-allowed}.sds-button[_ngcontent-%COMP%]:focus{outline:3px solid var(--color-focus)}.sds-button.sds-button--small[_ngcontent-%COMP%]{line-height:2em;padding:0 1.1428571429em}.sds-button.sds-button--large[_ngcontent-%COMP%]{font-size:1.1428571429em;line-height:2.75em;padding:0 2em}.sds-button-primary[_ngcontent-%COMP%]{color:var(--color-white);background:var(--button-color)}.sds-button-secondary[_ngcontent-%COMP%]{border-color:currentColor;color:var(--button-color);background:var(--color-white)}.sds-button-secondary[_ngcontent-%COMP%]:focus, .sds-button-secondary[_ngcontent-%COMP%]:hover{--button-color:var(--color-hover);color:var(--color-white);border-color:var(--button-color);background:var(--button-color)}.sds-button-secondary[_ngcontent-%COMP%]:disabled, .sds-button-secondary[aria-disabled=true][_ngcontent-%COMP%]{cursor:not-allowed;color:var(--color-black-30);border-color:var(--color-slate-90);background:var(--color-white)}.sds-button-tertiary[_ngcontent-%COMP%]{color:var(--button-color);background:0 0;border-color:transparent}.sds-button.sds-button--destructive[_ngcontent-%COMP%]{--button-color:var(--color-red)}.sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover{--button-color:var(--color-red-shade-10)}.sds-button.sds-button--disabled[_ngcontent-%COMP%]{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button.sds-button--disabled[_ngcontent-%COMP%]:focus, .sds-button.sds-button--disabled[_ngcontent-%COMP%]:hover{cursor:not-allowed}.sds-button-bar[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], .sds-button-bar   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]{margin-left:-2px}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], sds-split-button-options[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%], sds-split-button-options   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]{width:100%;text-align:inherit;--button-color:var(--button-color--hover)}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover, sds-split-button-options[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, sds-split-button-options   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:focus, sds-split-button-options[_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover, sds-split-button-options   [_nghost-%COMP%]   .sds-button[_ngcontent-%COMP%]:hover{--button-color:var(--button-color--hover-2);z-index:2}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%], .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%], sds-split-button-options[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%], sds-split-button-options   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]{--button-color:var(--button-color-destructive--hover)}.sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, .sds-multi-action-button__expandable[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover, .sds-multi-action-button__expandable   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover, sds-split-button-options[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, sds-split-button-options   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:focus, sds-split-button-options[_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover, sds-split-button-options   [_nghost-%COMP%]   .sds-button.sds-button--destructive[_ngcontent-%COMP%]:hover{--button-color:var(--button-color-destructive--hover-2)}"]
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ButtonComponent.prototype, "type", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ButtonComponent.prototype, "size", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ButtonComponent.prototype, "buttonType", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ButtonComponent.prototype, "disabled", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ButtonComponent.prototype, "destructive", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"])], ButtonComponent.prototype, "clickEvent", void 0);
+
+    var ButtonModule = function ButtonModule() {
+      _classCallCheck(this, ButtonModule);
+    };
+
+    ButtonModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
+      type: ButtonModule
+    });
+    ButtonModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
+      factory: function ButtonModule_Factory(t) {
+        return new (t || ButtonModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](ButtonComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-button',
+          template: "\n    <button [type]=\"type\" [disabled]=\"disabled\" [ngClass]=\"classes\" class=\"sds-button\" (click)=\"handleEvent()\" (keypress.enter)=\"handleEvent()\">\n      <ng-content></ng-content>\n    </button>\n  ",
+          styles: [".sds-button{font-size:1em;cursor:pointer;border-radius:0;font-weight:600;display:inline-block;color:var(--color-white);padding:0 1.7142857143em;line-height:2.5714285714em;border:2px solid transparent;background:var(--button-color);font-family:var(--font-default-body)}.sds-button:focus,.sds-button:hover{--button-color:var(--color-hover)}.sds-button:disabled,.sds-button[aria-disabled=true]{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button:disabled:focus,.sds-button:disabled:hover,.sds-button[aria-disabled=true]:focus,.sds-button[aria-disabled=true]:hover{--button-color:var(--color-slate-90);color:var(--color-black-30);cursor:not-allowed}.sds-button:focus{outline:3px solid var(--color-focus)}.sds-button.sds-button--small{line-height:2em;padding:0 1.1428571429em}.sds-button.sds-button--large{font-size:1.1428571429em;line-height:2.75em;padding:0 2em}.sds-button-primary{color:var(--color-white);background:var(--button-color)}.sds-button-secondary{border-color:currentColor;color:var(--button-color);background:var(--color-white)}.sds-button-secondary:focus,.sds-button-secondary:hover{--button-color:var(--color-hover);color:var(--color-white);border-color:var(--button-color);background:var(--button-color)}.sds-button-secondary:disabled,.sds-button-secondary[aria-disabled=true]{cursor:not-allowed;color:var(--color-black-30);border-color:var(--color-slate-90);background:var(--color-white)}.sds-button-tertiary{color:var(--button-color);background:0 0;border-color:transparent}.sds-button.sds-button--destructive{--button-color:var(--color-red)}.sds-button.sds-button--destructive:focus,.sds-button.sds-button--destructive:hover{--button-color:var(--color-red-shade-10)}.sds-button.sds-button--disabled{--button-color:var(--color-slate-90);color:var(--color-black-30)}.sds-button.sds-button--disabled:focus,.sds-button.sds-button--disabled:hover{cursor:not-allowed}:host-context(.sds-button-bar) .sds-button{margin-left:-2px}:host-context(.sds-multi-action-button__expandable) .sds-button,:host-context(sds-split-button-options) .sds-button{width:100%;text-align:inherit;--button-color:var(--button-color--hover)}:host-context(.sds-multi-action-button__expandable) .sds-button:focus,:host-context(.sds-multi-action-button__expandable) .sds-button:hover,:host-context(sds-split-button-options) .sds-button:focus,:host-context(sds-split-button-options) .sds-button:hover{--button-color:var(--button-color--hover-2);z-index:2}:host-context(.sds-multi-action-button__expandable) .sds-button.sds-button--destructive,:host-context(sds-split-button-options) .sds-button.sds-button--destructive{--button-color:var(--button-color-destructive--hover)}:host-context(.sds-multi-action-button__expandable) .sds-button.sds-button--destructive:focus,:host-context(.sds-multi-action-button__expandable) .sds-button.sds-button--destructive:hover,:host-context(sds-split-button-options) .sds-button.sds-button--destructive:focus,:host-context(sds-split-button-options) .sds-button.sds-button--destructive:hover{--button-color:var(--button-color-destructive--hover-2)}"]
+        }]
+      }], function () {
+        return [];
+      }, {
+        type: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        size: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        buttonType: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        disabled: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        destructive: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        clickEvent: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"]
+        }]
+      });
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](ButtonModule, {
+        declarations: function declarations() {
+          return [ButtonComponent];
+        },
+        imports: function imports() {
+          return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]];
+        },
+        exports: function exports() {
+          return [ButtonComponent];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](ButtonModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+          exports: [ButtonComponent],
+          declarations: [ButtonComponent]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=sage-ng-carbon-button.js.map
+
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-checkbox.js":
+  /*!***************************************************************************************!*\
+    !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-checkbox.js ***!
+    \***************************************************************************************/
+
+  /*! exports provided: CheckboxComponent, CheckboxModule */
+
+  /***/
+  function node_modulesSageNgCarbon__ivy_ngcc__Fesm2015SageNgCarbonCheckboxJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "CheckboxComponent", function () {
+      return CheckboxComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "CheckboxModule", function () {
+      return CheckboxModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+
+    var _c0 = ["*"];
+    var CheckboxComponent_1;
+
+    var CheckboxComponent = CheckboxComponent_1 = /*#__PURE__*/function () {
+      function CheckboxComponent() {
+        _classCallCheck(this, CheckboxComponent);
+
+        this.size = 'small';
+        this.error = false;
+        this.identifier = "checkbox-".concat(Math.random().toString().substring(2, 10) + Math.random().toString().substring(2, 10));
+        /**
+         * @description
+         * Invoked when the model has been changed
+         */
+
+        this.onChange = function (_) {};
+        /**
+         * @description
+         * Invoked when the model has been touched
+         */
+
+
+        this.onTouched = function () {};
+      }
+
+      _createClass2(CheckboxComponent, [{
+        key: "writeValue",
+
+        /**
+         * @description
+         * Writes a new item to the element.
+         */
+        value: function writeValue(value) {
+          if (value !== undefined) {
+            this._value = value;
+          }
+        }
+        /**
+         * @description
+         * Registers a callback function that should be called when the control's value changes in the UI.
+         */
+
+      }, {
+        key: "registerOnChange",
+        value: function registerOnChange(fn) {
+          this.onChange = fn;
+        }
+        /**
+         * @description
+         * Registers a callback function that should be called when the control receives a blur event.
+         */
+
+      }, {
+        key: "registerOnTouched",
+        value: function registerOnTouched(fn) {
+          this.onTouched = fn;
+        }
+        /**
+         * @description
+         * Function that is called by the forms API when the control status changes.
+         * Depending on the status, it enables or disables the appropriate DOM element.
+         */
+
+      }, {
+        key: "setDisabledState",
+        value: function setDisabledState(isDisabled) {
+          this.disabled = isDisabled;
+        }
+      }, {
+        key: "value",
+        get: function get() {
+          return this._value;
+        },
+        set: function set(v) {
+          this._value = v;
+          this.onChange(this._value);
+          this.onTouched();
+        }
+      }, {
+        key: "classes",
+        get: function get() {
+          var _ref13;
+
+          var CLASS_NAME = 'sds-checkbox';
+          return _ref13 = {}, _defineProperty(_ref13, "".concat(CLASS_NAME, "--error"), this.error), _defineProperty(_ref13, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref13, "".concat(CLASS_NAME, "--disabled"), this.disabled), _ref13;
+        }
+      }]);
+
+      return CheckboxComponent;
+    }();
+
+    CheckboxComponent.ɵfac = function CheckboxComponent_Factory(t) {
+      return new (t || CheckboxComponent)();
+    };
+
+    CheckboxComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: CheckboxComponent,
+      selectors: [["sds-checkbox"]],
+      inputs: {
+        size: "size",
+        error: "error",
+        identifier: "identifier",
+        disabled: "disabled"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵProvidersFeature"]([{
+        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function () {
+          return CheckboxComponent_1;
+        }),
+        multi: true
+      }])],
+      ngContentSelectors: _c0,
+      decls: 4,
+      vars: 6,
+      consts: [[1, "sds-checkbox", 3, "ngClass"], ["type", "checkbox", 1, "sds-checkbox__input", 3, "id", "ngModel", "ngModelChange"], [3, "for"]],
+      template: function CheckboxComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "input", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function CheckboxComponent_Template_input_ngModelChange_1_listener($event) {
+            return ctx.value = $event;
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "label", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx.classes);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", ctx.identifier);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngModel", ctx.value);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("aria-checked", ctx.value)("disabled", ctx.disabled ? ctx.disabled : null);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("for", ctx.identifier);
+        }
+      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"]],
+      styles: [".sds-checkbox[_ngcontent-%COMP%]{position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:inline-block}.sds-checkbox--disabled[_ngcontent-%COMP%]{cursor:not-allowed}.sds-checkbox--small[_ngcontent-%COMP%]{--checkbox-size:16px}.sds-checkbox--small[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]{margin-left:2px;line-height:var(--checkbox-size)}.sds-checkbox--small[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]::after{height:8px;width:4px;top:1px;left:5px}.sds-checkbox--large[_ngcontent-%COMP%]{--checkbox-size:24px}.sds-checkbox--large[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]{margin-left:10px;line-height:var(--checkbox-size)}.sds-checkbox--large[_ngcontent-%COMP%] > label[_ngcontent-%COMP%]::after{height:10px;width:5px;top:4px;left:8px}.sds-checkbox__input[_ngcontent-%COMP%]{opacity:0}.sds-checkbox__input[_ngcontent-%COMP%] + label[_ngcontent-%COMP%]{cursor:pointer;display:inline-block}.sds-checkbox__input[_ngcontent-%COMP%] + label[_ngcontent-%COMP%]::before{border:1px solid var(--color-slate-40);background:var(--color-white);content:\"\";-webkit-box-sizing:border-box;box-sizing:border-box;height:var(--checkbox-size);width:var(--checkbox-size);left:0;top:0;position:absolute}.sds-checkbox__input[_ngcontent-%COMP%] + label[_ngcontent-%COMP%]::after{border:1px solid;border-width:0 3px 3px 0;content:\"\";position:absolute;-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0}.sds-checkbox__input[_ngcontent-%COMP%]:checked + label[_ngcontent-%COMP%]::after{opacity:1}.sds-checkbox__input[_ngcontent-%COMP%]:focus + label[_ngcontent-%COMP%]::before, .sds-checkbox__input[_ngcontent-%COMP%]:hover + label[_ngcontent-%COMP%]::before{outline:2px solid var(--color-focus)}.sds-checkbox__input[_ngcontent-%COMP%]:disabled + label[_ngcontent-%COMP%]{cursor:not-allowed;color:var(--color-black-55)}.sds-checkbox__input[_ngcontent-%COMP%]:disabled + label[_ngcontent-%COMP%]::after{background:var(--color-slate-95);border:1px solid var(--color-slate-80);border-width:0 3px 3px 0}.sds-checkbox__input[_ngcontent-%COMP%]:disabled + label[_ngcontent-%COMP%]::before{background:var(--color-slate-95);border:1px solid var(--color-slate-80)}.sds-checkbox__input[_ngcontent-%COMP%]:disabled:hover + label[_ngcontent-%COMP%]::before{outline:0}.sds-checkbox--error[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]::before{border:1px solid var(--color-red)}"]
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], CheckboxComponent.prototype, "size", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], CheckboxComponent.prototype, "disabled", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], CheckboxComponent.prototype, "error", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], CheckboxComponent.prototype, "identifier", void 0);
+
+    var CheckboxModule = function CheckboxModule() {
+      _classCallCheck(this, CheckboxModule);
+    };
+
+    CheckboxModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
+      type: CheckboxModule
+    });
+    CheckboxModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
+      factory: function CheckboxModule_Factory(t) {
+        return new (t || CheckboxModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]]]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](CheckboxComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-checkbox',
+          template: "\n    <div class=\"sds-checkbox\" [ngClass]=\"classes\">\n      <input\n        type=\"checkbox\"\n        id=\"{{ identifier }}\"\n        class=\"sds-checkbox__input\"\n        [attr.aria-checked]=\"value\"\n        [(ngModel)]=\"value\"\n        [attr.disabled]=\"disabled ? disabled : null\"\n      />\n      <label for=\"{{ identifier }}\"><ng-content></ng-content></label>\n    </div>\n  ",
+          providers: [{
+            provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+            useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function () {
+              return CheckboxComponent_1;
+            }),
+            multi: true
+          }],
+          styles: [".sds-checkbox{position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:inline-block}.sds-checkbox--disabled{cursor:not-allowed}.sds-checkbox--small{--checkbox-size:16px}.sds-checkbox--small>label{margin-left:2px;line-height:var(--checkbox-size)}.sds-checkbox--small>label::after{height:8px;width:4px;top:1px;left:5px}.sds-checkbox--large{--checkbox-size:24px}.sds-checkbox--large>label{margin-left:10px;line-height:var(--checkbox-size)}.sds-checkbox--large>label::after{height:10px;width:5px;top:4px;left:8px}.sds-checkbox__input{opacity:0}.sds-checkbox__input+label{cursor:pointer;display:inline-block}.sds-checkbox__input+label::before{border:1px solid var(--color-slate-40);background:var(--color-white);content:\"\";-webkit-box-sizing:border-box;box-sizing:border-box;height:var(--checkbox-size);width:var(--checkbox-size);left:0;top:0;position:absolute}.sds-checkbox__input+label::after{border:1px solid;border-width:0 3px 3px 0;content:\"\";position:absolute;-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0}.sds-checkbox__input:checked+label::after{opacity:1}.sds-checkbox__input:focus+label::before,.sds-checkbox__input:hover+label::before{outline:2px solid var(--color-focus)}.sds-checkbox__input:disabled+label{cursor:not-allowed;color:var(--color-black-55)}.sds-checkbox__input:disabled+label::after{background:var(--color-slate-95);border:1px solid var(--color-slate-80);border-width:0 3px 3px 0}.sds-checkbox__input:disabled+label::before{background:var(--color-slate-95);border:1px solid var(--color-slate-80)}.sds-checkbox__input:disabled:hover+label::before{outline:0}.sds-checkbox--error label::before{border:1px solid var(--color-red)}"]
+        }]
+      }], function () {
+        return [];
+      }, {
+        size: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        error: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        identifier: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        disabled: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }]
+      });
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](CheckboxModule, {
+        declarations: function declarations() {
+          return [CheckboxComponent];
+        },
+        imports: function imports() {
+          return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]];
+        },
+        exports: function exports() {
+          return [CheckboxComponent];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](CheckboxModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]],
+          exports: [CheckboxComponent],
+          declarations: [CheckboxComponent]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=sage-ng-carbon-checkbox.js.map
+
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js":
+  /*!***************************************************************************************!*\
+    !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js ***!
+    \***************************************************************************************/
+
+  /*! exports provided: DropdownComponent, DropdownModule, DropdownOptionComponent */
+
+  /***/
+  function node_modulesSageNgCarbon__ivy_ngcc__Fesm2015SageNgCarbonDropdownJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DropdownComponent", function () {
+      return DropdownComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DropdownModule", function () {
+      return DropdownModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DropdownOptionComponent", function () {
+      return DropdownOptionComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @sage/ng-carbon/icon */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @sage/ng-carbon/tooltip */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js");
+
+    var _c0 = ["ele"];
+    var _c1 = ["*"];
+    var _c2 = [[["sds-dropdown-option"]]];
+    var _c3 = ["sds-dropdown-option"];
+
+    var DropdownOptionComponent = /*#__PURE__*/function () {
+      function DropdownOptionComponent() {
+        _classCallCheck(this, DropdownOptionComponent);
+
+        /**
+         * @description
+         * When this item is clicked. Passes components value and the native mouse event
+         */
+        this.clickEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"]();
+      }
+
+      _createClass2(DropdownOptionComponent, [{
+        key: "clicked",
+
+        /**
+         * @description
+         * Handles the click event
+         */
+        value: function clicked(nativeEvent) {
+          nativeEvent.preventDefault();
+          this.clickEvent.emit([this.value, this.index, nativeEvent]);
+        }
+        /**
+         * @description
+         * Builds the classes for the component
+         */
+
+      }, {
+        key: "isFocused",
+        get: function get() {
+          return this._isFocused;
+        },
+        set: function set(value) {
+          this._isFocused = value; // Scrolls focused value into view
+
+          if (value && this.elementRef) {
+            this.elementRef.nativeElement.scrollIntoView({
+              behaviour: 'auto',
+              block: 'nearest',
+              inline: 'nearest'
+            });
+          }
+        }
+        /**
+         * @description
+         * The label of the element
+         */
+
+      }, {
+        key: "label",
+        get: function get() {
+          var _a;
+
+          return (_a = this.elementRef) === null || _a === void 0 ? void 0 : _a.nativeElement.textContent;
+        }
+      }, {
+        key: "classes",
+        get: function get() {
+          var _ref14;
+
+          var CLASS_NAME = 'sds-dropdown-option';
+          return _ref14 = {}, _defineProperty(_ref14, "".concat(CLASS_NAME, "--focused"), this.isFocused), _defineProperty(_ref14, "".concat(CLASS_NAME, "--selected"), this.selected), _ref14;
+        }
+      }]);
+
+      return DropdownOptionComponent;
+    }();
+
+    DropdownOptionComponent.ɵfac = function DropdownOptionComponent_Factory(t) {
+      return new (t || DropdownOptionComponent)();
+    };
+
+    DropdownOptionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+      type: DropdownOptionComponent,
+      selectors: [["sds-dropdown-option"]],
+      viewQuery: function DropdownOptionComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵstaticViewQuery"](_c0, true);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.elementRef = _t.first);
+        }
+      },
+      inputs: {
+        value: "value",
+        identifier: "identifier",
+        selected: "selected",
+        disabled: "disabled",
+        index: "index",
+        setsize: "setsize"
+      },
+      outputs: {
+        clickEvent: "clickEvent"
+      },
+      ngContentSelectors: _c1,
+      decls: 3,
+      vars: 6,
+      consts: [["role", "option", 1, "sds-dropdown-option", 3, "ngClass", "id", "mousedown"], ["ele", ""]],
+      template: function DropdownOptionComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0, 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("mousedown", function DropdownOptionComponent_Template_div_mousedown_0_listener($event) {
+            return ctx.clicked($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojection"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngClass", ctx.classes)("id", ctx.identifier);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("selected", ctx.selected)("aria-disabled", ctx.disabled)("aria-setsize", ctx.setsize)("aria-aria-posinset", ctx.index);
+        }
+      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]],
+      styles: [".sds-dropdown-option[_ngcontent-%COMP%]{line-height:var(--select-height);padding:0 20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:var(--input-color-background);font-family:var(--font-default-body);text-align:inherit;cursor:pointer}.sds-dropdown-option[_ngcontent-%COMP%]:hover{background-color:var(--color-slate-95)}.sds-dropdown-option--focused[_ngcontent-%COMP%], .sds-dropdown-option--focused[_ngcontent-%COMP%]:hover{background-color:var(--color-slate-90)}"],
+      changeDetection: 0
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"])('ele', {
+      "static": true
+    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ElementRef"])], DropdownOptionComponent.prototype, "elementRef", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], DropdownOptionComponent.prototype, "value", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], DropdownOptionComponent.prototype, "identifier", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], DropdownOptionComponent.prototype, "selected", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], DropdownOptionComponent.prototype, "disabled", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_3__["EventEmitter"])], DropdownOptionComponent.prototype, "clickEvent", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], DropdownOptionComponent.prototype, "index", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], DropdownOptionComponent.prototype, "setsize", void 0);
+    var DropdownComponent_1;
+
+    var DropdownComponent = DropdownComponent_1 = /*#__PURE__*/function () {
+      function DropdownComponent() {
+        _classCallCheck(this, DropdownComponent);
+
+        // Used to close subscriptions with takeUntil operator
+        this._unsubscribe = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
+        this.isOpen = false;
+        this.readOnly = false;
+        this.placeholder = 'Please select...';
+        this.size = 'medium';
+        this.align = 'left';
+        this.identifier = "dropdown-".concat(Math.random().toString().substring(2, 10) + Math.random().toString().substring(2, 10));
+        this.errorType = 'error';
+        /**
+         * @description
+         * Invoked when the model has been changed
+         */
+
+        this.onChange = function (_) {};
+        /**
+         * @description
+         * Invoked when the model has been touched
+         */
+
+
+        this.onTouched = function () {};
+      }
+      /**
+       * @description
+       * Writes a new value to the component via reactive forms
+       */
+
+
+      _createClass2(DropdownComponent, [{
+        key: "writeValue",
+        value: function writeValue(value) {
+          // If value isn't set then reset the form
+          this._value = value !== null ? value : null; // Update the state of the options
+
+          this._setSelectionOptionByValue(this._value);
+        }
+        /**
+         * @description
+         * Registers a callback function that should be called when the control's value changes in the UI.
+         */
+
+      }, {
+        key: "registerOnChange",
+        value: function registerOnChange(fn) {
+          this.onChange = fn;
+        }
+        /**
+         * @description
+         * Registers a callback function that should be called when the control receives a blur event.
+         */
+
+      }, {
+        key: "registerOnTouched",
+        value: function registerOnTouched(fn) {
+          this.onTouched = fn;
+        }
+        /**
+         * @description
+         * Runs after options initialised
+         */
+
+      }, {
+        key: "ngAfterContentInit",
+        value: function ngAfterContentInit() {
+          var _this145 = this;
+
+          if (!this.optionsComponents) {
+            return;
+          } // Initial set up
+
+
+          this._setupOptionsSelectedSubscription(this.optionsComponents); // If the components changes after the initial rendering this is run again
+
+
+          this.optionsComponents.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this._unsubscribe)).subscribe(function (newOptions) {
+            // This subscription runs after content checked, so this needs to be deffered until the next render
+            requestAnimationFrame(function () {
+              return _this145._setupOptionsSelectedSubscription(newOptions);
+            });
+          });
+        }
+        /**
+         * @description
+         * Runs on the onDestroy angular lifecycle hook.
+         * Unsubscribes the option change listener.
+         */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._unsubscribe.complete();
+        }
+      }, {
+        key: "selectOption",
+
+        /**
+         * @description
+         * Selects an option by index
+         */
+        value: function selectOption(index) {
+          this.value = this.optionsComponents.toArray()[index].value;
+        }
+        /**
+         * @description
+         * Search through the list and find the correct list item to select
+         */
+
+      }, {
+        key: "changeFocusByKey",
+        value: function changeFocusByKey(key) {
+          var firstMatchingOptionIndex = this.optionsComponents.toArray().findIndex(function (option) {
+            return option.label.toLowerCase().startsWith(key.toLowerCase());
+          }); // This will be -1 if there are no matches
+
+          if (firstMatchingOptionIndex !== -1) {
+            this.selectedOptionIndex = firstMatchingOptionIndex;
+          }
+        }
+        /**
+         * @description
+         * Focus the next item
+         */
+
+      }, {
+        key: "focusNext",
+        value: function focusNext() {
+          // If none are focused then focus the first in the list
+          if (!Number.isInteger(this.selectedOptionIndex)) {
+            this.selectedOptionIndex = 0;
+            return;
+          }
+
+          if (this.selectedOptionIndex >= this.optionsComponents.length - 1) {
+            return;
+          }
+
+          this.selectedOptionIndex = this.selectedOptionIndex + 1;
+        }
+        /**
+         * @description
+         * Focus the previous item
+         */
+
+      }, {
+        key: "focusPrev",
+        value: function focusPrev() {
+          // If none are focused then focus the last in the list
+          if (!Number.isInteger(this.selectedOptionIndex)) {
+            this.selectedOptionIndex = this.optionsComponents.length - 1;
+            return;
+          }
+
+          if (this.selectedOptionIndex < 1) return;
+          this.selectedOptionIndex = this.selectedOptionIndex - 1;
+        }
+        /**
+         * @description
+         * Opens and closes the dropdown
+         */
+
+      }, {
+        key: "toggleOpen",
+        value: function toggleOpen(open) {
+          this.isOpen = open;
+        }
+        /**
+         * @description
+         * CSS classes for the parent element
+         */
+
+      }, {
+        key: "onClick",
+
+        /**
+         * @description
+         * Handles the click event
+         */
+        value: function onClick(nativeEvent) {
+          if (this.disabled || this.readOnly) {
+            nativeEvent.preventDefault();
+            return false;
+          }
+
+          this.toggleOpen(!this.isOpen);
+        }
+        /**
+         * @description
+         * Handles the blur event
+         */
+
+      }, {
+        key: "onBlur",
+        value: function onBlur() {
+          var _this146 = this;
+
+          // Ensures that the click event is registered before the element closes
+          requestAnimationFrame(function () {
+            _this146.toggleOpen(false);
+          });
+        }
+        /**
+         * @description
+         * Handles the keydown event
+         */
+
+      }, {
+        key: "onKeyDown",
+        value: function onKeyDown(nativeEvent) {
+          var key = nativeEvent.key; // Don't do anything if disabled or read-only
+
+          if (this.disabled || this.readOnly) {
+            nativeEvent.preventDefault();
+            return false;
+          }
+
+          if (key === 'Enter') {
+            this.toggleOpen(!this.isOpen);
+            nativeEvent.preventDefault();
+          } else if (key === 'Tab' && this.isOpen) {
+            this.toggleOpen(false);
+            nativeEvent.preventDefault(); // number or letters
+          } else if (/^[a-zA-Z0-9]$/.test(key)) {
+            // Change focus
+            this.changeFocusByKey(key);
+          } else if (key === 'ArrowDown') {
+            // Focus the next item (don't loop)
+            nativeEvent.preventDefault();
+            this.focusNext();
+            this.selectOption(this.selectedOptionIndex);
+          } else if (key === 'ArrowUp') {
+            // Focus the previous item (don't loop)
+            nativeEvent.preventDefault();
+            this.focusPrev();
+            this.selectOption(this.selectedOptionIndex);
+          }
+        }
+        /**
+         * @description
+         * Sets up subscription on the options
+         */
+
+      }, {
+        key: "_setupOptionsSelectedSubscription",
+        value: function _setupOptionsSelectedSubscription(optionsComponents) {
+          var _this147 = this;
+
+          var _a; // Add all of the options outputs into an array of observables
+
+
+          var optionsEvents = []; // Also sets some properties on the option
+
+          optionsComponents.toArray().forEach(function (option, index) {
+            // Get the clickevent observable
+            optionsEvents.push(option.clickEvent); // Sets the index and setsize on the option component
+
+            option.index = index;
+            option.setsize = optionsComponents.length;
+            option.identifier = "".concat(_this147.identifier, "__option_").concat(index); // If one of the children is selected then set the value of the dropdown
+
+            if (option.selected === true) {
+              _this147.value = option.value;
+              _this147.selectedOptionIndex = index;
+              return;
+            } // If the value of the option is the same as the value already set, then set it to selected
+
+
+            if (_this147.value == option.value) {
+              _this147.selectedOptionIndex = index;
+              option.selected = true;
+              return;
+            }
+          }); // Remove options changes subscription if it already exists
+
+          (_a = this._optionsChangedSubscription) === null || _a === void 0 ? void 0 : _a.unsubscribe(); // Merge the clickevent observables together into one stream
+
+          this._optionsChangedSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["merge"]).apply(void 0, optionsEvents).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this._unsubscribe)).subscribe(function (args) {
+            return _this147._handleOptionClicked(optionsComponents, args);
+          });
+        }
+        /**
+         * @description
+         * Handles the output from the dropdownOptionComponents
+         */
+
+      }, {
+        key: "_handleOptionClicked",
+        value: function _handleOptionClicked(optionsComponents, _ref15) {
+          var _this148 = this;
+
+          var _ref16 = _slicedToArray(_ref15, 3),
+              optionValue = _ref16[0],
+              index = _ref16[1],
+              _ = _ref16[2];
+
+          this.value = optionValue;
+          this.selectedOptionIndex = index;
+          optionsComponents.forEach(function (option) {
+            option.selected = option.value === _this148.value;
+          });
+          this.toggleOpen(false);
+        }
+        /**
+         * @description
+         * Search through the options and change the selected one by value
+         * Selects the first option with the selected value
+         */
+
+      }, {
+        key: "_setSelectionOptionByValue",
+        value: function _setSelectionOptionByValue(value) {
+          var _a; // Turn it into an array
+
+
+          var optionsArray = (_a = this.optionsComponents) === null || _a === void 0 ? void 0 : _a.toArray(); // Do nothing if there are no options
+
+          if (!optionsArray) {
+            this.selectedOptionIndex = null;
+            return;
+          } // Get the first matching option
+
+
+          var firstMatchingOptionIndex = optionsArray.findIndex(function (option) {
+            return option.value === value;
+          });
+          this.selectedOptionIndex = firstMatchingOptionIndex !== -1 ? firstMatchingOptionIndex : null; // Set which option is selected
+
+          optionsArray.forEach(function (item, index) {
+            item.selected = index === firstMatchingOptionIndex;
+          });
+        }
+        /**
+         * @description
+         * Function that is called by the forms API when the control status changes.
+         * Depending on the status, it enables or disables the appropriate DOM element.
+         */
+
+      }, {
+        key: "setDisabledState",
+        value: function setDisabledState(isDisabled) {
+          this.disabled = isDisabled;
+        }
+      }, {
+        key: "selectedOptionIndex",
+        get: function get() {
+          return this._selectedOptionIndex;
+        },
+        set: function set(optionIndex) {
+          var _a;
+
+          this._selectedOptionIndex = optionIndex;
+          (_a = this.optionsComponents) === null || _a === void 0 ? void 0 : _a.forEach(function (option, index) {
+            option.isFocused = index === optionIndex;
+          });
+        }
+      }, {
+        key: "classes",
+        get: function get() {
+          var _ref17;
+
+          var CLASS_NAME = 'sds-dropdown';
+          return _ref17 = {}, _defineProperty(_ref17, "".concat(CLASS_NAME, "--").concat(this.align), this.align), _defineProperty(_ref17, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref17, "".concat(CLASS_NAME, "--disabled"), this.disabled), _defineProperty(_ref17, "".concat(CLASS_NAME, "--read-only"), this.readOnly), _defineProperty(_ref17, "".concat(CLASS_NAME, "--placeholder"), !this.value), _defineProperty(_ref17, "".concat(CLASS_NAME, "--open"), this.isOpen), _ref17;
+        }
+        /**
+         * @description
+         * The label to show within the button element
+         */
+
+      }, {
+        key: "label",
+        get: function get() {
+          var _a; // If no options
+
+
+          if (this.optionsComponents && this.optionsComponents.length) {
+            var optionsArray = this.optionsComponents.toArray();
+            return ((_a = optionsArray[this.selectedOptionIndex]) === null || _a === void 0 ? void 0 : _a.label) ? optionsArray[this.selectedOptionIndex].label : this.placeholder;
+          }
+
+          return this.placeholder;
+        }
+        /**
+         * @description
+         * The active descendant from the dropdown
+         */
+
+      }, {
+        key: "activeDescendant",
+        get: function get() {
+          if (this.optionsComponents && this.optionsComponents.length && this.optionsComponents[this.selectedOptionIndex]) {
+            return this.optionsComponents[this.selectedOptionIndex].identifier;
+          }
+
+          return false;
+        }
+        /**
+         * @description
+         * The selected value of the select component
+         */
+
+      }, {
+        key: "value",
+        get: function get() {
+          return this._value;
+        }
+        /**
+         * @description
+         * Set the value of the select component
+         */
+        ,
+        set: function set(v) {
+          this._value = v;
+          this.onChange(this._value);
+          this.onTouched();
+        }
+      }]);
+
+      return DropdownComponent;
+    }();
+
+    DropdownComponent.ɵfac = function DropdownComponent_Factory(t) {
+      return new (t || DropdownComponent)();
+    };
+
+    DropdownComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
+      type: DropdownComponent,
+      selectors: [["sds-dropdown"]],
+      contentQueries: function DropdownComponent_ContentQueries(rf, ctx, dirIndex) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵcontentQuery"](dirIndex, DropdownOptionComponent, false);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.optionsComponents = _t);
+        }
+      },
+      inputs: {
+        readOnly: "readOnly",
+        placeholder: "placeholder",
+        size: "size",
+        align: "align",
+        identifier: "identifier",
+        errorType: "errorType",
+        disabled: "disabled",
+        labelledBy: "labelledBy",
+        errors: "errors"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵProvidersFeature"]([{
+        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NG_VALUE_ACCESSOR"],
+        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["forwardRef"])(function () {
+          return DropdownComponent_1;
+        }),
+        multi: true
+      }])],
+      ngContentSelectors: _c3,
+      decls: 7,
+      vars: 10,
+      consts: [["sds-tooltip", "", "position", "right", 1, "sds-dropdown", 3, "error", "identifier", "tooltipContent", "ngClass"], ["aria-haspopup", "listbox", "type", "button", 1, "sds-dropdown__button", 3, "click", "blur", "keydown"], [1, "sds-dropdown__button-label"], ["iconType", "dropdown"], ["role", "listbox", "tabindex", "-1", 1, "sds-dropdown__dropdown-list"]],
+      template: function DropdownComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojectionDef"](_c2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "button", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function DropdownComponent_Template_button_click_1_listener($event) {
+            return ctx.onClick($event);
+          })("blur", function DropdownComponent_Template_button_blur_1_listener() {
+            return ctx.onBlur();
+          })("keydown", function DropdownComponent_Template_button_keydown_1_listener($event) {
+            return ctx.onKeyDown($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "span", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](4, "sds-icon", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "div", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵprojection"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("error", ctx.errorType === "error")("identifier", ctx.identifier + "__tooltip")("tooltipContent", ctx.errors)("ngClass", ctx.classes);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("aria-expanded", ctx.isOpen)("tabindex", ctx.disabled ? "-1" : "0")("aria-disabled", ctx.disabled)("aria-labelledby", ctx.labelledBy);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](ctx.label);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵattribute"]("aria-activedescendant", ctx.activeDescendant);
+        }
+      },
+      directives: [_sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconComponent"]],
+      styles: [".sds-dropdown[_ngcontent-%COMP%]{--select-height:2.85714286em;position:relative}.sds-dropdown[_ngcontent-%COMP%]   .hidden[_ngcontent-%COMP%]{display:none}.sds-dropdown__button-label[_ngcontent-%COMP%]{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:pre;margin-right:1ch}.sds-dropdown__button[_ngcontent-%COMP%]{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;text-align:inherit;cursor:pointer;width:100%;z-index:1;padding:0 .5714285714em;position:relative;height:var(--select-height);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:var(--font-default-body);color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-dropdown__button[_ngcontent-%COMP%]:focus{outline:3px solid var(--color-focus)}.sds-dropdown--open[_ngcontent-%COMP%]   .sds-dropdown__dropdown-list[_ngcontent-%COMP%]{display:block}.sds-dropdown__dropdown-list[_ngcontent-%COMP%]{padding:10px 0;margin:0;display:none;position:absolute;top:calc(100% + 3px);left:-10px;right:-10px;background:var(--input-color-background);width:calc(100% + 20px);z-index:999;overflow-y:scroll;max-height:220px;-webkit-box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1);box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1)}.sds-dropdown--small[_ngcontent-%COMP%]{--select-height:2.28571429em}.sds-dropdown--large[_ngcontent-%COMP%]{--select-height:3em;font-size:1.1428571429em}.sds-dropdown--left[_ngcontent-%COMP%]{text-align:left}.sds-dropdown--right[_ngcontent-%COMP%]{text-align:right}.sds-dropdown--right[_ngcontent-%COMP%]   .sds-dropdown__button-label[_ngcontent-%COMP%]{margin-left:auto}.sds-dropdown--placeholder[_ngcontent-%COMP%]   .sds-dropdown__button-label[_ngcontent-%COMP%]{color:var(--color-black-60)}.sds-dropdown--read-only[_ngcontent-%COMP%]{cursor:not-allowed}.sds-dropdown--read-only[_ngcontent-%COMP%]   .sds-dropdown__button[_ngcontent-%COMP%]{cursor:inherit;color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-dropdown--disabled[_ngcontent-%COMP%]{cursor:not-allowed}.sds-dropdown--disabled[_ngcontent-%COMP%]   .sds-dropdown__button[_ngcontent-%COMP%]{cursor:inherit;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-dropdown--error[_ngcontent-%COMP%]{border:2px solid var(--color-error)}"]
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ContentChildren"])(DropdownOptionComponent), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_3__["QueryList"])], DropdownComponent.prototype, "optionsComponents", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], DropdownComponent.prototype, "disabled", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], DropdownComponent.prototype, "readOnly", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], DropdownComponent.prototype, "placeholder", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], DropdownComponent.prototype, "size", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], DropdownComponent.prototype, "labelledBy", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], DropdownComponent.prototype, "align", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], DropdownComponent.prototype, "identifier", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], DropdownComponent.prototype, "errors", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], DropdownComponent.prototype, "errorType", void 0);
+
+    var DropdownModule = function DropdownModule() {
+      _classCallCheck(this, DropdownModule);
+    };
+
+    DropdownModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({
+      type: DropdownModule
+    });
+    DropdownModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({
+      factory: function DropdownModule_Factory(t) {
+        return new (t || DropdownModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipModule"]]]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](DropdownOptionComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"],
+        args: [{
+          selector: 'sds-dropdown-option',
+          template: "\n    <div\n      #ele\n      role=\"option\"\n      class=\"sds-dropdown-option\"\n      [ngClass]=\"classes\"\n      [id]=\"identifier\"\n      (mousedown)=\"clicked($event)\"\n      [attr.selected]=\"selected\"\n      [attr.aria-disabled]=\"disabled\"\n      [attr.aria-setsize]=\"setsize\"\n      [attr.aria-aria-posinset]=\"index\"\n    >\n      <ng-content></ng-content>\n    </div>\n  ",
+          changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ChangeDetectionStrategy"].OnPush,
+          styles: [".sds-dropdown-option{line-height:var(--select-height);padding:0 20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:var(--input-color-background);font-family:var(--font-default-body);text-align:inherit;cursor:pointer}.sds-dropdown-option:hover{background-color:var(--color-slate-95)}.sds-dropdown-option--focused,.sds-dropdown-option--focused:hover{background-color:var(--color-slate-90)}"]
+        }]
+      }], function () {
+        return [];
+      }, {
+        clickEvent: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Output"]
+        }],
+        elementRef: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ViewChild"],
+          args: ['ele', {
+            "static": true
+          }]
+        }],
+        value: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        identifier: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        selected: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        disabled: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        index: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        setsize: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](DropdownComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"],
+        args: [{
+          selector: 'sds-dropdown',
+          template: "\n    <div\n      sds-tooltip\n      position=\"right\"\n      class=\"sds-dropdown\"\n      [error]=\"errorType === 'error'\"\n      [identifier]=\"identifier + '__tooltip'\"\n      [tooltipContent]=\"errors\"\n      [ngClass]=\"classes\"\n    >\n      <button\n        class=\"sds-dropdown__button\"\n        aria-haspopup=\"listbox\"\n        type=\"button\"\n        [attr.aria-expanded]=\"isOpen\"\n        [attr.tabindex]=\"disabled ? '-1' : '0'\"\n        [attr.aria-disabled]=\"disabled\"\n        [attr.aria-labelledby]=\"labelledBy\"\n        (click)=\"onClick($event)\"\n        (blur)=\"onBlur()\"\n        (keydown)=\"onKeyDown($event)\"\n      >\n        <span class=\"sds-dropdown__button-label\">{{ label }}</span>\n        <sds-icon iconType=\"dropdown\"></sds-icon>\n      </button>\n      <div role=\"listbox\" class=\"sds-dropdown__dropdown-list\" [attr.aria-activedescendant]=\"activeDescendant\" tabindex=\"-1\">\n        <ng-content select=\"sds-dropdown-option\"></ng-content>\n      </div>\n    </div>\n  ",
+          providers: [{
+            provide: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NG_VALUE_ACCESSOR"],
+            useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["forwardRef"])(function () {
+              return DropdownComponent_1;
+            }),
+            multi: true
+          }],
+          styles: [".sds-dropdown{--select-height:2.85714286em;position:relative}.sds-dropdown .hidden{display:none}.sds-dropdown__button-label{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:pre;margin-right:1ch}.sds-dropdown__button{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;text-align:inherit;cursor:pointer;width:100%;z-index:1;padding:0 .5714285714em;position:relative;height:var(--select-height);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:var(--font-default-body);color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-dropdown__button:focus{outline:3px solid var(--color-focus)}.sds-dropdown--open .sds-dropdown__dropdown-list{display:block}.sds-dropdown__dropdown-list{padding:10px 0;margin:0;display:none;position:absolute;top:calc(100% + 3px);left:-10px;right:-10px;background:var(--input-color-background);width:calc(100% + 20px);z-index:999;overflow-y:scroll;max-height:220px;-webkit-box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1);box-shadow:0 5px 5px 0 rgba(0,20,29,.2),0 10px 10px 0 rgba(0,20,29,.1)}.sds-dropdown--small{--select-height:2.28571429em}.sds-dropdown--large{--select-height:3em;font-size:1.1428571429em}.sds-dropdown--left{text-align:left}.sds-dropdown--right{text-align:right}.sds-dropdown--right .sds-dropdown__button-label{margin-left:auto}.sds-dropdown--placeholder .sds-dropdown__button-label{color:var(--color-black-60)}.sds-dropdown--read-only{cursor:not-allowed}.sds-dropdown--read-only .sds-dropdown__button{cursor:inherit;color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-dropdown--disabled{cursor:not-allowed}.sds-dropdown--disabled .sds-dropdown__button{cursor:inherit;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-dropdown--error{border:2px solid var(--color-error)}"]
+        }]
+      }], function () {
+        return [];
+      }, {
+        readOnly: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        placeholder: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        size: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        align: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        identifier: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        errorType: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        disabled: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        optionsComponents: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["ContentChildren"],
+          args: [DropdownOptionComponent]
+        }],
+        labelledBy: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }],
+        errors: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["Input"]
+        }]
+      });
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](DropdownModule, {
+        declarations: function declarations() {
+          return [DropdownComponent, DropdownOptionComponent];
+        },
+        imports: function imports() {
+          return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipModule"]];
+        },
+        exports: function exports() {
+          return [DropdownComponent, DropdownOptionComponent];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵsetClassMetadata"](DropdownModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"],
+        args: [{
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_6__["IconModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipModule"]],
+          exports: [DropdownComponent, DropdownOptionComponent],
+          declarations: [DropdownComponent, DropdownOptionComponent]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=sage-ng-carbon-dropdown.js.map
+
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js":
+  /*!***********************************************************************************!*\
+    !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js ***!
+    \***********************************************************************************/
+
+  /*! exports provided: ICON_TYPES, IconComponent, IconModule */
+
+  /***/
+  function node_modulesSageNgCarbon__ivy_ngcc__Fesm2015SageNgCarbonIconJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ICON_TYPES", function () {
+      return ICON_TYPES;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "IconComponent", function () {
+      return IconComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "IconModule", function () {
+      return IconModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var IconComponent = /*#__PURE__*/function () {
+      function IconComponent() {
+        _classCallCheck(this, IconComponent);
+      }
+
+      _createClass2(IconComponent, [{
+        key: "classes",
+        get: function get() {
+          var _ref18;
+
+          return _ref18 = {}, _defineProperty(_ref18, "sds-icon-".concat(this.iconType), this.iconType), _defineProperty(_ref18, "sds-icon--".concat(this.type), this.type), _ref18;
+        }
+      }]);
+
+      return IconComponent;
+    }();
+
+    IconComponent.ɵfac = function IconComponent_Factory(t) {
+      return new (t || IconComponent)();
+    };
+
+    IconComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: IconComponent,
+      selectors: [["sds-icon"]],
+      inputs: {
+        iconType: "iconType",
+        type: "type"
+      },
+      decls: 1,
+      vars: 1,
+      consts: [[1, "sds-icon", 3, "ngClass"]],
+      template: function IconComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "span", 0);
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx.classes);
+        }
+      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]],
+      styles: ["@charset \"UTF-8\";.sds-icon[_ngcontent-%COMP%]{color:inherit}.sds-icon--input[_ngcontent-%COMP%]{color:var(--color-black-55)}.sds-icon--input[_ngcontent-%COMP%]:hover{color:var(--color-black-90)}.sds-icon--info[_ngcontent-%COMP%], .sds-icon--info[_ngcontent-%COMP%]:hover{color:var(--color-info)}.sds-icon--error[_ngcontent-%COMP%], .sds-icon--error[_ngcontent-%COMP%]:hover{color:var(--color-error)}.sds-icon--warning[_ngcontent-%COMP%], .sds-icon--warning[_ngcontent-%COMP%]:hover{color:var(--color-warning)}.sds-icon--disabled[_ngcontent-%COMP%], .sds-icon--disabled[_ngcontent-%COMP%]:hover{color:var(--color-black-30)}.sds-icon--dark-background[_ngcontent-%COMP%], .sds-icon--dark-background[_ngcontent-%COMP%]:hover{color:var(--color-white)}.sds-icon--light-background[_ngcontent-%COMP%]{color:var(--color-slate-40)}.sds-icon--light-background[_ngcontent-%COMP%]:hover{color:var(--color-slate-20)}[class*=sds-icon-][_ngcontent-%COMP%]:before, [class^=sds-icon-][_ngcontent-%COMP%]:before{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:var(--font-default-icon);font-style:normal;font-weight:400}.sds-icon-feedback[_ngcontent-%COMP%]:before{content:\"\uE930\"}.sds-icon-info[_ngcontent-%COMP%]:before{content:\"\uE92A\"}.sds-icon-help[_ngcontent-%COMP%]:before{content:\"\uE951\"}.sds-icon-settings[_ngcontent-%COMP%]:before{content:\"\uE91A\"}.sds-icon-logout[_ngcontent-%COMP%]:before{content:\"\uE92E\"}.sds-icon-pdf[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE91F\"}.sds-icon-csv[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE94A\"}.sds-icon-copy[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE91B\"}.sds-icon-error[_ngcontent-%COMP%]:before{content:\"\uE923\"}.sds-icon-calendar[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE90E\"}.sds-icon-analysis[_ngcontent-%COMP%]:before{content:\"\uE912\"}.sds-icon-people[_ngcontent-%COMP%]:before{content:\"\uE93B\"}.sds-icon-dropdown[_ngcontent-%COMP%]:before{content:\"\uE910\"}.sds-icon-alert[_ngcontent-%COMP%]:before{content:\"\uE90B\"}.sds-icon-person[_ngcontent-%COMP%]:before{content:\"\uE93C\"}.sds-icon-search[_ngcontent-%COMP%]:before{content:\"\uE92F\"}.sds-icon-cross[_ngcontent-%COMP%]:before{content:\"\uE91D\"}.sds-icon-close[_ngcontent-%COMP%]:before{content:\"\uE91E\"}.sds-icon-delete[_ngcontent-%COMP%]:before{content:\"\uE90C\"}.sds-icon-email[_ngcontent-%COMP%]:before, .sds-icon-message[_ngcontent-%COMP%]:before, .sds-icon-messages[_ngcontent-%COMP%]:before{content:\"\uE922\"}.sds-icon-edit[_ngcontent-%COMP%]:before{content:\"\uE93A\"}.sds-icon-print[_ngcontent-%COMP%]:before{content:\"\uE942\"}.sds-icon-clock[_ngcontent-%COMP%]:before{content:\"\uE919\"}.sds-icon-euro[_ngcontent-%COMP%]:before{content:\"t\"}.sds-icon-home[_ngcontent-%COMP%]:before{content:\"\uE929\"}.sds-icon-cart[_ngcontent-%COMP%]:before{content:\"\uE90A\"}.sds-icon-bulk_destroy[_ngcontent-%COMP%]:before{content:\"\uE90C\"}.sds-icon-hide[_ngcontent-%COMP%]:before{content:\"w\"}.sds-icon-warning[_ngcontent-%COMP%]:before{content:\"\uE924\"}.sds-icon-question[_ngcontent-%COMP%]:before{content:\"\uE943\"}.sds-icon-question_hollow[_ngcontent-%COMP%]:before{content:\"\uE95E\"}.sds-icon-tick[_ngcontent-%COMP%]:before{content:\"\uE950\"}.sds-icon-none[_ngcontent-%COMP%]:before{content:\" \"}.sds-icon-add[_ngcontent-%COMP%]:before{content:\"\uE940\"}.sds-icon-services[_ngcontent-%COMP%]:before{content:\"+\"}.sds-icon-collaborate[_ngcontent-%COMP%]:before{content:\"\uE946\"}.sds-icon-graph[_ngcontent-%COMP%]:before{content:\"\uE912\"}.sds-icon-plus[_ngcontent-%COMP%]:before{content:\"\uE940\"}.sds-icon-arrow[_ngcontent-%COMP%]:before{content:\"\uE904\"}.sds-icon-pound[_ngcontent-%COMP%]:before{content:\"\xA3\"}.sds-icon-go[_ngcontent-%COMP%]:before{content:\"\uE903\"}.sds-icon-question_mark[_ngcontent-%COMP%]:before{content:\"\uE943\"}.sds-icon-admin[_ngcontent-%COMP%]:before{content:\"\uE94F\"}.sds-icon-contacts[_ngcontent-%COMP%]:before{content:\"\uE93B\"}.sds-icon-create[_ngcontent-%COMP%]:before{content:\"\uE940\"}.sds-icon-piggy_bank[_ngcontent-%COMP%]:before{content:\"\uE926\"}.sds-icon-entry[_ngcontent-%COMP%]:before{content:\"\uE92C\"}.sds-icon-edited[_ngcontent-%COMP%]:before{content:\"\uE938\"}.sds-icon-refresh[_ngcontent-%COMP%]:before{content:\"\uE945\"}.sds-icon-sync[_ngcontent-%COMP%]:before{content:\"\uE944\"}.sds-icon-fax[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE925\"}.sds-icon-shop[_ngcontent-%COMP%]:before{content:\"\uE947\"}.sds-icon-attach[_ngcontent-%COMP%]:before{content:\"\uE937\"}.sds-icon-filter[_ngcontent-%COMP%]:before{content:\"\uE928\"}.sds-icon-chat[_ngcontent-%COMP%]:before{content:\"\uE914\"}.sds-icon-duplicate[_ngcontent-%COMP%]:before{-webkit-font-smoothing:none;content:\"\uE921\"}.sds-icon-call[_ngcontent-%COMP%]:before, .sds-icon-phone[_ngcontent-%COMP%]:before{content:\"\uE93D\"}.sds-icon-favourite[_ngcontent-%COMP%]:before{content:\"\uE94F\"}.sds-icon-favourite_lined[_ngcontent-%COMP%]:before{content:\"\uE94E\"}.sds-icon-sort_up[_ngcontent-%COMP%]:before{content:\"\uE949\"}.sds-icon-sort_down[_ngcontent-%COMP%]:before{content:\"\uE948\"}.sds-icon-link[_ngcontent-%COMP%]:before{content:\"\uE92D\"}.sds-icon-locked[_ngcontent-%COMP%]:before{content:\"\uE935\"}.sds-icon-unlocked[_ngcontent-%COMP%]:before{content:\"\uE936\"}.sds-icon-caret_down[_ngcontent-%COMP%]:before{content:\"\uE910\"}.sds-icon-draft[_ngcontent-%COMP%]:before{content:\"\uE939\"}.sds-icon-chart_line[_ngcontent-%COMP%]:before{content:\"\uE912\"}.sds-icon-chart_bar[_ngcontent-%COMP%]:before{content:\"\uE911\"}.sds-icon-chart_pie[_ngcontent-%COMP%]:before{content:\"\uE913\"}.sds-icon-in_progress[_ngcontent-%COMP%]:before{content:\"\uE920\"}.sds-icon-progressed[_ngcontent-%COMP%]:before{content:\"\uE903\"}.sds-icon-save[_ngcontent-%COMP%]:before{content:\"\uE926\"}.sds-icon-image[_ngcontent-%COMP%]:before{content:\"\uE93E\"}.sds-icon-camera[_ngcontent-%COMP%]:before{content:\"\uE90F\"}.sds-icon-arrow_up[_ngcontent-%COMP%]:before{content:\"\uE907\"}.sds-icon-arrow_down[_ngcontent-%COMP%]:before{content:\"\uE901\"}.sds-icon-arrow_left[_ngcontent-%COMP%]:before{content:\"\uE902\"}.sds-icon-arrow_right[_ngcontent-%COMP%]:before{content:\"\uE904\"}.sds-icon-chevron_up[_ngcontent-%COMP%]:before{content:\"\uE918\"}.sds-icon-chevron_down[_ngcontent-%COMP%]:before{content:\"\uE915\"}.sds-icon-chevron_left[_ngcontent-%COMP%]:before{content:\"\uE916\"}.sds-icon-chevron_right[_ngcontent-%COMP%]:before{content:\"\uE917\"}.sds-icon-download[_ngcontent-%COMP%]:before{content:\"\uE900\"}.sds-icon-upload[_ngcontent-%COMP%]:before{content:\"\uE906\"}.sds-icon-uploaded[_ngcontent-%COMP%]:before{content:\"\uE905\"}.sds-icon-folder[_ngcontent-%COMP%]:before{content:\"\uE927\"}.sds-icon-share[_ngcontent-%COMP%]:before{content:\"\uE946\"}.sds-icon-gift[_ngcontent-%COMP%]:before{content:\"\uE941\"}.sds-icon-mobile[_ngcontent-%COMP%]:before{content:\"\uE932\"}.sds-icon-grid[_ngcontent-%COMP%]:before{content:\"\uE952\"}.sds-icon-fit_height[_ngcontent-%COMP%]:before{content:\"\uE909\"}.sds-icon-fit_width[_ngcontent-%COMP%]:before{content:\"\uE908\"}.sds-icon-blocked[_ngcontent-%COMP%]:before{content:\"\uE933\"}.sds-icon-blocked_square[_ngcontent-%COMP%]:before{content:\"\uE934\"}.sds-icon-drag[_ngcontent-%COMP%]:before{content:\"\uE94C\"}.sds-icon-drag_vertical[_ngcontent-%COMP%]:before{content:\"\uE94D\"}.sds-icon-list_view[_ngcontent-%COMP%]:before{content:\"\uE92C\"}.sds-icon-card_view[_ngcontent-%COMP%]:before{content:\"\uE94B\"}.sds-icon-minus[_ngcontent-%COMP%]:before{content:\"\uE931\"}.sds-icon-business[_ngcontent-%COMP%]:before{content:\"\uE90D\"}.sds-icon-key[_ngcontent-%COMP%]:before{content:\"\uE92B\"}.sds-icon-credit_card[_ngcontent-%COMP%]:before{content:\"\uE91C\"}.sds-icon-marker[_ngcontent-%COMP%]:before{content:\"\uE93F\"}.sds-icon-delivery[_ngcontent-%COMP%]:before{content:\"\uE959\"}.sds-icon-filter_new[_ngcontent-%COMP%]:before{content:\"\uE954\"}.sds-icon-view[_ngcontent-%COMP%]:before{content:\"\uE957\"}.sds-icon-disputed[_ngcontent-%COMP%]:before{content:\"\uE958\"}.sds-icon-connect[_ngcontent-%COMP%]:before{content:\"\uE955\"}.sds-icon-chat_notes[_ngcontent-%COMP%]:before{content:\"\uE956\"}.sds-icon-talk[_ngcontent-%COMP%]:before{content:\"\uE95A\"}.sds-icon-split[_ngcontent-%COMP%]:before{content:\"\uE952\"}.sds-icon-disconnect[_ngcontent-%COMP%]:before{content:\"\uE953\"}.sds-icon-bullet_list[_ngcontent-%COMP%]:before{content:\"\uE95B\"}.sds-icon-lightbulb_on[_ngcontent-%COMP%]:before{content:\"\uE95D\"}.sds-icon-lightbulb_off[_ngcontent-%COMP%]:before{content:\"\uE95C\"}.sds-icon-accounts[_ngcontent-%COMP%]:before, .sds-icon-accounts_extra[_ngcontent-%COMP%]:before, .sds-icon-cashbook[_ngcontent-%COMP%]:before{content:\"1\"}.sds-icon-payroll[_ngcontent-%COMP%]:before{content:\"2\"}.sds-icon-insert_row[_ngcontent-%COMP%]:before{content:\"A\"}.sds-icon-book[_ngcontent-%COMP%]:before{content:\"D\"}.sds-icon-bank[_ngcontent-%COMP%]:before{content:\"G\"}.sds-icon-new[_ngcontent-%COMP%]:before{content:\"k\"}.sds-icon-video[_ngcontent-%COMP%]:before{content:\"\uE95E\"}.sds-icon-play[_ngcontent-%COMP%]:before{content:\"\uE95F\"}.sds-icon-ellipsis_horizontal[_ngcontent-%COMP%]:before{content:\"\uE960\"}.sds-icon-ellipsis_vertical[_ngcontent-%COMP%]:before{content:\"\uE961\"}"],
+      changeDetection: 0
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], IconComponent.prototype, "iconType", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], IconComponent.prototype, "type", void 0);
+
+    var IconModule = function IconModule() {
+      _classCallCheck(this, IconModule);
+    };
+
+    IconModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
+      type: IconModule
+    });
+    IconModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
+      factory: function IconModule_Factory(t) {
+        return new (t || IconModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](IconComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-icon',
+          template: "\n    <span class=\"sds-icon\" [ngClass]=\"classes\"></span>\n  ",
+          changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectionStrategy"].OnPush,
+          styles: ["@charset \"UTF-8\";.sds-icon{color:inherit}.sds-icon--input{color:var(--color-black-55)}.sds-icon--input:hover{color:var(--color-black-90)}.sds-icon--info,.sds-icon--info:hover{color:var(--color-info)}.sds-icon--error,.sds-icon--error:hover{color:var(--color-error)}.sds-icon--warning,.sds-icon--warning:hover{color:var(--color-warning)}.sds-icon--disabled,.sds-icon--disabled:hover{color:var(--color-black-30)}.sds-icon--dark-background,.sds-icon--dark-background:hover{color:var(--color-white)}.sds-icon--light-background{color:var(--color-slate-40)}.sds-icon--light-background:hover{color:var(--color-slate-20)}[class*=sds-icon-]:before,[class^=sds-icon-]:before{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:var(--font-default-icon);font-style:normal;font-weight:400}.sds-icon-feedback:before{content:\"\uE930\"}.sds-icon-info:before{content:\"\uE92A\"}.sds-icon-help:before{content:\"\uE951\"}.sds-icon-settings:before{content:\"\uE91A\"}.sds-icon-logout:before{content:\"\uE92E\"}.sds-icon-pdf:before{-webkit-font-smoothing:none;content:\"\uE91F\"}.sds-icon-csv:before{-webkit-font-smoothing:none;content:\"\uE94A\"}.sds-icon-copy:before{-webkit-font-smoothing:none;content:\"\uE91B\"}.sds-icon-error:before{content:\"\uE923\"}.sds-icon-calendar:before{-webkit-font-smoothing:none;content:\"\uE90E\"}.sds-icon-analysis:before{content:\"\uE912\"}.sds-icon-people:before{content:\"\uE93B\"}.sds-icon-dropdown:before{content:\"\uE910\"}.sds-icon-alert:before{content:\"\uE90B\"}.sds-icon-person:before{content:\"\uE93C\"}.sds-icon-search:before{content:\"\uE92F\"}.sds-icon-cross:before{content:\"\uE91D\"}.sds-icon-close:before{content:\"\uE91E\"}.sds-icon-delete:before{content:\"\uE90C\"}.sds-icon-email:before,.sds-icon-message:before,.sds-icon-messages:before{content:\"\uE922\"}.sds-icon-edit:before{content:\"\uE93A\"}.sds-icon-print:before{content:\"\uE942\"}.sds-icon-clock:before{content:\"\uE919\"}.sds-icon-euro:before{content:\"t\"}.sds-icon-home:before{content:\"\uE929\"}.sds-icon-cart:before{content:\"\uE90A\"}.sds-icon-bulk_destroy:before{content:\"\uE90C\"}.sds-icon-hide:before{content:\"w\"}.sds-icon-warning:before{content:\"\uE924\"}.sds-icon-question:before{content:\"\uE943\"}.sds-icon-question_hollow:before{content:\"\uE95E\"}.sds-icon-tick:before{content:\"\uE950\"}.sds-icon-none:before{content:\" \"}.sds-icon-add:before{content:\"\uE940\"}.sds-icon-services:before{content:\"+\"}.sds-icon-collaborate:before{content:\"\uE946\"}.sds-icon-graph:before{content:\"\uE912\"}.sds-icon-plus:before{content:\"\uE940\"}.sds-icon-arrow:before{content:\"\uE904\"}.sds-icon-pound:before{content:\"\xA3\"}.sds-icon-go:before{content:\"\uE903\"}.sds-icon-question_mark:before{content:\"\uE943\"}.sds-icon-admin:before{content:\"\uE94F\"}.sds-icon-contacts:before{content:\"\uE93B\"}.sds-icon-create:before{content:\"\uE940\"}.sds-icon-piggy_bank:before{content:\"\uE926\"}.sds-icon-entry:before{content:\"\uE92C\"}.sds-icon-edited:before{content:\"\uE938\"}.sds-icon-refresh:before{content:\"\uE945\"}.sds-icon-sync:before{content:\"\uE944\"}.sds-icon-fax:before{-webkit-font-smoothing:none;content:\"\uE925\"}.sds-icon-shop:before{content:\"\uE947\"}.sds-icon-attach:before{content:\"\uE937\"}.sds-icon-filter:before{content:\"\uE928\"}.sds-icon-chat:before{content:\"\uE914\"}.sds-icon-duplicate:before{-webkit-font-smoothing:none;content:\"\uE921\"}.sds-icon-call:before,.sds-icon-phone:before{content:\"\uE93D\"}.sds-icon-favourite:before{content:\"\uE94F\"}.sds-icon-favourite_lined:before{content:\"\uE94E\"}.sds-icon-sort_up:before{content:\"\uE949\"}.sds-icon-sort_down:before{content:\"\uE948\"}.sds-icon-link:before{content:\"\uE92D\"}.sds-icon-locked:before{content:\"\uE935\"}.sds-icon-unlocked:before{content:\"\uE936\"}.sds-icon-caret_down:before{content:\"\uE910\"}.sds-icon-draft:before{content:\"\uE939\"}.sds-icon-chart_line:before{content:\"\uE912\"}.sds-icon-chart_bar:before{content:\"\uE911\"}.sds-icon-chart_pie:before{content:\"\uE913\"}.sds-icon-in_progress:before{content:\"\uE920\"}.sds-icon-progressed:before{content:\"\uE903\"}.sds-icon-save:before{content:\"\uE926\"}.sds-icon-image:before{content:\"\uE93E\"}.sds-icon-camera:before{content:\"\uE90F\"}.sds-icon-arrow_up:before{content:\"\uE907\"}.sds-icon-arrow_down:before{content:\"\uE901\"}.sds-icon-arrow_left:before{content:\"\uE902\"}.sds-icon-arrow_right:before{content:\"\uE904\"}.sds-icon-chevron_up:before{content:\"\uE918\"}.sds-icon-chevron_down:before{content:\"\uE915\"}.sds-icon-chevron_left:before{content:\"\uE916\"}.sds-icon-chevron_right:before{content:\"\uE917\"}.sds-icon-download:before{content:\"\uE900\"}.sds-icon-upload:before{content:\"\uE906\"}.sds-icon-uploaded:before{content:\"\uE905\"}.sds-icon-folder:before{content:\"\uE927\"}.sds-icon-share:before{content:\"\uE946\"}.sds-icon-gift:before{content:\"\uE941\"}.sds-icon-mobile:before{content:\"\uE932\"}.sds-icon-grid:before{content:\"\uE952\"}.sds-icon-fit_height:before{content:\"\uE909\"}.sds-icon-fit_width:before{content:\"\uE908\"}.sds-icon-blocked:before{content:\"\uE933\"}.sds-icon-blocked_square:before{content:\"\uE934\"}.sds-icon-drag:before{content:\"\uE94C\"}.sds-icon-drag_vertical:before{content:\"\uE94D\"}.sds-icon-list_view:before{content:\"\uE92C\"}.sds-icon-card_view:before{content:\"\uE94B\"}.sds-icon-minus:before{content:\"\uE931\"}.sds-icon-business:before{content:\"\uE90D\"}.sds-icon-key:before{content:\"\uE92B\"}.sds-icon-credit_card:before{content:\"\uE91C\"}.sds-icon-marker:before{content:\"\uE93F\"}.sds-icon-delivery:before{content:\"\uE959\"}.sds-icon-filter_new:before{content:\"\uE954\"}.sds-icon-view:before{content:\"\uE957\"}.sds-icon-disputed:before{content:\"\uE958\"}.sds-icon-connect:before{content:\"\uE955\"}.sds-icon-chat_notes:before{content:\"\uE956\"}.sds-icon-talk:before{content:\"\uE95A\"}.sds-icon-split:before{content:\"\uE952\"}.sds-icon-disconnect:before{content:\"\uE953\"}.sds-icon-bullet_list:before{content:\"\uE95B\"}.sds-icon-lightbulb_on:before{content:\"\uE95D\"}.sds-icon-lightbulb_off:before{content:\"\uE95C\"}.sds-icon-accounts:before,.sds-icon-accounts_extra:before,.sds-icon-cashbook:before{content:\"1\"}.sds-icon-payroll:before{content:\"2\"}.sds-icon-insert_row:before{content:\"A\"}.sds-icon-book:before{content:\"D\"}.sds-icon-bank:before{content:\"G\"}.sds-icon-new:before{content:\"k\"}.sds-icon-video:before{content:\"\uE95E\"}.sds-icon-play:before{content:\"\uE95F\"}.sds-icon-ellipsis_horizontal:before{content:\"\uE960\"}.sds-icon-ellipsis_vertical:before{content:\"\uE961\"}"]
+        }]
+      }], null, {
+        iconType: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        type: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }]
+      });
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](IconModule, {
+        declarations: function declarations() {
+          return [IconComponent];
+        },
+        imports: function imports() {
+          return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]];
+        },
+        exports: function exports() {
+          return [IconComponent];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](IconModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+          exports: [IconComponent],
+          declarations: [IconComponent]
+        }]
+      }], null, null);
+    })();
+
+    var ICON_TYPES = ['add', 'admin', 'alert', 'analysis', 'arrow', 'arrow_down', 'arrow_left', 'arrow_left_small', 'arrow_right', 'arrow_right_small', 'arrow_up', 'attach', 'basket', 'bin', 'blocked', 'blocked_square', 'bulk_destroy', 'bullet_list', 'business', 'calendar', 'call', 'camera', 'card_view', 'caret_down', 'cart', 'chart_bar', 'chart_line', 'chart_pie', 'chat', 'chat_notes', 'chevron_down', 'chevron_left', 'chevron_right', 'chevron_up', 'clock', 'close', 'coins', 'collaborate', 'connect', 'contacts', 'copy', 'create', 'credit_card', 'credit_card_slash', 'cross', 'csv', 'delete', 'delivery', 'disconnect', 'disputed', 'download', 'draft', 'drag', 'drag_vertical', 'dropdown', 'duplicate', 'edit', 'edited', 'ellipsis_horizontal', 'ellipsis_vertical', 'email', 'entry', 'error', 'euro', 'favourite', 'favourite_lined', 'fax', 'feedback', 'filter', 'filter_new', 'fit_height', 'fit_width', 'folder', 'gift', 'go', 'graph', 'grid', 'help', 'home', 'image', 'in_progress', 'in_transit', 'individual', 'info', 'key', 'lightbulb_off', 'lightbulb_on', 'link', 'list_view', 'location', 'locked', 'logout', 'marker', 'message', 'minus', 'minus_large', 'mobile', 'none', 'pdf', 'people', 'person', 'phone', 'piggy_bank', 'play', 'plus', 'plus_large', 'pound', 'print', 'progress', 'progressed', 'question', 'question_hollow', 'question_mark', 'refresh', 'remove', 'save', 'search', 'services', 'settings', 'share', 'shop', 'sort_down', 'sort_up', 'split', 'submitted', 'sync', 'talk', 'tick', 'unlocked', 'upload', 'uploaded', 'video', 'view', 'warning'];
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=sage-ng-carbon-icon.js.map
+
+    /***/
+  },
+
+  /***/
+  "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-input-text.js":
+  /*!*****************************************************************************************!*\
+    !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-input-text.js ***!
+    \*****************************************************************************************/
+
+  /*! exports provided: InputTextComponent, InputTextModule */
+
+  /***/
+  function node_modulesSageNgCarbon__ivy_ngcc__Fesm2015SageNgCarbonInputTextJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "InputTextComponent", function () {
+      return InputTextComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "InputTextModule", function () {
+      return InputTextModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @sage/ng-carbon/tooltip */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @sage/ng-carbon/icon */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js");
+
+    function InputTextComponent_div_3_ng_container_1_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](0);
+      }
+    }
+
+    function InputTextComponent_div_3_ng_template_2_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "sds-icon", 7);
+      }
+
+      if (rf & 2) {
+        var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("type", ctx_r3.errorType)("iconType", ctx_r3.errorType);
+      }
+    }
+
+    function InputTextComponent_div_3_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 4);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, InputTextComponent_div_3_ng_container_1_Template, 1, 0, "ng-container", 5);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, InputTextComponent_div_3_ng_template_2_Template, 1, 2, "ng-template", null, 6, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](3);
+
+        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", ctx_r0.icon ? ctx_r0.icon : _r2);
+      }
+    }
+
+    var InputTextComponent_1;
+
+    var InputTextComponent = InputTextComponent_1 = /*#__PURE__*/function () {
+      function InputTextComponent() {
+        _classCallCheck(this, InputTextComponent);
+
+        this.size = 'medium';
+        this.disabled = false;
+        this.readOnly = false;
+        this.errorType = 'warning';
+        this.inputFocus = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        this.inputBlur = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"]();
+        this.identifier = "input-text-".concat(Math.random().toString().substring(2, 10) + Math.random().toString().substring(2, 10));
+        /**
+         * @description
+         * Invoked when the model has been changed
+         */
+
+        this.onChange = function (_) {};
+        /**
+         * @description
+         * Invoked when the model has been touched
+         */
+
+
+        this.onTouched = function () {};
+      }
+
+      _createClass2(InputTextComponent, [{
+        key: "handleFocus",
+
+        /**
+         * @description
+         * Handles the focus
+         */
+        value: function handleFocus($event) {
+          this.inputFocus.emit($event);
+        }
+        /**
+         * @description
+         * Handles the blur event
+         */
+
+      }, {
+        key: "handleBlur",
+        value: function handleBlur($event) {
+          this.inputBlur.emit($event);
+        }
+        /**
+         * @description
+         * Writes a new item to the element.
+         */
+
+      }, {
+        key: "writeValue",
+        value: function writeValue(value) {
+          if (value !== undefined) {
+            this._value = value;
+          }
+        }
+        /**
+         * @description
+         * Registers a callback function that should be called when the control's value changes in the UI.
+         */
+
+      }, {
+        key: "registerOnChange",
+        value: function registerOnChange(fn) {
+          this.onChange = fn;
+        }
+        /**
+         * @description
+         * Registers a callback function that should be called when the control receives a blur event.
+         */
+
+      }, {
+        key: "registerOnTouched",
+        value: function registerOnTouched(fn) {
+          this.onTouched = fn;
+        }
+      }, {
+        key: "value",
+        get: function get() {
+          return this._value;
+        },
+        set: function set(v) {
+          this._value = v;
+          this.onChange(this._value);
+          this.onTouched();
+        }
+      }, {
+        key: "classes",
+        get: function get() {
+          var _ref19;
+
+          var CLASS_NAME = 'sds-input-text__field';
+          return _ref19 = {}, _defineProperty(_ref19, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref19, "".concat(CLASS_NAME, "--error"), this.errorType === 'error' && this.errors), _defineProperty(_ref19, "".concat(CLASS_NAME, "--read-only"), this.readOnly), _ref19;
+        }
+        /**
+         * @description
+         * Returns the disable state
+         */
+
+      }, {
+        key: "isDisabled",
+        get: function get() {
+          return this.disabled ? this.disabled : null;
+        }
+        /**
+         * @description
+         * Displays the icon if there are errors and not readonly and not disable
+         * Or if there is an icon available
+         */
+
+      }, {
+        key: "showIcon",
+        get: function get() {
+          return this.errors && !this.readOnly && !this.disabled || this.icon;
+        }
+      }]);
+
+      return InputTextComponent;
+    }();
+
+    InputTextComponent.ɵfac = function InputTextComponent_Factory(t) {
+      return new (t || InputTextComponent)();
+    };
+
+    InputTextComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: InputTextComponent,
+      selectors: [["sds-input-text"]],
+      inputs: {
+        size: "size",
+        disabled: "disabled",
+        readOnly: "readOnly",
+        errorType: "errorType",
+        identifier: "identifier",
+        errors: "errors",
+        icon: "icon",
+        placeholderText: "placeholderText"
+      },
+      outputs: {
+        inputFocus: "inputFocus",
+        inputBlur: "inputBlur"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵProvidersFeature"]([{
+        provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+        useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function () {
+          return InputTextComponent_1;
+        }),
+        multi: true
+      }])],
+      decls: 4,
+      vars: 10,
+      consts: [["sds-tooltip", "", "position", "right", 3, "tooltipContent", "error"], [1, "sds-input-text"], ["type", "text", 1, "sds-input-text__field", 3, "id", "ngModel", "ngClass", "readonly", "ngModelChange", "focus", "blur"], ["class", "sds-input-text__icon", 4, "ngIf"], [1, "sds-input-text__icon"], [4, "ngTemplateOutlet"], ["defaultIcon", ""], [3, "type", "iconType"]],
+      template: function InputTextComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "input", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngModelChange", function InputTextComponent_Template_input_ngModelChange_2_listener($event) {
+            return ctx.value = $event;
+          })("focus", function InputTextComponent_Template_input_focus_2_listener($event) {
+            return ctx.handleFocus($event);
+          })("blur", function InputTextComponent_Template_input_blur_2_listener($event) {
+            return ctx.handleBlur($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, InputTextComponent_div_3_Template, 4, 1, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("tooltipContent", ctx.errors)("error", ctx.errorType === "error");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", ctx.identifier);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngModel", ctx.value)("ngClass", ctx.classes)("readonly", ctx.readOnly);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("aria-disabled", ctx.isDisabled)("disabled", ctx.isDisabled)("placeholder", ctx.placeholderText);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.showIcon);
+        }
+      },
+      directives: [_sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgTemplateOutlet"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconComponent"]],
+      styles: [".sds-input-text[_ngcontent-%COMP%]{position:relative}.sds-input-text__field[_ngcontent-%COMP%]{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;width:100%;color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-input-text__field--compact[_ngcontent-%COMP%]{padding:0 8px;line-height:1.8461538462em}.sds-input-text__field--small[_ngcontent-%COMP%]{padding:0 8px;line-height:2.1428571429em}.sds-input-text__field--medium[_ngcontent-%COMP%]{padding:0 11px;line-height:2.7142857143em}.sds-input-text__field--large[_ngcontent-%COMP%]{padding:0 11px;line-height:2.875em;font-size:1.1428571429em}.sds-input-text__field[_ngcontent-%COMP%]:focus{outline:3px solid var(--color-focus);outline-offset:0}.sds-input-text__field--read-only[_ngcontent-%COMP%]{color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-input-text__field[_ngcontent-%COMP%]:disabled{cursor:not-allowed;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-input-text__field--error[_ngcontent-%COMP%]{border:2px solid var(--color-error)}.sds-input-text__icon[_ngcontent-%COMP%]{top:0;right:0;position:absolute;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:40px}"]
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], InputTextComponent.prototype, "size", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], InputTextComponent.prototype, "disabled", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], InputTextComponent.prototype, "readOnly", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], InputTextComponent.prototype, "errors", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], InputTextComponent.prototype, "errorType", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"])], InputTextComponent.prototype, "icon", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"])], InputTextComponent.prototype, "inputFocus", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"])], InputTextComponent.prototype, "inputBlur", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], InputTextComponent.prototype, "placeholderText", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], InputTextComponent.prototype, "identifier", void 0);
+
+    var InputTextModule = function InputTextModule() {
+      _classCallCheck(this, InputTextModule);
+    };
+
+    InputTextModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
+      type: InputTextModule
+    });
+    InputTextModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
+      factory: function InputTextModule_Factory(t) {
+        return new (t || InputTextModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconModule"]], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](InputTextComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-input-text',
+          template: "\n    <div sds-tooltip position=\"right\" [tooltipContent]=\"errors\" [error]=\"errorType === 'error'\">\n      <div class=\"sds-input-text\">\n        <input\n          id=\"{{ identifier }}\"\n          class=\"sds-input-text__field\"\n          [(ngModel)]=\"value\"\n          type=\"text\"\n          [ngClass]=\"classes\"\n          [attr.aria-disabled]=\"isDisabled\"\n          [attr.disabled]=\"isDisabled\"\n          [readonly]=\"readOnly\"\n          (focus)=\"handleFocus($event)\"\n          (blur)=\"handleBlur($event)\"\n          [attr.placeholder]=\"placeholderText\"\n        />\n        <div class=\"sds-input-text__icon\" *ngIf=\"showIcon\">\n          <ng-container *ngTemplateOutlet=\"icon ? icon : defaultIcon\"> </ng-container>\n          <ng-template #defaultIcon>\n            <sds-icon [type]=\"errorType\" [iconType]=\"errorType\"></sds-icon>\n          </ng-template>\n        </div>\n      </div>\n    </div>\n  ",
+          providers: [{
+            provide: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NG_VALUE_ACCESSOR"],
+            useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["forwardRef"])(function () {
+              return InputTextComponent_1;
+            }),
+            multi: true
+          }],
+          styles: [".sds-input-text{position:relative}.sds-input-text__field{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:1em;width:100%;color:var(--input-color-text);border:1px solid var(--input-color-border);background:var(--input-color-background)}.sds-input-text__field--compact{padding:0 8px;line-height:1.8461538462em}.sds-input-text__field--small{padding:0 8px;line-height:2.1428571429em}.sds-input-text__field--medium{padding:0 11px;line-height:2.7142857143em}.sds-input-text__field--large{padding:0 11px;line-height:2.875em;font-size:1.1428571429em}.sds-input-text__field:focus{outline:3px solid var(--color-focus);outline-offset:0}.sds-input-text__field--read-only{color:var(--input-color-readonly-text);border:1px solid var(--input-color-readonly-border);background:var(--input-color-readonly-background)}.sds-input-text__field:disabled{cursor:not-allowed;color:var(--input-color-disabled-text);border:1px solid var(--input-color-disabled-border);background:var(--input-color-disabled-background)}.sds-input-text__field--error{border:2px solid var(--color-error)}.sds-input-text__icon{top:0;right:0;position:absolute;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:40px}"]
+        }]
+      }], function () {
+        return [];
+      }, {
+        size: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        disabled: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        readOnly: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        errorType: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        inputFocus: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"]
+        }],
+        inputBlur: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"]
+        }],
+        identifier: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        errors: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        icon: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        placeholderText: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }]
+      });
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](InputTextModule, {
+        declarations: function declarations() {
+          return [InputTextComponent];
+        },
+        imports: function imports() {
+          return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconModule"]];
+        },
+        exports: function exports() {
+          return [InputTextComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](InputTextModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _sage_ng_carbon_tooltip__WEBPACK_IMPORTED_MODULE_4__["TooltipModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_5__["IconModule"]],
+          exports: [InputTextComponent, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]],
+          declarations: [InputTextComponent]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=sage-ng-carbon-input-text.js.map
+
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js":
+  /*!**************************************************************************************!*\
+    !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js ***!
+    \**************************************************************************************/
+
+  /*! exports provided: TooltipComponent, TooltipModule */
+
+  /***/
+  function node_modulesSageNgCarbon__ivy_ngcc__Fesm2015SageNgCarbonTooltipJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TooltipComponent", function () {
+      return TooltipComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TooltipModule", function () {
+      return TooltipModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var _c0 = ["sds-tooltip", ""];
+
+    function TooltipComponent_div_2_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "div", 1);
+      }
+
+      if (rf & 2) {
+        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", ctx_r0.identifier);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx_r0.classes)("innerHTML", ctx_r0.tooltipContent, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeHtml"]);
+      }
+    }
+
+    var _c1 = ["*"];
+
+    var TooltipComponent = /*#__PURE__*/function () {
+      function TooltipComponent() {
+        _classCallCheck(this, TooltipComponent);
+
+        this.identifier = "tooltip-".concat(Math.random().toString().substring(2, 10) + Math.random().toString().substring(2, 10));
+        this.position = 'top';
+      }
+      /**
+       * @description
+       * Returns the id of the tooltip element if will be rendered
+       */
+
+
+      _createClass2(TooltipComponent, [{
+        key: "describedBy",
+        get: function get() {
+          return this.tooltipContent ? this.identifier : null;
+        }
+        /**
+         * @description
+         * Builds the classes to add to the tooltip
+         */
+
+      }, {
+        key: "classes",
+        get: function get() {
+          var _ref20;
+
+          return _ref20 = {}, _defineProperty(_ref20, "sds-tooltip--".concat(this.position), this.position), _defineProperty(_ref20, "sds-tooltip--error", this.error), _ref20;
+        }
+      }]);
+
+      return TooltipComponent;
+    }();
+
+    TooltipComponent.ɵfac = function TooltipComponent_Factory(t) {
+      return new (t || TooltipComponent)();
+    };
+
+    TooltipComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: TooltipComponent,
+      selectors: [["", "sds-tooltip", ""]],
+      inputs: {
+        identifier: "identifier",
+        position: "position",
+        error: "error",
+        tooltipContent: "tooltipContent"
+      },
+      attrs: _c0,
+      ngContentSelectors: _c1,
+      decls: 3,
+      vars: 2,
+      consts: [["class", "sds-tooltip", "role", "tooltip", 3, "id", "ngClass", "innerHTML", 4, "ngIf"], ["role", "tooltip", 1, "sds-tooltip", 3, "id", "ngClass", "innerHTML"]],
+      template: function TooltipComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "span");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, TooltipComponent_div_2_Template, 1, 3, "div", 0);
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("aria-describedby", ctx.describedBy);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.tooltipContent);
+        }
+      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]],
+      styles: ["[_nghost-%COMP%]{position:relative}[_nghost-%COMP%]:focus   .sds-tooltip[_ngcontent-%COMP%], [_nghost-%COMP%]:focus-within   .sds-tooltip[_ngcontent-%COMP%], [_nghost-%COMP%]:hover   .sds-tooltip[_ngcontent-%COMP%]{visibility:visible}[_nghost-%COMP%]:focus{outline:3px solid var(--color-focus)}.sds-tooltip[_ngcontent-%COMP%]{--tooltip-color:rgba(0, 0, 0);font-family:var(--font-default-body);visibility:hidden;position:absolute;background:var(--tooltip-color);color:var(--color-white);padding:10px 15px;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:300px;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:var(--tooltip-z-index)}.sds-tooltip[_ngcontent-%COMP%]::after{content:\"\";position:absolute;width:0;height:0;border-top:8px solid var(--tooltip-color);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--right[_ngcontent-%COMP%]{top:50%;left:100%;margin-left:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--right[_ngcontent-%COMP%]::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:-16px;border-top:8px solid transparent;border-right:8px solid var(--tooltip-color);border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--top[_ngcontent-%COMP%]{bottom:100%;margin-bottom:10px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--top[_ngcontent-%COMP%]::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:100%}.sds-tooltip--left[_ngcontent-%COMP%]{top:50%;right:100%;margin-right:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--left[_ngcontent-%COMP%]::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);right:-16px;border-top:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid var(--tooltip-color)}.sds-tooltip--bottom[_ngcontent-%COMP%]{left:50%;top:100%;margin-top:10px;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--bottom[_ngcontent-%COMP%]::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:-16px;border-right:8px solid transparent;border-left:8px solid transparent;border-bottom:8px solid #000;border-top:8px solid transparent;border-bottom:8px solid var(--tooltip-color)}.sds-tooltip--error[_ngcontent-%COMP%]{--tooltip-color:var(--color-red)}"],
+      changeDetection: 0
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], TooltipComponent.prototype, "identifier", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], TooltipComponent.prototype, "error", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], TooltipComponent.prototype, "tooltipContent", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], TooltipComponent.prototype, "position", void 0);
+
+    var TooltipModule = function TooltipModule() {
+      _classCallCheck(this, TooltipModule);
+    };
+
+    TooltipModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
+      type: TooltipModule
+    });
+    TooltipModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
+      factory: function TooltipModule_Factory(t) {
+        return new (t || TooltipModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TooltipComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: '[sds-tooltip]',
+          template: "\n    <span [attr.aria-describedby]=\"describedBy\">\n      <ng-content></ng-content>\n    </span>\n    <div *ngIf=\"tooltipContent\" id=\"{{ identifier }}\" class=\"sds-tooltip\" [ngClass]=\"classes\" role=\"tooltip\" [innerHTML]=\"tooltipContent\"></div>\n  ",
+          changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectionStrategy"].OnPush,
+          styles: [":host{position:relative}:host:focus .sds-tooltip,:host:focus-within .sds-tooltip,:host:hover .sds-tooltip{visibility:visible}:host:focus{outline:3px solid var(--color-focus)}.sds-tooltip{--tooltip-color:rgba(0, 0, 0);font-family:var(--font-default-body);visibility:hidden;position:absolute;background:var(--tooltip-color);color:var(--color-white);padding:10px 15px;width:-webkit-max-content;width:-moz-max-content;width:max-content;max-width:300px;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;z-index:var(--tooltip-z-index)}.sds-tooltip::after{content:\"\";position:absolute;width:0;height:0;border-top:8px solid var(--tooltip-color);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--right{top:50%;left:100%;margin-left:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--right::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:-16px;border-top:8px solid transparent;border-right:8px solid var(--tooltip-color);border-bottom:8px solid transparent;border-left:8px solid transparent}.sds-tooltip--top{bottom:100%;margin-bottom:10px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--top::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:100%}.sds-tooltip--left{top:50%;right:100%;margin-right:10px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.sds-tooltip--left::after{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);right:-16px;border-top:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid var(--tooltip-color)}.sds-tooltip--bottom{left:50%;top:100%;margin-top:10px;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.sds-tooltip--bottom::after{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);top:-16px;border-right:8px solid transparent;border-left:8px solid transparent;border-bottom:8px solid #000;border-top:8px solid transparent;border-bottom:8px solid var(--tooltip-color)}.sds-tooltip--error{--tooltip-color:var(--color-red)}"]
+        }]
+      }], function () {
+        return [];
+      }, {
+        identifier: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        position: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        error: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        tooltipContent: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }]
+      });
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](TooltipModule, {
+        declarations: function declarations() {
+          return [TooltipComponent];
+        },
+        imports: function imports() {
+          return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]];
+        },
+        exports: function exports() {
+          return [TooltipComponent];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TooltipModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+          exports: [TooltipComponent],
+          declarations: [TooltipComponent]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=sage-ng-carbon-tooltip.js.map
+
+    /***/
+
+  },
+
+  /***/
   "./node_modules/rxjs/_esm2015/index.js":
   /*!*********************************************!*\
     !*** ./node_modules/rxjs/_esm2015/index.js ***!
@@ -99299,15 +101511,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super66 = _createSuper(AsyncSubject);
 
       function AsyncSubject() {
-        var _this145;
+        var _this149;
 
         _classCallCheck(this, AsyncSubject);
 
-        _this145 = _super66.apply(this, arguments);
-        _this145.value = null;
-        _this145.hasNext = false;
-        _this145.hasCompleted = false;
-        return _this145;
+        _this149 = _super66.apply(this, arguments);
+        _this149.value = null;
+        _this149.hasNext = false;
+        _this149.hasCompleted = false;
+        return _this149;
       }
 
       _createClass2(AsyncSubject, [{
@@ -99397,13 +101609,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super67 = _createSuper(BehaviorSubject);
 
       function BehaviorSubject(_value) {
-        var _this146;
+        var _this150;
 
         _classCallCheck(this, BehaviorSubject);
 
-        _this146 = _super67.call(this);
-        _this146._value = _value;
-        return _this146;
+        _this150 = _super67.call(this);
+        _this150._value = _value;
+        return _this150;
       }
 
       _createClass2(BehaviorSubject, [{
@@ -99479,16 +101691,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super68 = _createSuper(InnerSubscriber);
 
       function InnerSubscriber(parent, outerValue, outerIndex) {
-        var _this147;
+        var _this151;
 
         _classCallCheck(this, InnerSubscriber);
 
-        _this147 = _super68.call(this);
-        _this147.parent = parent;
-        _this147.outerValue = outerValue;
-        _this147.outerIndex = outerIndex;
-        _this147.index = 0;
-        return _this147;
+        _this151 = _super68.call(this);
+        _this151.parent = parent;
+        _this151.outerValue = outerValue;
+        _this151.outerIndex = outerIndex;
+        _this151.index = 0;
+        return _this151;
       }
 
       _createClass2(InnerSubscriber, [{
@@ -99780,12 +101992,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "forEach",
         value: function forEach(next, promiseCtor) {
-          var _this148 = this;
+          var _this152 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var subscription;
-            subscription = _this148.subscribe(function (value) {
+            subscription = _this152.subscribe(function (value) {
               try {
                 next(value);
               } catch (err) {
@@ -99825,13 +102037,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toPromise",
         value: function toPromise(promiseCtor) {
-          var _this149 = this;
+          var _this153 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var value;
 
-            _this149.subscribe(function (x) {
+            _this153.subscribe(function (x) {
               return value = x;
             }, function (err) {
               return reject(err);
@@ -100036,7 +102248,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super70 = _createSuper(ReplaySubject);
 
       function ReplaySubject() {
-        var _this150;
+        var _this154;
 
         var bufferSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Number.POSITIVE_INFINITY;
         var windowTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
@@ -100044,21 +102256,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, ReplaySubject);
 
-        _this150 = _super70.call(this);
-        _this150.scheduler = scheduler;
-        _this150._events = [];
-        _this150._infiniteTimeWindow = false;
-        _this150._bufferSize = bufferSize < 1 ? 1 : bufferSize;
-        _this150._windowTime = windowTime < 1 ? 1 : windowTime;
+        _this154 = _super70.call(this);
+        _this154.scheduler = scheduler;
+        _this154._events = [];
+        _this154._infiniteTimeWindow = false;
+        _this154._bufferSize = bufferSize < 1 ? 1 : bufferSize;
+        _this154._windowTime = windowTime < 1 ? 1 : windowTime;
 
         if (windowTime === Number.POSITIVE_INFINITY) {
-          _this150._infiniteTimeWindow = true;
-          _this150.next = _this150.nextInfiniteTimeWindow;
+          _this154._infiniteTimeWindow = true;
+          _this154.next = _this154.nextInfiniteTimeWindow;
         } else {
-          _this150.next = _this150.nextTimeWindow;
+          _this154.next = _this154.nextTimeWindow;
         }
 
-        return _this150;
+        return _this154;
       }
 
       _createClass2(ReplaySubject, [{
@@ -100299,13 +102511,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super71 = _createSuper(SubjectSubscriber);
 
       function SubjectSubscriber(destination) {
-        var _this151;
+        var _this155;
 
         _classCallCheck(this, SubjectSubscriber);
 
-        _this151 = _super71.call(this, destination);
-        _this151.destination = destination;
-        return _this151;
+        _this155 = _super71.call(this, destination);
+        _this155.destination = destination;
+        return _this155;
       }
 
       return SubjectSubscriber;
@@ -100317,17 +102529,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super72 = _createSuper(Subject);
 
       function Subject() {
-        var _this152;
+        var _this156;
 
         _classCallCheck(this, Subject);
 
-        _this152 = _super72.call(this);
-        _this152.observers = [];
-        _this152.closed = false;
-        _this152.isStopped = false;
-        _this152.hasError = false;
-        _this152.thrownError = null;
-        return _this152;
+        _this156 = _super72.call(this);
+        _this156.observers = [];
+        _this156.closed = false;
+        _this156.isStopped = false;
+        _this156.hasError = false;
+        _this156.thrownError = null;
+        return _this156;
       }
 
       _createClass2(Subject, [{
@@ -100451,14 +102663,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super73 = _createSuper(AnonymousSubject);
 
       function AnonymousSubject(destination, source) {
-        var _this153;
+        var _this157;
 
         _classCallCheck(this, AnonymousSubject);
 
-        _this153 = _super73.call(this);
-        _this153.destination = destination;
-        _this153.source = source;
-        return _this153;
+        _this157 = _super73.call(this);
+        _this157.destination = destination;
+        _this157.source = source;
+        return _this157;
       }
 
       _createClass2(AnonymousSubject, [{
@@ -100540,15 +102752,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super74 = _createSuper(SubjectSubscription);
 
       function SubjectSubscription(subject, subscriber) {
-        var _this154;
+        var _this158;
 
         _classCallCheck(this, SubjectSubscription);
 
-        _this154 = _super74.call(this);
-        _this154.subject = subject;
-        _this154.subscriber = subscriber;
-        _this154.closed = false;
-        return _this154;
+        _this158 = _super74.call(this);
+        _this158.subject = subject;
+        _this158.subscriber = subscriber;
+        _this158.closed = false;
+        return _this158;
       }
 
       _createClass2(SubjectSubscription, [{
@@ -100650,47 +102862,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super75 = _createSuper(Subscriber);
 
       function Subscriber(destinationOrNext, error, complete) {
-        var _this155;
+        var _this159;
 
         _classCallCheck(this, Subscriber);
 
-        _this155 = _super75.call(this);
-        _this155.syncErrorValue = null;
-        _this155.syncErrorThrown = false;
-        _this155.syncErrorThrowable = false;
-        _this155.isStopped = false;
+        _this159 = _super75.call(this);
+        _this159.syncErrorValue = null;
+        _this159.syncErrorThrown = false;
+        _this159.syncErrorThrowable = false;
+        _this159.isStopped = false;
 
         switch (arguments.length) {
           case 0:
-            _this155.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+            _this159.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
             break;
 
           case 1:
             if (!destinationOrNext) {
-              _this155.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+              _this159.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
               break;
             }
 
             if (typeof destinationOrNext === 'object') {
               if (destinationOrNext instanceof Subscriber) {
-                _this155.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
-                _this155.destination = destinationOrNext;
-                destinationOrNext.add(_assertThisInitialized(_this155));
+                _this159.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
+                _this159.destination = destinationOrNext;
+                destinationOrNext.add(_assertThisInitialized(_this159));
               } else {
-                _this155.syncErrorThrowable = true;
-                _this155.destination = new SafeSubscriber(_assertThisInitialized(_this155), destinationOrNext);
+                _this159.syncErrorThrowable = true;
+                _this159.destination = new SafeSubscriber(_assertThisInitialized(_this159), destinationOrNext);
               }
 
               break;
             }
 
           default:
-            _this155.syncErrorThrowable = true;
-            _this155.destination = new SafeSubscriber(_assertThisInitialized(_this155), destinationOrNext, error, complete);
+            _this159.syncErrorThrowable = true;
+            _this159.destination = new SafeSubscriber(_assertThisInitialized(_this159), destinationOrNext, error, complete);
             break;
         }
 
-        return _this155;
+        return _this159;
       }
 
       _createClass2(Subscriber, [{
@@ -100780,15 +102992,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super76 = _createSuper(SafeSubscriber);
 
       function SafeSubscriber(_parentSubscriber, observerOrNext, error, complete) {
-        var _this156;
+        var _this160;
 
         _classCallCheck(this, SafeSubscriber);
 
-        _this156 = _super76.call(this);
-        _this156._parentSubscriber = _parentSubscriber;
+        _this160 = _super76.call(this);
+        _this160._parentSubscriber = _parentSubscriber;
         var next;
 
-        var context = _assertThisInitialized(_this156);
+        var context = _assertThisInitialized(_this160);
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(observerOrNext)) {
           next = observerOrNext;
@@ -100801,18 +103013,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             context = Object.create(observerOrNext);
 
             if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(context.unsubscribe)) {
-              _this156.add(context.unsubscribe.bind(context));
+              _this160.add(context.unsubscribe.bind(context));
             }
 
-            context.unsubscribe = _this156.unsubscribe.bind(_assertThisInitialized(_this156));
+            context.unsubscribe = _this160.unsubscribe.bind(_assertThisInitialized(_this160));
           }
         }
 
-        _this156._context = context;
-        _this156._next = next;
-        _this156._error = error;
-        _this156._complete = complete;
-        return _this156;
+        _this160._context = context;
+        _this160._next = next;
+        _this160._error = error;
+        _this160._complete = complete;
+        return _this160;
       }
 
       _createClass2(SafeSubscriber, [{
@@ -100868,14 +103080,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "complete",
         value: function complete() {
-          var _this157 = this;
+          var _this161 = this;
 
           if (!this.isStopped) {
             var _parentSubscriber = this._parentSubscriber;
 
             if (this._complete) {
               var wrappedComplete = function wrappedComplete() {
-                return _this157._complete.call(_this157._context);
+                return _this161._complete.call(_this161._context);
               };
 
               if (!_config__WEBPACK_IMPORTED_MODULE_4__["config"].useDeprecatedSynchronousErrorHandling || !_parentSubscriber.syncErrorThrowable) {
@@ -101264,16 +103476,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super77 = _createSuper(ConnectableObservable);
 
       function ConnectableObservable(source, subjectFactory) {
-        var _this158;
+        var _this162;
 
         _classCallCheck(this, ConnectableObservable);
 
-        _this158 = _super77.call(this);
-        _this158.source = source;
-        _this158.subjectFactory = subjectFactory;
-        _this158._refCount = 0;
-        _this158._isComplete = false;
-        return _this158;
+        _this162 = _super77.call(this);
+        _this162.source = source;
+        _this162.subjectFactory = subjectFactory;
+        _this162._refCount = 0;
+        _this162._isComplete = false;
+        return _this162;
       }
 
       _createClass2(ConnectableObservable, [{
@@ -101363,13 +103575,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super78 = _createSuper(ConnectableSubscriber);
 
       function ConnectableSubscriber(destination, connectable) {
-        var _this159;
+        var _this163;
 
         _classCallCheck(this, ConnectableSubscriber);
 
-        _this159 = _super78.call(this, destination);
-        _this159.connectable = connectable;
-        return _this159;
+        _this163 = _super78.call(this, destination);
+        _this163.connectable = connectable;
+        return _this163;
       }
 
       _createClass2(ConnectableSubscriber, [{
@@ -101442,13 +103654,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super79 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this160;
+        var _this164;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this160 = _super79.call(this, destination);
-        _this160.connectable = connectable;
-        return _this160;
+        _this164 = _super79.call(this, destination);
+        _this164.connectable = connectable;
+        return _this164;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -101537,27 +103749,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super80 = _createSuper(SubscribeOnObservable);
 
       function SubscribeOnObservable(source) {
-        var _this161;
+        var _this165;
 
         var delayTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         var scheduler = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
 
         _classCallCheck(this, SubscribeOnObservable);
 
-        _this161 = _super80.call(this);
-        _this161.source = source;
-        _this161.delayTime = delayTime;
-        _this161.scheduler = scheduler;
+        _this165 = _super80.call(this);
+        _this165.source = source;
+        _this165.delayTime = delayTime;
+        _this165.scheduler = scheduler;
 
         if (!Object(_util_isNumeric__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(delayTime) || delayTime < 0) {
-          _this161.delayTime = 0;
+          _this165.delayTime = 0;
         }
 
         if (!scheduler || typeof scheduler.schedule !== 'function') {
-          _this161.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
+          _this165.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
         }
 
-        return _this161;
+        return _this165;
       }
 
       _createClass2(SubscribeOnObservable, [{
@@ -101715,7 +103927,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this162 = this;
+      var _this166 = this;
 
       var self = this;
       var args = state.args,
@@ -101736,7 +103948,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-          _this162.add(scheduler.schedule(dispatchNext, 0, {
+          _this166.add(scheduler.schedule(dispatchNext, 0, {
             value: value,
             subject: subject
           }));
@@ -101898,7 +104110,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this163 = this;
+      var _this167 = this;
 
       var params = state.params,
           subscriber = state.subscriber,
@@ -101919,14 +104131,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var err = innerArgs.shift();
 
           if (err) {
-            _this163.add(scheduler.schedule(dispatchError, 0, {
+            _this167.add(scheduler.schedule(dispatchError, 0, {
               err: err,
               subject: subject
             }));
           } else {
             var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-            _this163.add(scheduler.schedule(dispatchNext, 0, {
+            _this167.add(scheduler.schedule(dispatchNext, 0, {
               value: value,
               subject: subject
             }));
@@ -102073,16 +104285,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super81 = _createSuper(CombineLatestSubscriber);
 
       function CombineLatestSubscriber(destination, resultSelector) {
-        var _this164;
+        var _this168;
 
         _classCallCheck(this, CombineLatestSubscriber);
 
-        _this164 = _super81.call(this, destination);
-        _this164.resultSelector = resultSelector;
-        _this164.active = 0;
-        _this164.values = [];
-        _this164.observables = [];
-        return _this164;
+        _this168 = _super81.call(this, destination);
+        _this168.resultSelector = resultSelector;
+        _this168.active = 0;
+        _this168.values = [];
+        _this168.observables = [];
+        return _this168;
       }
 
       _createClass2(CombineLatestSubscriber, [{
@@ -103552,15 +105764,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super82 = _createSuper(RaceSubscriber);
 
       function RaceSubscriber(destination) {
-        var _this165;
+        var _this169;
 
         _classCallCheck(this, RaceSubscriber);
 
-        _this165 = _super82.call(this, destination);
-        _this165.hasFirst = false;
-        _this165.observables = [];
-        _this165.subscriptions = [];
-        return _this165;
+        _this169 = _super82.call(this, destination);
+        _this169.hasFirst = false;
+        _this169.observables = [];
+        _this169.subscriptions = [];
+        return _this169;
       }
 
       _createClass2(RaceSubscriber, [{
@@ -103757,9 +105969,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function dispatch(_ref12) {
-      var error = _ref12.error,
-          subscriber = _ref12.subscriber;
+    function dispatch(_ref21) {
+      var error = _ref21.error,
+          subscriber = _ref21.subscriber;
       subscriber.error(error);
     } //# sourceMappingURL=throwError.js.map
 
@@ -104036,18 +106248,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super83 = _createSuper(ZipSubscriber);
 
       function ZipSubscriber(destination, resultSelector) {
-        var _this166;
+        var _this170;
 
         var values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.create(null);
 
         _classCallCheck(this, ZipSubscriber);
 
-        _this166 = _super83.call(this, destination);
-        _this166.iterators = [];
-        _this166.active = 0;
-        _this166.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
-        _this166.values = values;
-        return _this166;
+        _this170 = _super83.call(this, destination);
+        _this170.iterators = [];
+        _this170.active = 0;
+        _this170.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
+        _this170.values = values;
+        return _this170;
       }
 
       _createClass2(ZipSubscriber, [{
@@ -104241,17 +106453,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super84 = _createSuper(ZipBufferIterator);
 
       function ZipBufferIterator(destination, parent, observable) {
-        var _this167;
+        var _this171;
 
         _classCallCheck(this, ZipBufferIterator);
 
-        _this167 = _super84.call(this, destination);
-        _this167.parent = parent;
-        _this167.observable = observable;
-        _this167.stillUnsubscribed = true;
-        _this167.buffer = [];
-        _this167.isComplete = false;
-        return _this167;
+        _this171 = _super84.call(this, destination);
+        _this171.parent = parent;
+        _this171.observable = observable;
+        _this171.stillUnsubscribed = true;
+        _this171.buffer = [];
+        _this171.isComplete = false;
+        return _this171;
       }
 
       _createClass2(ZipBufferIterator, [{
@@ -104377,14 +106589,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super85 = _createSuper(AuditSubscriber);
 
       function AuditSubscriber(destination, durationSelector) {
-        var _this168;
+        var _this172;
 
         _classCallCheck(this, AuditSubscriber);
 
-        _this168 = _super85.call(this, destination);
-        _this168.durationSelector = durationSelector;
-        _this168.hasValue = false;
-        return _this168;
+        _this172 = _super85.call(this, destination);
+        _this172.durationSelector = durationSelector;
+        _this172.hasValue = false;
+        return _this172;
       }
 
       _createClass2(AuditSubscriber, [{
@@ -104560,16 +106772,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super86 = _createSuper(BufferSubscriber);
 
       function BufferSubscriber(destination, closingNotifier) {
-        var _this169;
+        var _this173;
 
         _classCallCheck(this, BufferSubscriber);
 
-        _this169 = _super86.call(this, destination);
-        _this169.buffer = [];
+        _this173 = _super86.call(this, destination);
+        _this173.buffer = [];
 
-        _this169.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this169), closingNotifier));
+        _this173.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this173), closingNotifier));
 
-        return _this169;
+        return _this173;
       }
 
       _createClass2(BufferSubscriber, [{
@@ -104656,14 +106868,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super87 = _createSuper(BufferCountSubscriber);
 
       function BufferCountSubscriber(destination, bufferSize) {
-        var _this170;
+        var _this174;
 
         _classCallCheck(this, BufferCountSubscriber);
 
-        _this170 = _super87.call(this, destination);
-        _this170.bufferSize = bufferSize;
-        _this170.buffer = [];
-        return _this170;
+        _this174 = _super87.call(this, destination);
+        _this174.bufferSize = bufferSize;
+        _this174.buffer = [];
+        return _this174;
       }
 
       _createClass2(BufferCountSubscriber, [{
@@ -104699,16 +106911,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super88 = _createSuper(BufferSkipCountSubscriber);
 
       function BufferSkipCountSubscriber(destination, bufferSize, startBufferEvery) {
-        var _this171;
+        var _this175;
 
         _classCallCheck(this, BufferSkipCountSubscriber);
 
-        _this171 = _super88.call(this, destination);
-        _this171.bufferSize = bufferSize;
-        _this171.startBufferEvery = startBufferEvery;
-        _this171.buffers = [];
-        _this171.count = 0;
-        return _this171;
+        _this175 = _super88.call(this, destination);
+        _this175.bufferSize = bufferSize;
+        _this175.startBufferEvery = startBufferEvery;
+        _this175.buffers = [];
+        _this175.count = 0;
+        return _this175;
       }
 
       _createClass2(BufferSkipCountSubscriber, [{
@@ -104855,47 +107067,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super89 = _createSuper(BufferTimeSubscriber);
 
       function BufferTimeSubscriber(destination, bufferTimeSpan, bufferCreationInterval, maxBufferSize, scheduler) {
-        var _this172;
+        var _this176;
 
         _classCallCheck(this, BufferTimeSubscriber);
 
-        _this172 = _super89.call(this, destination);
-        _this172.bufferTimeSpan = bufferTimeSpan;
-        _this172.bufferCreationInterval = bufferCreationInterval;
-        _this172.maxBufferSize = maxBufferSize;
-        _this172.scheduler = scheduler;
-        _this172.contexts = [];
+        _this176 = _super89.call(this, destination);
+        _this176.bufferTimeSpan = bufferTimeSpan;
+        _this176.bufferCreationInterval = bufferCreationInterval;
+        _this176.maxBufferSize = maxBufferSize;
+        _this176.scheduler = scheduler;
+        _this176.contexts = [];
 
-        var context = _this172.openContext();
+        var context = _this176.openContext();
 
-        _this172.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
+        _this176.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
 
-        if (_this172.timespanOnly) {
+        if (_this176.timespanOnly) {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this172),
+            subscriber: _assertThisInitialized(_this176),
             context: context,
             bufferTimeSpan: bufferTimeSpan
           };
 
-          _this172.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
+          _this176.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
         } else {
           var closeState = {
-            subscriber: _assertThisInitialized(_this172),
+            subscriber: _assertThisInitialized(_this176),
             context: context
           };
           var creationState = {
             bufferTimeSpan: bufferTimeSpan,
             bufferCreationInterval: bufferCreationInterval,
-            subscriber: _assertThisInitialized(_this172),
+            subscriber: _assertThisInitialized(_this176),
             scheduler: scheduler
           };
 
-          _this172.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
+          _this176.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
 
-          _this172.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
+          _this176.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
         }
 
-        return _this172;
+        return _this176;
       }
 
       _createClass2(BufferTimeSubscriber, [{
@@ -105095,18 +107307,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super90 = _createSuper(BufferToggleSubscriber);
 
       function BufferToggleSubscriber(destination, openings, closingSelector) {
-        var _this173;
+        var _this177;
 
         _classCallCheck(this, BufferToggleSubscriber);
 
-        _this173 = _super90.call(this, destination);
-        _this173.openings = openings;
-        _this173.closingSelector = closingSelector;
-        _this173.contexts = [];
+        _this177 = _super90.call(this, destination);
+        _this177.openings = openings;
+        _this177.closingSelector = closingSelector;
+        _this177.contexts = [];
 
-        _this173.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this173), openings));
+        _this177.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this177), openings));
 
-        return _this173;
+        return _this177;
       }
 
       _createClass2(BufferToggleSubscriber, [{
@@ -105287,17 +107499,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super91 = _createSuper(BufferWhenSubscriber);
 
       function BufferWhenSubscriber(destination, closingSelector) {
-        var _this174;
+        var _this178;
 
         _classCallCheck(this, BufferWhenSubscriber);
 
-        _this174 = _super91.call(this, destination);
-        _this174.closingSelector = closingSelector;
-        _this174.subscribing = false;
+        _this178 = _super91.call(this, destination);
+        _this178.closingSelector = closingSelector;
+        _this178.subscribing = false;
 
-        _this174.openBuffer();
+        _this178.openBuffer();
 
-        return _this174;
+        return _this178;
       }
 
       _createClass2(BufferWhenSubscriber, [{
@@ -105447,14 +107659,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super92 = _createSuper(CatchSubscriber);
 
       function CatchSubscriber(destination, selector, caught) {
-        var _this175;
+        var _this179;
 
         _classCallCheck(this, CatchSubscriber);
 
-        _this175 = _super92.call(this, destination);
-        _this175.selector = selector;
-        _this175.caught = caught;
-        return _this175;
+        _this179 = _super92.call(this, destination);
+        _this179.selector = selector;
+        _this179.caught = caught;
+        return _this179;
       }
 
       _createClass2(CatchSubscriber, [{
@@ -105791,16 +108003,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super93 = _createSuper(CountSubscriber);
 
       function CountSubscriber(destination, predicate, source) {
-        var _this176;
+        var _this180;
 
         _classCallCheck(this, CountSubscriber);
 
-        _this176 = _super93.call(this, destination);
-        _this176.predicate = predicate;
-        _this176.source = source;
-        _this176.count = 0;
-        _this176.index = 0;
-        return _this176;
+        _this180 = _super93.call(this, destination);
+        _this180.predicate = predicate;
+        _this180.source = source;
+        _this180.count = 0;
+        _this180.index = 0;
+        return _this180;
       }
 
       _createClass2(CountSubscriber, [{
@@ -105904,15 +108116,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super94 = _createSuper(DebounceSubscriber);
 
       function DebounceSubscriber(destination, durationSelector) {
-        var _this177;
+        var _this181;
 
         _classCallCheck(this, DebounceSubscriber);
 
-        _this177 = _super94.call(this, destination);
-        _this177.durationSelector = durationSelector;
-        _this177.hasValue = false;
-        _this177.durationSubscription = null;
-        return _this177;
+        _this181 = _super94.call(this, destination);
+        _this181.durationSelector = durationSelector;
+        _this181.hasValue = false;
+        _this181.durationSubscription = null;
+        return _this181;
       }
 
       _createClass2(DebounceSubscriber, [{
@@ -106053,17 +108265,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super95 = _createSuper(DebounceTimeSubscriber);
 
       function DebounceTimeSubscriber(destination, dueTime, scheduler) {
-        var _this178;
+        var _this182;
 
         _classCallCheck(this, DebounceTimeSubscriber);
 
-        _this178 = _super95.call(this, destination);
-        _this178.dueTime = dueTime;
-        _this178.scheduler = scheduler;
-        _this178.debouncedSubscription = null;
-        _this178.lastValue = null;
-        _this178.hasValue = false;
-        return _this178;
+        _this182 = _super95.call(this, destination);
+        _this182.dueTime = dueTime;
+        _this182.scheduler = scheduler;
+        _this182.debouncedSubscription = null;
+        _this182.lastValue = null;
+        _this182.hasValue = false;
+        return _this182;
       }
 
       _createClass2(DebounceTimeSubscriber, [{
@@ -106172,14 +108384,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super96 = _createSuper(DefaultIfEmptySubscriber);
 
       function DefaultIfEmptySubscriber(destination, defaultValue) {
-        var _this179;
+        var _this183;
 
         _classCallCheck(this, DefaultIfEmptySubscriber);
 
-        _this179 = _super96.call(this, destination);
-        _this179.defaultValue = defaultValue;
-        _this179.isEmpty = true;
-        return _this179;
+        _this183 = _super96.call(this, destination);
+        _this183.defaultValue = defaultValue;
+        _this183.isEmpty = true;
+        return _this183;
       }
 
       _createClass2(DefaultIfEmptySubscriber, [{
@@ -106283,17 +108495,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super97 = _createSuper(DelaySubscriber);
 
       function DelaySubscriber(destination, delay, scheduler) {
-        var _this180;
+        var _this184;
 
         _classCallCheck(this, DelaySubscriber);
 
-        _this180 = _super97.call(this, destination);
-        _this180.delay = delay;
-        _this180.scheduler = scheduler;
-        _this180.queue = [];
-        _this180.active = false;
-        _this180.errored = false;
-        return _this180;
+        _this184 = _super97.call(this, destination);
+        _this184.delay = delay;
+        _this184.scheduler = scheduler;
+        _this184.queue = [];
+        _this184.active = false;
+        _this184.errored = false;
+        return _this184;
       }
 
       _createClass2(DelaySubscriber, [{
@@ -106457,16 +108669,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super98 = _createSuper(DelayWhenSubscriber);
 
       function DelayWhenSubscriber(destination, delayDurationSelector) {
-        var _this181;
+        var _this185;
 
         _classCallCheck(this, DelayWhenSubscriber);
 
-        _this181 = _super98.call(this, destination);
-        _this181.delayDurationSelector = delayDurationSelector;
-        _this181.completed = false;
-        _this181.delayNotifierSubscriptions = [];
-        _this181.index = 0;
-        return _this181;
+        _this185 = _super98.call(this, destination);
+        _this185.delayDurationSelector = delayDurationSelector;
+        _this185.completed = false;
+        _this185.delayNotifierSubscriptions = [];
+        _this185.index = 0;
+        return _this185;
       }
 
       _createClass2(DelayWhenSubscriber, [{
@@ -106555,14 +108767,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super99 = _createSuper(SubscriptionDelayObservable);
 
       function SubscriptionDelayObservable(source, subscriptionDelay) {
-        var _this182;
+        var _this186;
 
         _classCallCheck(this, SubscriptionDelayObservable);
 
-        _this182 = _super99.call(this);
-        _this182.source = source;
-        _this182.subscriptionDelay = subscriptionDelay;
-        return _this182;
+        _this186 = _super99.call(this);
+        _this186.source = source;
+        _this186.subscriptionDelay = subscriptionDelay;
+        return _this186;
       }
 
       _createClass2(SubscriptionDelayObservable, [{
@@ -106581,15 +108793,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super100 = _createSuper(SubscriptionDelaySubscriber);
 
       function SubscriptionDelaySubscriber(parent, source) {
-        var _this183;
+        var _this187;
 
         _classCallCheck(this, SubscriptionDelaySubscriber);
 
-        _this183 = _super100.call(this);
-        _this183.parent = parent;
-        _this183.source = source;
-        _this183.sourceSubscribed = false;
-        return _this183;
+        _this187 = _super100.call(this);
+        _this187.parent = parent;
+        _this187.source = source;
+        _this187.sourceSubscribed = false;
+        return _this187;
       }
 
       _createClass2(SubscriptionDelaySubscriber, [{
@@ -106767,19 +108979,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super102 = _createSuper(DistinctSubscriber);
 
       function DistinctSubscriber(destination, keySelector, flushes) {
-        var _this184;
+        var _this188;
 
         _classCallCheck(this, DistinctSubscriber);
 
-        _this184 = _super102.call(this, destination);
-        _this184.keySelector = keySelector;
-        _this184.values = new Set();
+        _this188 = _super102.call(this, destination);
+        _this188.keySelector = keySelector;
+        _this188.values = new Set();
 
         if (flushes) {
-          _this184.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this184), flushes));
+          _this188.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this188), flushes));
         }
 
-        return _this184;
+        return _this188;
       }
 
       _createClass2(DistinctSubscriber, [{
@@ -106891,19 +109103,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super103 = _createSuper(DistinctUntilChangedSubscriber);
 
       function DistinctUntilChangedSubscriber(destination, compare, keySelector) {
-        var _this185;
+        var _this189;
 
         _classCallCheck(this, DistinctUntilChangedSubscriber);
 
-        _this185 = _super103.call(this, destination);
-        _this185.keySelector = keySelector;
-        _this185.hasKey = false;
+        _this189 = _super103.call(this, destination);
+        _this189.keySelector = keySelector;
+        _this189.hasKey = false;
 
         if (typeof compare === 'function') {
-          _this185.compare = compare;
+          _this189.compare = compare;
         }
 
-        return _this185;
+        return _this189;
       }
 
       _createClass2(DistinctUntilChangedSubscriber, [{
@@ -107158,17 +109370,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super104 = _createSuper(EverySubscriber);
 
       function EverySubscriber(destination, predicate, thisArg, source) {
-        var _this186;
+        var _this190;
 
         _classCallCheck(this, EverySubscriber);
 
-        _this186 = _super104.call(this, destination);
-        _this186.predicate = predicate;
-        _this186.thisArg = thisArg;
-        _this186.source = source;
-        _this186.index = 0;
-        _this186.thisArg = thisArg || _assertThisInitialized(_this186);
-        return _this186;
+        _this190 = _super104.call(this, destination);
+        _this190.predicate = predicate;
+        _this190.thisArg = thisArg;
+        _this190.source = source;
+        _this190.index = 0;
+        _this190.thisArg = thisArg || _assertThisInitialized(_this190);
+        return _this190;
       }
 
       _createClass2(EverySubscriber, [{
@@ -107266,14 +109478,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super105 = _createSuper(SwitchFirstSubscriber);
 
       function SwitchFirstSubscriber(destination) {
-        var _this187;
+        var _this191;
 
         _classCallCheck(this, SwitchFirstSubscriber);
 
-        _this187 = _super105.call(this, destination);
-        _this187.hasCompleted = false;
-        _this187.hasSubscription = false;
-        return _this187;
+        _this191 = _super105.call(this, destination);
+        _this191.hasCompleted = false;
+        _this191.hasSubscription = false;
+        return _this191;
       }
 
       _createClass2(SwitchFirstSubscriber, [{
@@ -107401,16 +109613,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super106 = _createSuper(ExhaustMapSubscriber);
 
       function ExhaustMapSubscriber(destination, project) {
-        var _this188;
+        var _this192;
 
         _classCallCheck(this, ExhaustMapSubscriber);
 
-        _this188 = _super106.call(this, destination);
-        _this188.project = project;
-        _this188.hasSubscription = false;
-        _this188.hasCompleted = false;
-        _this188.index = 0;
-        return _this188;
+        _this192 = _super106.call(this, destination);
+        _this192.project = project;
+        _this192.hasSubscription = false;
+        _this192.hasCompleted = false;
+        _this192.index = 0;
+        return _this192;
       }
 
       _createClass2(ExhaustMapSubscriber, [{
@@ -107568,23 +109780,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super107 = _createSuper(ExpandSubscriber);
 
       function ExpandSubscriber(destination, project, concurrent, scheduler) {
-        var _this189;
+        var _this193;
 
         _classCallCheck(this, ExpandSubscriber);
 
-        _this189 = _super107.call(this, destination);
-        _this189.project = project;
-        _this189.concurrent = concurrent;
-        _this189.scheduler = scheduler;
-        _this189.index = 0;
-        _this189.active = 0;
-        _this189.hasCompleted = false;
+        _this193 = _super107.call(this, destination);
+        _this193.project = project;
+        _this193.concurrent = concurrent;
+        _this193.scheduler = scheduler;
+        _this193.index = 0;
+        _this193.active = 0;
+        _this193.hasCompleted = false;
 
         if (concurrent < Number.POSITIVE_INFINITY) {
-          _this189.buffer = [];
+          _this193.buffer = [];
         }
 
-        return _this189;
+        return _this193;
       }
 
       _createClass2(ExpandSubscriber, [{
@@ -107740,15 +109952,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super108 = _createSuper(FilterSubscriber);
 
       function FilterSubscriber(destination, predicate, thisArg) {
-        var _this190;
+        var _this194;
 
         _classCallCheck(this, FilterSubscriber);
 
-        _this190 = _super108.call(this, destination);
-        _this190.predicate = predicate;
-        _this190.thisArg = thisArg;
-        _this190.count = 0;
-        return _this190;
+        _this194 = _super108.call(this, destination);
+        _this194.predicate = predicate;
+        _this194.thisArg = thisArg;
+        _this194.count = 0;
+        return _this194;
       }
 
       _createClass2(FilterSubscriber, [{
@@ -107837,15 +110049,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super109 = _createSuper(FinallySubscriber);
 
       function FinallySubscriber(destination, callback) {
-        var _this191;
+        var _this195;
 
         _classCallCheck(this, FinallySubscriber);
 
-        _this191 = _super109.call(this, destination);
+        _this195 = _super109.call(this, destination);
 
-        _this191.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
+        _this195.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
 
-        return _this191;
+        return _this195;
       }
 
       return FinallySubscriber;
@@ -107929,17 +110141,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super110 = _createSuper(FindValueSubscriber);
 
       function FindValueSubscriber(destination, predicate, source, yieldIndex, thisArg) {
-        var _this192;
+        var _this196;
 
         _classCallCheck(this, FindValueSubscriber);
 
-        _this192 = _super110.call(this, destination);
-        _this192.predicate = predicate;
-        _this192.source = source;
-        _this192.yieldIndex = yieldIndex;
-        _this192.thisArg = thisArg;
-        _this192.index = 0;
-        return _this192;
+        _this196 = _super110.call(this, destination);
+        _this196.predicate = predicate;
+        _this196.source = source;
+        _this196.yieldIndex = yieldIndex;
+        _this196.thisArg = thisArg;
+        _this196.index = 0;
+        return _this196;
       }
 
       _createClass2(FindValueSubscriber, [{
@@ -108170,19 +110382,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super111 = _createSuper(GroupBySubscriber);
 
       function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector, subjectSelector) {
-        var _this193;
+        var _this197;
 
         _classCallCheck(this, GroupBySubscriber);
 
-        _this193 = _super111.call(this, destination);
-        _this193.keySelector = keySelector;
-        _this193.elementSelector = elementSelector;
-        _this193.durationSelector = durationSelector;
-        _this193.subjectSelector = subjectSelector;
-        _this193.groups = null;
-        _this193.attemptedToUnsubscribe = false;
-        _this193.count = 0;
-        return _this193;
+        _this197 = _super111.call(this, destination);
+        _this197.keySelector = keySelector;
+        _this197.elementSelector = elementSelector;
+        _this197.durationSelector = durationSelector;
+        _this197.subjectSelector = subjectSelector;
+        _this197.groups = null;
+        _this197.attemptedToUnsubscribe = false;
+        _this197.count = 0;
+        return _this197;
       }
 
       _createClass2(GroupBySubscriber, [{
@@ -108300,15 +110512,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super112 = _createSuper(GroupDurationSubscriber);
 
       function GroupDurationSubscriber(key, group, parent) {
-        var _this194;
+        var _this198;
 
         _classCallCheck(this, GroupDurationSubscriber);
 
-        _this194 = _super112.call(this, group);
-        _this194.key = key;
-        _this194.group = group;
-        _this194.parent = parent;
-        return _this194;
+        _this198 = _super112.call(this, group);
+        _this198.key = key;
+        _this198.group = group;
+        _this198.parent = parent;
+        return _this198;
       }
 
       _createClass2(GroupDurationSubscriber, [{
@@ -108338,15 +110550,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super113 = _createSuper(GroupedObservable);
 
       function GroupedObservable(key, groupSubject, refCountSubscription) {
-        var _this195;
+        var _this199;
 
         _classCallCheck(this, GroupedObservable);
 
-        _this195 = _super113.call(this);
-        _this195.key = key;
-        _this195.groupSubject = groupSubject;
-        _this195.refCountSubscription = refCountSubscription;
-        return _this195;
+        _this199 = _super113.call(this);
+        _this199.key = key;
+        _this199.groupSubject = groupSubject;
+        _this199.refCountSubscription = refCountSubscription;
+        return _this199;
       }
 
       _createClass2(GroupedObservable, [{
@@ -108374,14 +110586,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super114 = _createSuper(InnerRefCountSubscription);
 
       function InnerRefCountSubscription(parent) {
-        var _this196;
+        var _this200;
 
         _classCallCheck(this, InnerRefCountSubscription);
 
-        _this196 = _super114.call(this);
-        _this196.parent = parent;
+        _this200 = _super114.call(this);
+        _this200.parent = parent;
         parent.count++;
-        return _this196;
+        return _this200;
       }
 
       _createClass2(InnerRefCountSubscription, [{
@@ -108699,15 +110911,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super117 = _createSuper(MapSubscriber);
 
       function MapSubscriber(destination, project, thisArg) {
-        var _this197;
+        var _this201;
 
         _classCallCheck(this, MapSubscriber);
 
-        _this197 = _super117.call(this, destination);
-        _this197.project = project;
-        _this197.count = 0;
-        _this197.thisArg = thisArg || _assertThisInitialized(_this197);
-        return _this197;
+        _this201 = _super117.call(this, destination);
+        _this201.project = project;
+        _this201.count = 0;
+        _this201.thisArg = thisArg || _assertThisInitialized(_this201);
+        return _this201;
       }
 
       _createClass2(MapSubscriber, [{
@@ -108788,13 +111000,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super118 = _createSuper(MapToSubscriber);
 
       function MapToSubscriber(destination, value) {
-        var _this198;
+        var _this202;
 
         _classCallCheck(this, MapToSubscriber);
 
-        _this198 = _super118.call(this, destination);
-        _this198.value = value;
-        return _this198;
+        _this202 = _super118.call(this, destination);
+        _this202.value = value;
+        return _this202;
       }
 
       _createClass2(MapToSubscriber, [{
@@ -109131,20 +111343,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super120 = _createSuper(MergeMapSubscriber);
 
       function MergeMapSubscriber(destination, project) {
-        var _this199;
+        var _this203;
 
         var concurrent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, MergeMapSubscriber);
 
-        _this199 = _super120.call(this, destination);
-        _this199.project = project;
-        _this199.concurrent = concurrent;
-        _this199.hasCompleted = false;
-        _this199.buffer = [];
-        _this199.active = 0;
-        _this199.index = 0;
-        return _this199;
+        _this203 = _super120.call(this, destination);
+        _this203.project = project;
+        _this203.concurrent = concurrent;
+        _this203.hasCompleted = false;
+        _this203.buffer = [];
+        _this203.active = 0;
+        _this203.index = 0;
+        return _this203;
       }
 
       _createClass2(MergeMapSubscriber, [{
@@ -109353,20 +111565,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super121 = _createSuper(MergeScanSubscriber);
 
       function MergeScanSubscriber(destination, accumulator, acc, concurrent) {
-        var _this200;
+        var _this204;
 
         _classCallCheck(this, MergeScanSubscriber);
 
-        _this200 = _super121.call(this, destination);
-        _this200.accumulator = accumulator;
-        _this200.acc = acc;
-        _this200.concurrent = concurrent;
-        _this200.hasValue = false;
-        _this200.hasCompleted = false;
-        _this200.buffer = [];
-        _this200.active = 0;
-        _this200.index = 0;
-        return _this200;
+        _this204 = _super121.call(this, destination);
+        _this204.accumulator = accumulator;
+        _this204.acc = acc;
+        _this204.concurrent = concurrent;
+        _this204.hasValue = false;
+        _this204.hasCompleted = false;
+        _this204.buffer = [];
+        _this204.active = 0;
+        _this204.index = 0;
+        return _this204;
       }
 
       _createClass2(MergeScanSubscriber, [{
@@ -109656,16 +111868,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super122 = _createSuper(ObserveOnSubscriber);
 
       function ObserveOnSubscriber(destination, scheduler) {
-        var _this201;
+        var _this205;
 
         var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
         _classCallCheck(this, ObserveOnSubscriber);
 
-        _this201 = _super122.call(this, destination);
-        _this201.scheduler = scheduler;
-        _this201.delay = delay;
-        return _this201;
+        _this205 = _super122.call(this, destination);
+        _this205.scheduler = scheduler;
+        _this205.delay = delay;
+        return _this205;
       }
 
       _createClass2(ObserveOnSubscriber, [{
@@ -109823,14 +112035,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super123 = _createSuper(OnErrorResumeNextSubscriber);
 
       function OnErrorResumeNextSubscriber(destination, nextSources) {
-        var _this202;
+        var _this206;
 
         _classCallCheck(this, OnErrorResumeNextSubscriber);
 
-        _this202 = _super123.call(this, destination);
-        _this202.destination = destination;
-        _this202.nextSources = nextSources;
-        return _this202;
+        _this206 = _super123.call(this, destination);
+        _this206.destination = destination;
+        _this206.nextSources = nextSources;
+        return _this206;
       }
 
       _createClass2(OnErrorResumeNextSubscriber, [{
@@ -109935,13 +112147,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super124 = _createSuper(PairwiseSubscriber);
 
       function PairwiseSubscriber(destination) {
-        var _this203;
+        var _this207;
 
         _classCallCheck(this, PairwiseSubscriber);
 
-        _this203 = _super124.call(this, destination);
-        _this203.hasPrev = false;
-        return _this203;
+        _this207 = _super124.call(this, destination);
+        _this207.hasPrev = false;
+        return _this207;
       }
 
       _createClass2(PairwiseSubscriber, [{
@@ -110430,13 +112642,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super125 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this204;
+        var _this208;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this204 = _super125.call(this, destination);
-        _this204.connectable = connectable;
-        return _this204;
+        _this208 = _super125.call(this, destination);
+        _this208.connectable = connectable;
+        return _this208;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -110550,14 +112762,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super126 = _createSuper(RepeatSubscriber);
 
       function RepeatSubscriber(destination, count, source) {
-        var _this205;
+        var _this209;
 
         _classCallCheck(this, RepeatSubscriber);
 
-        _this205 = _super126.call(this, destination);
-        _this205.count = count;
-        _this205.source = source;
-        return _this205;
+        _this209 = _super126.call(this, destination);
+        _this209.count = count;
+        _this209.source = source;
+        return _this209;
       }
 
       _createClass2(RepeatSubscriber, [{
@@ -110652,15 +112864,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super127 = _createSuper(RepeatWhenSubscriber);
 
       function RepeatWhenSubscriber(destination, notifier, source) {
-        var _this206;
+        var _this210;
 
         _classCallCheck(this, RepeatWhenSubscriber);
 
-        _this206 = _super127.call(this, destination);
-        _this206.notifier = notifier;
-        _this206.source = source;
-        _this206.sourceIsBeingSubscribedTo = true;
-        return _this206;
+        _this210 = _super127.call(this, destination);
+        _this210.notifier = notifier;
+        _this210.source = source;
+        _this210.sourceIsBeingSubscribedTo = true;
+        return _this210;
       }
 
       _createClass2(RepeatWhenSubscriber, [{
@@ -110806,14 +113018,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super128 = _createSuper(RetrySubscriber);
 
       function RetrySubscriber(destination, count, source) {
-        var _this207;
+        var _this211;
 
         _classCallCheck(this, RetrySubscriber);
 
-        _this207 = _super128.call(this, destination);
-        _this207.count = count;
-        _this207.source = source;
-        return _this207;
+        _this211 = _super128.call(this, destination);
+        _this211.count = count;
+        _this211.source = source;
+        return _this211;
       }
 
       _createClass2(RetrySubscriber, [{
@@ -110909,14 +113121,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super129 = _createSuper(RetryWhenSubscriber);
 
       function RetryWhenSubscriber(destination, notifier, source) {
-        var _this208;
+        var _this212;
 
         _classCallCheck(this, RetryWhenSubscriber);
 
-        _this208 = _super129.call(this, destination);
-        _this208.notifier = notifier;
-        _this208.source = source;
-        return _this208;
+        _this212 = _super129.call(this, destination);
+        _this212.notifier = notifier;
+        _this212.source = source;
+        return _this212;
       }
 
       _createClass2(RetryWhenSubscriber, [{
@@ -111053,13 +113265,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super130 = _createSuper(SampleSubscriber);
 
       function SampleSubscriber() {
-        var _this209;
+        var _this213;
 
         _classCallCheck(this, SampleSubscriber);
 
-        _this209 = _super130.apply(this, arguments);
-        _this209.hasValue = false;
-        return _this209;
+        _this213 = _super130.apply(this, arguments);
+        _this213.hasValue = false;
+        return _this213;
       }
 
       _createClass2(SampleSubscriber, [{
@@ -111158,21 +113370,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super131 = _createSuper(SampleTimeSubscriber);
 
       function SampleTimeSubscriber(destination, period, scheduler) {
-        var _this210;
+        var _this214;
 
         _classCallCheck(this, SampleTimeSubscriber);
 
-        _this210 = _super131.call(this, destination);
-        _this210.period = period;
-        _this210.scheduler = scheduler;
-        _this210.hasValue = false;
+        _this214 = _super131.call(this, destination);
+        _this214.period = period;
+        _this214.scheduler = scheduler;
+        _this214.hasValue = false;
 
-        _this210.add(scheduler.schedule(dispatchNotification, period, {
-          subscriber: _assertThisInitialized(_this210),
+        _this214.add(scheduler.schedule(dispatchNotification, period, {
+          subscriber: _assertThisInitialized(_this214),
           period: period
         }));
 
-        return _this210;
+        return _this214;
       }
 
       _createClass2(SampleTimeSubscriber, [{
@@ -111270,16 +113482,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super132 = _createSuper(ScanSubscriber);
 
       function ScanSubscriber(destination, accumulator, _seed, hasSeed) {
-        var _this211;
+        var _this215;
 
         _classCallCheck(this, ScanSubscriber);
 
-        _this211 = _super132.call(this, destination);
-        _this211.accumulator = accumulator;
-        _this211._seed = _seed;
-        _this211.hasSeed = hasSeed;
-        _this211.index = 0;
-        return _this211;
+        _this215 = _super132.call(this, destination);
+        _this215.accumulator = accumulator;
+        _this215._seed = _seed;
+        _this215.hasSeed = hasSeed;
+        _this215.index = 0;
+        return _this215;
       }
 
       _createClass2(ScanSubscriber, [{
@@ -111393,20 +113605,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super133 = _createSuper(SequenceEqualSubscriber);
 
       function SequenceEqualSubscriber(destination, compareTo, comparator) {
-        var _this212;
+        var _this216;
 
         _classCallCheck(this, SequenceEqualSubscriber);
 
-        _this212 = _super133.call(this, destination);
-        _this212.compareTo = compareTo;
-        _this212.comparator = comparator;
-        _this212._a = [];
-        _this212._b = [];
-        _this212._oneComplete = false;
+        _this216 = _super133.call(this, destination);
+        _this216.compareTo = compareTo;
+        _this216.comparator = comparator;
+        _this216._a = [];
+        _this216._b = [];
+        _this216._oneComplete = false;
 
-        _this212.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this212))));
+        _this216.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this216))));
 
-        return _this212;
+        return _this216;
       }
 
       _createClass2(SequenceEqualSubscriber, [{
@@ -111494,13 +113706,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super134 = _createSuper(SequenceEqualCompareToSubscriber);
 
       function SequenceEqualCompareToSubscriber(destination, parent) {
-        var _this213;
+        var _this217;
 
         _classCallCheck(this, SequenceEqualCompareToSubscriber);
 
-        _this213 = _super134.call(this, destination);
-        _this213.parent = parent;
-        return _this213;
+        _this217 = _super134.call(this, destination);
+        _this217.parent = parent;
+        return _this217;
       }
 
       _createClass2(SequenceEqualCompareToSubscriber, [{
@@ -111626,13 +113838,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       };
     }
 
-    function shareReplayOperator(_ref13) {
-      var _ref13$bufferSize = _ref13.bufferSize,
-          bufferSize = _ref13$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref13$bufferSize,
-          _ref13$windowTime = _ref13.windowTime,
-          windowTime = _ref13$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref13$windowTime,
-          useRefCount = _ref13.refCount,
-          scheduler = _ref13.scheduler;
+    function shareReplayOperator(_ref22) {
+      var _ref22$bufferSize = _ref22.bufferSize,
+          bufferSize = _ref22$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref22$bufferSize,
+          _ref22$windowTime = _ref22.windowTime,
+          windowTime = _ref22$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref22$windowTime,
+          useRefCount = _ref22.refCount,
+          scheduler = _ref22.scheduler;
       var subject;
       var refCount = 0;
       var subscription;
@@ -111740,16 +113952,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super135 = _createSuper(SingleSubscriber);
 
       function SingleSubscriber(destination, predicate, source) {
-        var _this214;
+        var _this218;
 
         _classCallCheck(this, SingleSubscriber);
 
-        _this214 = _super135.call(this, destination);
-        _this214.predicate = predicate;
-        _this214.source = source;
-        _this214.seenValue = false;
-        _this214.index = 0;
-        return _this214;
+        _this218 = _super135.call(this, destination);
+        _this218.predicate = predicate;
+        _this218.source = source;
+        _this218.seenValue = false;
+        _this218.index = 0;
+        return _this218;
       }
 
       _createClass2(SingleSubscriber, [{
@@ -111860,14 +114072,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super136 = _createSuper(SkipSubscriber);
 
       function SkipSubscriber(destination, total) {
-        var _this215;
+        var _this219;
 
         _classCallCheck(this, SkipSubscriber);
 
-        _this215 = _super136.call(this, destination);
-        _this215.total = total;
-        _this215.count = 0;
-        return _this215;
+        _this219 = _super136.call(this, destination);
+        _this219.total = total;
+        _this219.count = 0;
+        return _this219;
       }
 
       _createClass2(SkipSubscriber, [{
@@ -111955,15 +114167,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super137 = _createSuper(SkipLastSubscriber);
 
       function SkipLastSubscriber(destination, _skipCount) {
-        var _this216;
+        var _this220;
 
         _classCallCheck(this, SkipLastSubscriber);
 
-        _this216 = _super137.call(this, destination);
-        _this216._skipCount = _skipCount;
-        _this216._count = 0;
-        _this216._ring = new Array(_skipCount);
-        return _this216;
+        _this220 = _super137.call(this, destination);
+        _this220._skipCount = _skipCount;
+        _this220._count = 0;
+        _this220._ring = new Array(_skipCount);
+        return _this220;
       }
 
       _createClass2(SkipLastSubscriber, [{
@@ -112058,26 +114270,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super138 = _createSuper(SkipUntilSubscriber);
 
       function SkipUntilSubscriber(destination, notifier) {
-        var _this217;
+        var _this221;
 
         _classCallCheck(this, SkipUntilSubscriber);
 
-        _this217 = _super138.call(this, destination);
-        _this217.hasValue = false;
-        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this217), undefined, undefined);
+        _this221 = _super138.call(this, destination);
+        _this221.hasValue = false;
+        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this221), undefined, undefined);
 
-        _this217.add(innerSubscriber);
+        _this221.add(innerSubscriber);
 
-        _this217.innerSubscription = innerSubscriber;
-        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this217), notifier, undefined, undefined, innerSubscriber);
+        _this221.innerSubscription = innerSubscriber;
+        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this221), notifier, undefined, undefined, innerSubscriber);
 
         if (innerSubscription !== innerSubscriber) {
-          _this217.add(innerSubscription);
+          _this221.add(innerSubscription);
 
-          _this217.innerSubscription = innerSubscription;
+          _this221.innerSubscription = innerSubscription;
         }
 
-        return _this217;
+        return _this221;
       }
 
       _createClass2(SkipUntilSubscriber, [{
@@ -112163,15 +114375,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super139 = _createSuper(SkipWhileSubscriber);
 
       function SkipWhileSubscriber(destination, predicate) {
-        var _this218;
+        var _this222;
 
         _classCallCheck(this, SkipWhileSubscriber);
 
-        _this218 = _super139.call(this, destination);
-        _this218.predicate = predicate;
-        _this218.skipping = true;
-        _this218.index = 0;
-        return _this218;
+        _this222 = _super139.call(this, destination);
+        _this222.predicate = predicate;
+        _this222.skipping = true;
+        _this222.index = 0;
+        return _this222;
       }
 
       _createClass2(SkipWhileSubscriber, [{
@@ -112445,14 +114657,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super140 = _createSuper(SwitchMapSubscriber);
 
       function SwitchMapSubscriber(destination, project) {
-        var _this219;
+        var _this223;
 
         _classCallCheck(this, SwitchMapSubscriber);
 
-        _this219 = _super140.call(this, destination);
-        _this219.project = project;
-        _this219.index = 0;
-        return _this219;
+        _this223 = _super140.call(this, destination);
+        _this223.project = project;
+        _this223.index = 0;
+        return _this223;
       }
 
       _createClass2(SwitchMapSubscriber, [{
@@ -112642,14 +114854,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super141 = _createSuper(TakeSubscriber);
 
       function TakeSubscriber(destination, total) {
-        var _this220;
+        var _this224;
 
         _classCallCheck(this, TakeSubscriber);
 
-        _this220 = _super141.call(this, destination);
-        _this220.total = total;
-        _this220.count = 0;
-        return _this220;
+        _this224 = _super141.call(this, destination);
+        _this224.total = total;
+        _this224.count = 0;
+        return _this224;
       }
 
       _createClass2(TakeSubscriber, [{
@@ -112751,15 +114963,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super142 = _createSuper(TakeLastSubscriber);
 
       function TakeLastSubscriber(destination, total) {
-        var _this221;
+        var _this225;
 
         _classCallCheck(this, TakeLastSubscriber);
 
-        _this221 = _super142.call(this, destination);
-        _this221.total = total;
-        _this221.ring = new Array();
-        _this221.count = 0;
-        return _this221;
+        _this225 = _super142.call(this, destination);
+        _this225.total = total;
+        _this225.ring = new Array();
+        _this225.count = 0;
+        return _this225;
       }
 
       _createClass2(TakeLastSubscriber, [{
@@ -112872,13 +115084,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super143 = _createSuper(TakeUntilSubscriber);
 
       function TakeUntilSubscriber(destination) {
-        var _this222;
+        var _this226;
 
         _classCallCheck(this, TakeUntilSubscriber);
 
-        _this222 = _super143.call(this, destination);
-        _this222.seenValue = false;
-        return _this222;
+        _this226 = _super143.call(this, destination);
+        _this226.seenValue = false;
+        return _this226;
       }
 
       _createClass2(TakeUntilSubscriber, [{
@@ -112956,15 +115168,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super144 = _createSuper(TakeWhileSubscriber);
 
       function TakeWhileSubscriber(destination, predicate, inclusive) {
-        var _this223;
+        var _this227;
 
         _classCallCheck(this, TakeWhileSubscriber);
 
-        _this223 = _super144.call(this, destination);
-        _this223.predicate = predicate;
-        _this223.inclusive = inclusive;
-        _this223.index = 0;
-        return _this223;
+        _this227 = _super144.call(this, destination);
+        _this227.predicate = predicate;
+        _this227.inclusive = inclusive;
+        _this227.index = 0;
+        return _this227;
       }
 
       _createClass2(TakeWhileSubscriber, [{
@@ -113075,28 +115287,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super145 = _createSuper(TapSubscriber);
 
       function TapSubscriber(destination, observerOrNext, error, complete) {
-        var _this224;
+        var _this228;
 
         _classCallCheck(this, TapSubscriber);
 
-        _this224 = _super145.call(this, destination);
-        _this224._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this224._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this224._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this224._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this224._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this228 = _super145.call(this, destination);
+        _this228._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this228._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this228._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this228._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this228._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_2__["isFunction"])(observerOrNext)) {
-          _this224._context = _assertThisInitialized(_this224);
-          _this224._tapNext = observerOrNext;
+          _this228._context = _assertThisInitialized(_this228);
+          _this228._tapNext = observerOrNext;
         } else if (observerOrNext) {
-          _this224._context = observerOrNext;
-          _this224._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this224._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this224._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this228._context = observerOrNext;
+          _this228._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this228._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this228._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
         }
 
-        return _this224;
+        return _this228;
       }
 
       _createClass2(TapSubscriber, [{
@@ -113219,17 +115431,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super146 = _createSuper(ThrottleSubscriber);
 
       function ThrottleSubscriber(destination, durationSelector, _leading, _trailing) {
-        var _this225;
+        var _this229;
 
         _classCallCheck(this, ThrottleSubscriber);
 
-        _this225 = _super146.call(this, destination);
-        _this225.destination = destination;
-        _this225.durationSelector = durationSelector;
-        _this225._leading = _leading;
-        _this225._trailing = _trailing;
-        _this225._hasValue = false;
-        return _this225;
+        _this229 = _super146.call(this, destination);
+        _this229.destination = destination;
+        _this229.durationSelector = durationSelector;
+        _this229._leading = _leading;
+        _this229._trailing = _trailing;
+        _this229._hasValue = false;
+        return _this229;
       }
 
       _createClass2(ThrottleSubscriber, [{
@@ -113386,18 +115598,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super147 = _createSuper(ThrottleTimeSubscriber);
 
       function ThrottleTimeSubscriber(destination, duration, scheduler, leading, trailing) {
-        var _this226;
+        var _this230;
 
         _classCallCheck(this, ThrottleTimeSubscriber);
 
-        _this226 = _super147.call(this, destination);
-        _this226.duration = duration;
-        _this226.scheduler = scheduler;
-        _this226.leading = leading;
-        _this226.trailing = trailing;
-        _this226._hasTrailingValue = false;
-        _this226._trailingValue = null;
-        return _this226;
+        _this230 = _super147.call(this, destination);
+        _this230.duration = duration;
+        _this230.scheduler = scheduler;
+        _this230.leading = leading;
+        _this230.trailing = trailing;
+        _this230._hasTrailingValue = false;
+        _this230._trailingValue = null;
+        return _this230;
       }
 
       _createClass2(ThrottleTimeSubscriber, [{
@@ -113524,14 +115736,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super148 = _createSuper(ThrowIfEmptySubscriber);
 
       function ThrowIfEmptySubscriber(destination, errorFactory) {
-        var _this227;
+        var _this231;
 
         _classCallCheck(this, ThrowIfEmptySubscriber);
 
-        _this227 = _super148.call(this, destination);
-        _this227.errorFactory = errorFactory;
-        _this227.hasValue = false;
-        return _this227;
+        _this231 = _super148.call(this, destination);
+        _this231.errorFactory = errorFactory;
+        _this231.hasValue = false;
+        return _this231;
       }
 
       _createClass2(ThrowIfEmptySubscriber, [{
@@ -113624,8 +115836,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var scheduler = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _scheduler_async__WEBPACK_IMPORTED_MODULE_0__["async"];
       return function (source) {
         return Object(_observable_defer__WEBPACK_IMPORTED_MODULE_2__["defer"])(function () {
-          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref14, value) {
-            var current = _ref14.current;
+          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref23, value) {
+            var current = _ref23.current;
             return {
               value: value,
               current: scheduler.now(),
@@ -113635,10 +115847,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             current: scheduler.now(),
             value: undefined,
             last: undefined
-          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref15) {
-            var current = _ref15.current,
-                last = _ref15.last,
-                value = _ref15.value;
+          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref24) {
+            var current = _ref24.current,
+                last = _ref24.last,
+                value = _ref24.value;
             return new TimeInterval(value, current - last);
           }));
         });
@@ -113788,20 +116000,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super149 = _createSuper(TimeoutWithSubscriber);
 
       function TimeoutWithSubscriber(destination, absoluteTimeout, waitFor, withObservable, scheduler) {
-        var _this228;
+        var _this232;
 
         _classCallCheck(this, TimeoutWithSubscriber);
 
-        _this228 = _super149.call(this, destination);
-        _this228.absoluteTimeout = absoluteTimeout;
-        _this228.waitFor = waitFor;
-        _this228.withObservable = withObservable;
-        _this228.scheduler = scheduler;
-        _this228.action = null;
+        _this232 = _super149.call(this, destination);
+        _this232.absoluteTimeout = absoluteTimeout;
+        _this232.waitFor = waitFor;
+        _this232.withObservable = withObservable;
+        _this232.scheduler = scheduler;
+        _this232.action = null;
 
-        _this228.scheduleTimeout();
+        _this232.scheduleTimeout();
 
-        return _this228;
+        return _this232;
       }
 
       _createClass2(TimeoutWithSubscriber, [{
@@ -114022,14 +116234,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super150 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination) {
-        var _this229;
+        var _this233;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this229 = _super150.call(this, destination);
-        _this229.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
-        destination.next(_this229.window);
-        return _this229;
+        _this233 = _super150.call(this, destination);
+        _this233.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        destination.next(_this233.window);
+        return _this233;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -114154,18 +116366,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super151 = _createSuper(WindowCountSubscriber);
 
       function WindowCountSubscriber(destination, windowSize, startWindowEvery) {
-        var _this230;
+        var _this234;
 
         _classCallCheck(this, WindowCountSubscriber);
 
-        _this230 = _super151.call(this, destination);
-        _this230.destination = destination;
-        _this230.windowSize = windowSize;
-        _this230.startWindowEvery = startWindowEvery;
-        _this230.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
-        _this230.count = 0;
-        destination.next(_this230.windows[0]);
-        return _this230;
+        _this234 = _super151.call(this, destination);
+        _this234.destination = destination;
+        _this234.windowSize = windowSize;
+        _this234.startWindowEvery = startWindowEvery;
+        _this234.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
+        _this234.count = 0;
+        destination.next(_this234.windows[0]);
+        return _this234;
       }
 
       _createClass2(WindowCountSubscriber, [{
@@ -114337,13 +116549,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super152 = _createSuper(CountedSubject);
 
       function CountedSubject() {
-        var _this231;
+        var _this235;
 
         _classCallCheck(this, CountedSubject);
 
-        _this231 = _super152.apply(this, arguments);
-        _this231._numberOfNextedValues = 0;
-        return _this231;
+        _this235 = _super152.apply(this, arguments);
+        _this235._numberOfNextedValues = 0;
+        return _this235;
       }
 
       _createClass2(CountedSubject, [{
@@ -114369,47 +116581,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super153 = _createSuper(WindowTimeSubscriber);
 
       function WindowTimeSubscriber(destination, windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler) {
-        var _this232;
+        var _this236;
 
         _classCallCheck(this, WindowTimeSubscriber);
 
-        _this232 = _super153.call(this, destination);
-        _this232.destination = destination;
-        _this232.windowTimeSpan = windowTimeSpan;
-        _this232.windowCreationInterval = windowCreationInterval;
-        _this232.maxWindowSize = maxWindowSize;
-        _this232.scheduler = scheduler;
-        _this232.windows = [];
+        _this236 = _super153.call(this, destination);
+        _this236.destination = destination;
+        _this236.windowTimeSpan = windowTimeSpan;
+        _this236.windowCreationInterval = windowCreationInterval;
+        _this236.maxWindowSize = maxWindowSize;
+        _this236.scheduler = scheduler;
+        _this236.windows = [];
 
-        var window = _this232.openWindow();
+        var window = _this236.openWindow();
 
         if (windowCreationInterval !== null && windowCreationInterval >= 0) {
           var closeState = {
-            subscriber: _assertThisInitialized(_this232),
+            subscriber: _assertThisInitialized(_this236),
             window: window,
             context: null
           };
           var creationState = {
             windowTimeSpan: windowTimeSpan,
             windowCreationInterval: windowCreationInterval,
-            subscriber: _assertThisInitialized(_this232),
+            subscriber: _assertThisInitialized(_this236),
             scheduler: scheduler
           };
 
-          _this232.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
+          _this236.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
 
-          _this232.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
+          _this236.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
         } else {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this232),
+            subscriber: _assertThisInitialized(_this236),
             window: window,
             windowTimeSpan: windowTimeSpan
           };
 
-          _this232.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
+          _this236.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
         }
 
-        return _this232;
+        return _this236;
       }
 
       _createClass2(WindowTimeSubscriber, [{
@@ -114601,18 +116813,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super154 = _createSuper(WindowToggleSubscriber);
 
       function WindowToggleSubscriber(destination, openings, closingSelector) {
-        var _this233;
+        var _this237;
 
         _classCallCheck(this, WindowToggleSubscriber);
 
-        _this233 = _super154.call(this, destination);
-        _this233.openings = openings;
-        _this233.closingSelector = closingSelector;
-        _this233.contexts = [];
+        _this237 = _super154.call(this, destination);
+        _this237.openings = openings;
+        _this237.closingSelector = closingSelector;
+        _this237.contexts = [];
 
-        _this233.add(_this233.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this233), openings, openings));
+        _this237.add(_this237.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this237), openings, openings));
 
-        return _this233;
+        return _this237;
       }
 
       _createClass2(WindowToggleSubscriber, [{
@@ -114821,17 +117033,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super155 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination, closingSelector) {
-        var _this234;
+        var _this238;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this234 = _super155.call(this, destination);
-        _this234.destination = destination;
-        _this234.closingSelector = closingSelector;
+        _this238 = _super155.call(this, destination);
+        _this238.destination = destination;
+        _this238.closingSelector = closingSelector;
 
-        _this234.openWindow();
+        _this238.openWindow();
 
-        return _this234;
+        return _this238;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -114988,28 +117200,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super156 = _createSuper(WithLatestFromSubscriber);
 
       function WithLatestFromSubscriber(destination, observables, project) {
-        var _this235;
+        var _this239;
 
         _classCallCheck(this, WithLatestFromSubscriber);
 
-        _this235 = _super156.call(this, destination);
-        _this235.observables = observables;
-        _this235.project = project;
-        _this235.toRespond = [];
+        _this239 = _super156.call(this, destination);
+        _this239.observables = observables;
+        _this239.project = project;
+        _this239.toRespond = [];
         var len = observables.length;
-        _this235.values = new Array(len);
+        _this239.values = new Array(len);
 
         for (var i = 0; i < len; i++) {
-          _this235.toRespond.push(i);
+          _this239.toRespond.push(i);
         }
 
         for (var _i26 = 0; _i26 < len; _i26++) {
           var observable = observables[_i26];
 
-          _this235.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this235), observable, observable, _i26));
+          _this239.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this239), observable, observable, _i26));
         }
 
-        return _this235;
+        return _this239;
       }
 
       _createClass2(WithLatestFromSubscriber, [{
@@ -115582,14 +117794,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super158 = _createSuper(AnimationFrameAction);
 
       function AnimationFrameAction(scheduler, work) {
-        var _this236;
+        var _this240;
 
         _classCallCheck(this, AnimationFrameAction);
 
-        _this236 = _super158.call(this, scheduler, work);
-        _this236.scheduler = scheduler;
-        _this236.work = work;
-        return _this236;
+        _this240 = _super158.call(this, scheduler, work);
+        _this240.scheduler = scheduler;
+        _this240.work = work;
+        return _this240;
       }
 
       _createClass2(AnimationFrameAction, [{
@@ -115742,14 +117954,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super160 = _createSuper(AsapAction);
 
       function AsapAction(scheduler, work) {
-        var _this237;
+        var _this241;
 
         _classCallCheck(this, AsapAction);
 
-        _this237 = _super160.call(this, scheduler, work);
-        _this237.scheduler = scheduler;
-        _this237.work = work;
-        return _this237;
+        _this241 = _super160.call(this, scheduler, work);
+        _this241.scheduler = scheduler;
+        _this241.work = work;
+        return _this241;
       }
 
       _createClass2(AsapAction, [{
@@ -115895,15 +118107,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super162 = _createSuper(AsyncAction);
 
       function AsyncAction(scheduler, work) {
-        var _this238;
+        var _this242;
 
         _classCallCheck(this, AsyncAction);
 
-        _this238 = _super162.call(this, scheduler, work);
-        _this238.scheduler = scheduler;
-        _this238.work = work;
-        _this238.pending = false;
-        return _this238;
+        _this242 = _super162.call(this, scheduler, work);
+        _this242.scheduler = scheduler;
+        _this242.work = work;
+        _this242.pending = false;
+        return _this242;
       }
 
       _createClass2(AsyncAction, [{
@@ -116044,23 +118256,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super163 = _createSuper(AsyncScheduler);
 
       function AsyncScheduler(SchedulerAction) {
-        var _this239;
+        var _this243;
 
         var now = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Scheduler__WEBPACK_IMPORTED_MODULE_0__["Scheduler"].now;
 
         _classCallCheck(this, AsyncScheduler);
 
-        _this239 = _super163.call(this, SchedulerAction, function () {
-          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this239)) {
+        _this243 = _super163.call(this, SchedulerAction, function () {
+          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this243)) {
             return AsyncScheduler.delegate.now();
           } else {
             return now();
           }
         });
-        _this239.actions = [];
-        _this239.active = false;
-        _this239.scheduled = undefined;
-        return _this239;
+        _this243.actions = [];
+        _this243.active = false;
+        _this243.scheduled = undefined;
+        return _this243;
       }
 
       _createClass2(AsyncScheduler, [{
@@ -116145,14 +118357,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super164 = _createSuper(QueueAction);
 
       function QueueAction(scheduler, work) {
-        var _this240;
+        var _this244;
 
         _classCallCheck(this, QueueAction);
 
-        _this240 = _super164.call(this, scheduler, work);
-        _this240.scheduler = scheduler;
-        _this240.work = work;
-        return _this240;
+        _this244 = _super164.call(this, scheduler, work);
+        _this244.scheduler = scheduler;
+        _this244.work = work;
+        return _this244;
       }
 
       _createClass2(QueueAction, [{
@@ -116282,20 +118494,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super166 = _createSuper(VirtualTimeScheduler);
 
       function VirtualTimeScheduler() {
-        var _this241;
+        var _this245;
 
         var SchedulerAction = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : VirtualAction;
         var maxFrames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, VirtualTimeScheduler);
 
-        _this241 = _super166.call(this, SchedulerAction, function () {
-          return _this241.frame;
+        _this245 = _super166.call(this, SchedulerAction, function () {
+          return _this245.frame;
         });
-        _this241.maxFrames = maxFrames;
-        _this241.frame = 0;
-        _this241.index = -1;
-        return _this241;
+        _this245.maxFrames = maxFrames;
+        _this245.frame = 0;
+        _this245.index = -1;
+        return _this245;
       }
 
       _createClass2(VirtualTimeScheduler, [{
@@ -116335,19 +118547,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var _super167 = _createSuper(VirtualAction);
 
       function VirtualAction(scheduler, work) {
-        var _this242;
+        var _this246;
 
         var index = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : scheduler.index += 1;
 
         _classCallCheck(this, VirtualAction);
 
-        _this242 = _super167.call(this, scheduler, work);
-        _this242.scheduler = scheduler;
-        _this242.work = work;
-        _this242.index = index;
-        _this242.active = true;
-        _this242.index = scheduler.index = index;
-        return _this242;
+        _this246 = _super167.call(this, scheduler, work);
+        _this246.scheduler = scheduler;
+        _this246.work = work;
+        _this246.index = index;
+        _this246.active = true;
+        _this246.index = scheduler.index = index;
+        return _this246;
       }
 
       _createClass2(VirtualAction, [{
@@ -119131,6 +121343,610 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return _internal_operators_zipAll__WEBPACK_IMPORTED_MODULE_102__["zipAll"];
     }); //# sourceMappingURL=index.js.map
 
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/tslib/tslib.es6.js":
+  /*!*****************************************!*\
+    !*** ./node_modules/tslib/tslib.es6.js ***!
+    \*****************************************/
+
+  /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+
+  /***/
+  function node_modulesTslibTslibEs6Js(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__extends", function () {
+      return __extends;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__assign", function () {
+      return _assign;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__rest", function () {
+      return __rest;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__decorate", function () {
+      return __decorate;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__param", function () {
+      return __param;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__metadata", function () {
+      return __metadata;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__awaiter", function () {
+      return __awaiter;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__generator", function () {
+      return __generator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__createBinding", function () {
+      return __createBinding;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__exportStar", function () {
+      return __exportStar;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__values", function () {
+      return __values;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__read", function () {
+      return __read;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__spread", function () {
+      return __spread;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__spreadArrays", function () {
+      return __spreadArrays;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__await", function () {
+      return __await;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function () {
+      return __asyncGenerator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function () {
+      return __asyncDelegator;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__asyncValues", function () {
+      return __asyncValues;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function () {
+      return __makeTemplateObject;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__importStar", function () {
+      return __importStar;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__importDefault", function () {
+      return __importDefault;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function () {
+      return __classPrivateFieldGet;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function () {
+      return __classPrivateFieldSet;
+    });
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+    
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+    
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+
+    /* global Reflect, Promise */
+
+
+    var _extendStatics = function extendStatics(d, b) {
+      _extendStatics = Object.setPrototypeOf || {
+        __proto__: []
+      } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+      } || function (d, b) {
+        for (var p in b) {
+          if (b.hasOwnProperty(p)) d[p] = b[p];
+        }
+      };
+
+      return _extendStatics(d, b);
+    };
+
+    function __extends(d, b) {
+      _extendStatics(d, b);
+
+      function __() {
+        this.constructor = d;
+      }
+
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    }
+
+    var _assign = function __assign() {
+      _assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+          s = arguments[i];
+
+          for (var p in s) {
+            if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+          }
+        }
+
+        return t;
+      };
+
+      return _assign.apply(this, arguments);
+    };
+
+    function __rest(s, e) {
+      var t = {};
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+      }
+
+      if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+        if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+      }
+      return t;
+    }
+
+    function __decorate(decorators, target, key, desc) {
+      var c = arguments.length,
+          r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+          d;
+      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+      }
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    }
+
+    function __param(paramIndex, decorator) {
+      return function (target, key) {
+        decorator(target, key, paramIndex);
+      };
+    }
+
+    function __metadata(metadataKey, metadataValue) {
+      if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+    }
+
+    function __awaiter(thisArg, _arguments, P, generator) {
+      function adopt(value) {
+        return value instanceof P ? value : new P(function (resolve) {
+          resolve(value);
+        });
+      }
+
+      return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) {
+          try {
+            step(generator.next(value));
+          } catch (e) {
+            reject(e);
+          }
+        }
+
+        function rejected(value) {
+          try {
+            step(generator["throw"](value));
+          } catch (e) {
+            reject(e);
+          }
+        }
+
+        function step(result) {
+          result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+      });
+    }
+
+    function __generator(thisArg, body) {
+      var _ = {
+        label: 0,
+        sent: function sent() {
+          if (t[0] & 1) throw t[1];
+          return t[1];
+        },
+        trys: [],
+        ops: []
+      },
+          f,
+          y,
+          t,
+          g;
+      return g = {
+        next: verb(0),
+        "throw": verb(1),
+        "return": verb(2)
+      }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
+        return this;
+      }), g;
+
+      function verb(n) {
+        return function (v) {
+          return step([n, v]);
+        };
+      }
+
+      function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+
+        while (_) {
+          try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+
+            switch (op[0]) {
+              case 0:
+              case 1:
+                t = op;
+                break;
+
+              case 4:
+                _.label++;
+                return {
+                  value: op[1],
+                  done: false
+                };
+
+              case 5:
+                _.label++;
+                y = op[1];
+                op = [0];
+                continue;
+
+              case 7:
+                op = _.ops.pop();
+
+                _.trys.pop();
+
+                continue;
+
+              default:
+                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                  _ = 0;
+                  continue;
+                }
+
+                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                  _.label = op[1];
+                  break;
+                }
+
+                if (op[0] === 6 && _.label < t[1]) {
+                  _.label = t[1];
+                  t = op;
+                  break;
+                }
+
+                if (t && _.label < t[2]) {
+                  _.label = t[2];
+
+                  _.ops.push(op);
+
+                  break;
+                }
+
+                if (t[2]) _.ops.pop();
+
+                _.trys.pop();
+
+                continue;
+            }
+
+            op = body.call(thisArg, _);
+          } catch (e) {
+            op = [6, e];
+            y = 0;
+          } finally {
+            f = t = 0;
+          }
+        }
+
+        if (op[0] & 5) throw op[1];
+        return {
+          value: op[0] ? op[1] : void 0,
+          done: true
+        };
+      }
+    }
+
+    function __createBinding(o, m, k, k2) {
+      if (k2 === undefined) k2 = k;
+      o[k2] = m[k];
+    }
+
+    function __exportStar(m, exports) {
+      for (var p in m) {
+        if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
+      }
+    }
+
+    function __values(o) {
+      var s = typeof Symbol === "function" && Symbol.iterator,
+          m = s && o[s],
+          i = 0;
+      if (m) return m.call(o);
+      if (o && typeof o.length === "number") return {
+        next: function next() {
+          if (o && i >= o.length) o = void 0;
+          return {
+            value: o && o[i++],
+            done: !o
+          };
+        }
+      };
+      throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+    }
+
+    function __read(o, n) {
+      var m = typeof Symbol === "function" && o[Symbol.iterator];
+      if (!m) return o;
+      var i = m.call(o),
+          r,
+          ar = [],
+          e;
+
+      try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
+          ar.push(r.value);
+        }
+      } catch (error) {
+        e = {
+          error: error
+        };
+      } finally {
+        try {
+          if (r && !r.done && (m = i["return"])) m.call(i);
+        } finally {
+          if (e) throw e.error;
+        }
+      }
+
+      return ar;
+    }
+
+    function __spread() {
+      for (var ar = [], i = 0; i < arguments.length; i++) {
+        ar = ar.concat(__read(arguments[i]));
+      }
+
+      return ar;
+    }
+
+    function __spreadArrays() {
+      for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
+        s += arguments[i].length;
+      }
+
+      for (var r = Array(s), k = 0, i = 0; i < il; i++) {
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
+          r[k] = a[j];
+        }
+      }
+
+      return r;
+    }
+
+    ;
+
+    function __await(v) {
+      return this instanceof __await ? (this.v = v, this) : new __await(v);
+    }
+
+    function __asyncGenerator(thisArg, _arguments, generator) {
+      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+      var g = generator.apply(thisArg, _arguments || []),
+          i,
+          q = [];
+      return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+        return this;
+      }, i;
+
+      function verb(n) {
+        if (g[n]) i[n] = function (v) {
+          return new Promise(function (a, b) {
+            q.push([n, v, a, b]) > 1 || resume(n, v);
+          });
+        };
+      }
+
+      function resume(n, v) {
+        try {
+          step(g[n](v));
+        } catch (e) {
+          settle(q[0][3], e);
+        }
+      }
+
+      function step(r) {
+        r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+      }
+
+      function fulfill(value) {
+        resume("next", value);
+      }
+
+      function reject(value) {
+        resume("throw", value);
+      }
+
+      function settle(f, v) {
+        if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
+      }
+    }
+
+    function __asyncDelegator(o) {
+      var i, p;
+      return i = {}, verb("next"), verb("throw", function (e) {
+        throw e;
+      }), verb("return"), i[Symbol.iterator] = function () {
+        return this;
+      }, i;
+
+      function verb(n, f) {
+        i[n] = o[n] ? function (v) {
+          return (p = !p) ? {
+            value: __await(o[n](v)),
+            done: n === "return"
+          } : f ? f(v) : v;
+        } : f;
+      }
+    }
+
+    function __asyncValues(o) {
+      if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+      var m = o[Symbol.asyncIterator],
+          i;
+      return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+        return this;
+      }, i);
+
+      function verb(n) {
+        i[n] = o[n] && function (v) {
+          return new Promise(function (resolve, reject) {
+            v = o[n](v), settle(resolve, reject, v.done, v.value);
+          });
+        };
+      }
+
+      function settle(resolve, reject, d, v) {
+        Promise.resolve(v).then(function (v) {
+          resolve({
+            value: v,
+            done: d
+          });
+        }, reject);
+      }
+    }
+
+    function __makeTemplateObject(cooked, raw) {
+      if (Object.defineProperty) {
+        Object.defineProperty(cooked, "raw", {
+          value: raw
+        });
+      } else {
+        cooked.raw = raw;
+      }
+
+      return cooked;
+    }
+
+    ;
+
+    function __importStar(mod) {
+      if (mod && mod.__esModule) return mod;
+      var result = {};
+      if (mod != null) for (var k in mod) {
+        if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+      }
+      result["default"] = mod;
+      return result;
+    }
+
+    function __importDefault(mod) {
+      return mod && mod.__esModule ? mod : {
+        "default": mod
+      };
+    }
+
+    function __classPrivateFieldGet(receiver, privateMap) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+      }
+
+      return privateMap.get(receiver);
+    }
+
+    function __classPrivateFieldSet(receiver, privateMap, value) {
+      if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+      }
+
+      privateMap.set(receiver, value);
+      return value;
+    }
     /***/
 
   }
