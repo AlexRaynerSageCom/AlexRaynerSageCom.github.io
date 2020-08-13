@@ -72963,13 +72963,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             } // Degrade on IE
             else {
                 /** @type {?} */
-                var _options =
+                var _options2 =
                 /** @type {?} */
                 _.options;
 
-                for (var _i21 = 0; _i21 < _options.length; _i21++) {
+                for (var _i21 = 0; _i21 < _options2.length; _i21++) {
                   /** @type {?} */
-                  var _opt = _options.item(_i21);
+                  var _opt = _options2.item(_i21);
 
                   if (_opt.selected) {
                     /** @type {?} */
@@ -98584,6 +98584,5652 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/@ngrx/store-devtools/__ivy_ngcc__/fesm2015/ngrx-store-devtools.js":
+  /*!****************************************************************************************!*\
+    !*** ./node_modules/@ngrx/store-devtools/__ivy_ngcc__/fesm2015/ngrx-store-devtools.js ***!
+    \****************************************************************************************/
+
+  /*! exports provided: INITIAL_OPTIONS, RECOMPUTE, StoreDevtools, StoreDevtoolsConfig, StoreDevtoolsModule, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj */
+
+  /***/
+  function node_modulesNgrxStoreDevtools__ivy_ngcc__Fesm2015NgrxStoreDevtoolsJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "INITIAL_OPTIONS", function () {
+      return INITIAL_OPTIONS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RECOMPUTE", function () {
+      return RECOMPUTE;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StoreDevtools", function () {
+      return StoreDevtools;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StoreDevtoolsConfig", function () {
+      return StoreDevtoolsConfig;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StoreDevtoolsModule", function () {
+      return StoreDevtoolsModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵa", function () {
+      return IS_EXTENSION_OR_MONITOR_PRESENT;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵb", function () {
+      return createIsExtensionOrMonitorPresent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵc", function () {
+      return createReduxDevtoolsExtension;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵd", function () {
+      return createStateObservable;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵe", function () {
+      return STORE_DEVTOOLS_CONFIG;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵf", function () {
+      return noMonitor;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵg", function () {
+      return createConfig;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵh", function () {
+      return REDUX_DEVTOOLS_EXTENSION;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵi", function () {
+      return DevtoolsExtension;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵj", function () {
+      return DevtoolsDispatcher;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @ngrx/store */
+    "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/config.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @record
+     */
+
+
+    function DevToolsFeatureOptions() {}
+
+    if (false) {}
+
+    var StoreDevtoolsConfig = function StoreDevtoolsConfig() {
+      _classCallCheck(this, StoreDevtoolsConfig);
+
+      this.maxAge = false;
+    };
+
+    if (false) {}
+    /** @type {?} */
+
+
+    var STORE_DEVTOOLS_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/devtools Options');
+    /** @type {?} */
+
+    var INITIAL_OPTIONS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/devtools Initial Config');
+    /**
+     * @return {?}
+     */
+
+    function noMonitor() {
+      return null;
+    }
+    /** @type {?} */
+
+
+    var DEFAULT_NAME = 'NgRx Store DevTools';
+    /**
+     * @param {?} _options
+     * @return {?}
+     */
+
+    function createConfig(_options) {
+      /** @type {?} */
+      var DEFAULT_OPTIONS = {
+        maxAge: false,
+        monitor: noMonitor,
+        actionSanitizer: undefined,
+        stateSanitizer: undefined,
+        name: DEFAULT_NAME,
+        serialize: false,
+        logOnly: false,
+        // Add all features explicitly. This prevent buggy behavior for
+        // options like "lock" which might otherwise not show up.
+        features: {
+          pause: true,
+          // start/pause recording of dispatched actions
+          lock: true,
+          // lock/unlock dispatching actions and side effects
+          persist: true,
+          // persist states on page reloading
+          "export": true,
+          // export history of actions in a file
+          "import": 'custom',
+          // import history of actions from a file
+          jump: true,
+          // jump back and forth (time travelling)
+          skip: true,
+          // skip (cancel) actions
+          reorder: true,
+          // drag and drop actions in the history list
+          dispatch: true,
+          // dispatch custom actions or action creators
+          test: true
+        }
+      };
+      /** @type {?} */
+
+      var options = typeof _options === 'function' ? _options() : _options;
+      /** @type {?} */
+
+      var logOnly = options.logOnly ? {
+        pause: true,
+        "export": true,
+        test: true
+      } : false;
+      /** @type {?} */
+
+      var features = options.features || logOnly || DEFAULT_OPTIONS.features;
+      /** @type {?} */
+
+      var config = Object.assign({}, DEFAULT_OPTIONS, {
+        features: features
+      }, options);
+
+      if (config.maxAge && config.maxAge < 2) {
+        throw new Error("Devtools 'maxAge' cannot be less than 2, got ".concat(config.maxAge));
+      }
+
+      return config;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/actions.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var PERFORM_ACTION = 'PERFORM_ACTION';
+    /** @type {?} */
+
+    var REFRESH = 'REFRESH';
+    /** @type {?} */
+
+    var RESET = 'RESET';
+    /** @type {?} */
+
+    var ROLLBACK = 'ROLLBACK';
+    /** @type {?} */
+
+    var COMMIT = 'COMMIT';
+    /** @type {?} */
+
+    var SWEEP = 'SWEEP';
+    /** @type {?} */
+
+    var TOGGLE_ACTION = 'TOGGLE_ACTION';
+    /** @type {?} */
+
+    var SET_ACTIONS_ACTIVE = 'SET_ACTIONS_ACTIVE';
+    /** @type {?} */
+
+    var JUMP_TO_STATE = 'JUMP_TO_STATE';
+    /** @type {?} */
+
+    var JUMP_TO_ACTION = 'JUMP_TO_ACTION';
+    /** @type {?} */
+
+    var IMPORT_STATE = 'IMPORT_STATE';
+    /** @type {?} */
+
+    var LOCK_CHANGES = 'LOCK_CHANGES';
+    /** @type {?} */
+
+    var PAUSE_RECORDING = 'PAUSE_RECORDING';
+
+    var PerformAction =
+    /**
+     * @param {?} action
+     * @param {?} timestamp
+     */
+    function PerformAction(action, timestamp) {
+      _classCallCheck(this, PerformAction);
+
+      this.action = action;
+      this.timestamp = timestamp;
+      this.type = PERFORM_ACTION;
+
+      if (typeof action.type === 'undefined') {
+        throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+      }
+    };
+
+    if (false) {}
+
+    var Refresh = function Refresh() {
+      _classCallCheck(this, Refresh);
+
+      this.type = REFRESH;
+    };
+
+    if (false) {}
+
+    var Reset =
+    /**
+     * @param {?} timestamp
+     */
+    function Reset(timestamp) {
+      _classCallCheck(this, Reset);
+
+      this.timestamp = timestamp;
+      this.type = RESET;
+    };
+
+    if (false) {}
+
+    var Rollback =
+    /**
+     * @param {?} timestamp
+     */
+    function Rollback(timestamp) {
+      _classCallCheck(this, Rollback);
+
+      this.timestamp = timestamp;
+      this.type = ROLLBACK;
+    };
+
+    if (false) {}
+
+    var Commit =
+    /**
+     * @param {?} timestamp
+     */
+    function Commit(timestamp) {
+      _classCallCheck(this, Commit);
+
+      this.timestamp = timestamp;
+      this.type = COMMIT;
+    };
+
+    if (false) {}
+
+    var Sweep = function Sweep() {
+      _classCallCheck(this, Sweep);
+
+      this.type = SWEEP;
+    };
+
+    if (false) {}
+
+    var ToggleAction =
+    /**
+     * @param {?} id
+     */
+    function ToggleAction(id) {
+      _classCallCheck(this, ToggleAction);
+
+      this.id = id;
+      this.type = TOGGLE_ACTION;
+    };
+
+    if (false) {}
+
+    var SetActionsActive =
+    /**
+     * @param {?} start
+     * @param {?} end
+     * @param {?=} active
+     */
+    function SetActionsActive(start, end) {
+      var active = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+      _classCallCheck(this, SetActionsActive);
+
+      this.start = start;
+      this.end = end;
+      this.active = active;
+      this.type = SET_ACTIONS_ACTIVE;
+    };
+
+    if (false) {}
+
+    var JumpToState =
+    /**
+     * @param {?} index
+     */
+    function JumpToState(index) {
+      _classCallCheck(this, JumpToState);
+
+      this.index = index;
+      this.type = JUMP_TO_STATE;
+    };
+
+    if (false) {}
+
+    var JumpToAction =
+    /**
+     * @param {?} actionId
+     */
+    function JumpToAction(actionId) {
+      _classCallCheck(this, JumpToAction);
+
+      this.actionId = actionId;
+      this.type = JUMP_TO_ACTION;
+    };
+
+    if (false) {}
+
+    var ImportState =
+    /**
+     * @param {?} nextLiftedState
+     */
+    function ImportState(nextLiftedState) {
+      _classCallCheck(this, ImportState);
+
+      this.nextLiftedState = nextLiftedState;
+      this.type = IMPORT_STATE;
+    };
+
+    if (false) {}
+
+    var LockChanges =
+    /**
+     * @param {?} status
+     */
+    function LockChanges(status) {
+      _classCallCheck(this, LockChanges);
+
+      this.status = status;
+      this.type = LOCK_CHANGES;
+    };
+
+    if (false) {}
+
+    var PauseRecording =
+    /**
+     * @param {?} status
+     */
+    function PauseRecording(status) {
+      _classCallCheck(this, PauseRecording);
+
+      this.status = status;
+      this.type = PAUSE_RECORDING;
+    };
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/devtools-dispatcher.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var DevtoolsDispatcher = /*#__PURE__*/function (_ngrx_store__WEBPACK_) {
+      _inherits(DevtoolsDispatcher, _ngrx_store__WEBPACK_);
+
+      var _super66 = _createSuper(DevtoolsDispatcher);
+
+      function DevtoolsDispatcher() {
+        _classCallCheck(this, DevtoolsDispatcher);
+
+        return _super66.apply(this, arguments);
+      }
+
+      return DevtoolsDispatcher;
+    }(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ActionsSubject"]);
+
+    DevtoolsDispatcher.ɵfac = function DevtoolsDispatcher_Factory(t) {
+      return ɵDevtoolsDispatcher_BaseFactory(t || DevtoolsDispatcher);
+    };
+
+    DevtoolsDispatcher.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: DevtoolsDispatcher,
+      factory: DevtoolsDispatcher.ɵfac
+    });
+
+    var ɵDevtoolsDispatcher_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](DevtoolsDispatcher);
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DevtoolsDispatcher, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/utils.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @param {?} first
+     * @param {?} second
+     * @return {?}
+     */
+
+
+    function difference(first, second) {
+      return first.filter(
+      /**
+      * @param {?} item
+      * @return {?}
+      */
+      function (item) {
+        return second.indexOf(item) < 0;
+      });
+    }
+    /**
+     * Provides an app's view into the state of the lifted store.
+     * @param {?} liftedState
+     * @return {?}
+     */
+
+
+    function unliftState(liftedState) {
+      var computedStates = liftedState.computedStates,
+          currentStateIndex = liftedState.currentStateIndex; // At start up NgRx dispatches init actions,
+      // When these init actions are being filtered out by the predicate or safe/block list options
+      // we don't have a complete computed states yet.
+      // At this point it could happen that we're out of bounds, when this happens we fall back to the last known state
+
+      if (currentStateIndex >= computedStates.length) {
+        var _state = computedStates[computedStates.length - 1].state;
+        return _state;
+      }
+
+      var state = computedStates[currentStateIndex].state;
+      return state;
+    }
+    /**
+     * @param {?} liftedState
+     * @return {?}
+     */
+
+
+    function unliftAction(liftedState) {
+      return liftedState.actionsById[liftedState.nextActionId - 1];
+    }
+    /**
+     * Lifts an app's action into an action on the lifted store.
+     * @param {?} action
+     * @return {?}
+     */
+
+
+    function liftAction(action) {
+      return new PerformAction(action, +Date.now());
+    }
+    /**
+     * Sanitizes given actions with given function.
+     * @param {?} actionSanitizer
+     * @param {?} actions
+     * @return {?}
+     */
+
+
+    function sanitizeActions(actionSanitizer, actions) {
+      return Object.keys(actions).reduce(
+      /**
+      * @param {?} sanitizedActions
+      * @param {?} actionIdx
+      * @return {?}
+      */
+      function (sanitizedActions, actionIdx) {
+        /** @type {?} */
+        var idx = Number(actionIdx);
+        sanitizedActions[idx] = sanitizeAction(actionSanitizer, actions[idx], idx);
+        return sanitizedActions;
+      },
+      /** @type {?} */
+      {});
+    }
+    /**
+     * Sanitizes given action with given function.
+     * @param {?} actionSanitizer
+     * @param {?} action
+     * @param {?} actionIdx
+     * @return {?}
+     */
+
+
+    function sanitizeAction(actionSanitizer, action, actionIdx) {
+      return Object.assign(Object.assign({}, action), {
+        action: actionSanitizer(action.action, actionIdx)
+      });
+    }
+    /**
+     * Sanitizes given states with given function.
+     * @param {?} stateSanitizer
+     * @param {?} states
+     * @return {?}
+     */
+
+
+    function sanitizeStates(stateSanitizer, states) {
+      return states.map(
+      /**
+      * @param {?} computedState
+      * @param {?} idx
+      * @return {?}
+      */
+      function (computedState, idx) {
+        return {
+          state: sanitizeState(stateSanitizer, computedState.state, idx),
+          error: computedState.error
+        };
+      });
+    }
+    /**
+     * Sanitizes given state with given function.
+     * @param {?} stateSanitizer
+     * @param {?} state
+     * @param {?} stateIdx
+     * @return {?}
+     */
+
+
+    function sanitizeState(stateSanitizer, state, stateIdx) {
+      return stateSanitizer(state, stateIdx);
+    }
+    /**
+     * Read the config and tell if actions should be filtered
+     * @param {?} config
+     * @return {?}
+     */
+
+
+    function shouldFilterActions(config) {
+      return config.predicate || config.actionsSafelist || config.actionsBlocklist;
+    }
+    /**
+     * Return a full filtered lifted state
+     * @param {?} liftedState
+     * @param {?=} predicate
+     * @param {?=} safelist
+     * @param {?=} blocklist
+     * @return {?}
+     */
+
+
+    function filterLiftedState(liftedState, predicate, safelist, blocklist) {
+      /** @type {?} */
+      var filteredStagedActionIds = [];
+      /** @type {?} */
+
+      var filteredActionsById = {};
+      /** @type {?} */
+
+      var filteredComputedStates = [];
+      liftedState.stagedActionIds.forEach(
+      /**
+      * @param {?} id
+      * @param {?} idx
+      * @return {?}
+      */
+      function (id, idx) {
+        /** @type {?} */
+        var liftedAction = liftedState.actionsById[id];
+        if (!liftedAction) return;
+
+        if (idx && isActionFiltered(liftedState.computedStates[idx], liftedAction, predicate, safelist, blocklist)) {
+          return;
+        }
+
+        filteredActionsById[id] = liftedAction;
+        filteredStagedActionIds.push(id);
+        filteredComputedStates.push(liftedState.computedStates[idx]);
+      });
+      return Object.assign(Object.assign({}, liftedState), {
+        stagedActionIds: filteredStagedActionIds,
+        actionsById: filteredActionsById,
+        computedStates: filteredComputedStates
+      });
+    }
+    /**
+     * Return true is the action should be ignored
+     * @param {?} state
+     * @param {?} action
+     * @param {?=} predicate
+     * @param {?=} safelist
+     * @param {?=} blockedlist
+     * @return {?}
+     */
+
+
+    function isActionFiltered(state, action, predicate, safelist, blockedlist) {
+      /** @type {?} */
+      var predicateMatch = predicate && !predicate(state, action.action);
+      /** @type {?} */
+
+      var safelistMatch = safelist && !action.action.type.match(safelist.map(
+      /**
+      * @param {?} s
+      * @return {?}
+      */
+      function (s) {
+        return escapeRegExp(s);
+      }).join('|'));
+      /** @type {?} */
+
+      var blocklistMatch = blockedlist && action.action.type.match(blockedlist.map(
+      /**
+      * @param {?} s
+      * @return {?}
+      */
+      function (s) {
+        return escapeRegExp(s);
+      }).join('|'));
+      return predicateMatch || safelistMatch || blocklistMatch;
+    }
+    /**
+     * Return string with escaped RegExp special characters
+     * https://stackoverflow.com/a/6969486/1337347
+     * @param {?} s
+     * @return {?}
+     */
+
+
+    function escapeRegExp(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/extension.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var ExtensionActionTypes = {
+      START: 'START',
+      DISPATCH: 'DISPATCH',
+      STOP: 'STOP',
+      ACTION: 'ACTION'
+    };
+    /** @type {?} */
+
+    var REDUX_DEVTOOLS_EXTENSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('Redux Devtools Extension');
+    /**
+     * @record
+     */
+
+    function ReduxDevtoolsExtensionConnection() {}
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function ReduxDevtoolsExtensionConfig() {}
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function ReduxDevtoolsExtension() {}
+
+    if (false) {}
+
+    var DevtoolsExtension = /*#__PURE__*/function () {
+      /**
+       * @param {?} devtoolsExtension
+       * @param {?} config
+       * @param {?} dispatcher
+       */
+      function DevtoolsExtension(devtoolsExtension, config, dispatcher) {
+        _classCallCheck(this, DevtoolsExtension);
+
+        this.config = config;
+        this.dispatcher = dispatcher;
+        this.devtoolsExtension = devtoolsExtension;
+        this.createActionStreams();
+      }
+      /**
+       * @param {?} action
+       * @param {?} state
+       * @return {?}
+       */
+
+
+      _createClass2(DevtoolsExtension, [{
+        key: "notify",
+        value: function notify(action, state) {
+          var _this145 = this;
+
+          if (!this.devtoolsExtension) {
+            return;
+          } // Check to see if the action requires a full update of the liftedState.
+          // If it is a simple action generated by the user's app and the recording
+          // is not locked/paused, only send the action and the current state (fast).
+          //
+          // A full liftedState update (slow: serializes the entire liftedState) is
+          // only required when:
+          //   a) redux-devtools-extension fires the @@Init action (ignored by
+          //      @ngrx/store-devtools)
+          //   b) an action is generated by an @ngrx module (e.g. @ngrx/effects/init
+          //      or @ngrx/store/update-reducers)
+          //   c) the state has been recomputed due to time-traveling
+          //   d) any action that is not a PerformAction to err on the side of
+          //      caution.
+
+
+          if (action.type === PERFORM_ACTION) {
+            if (state.isLocked || state.isPaused) {
+              return;
+            }
+            /** @type {?} */
+
+
+            var currentState = unliftState(state);
+
+            if (shouldFilterActions(this.config) && isActionFiltered(currentState, action, this.config.predicate, this.config.actionsSafelist, this.config.actionsBlocklist)) {
+              return;
+            }
+            /** @type {?} */
+
+
+            var sanitizedState = this.config.stateSanitizer ? sanitizeState(this.config.stateSanitizer, currentState, state.currentStateIndex) : currentState;
+            /** @type {?} */
+
+            var sanitizedAction = this.config.actionSanitizer ? sanitizeAction(this.config.actionSanitizer, action, state.nextActionId) : action;
+            this.sendToReduxDevtools(
+            /**
+            * @return {?}
+            */
+            function () {
+              return _this145.extensionConnection.send(sanitizedAction, sanitizedState);
+            });
+          } else {
+            // Requires full state update
+
+            /** @type {?} */
+            var sanitizedLiftedState = Object.assign(Object.assign({}, state), {
+              stagedActionIds: state.stagedActionIds,
+              actionsById: this.config.actionSanitizer ? sanitizeActions(this.config.actionSanitizer, state.actionsById) : state.actionsById,
+              computedStates: this.config.stateSanitizer ? sanitizeStates(this.config.stateSanitizer, state.computedStates) : state.computedStates
+            });
+            this.sendToReduxDevtools(
+            /**
+            * @return {?}
+            */
+            function () {
+              return _this145.devtoolsExtension.send(null, sanitizedLiftedState, _this145.getExtensionConfig(_this145.config));
+            });
+          }
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "createChangesObservable",
+        value: function createChangesObservable() {
+          var _this146 = this;
+
+          if (!this.devtoolsExtension) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["empty"])();
+          }
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"](
+          /**
+          * @param {?} subscriber
+          * @return {?}
+          */
+          function (subscriber) {
+            /** @type {?} */
+            var connection = _this146.devtoolsExtension.connect(_this146.getExtensionConfig(_this146.config));
+
+            _this146.extensionConnection = connection;
+            connection.init();
+            connection.subscribe(
+            /**
+            * @param {?} change
+            * @return {?}
+            */
+            function (change) {
+              return subscriber.next(change);
+            });
+            return connection.unsubscribe;
+          });
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "createActionStreams",
+        value: function createActionStreams() {
+          var _this147 = this;
+
+          // Listens to all changes
+
+          /** @type {?} */
+          var changes$ = this.createChangesObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["share"])()); // Listen for the start action
+
+          /** @type {?} */
+
+          var start$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
+          /**
+          * @param {?} change
+          * @return {?}
+          */
+          function (change) {
+            return change.type === ExtensionActionTypes.START;
+          })); // Listen for the stop action
+
+          /** @type {?} */
+
+          var stop$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
+          /**
+          * @param {?} change
+          * @return {?}
+          */
+          function (change) {
+            return change.type === ExtensionActionTypes.STOP;
+          })); // Listen for lifted actions
+
+          /** @type {?} */
+
+          var liftedActions$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
+          /**
+          * @param {?} change
+          * @return {?}
+          */
+          function (change) {
+            return change.type === ExtensionActionTypes.DISPATCH;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
+          /**
+          * @param {?} change
+          * @return {?}
+          */
+          function (change) {
+            return _this147.unwrapAction(change.payload);
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["concatMap"])(
+          /**
+          * @param {?} action
+          * @return {?}
+          */
+          function (action) {
+            if (action.type === IMPORT_STATE) {
+              // State imports may happen in two situations:
+              // 1. Explicitly by user
+              // 2. User activated the "persist state accross reloads" option
+              //    and now the state is imported during reload.
+              // Because of option 2, we need to give possible
+              // lazy loaded reducers time to instantiate.
+              // As soon as there is no UPDATE action within 1 second,
+              // it is assumed that all reducers are loaded.
+              return _this147.dispatcher.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
+              /**
+              * @param {?} action
+              * @return {?}
+              */
+              function (action) {
+                return action.type === _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["UPDATE"];
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["timeout"])(1000), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["debounceTime"])(1000), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
+              /**
+              * @return {?}
+              */
+              function () {
+                return action;
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(
+              /**
+              * @return {?}
+              */
+              function () {
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(action);
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1));
+            } else {
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(action);
+            }
+          })); // Listen for unlifted actions
+
+          /** @type {?} */
+
+          var actions$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
+          /**
+          * @param {?} change
+          * @return {?}
+          */
+          function (change) {
+            return change.type === ExtensionActionTypes.ACTION;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
+          /**
+          * @param {?} change
+          * @return {?}
+          */
+          function (change) {
+            return _this147.unwrapAction(change.payload);
+          }));
+          /** @type {?} */
+
+          var actionsUntilStop$ = actions$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(stop$));
+          /** @type {?} */
+
+          var liftedUntilStop$ = liftedActions$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(stop$));
+          this.start$ = start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(stop$)); // Only take the action sources between the start/stop events
+
+          this.actions$ = this.start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(
+          /**
+          * @return {?}
+          */
+          function () {
+            return actionsUntilStop$;
+          }));
+          this.liftedActions$ = this.start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(
+          /**
+          * @return {?}
+          */
+          function () {
+            return liftedUntilStop$;
+          }));
+        }
+        /**
+         * @private
+         * @param {?} action
+         * @return {?}
+         */
+
+      }, {
+        key: "unwrapAction",
+        value: function unwrapAction(action) {
+          return typeof action === 'string' ? eval("(".concat(action, ")")) : action;
+        }
+        /**
+         * @private
+         * @param {?} config
+         * @return {?}
+         */
+
+      }, {
+        key: "getExtensionConfig",
+        value: function getExtensionConfig(config) {
+          /** @type {?} */
+          var extensionOptions = {
+            name: config.name,
+            features: config.features,
+            serialize: config.serialize
+          };
+
+          if (config.maxAge !== false
+          /* support === 0 */
+          ) {
+              extensionOptions.maxAge = config.maxAge;
+            }
+
+          return extensionOptions;
+        }
+        /**
+         * @private
+         * @param {?} send
+         * @return {?}
+         */
+
+      }, {
+        key: "sendToReduxDevtools",
+        value: function sendToReduxDevtools(send) {
+          try {
+            send();
+          } catch (err) {
+            console.warn('@ngrx/store-devtools: something went wrong inside the redux devtools', err);
+          }
+        }
+      }]);
+
+      return DevtoolsExtension;
+    }();
+
+    DevtoolsExtension.ɵfac = function DevtoolsExtension_Factory(t) {
+      return new (t || DevtoolsExtension)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](REDUX_DEVTOOLS_EXTENSION), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](STORE_DEVTOOLS_CONFIG), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](DevtoolsDispatcher));
+    };
+
+    DevtoolsExtension.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: DevtoolsExtension,
+      factory: DevtoolsExtension.ɵfac
+    });
+    /** @nocollapse */
+
+    DevtoolsExtension.ctorParameters = function () {
+      return [{
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [REDUX_DEVTOOLS_EXTENSION]
+        }]
+      }, {
+        type: StoreDevtoolsConfig,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [STORE_DEVTOOLS_CONFIG]
+        }]
+      }, {
+        type: DevtoolsDispatcher
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DevtoolsExtension, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [REDUX_DEVTOOLS_EXTENSION]
+          }]
+        }, {
+          type: StoreDevtoolsConfig,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [STORE_DEVTOOLS_CONFIG]
+          }]
+        }, {
+          type: DevtoolsDispatcher
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/reducer.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var INIT_ACTION = {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["INIT"]
+    };
+    /** @type {?} */
+
+    var RECOMPUTE =
+    /** @type {?} */
+    '@ngrx/store-devtools/recompute';
+    /** @type {?} */
+
+    var RECOMPUTE_ACTION = {
+      type: RECOMPUTE
+    };
+    /**
+     * @record
+     */
+
+    function ComputedState() {}
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function LiftedAction() {}
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function LiftedActions() {}
+    /**
+     * @record
+     */
+
+
+    function LiftedState() {}
+
+    if (false) {}
+    /**
+     * Computes the next entry in the log by applying an action.
+     * @param {?} reducer
+     * @param {?} action
+     * @param {?} state
+     * @param {?} error
+     * @param {?} errorHandler
+     * @return {?}
+     */
+
+
+    function computeNextEntry(reducer, action, state, error, errorHandler) {
+      if (error) {
+        return {
+          state: state,
+          error: 'Interrupted by an error up the chain'
+        };
+      }
+      /** @type {?} */
+
+
+      var nextState = state;
+      /** @type {?} */
+
+      var nextError;
+
+      try {
+        nextState = reducer(state, action);
+      } catch (err) {
+        nextError = err.toString();
+        errorHandler.handleError(err.stack || err);
+      }
+
+      return {
+        state: nextState,
+        error: nextError
+      };
+    }
+    /**
+     * Runs the reducer on invalidated actions to get a fresh computation log.
+     * @param {?} computedStates
+     * @param {?} minInvalidatedStateIndex
+     * @param {?} reducer
+     * @param {?} committedState
+     * @param {?} actionsById
+     * @param {?} stagedActionIds
+     * @param {?} skippedActionIds
+     * @param {?} errorHandler
+     * @param {?} isPaused
+     * @return {?}
+     */
+
+
+    function recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused) {
+      // Optimization: exit early and return the same reference
+      // if we know nothing could have changed.
+      if (minInvalidatedStateIndex >= computedStates.length && computedStates.length === stagedActionIds.length) {
+        return computedStates;
+      }
+      /** @type {?} */
+
+
+      var nextComputedStates = computedStates.slice(0, minInvalidatedStateIndex); // If the recording is paused, recompute all states up until the pause state,
+      // else recompute all states.
+
+      /** @type {?} */
+
+      var lastIncludedActionId = stagedActionIds.length - (isPaused ? 1 : 0);
+
+      for (var i = minInvalidatedStateIndex; i < lastIncludedActionId; i++) {
+        /** @type {?} */
+        var actionId = stagedActionIds[i];
+        /** @type {?} */
+
+        var action = actionsById[actionId].action;
+        /** @type {?} */
+
+        var previousEntry = nextComputedStates[i - 1];
+        /** @type {?} */
+
+        var previousState = previousEntry ? previousEntry.state : committedState;
+        /** @type {?} */
+
+        var previousError = previousEntry ? previousEntry.error : undefined;
+        /** @type {?} */
+
+        var shouldSkip = skippedActionIds.indexOf(actionId) > -1;
+        /** @type {?} */
+
+        var entry = shouldSkip ? previousEntry : computeNextEntry(reducer, action, previousState, previousError, errorHandler);
+        nextComputedStates.push(entry);
+      } // If the recording is paused, the last state will not be recomputed,
+      // because it's essentially not part of the state history.
+
+
+      if (isPaused) {
+        nextComputedStates.push(computedStates[computedStates.length - 1]);
+      }
+
+      return nextComputedStates;
+    }
+    /**
+     * @param {?=} initialCommittedState
+     * @param {?=} monitorReducer
+     * @return {?}
+     */
+
+
+    function liftInitialState(initialCommittedState, monitorReducer) {
+      return {
+        monitorState: monitorReducer(undefined, {}),
+        nextActionId: 1,
+        actionsById: {
+          0: liftAction(INIT_ACTION)
+        },
+        stagedActionIds: [0],
+        skippedActionIds: [],
+        committedState: initialCommittedState,
+        currentStateIndex: 0,
+        computedStates: [],
+        isLocked: false,
+        isPaused: false
+      };
+    }
+    /**
+     * Creates a history state reducer from an app's reducer.
+     * @param {?} initialCommittedState
+     * @param {?} initialLiftedState
+     * @param {?} errorHandler
+     * @param {?=} monitorReducer
+     * @param {?=} options
+     * @return {?}
+     */
+
+
+    function liftReducerWith(initialCommittedState, initialLiftedState, errorHandler, monitorReducer) {
+      var options = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+
+      /**
+       * Manages how the history actions modify the history state.
+       */
+      return (
+        /**
+        * @param {?} reducer
+        * @return {?}
+        */
+        function (reducer) {
+          return (
+            /**
+            * @param {?} liftedState
+            * @param {?} liftedAction
+            * @return {?}
+            */
+            function (liftedState, liftedAction) {
+              var _ref12 = liftedState || initialLiftedState,
+                  monitorState = _ref12.monitorState,
+                  actionsById = _ref12.actionsById,
+                  nextActionId = _ref12.nextActionId,
+                  stagedActionIds = _ref12.stagedActionIds,
+                  skippedActionIds = _ref12.skippedActionIds,
+                  committedState = _ref12.committedState,
+                  currentStateIndex = _ref12.currentStateIndex,
+                  computedStates = _ref12.computedStates,
+                  isLocked = _ref12.isLocked,
+                  isPaused = _ref12.isPaused;
+
+              if (!liftedState) {
+                // Prevent mutating initialLiftedState
+                actionsById = Object.create(actionsById);
+              }
+              /**
+               * @param {?} n
+               * @return {?}
+               */
+
+
+              function commitExcessActions(n) {
+                // Auto-commits n-number of excess actions.
+
+                /** @type {?} */
+                var excess = n;
+                /** @type {?} */
+
+                var idsToDelete = stagedActionIds.slice(1, excess + 1);
+
+                for (var i = 0; i < idsToDelete.length; i++) {
+                  if (computedStates[i + 1].error) {
+                    // Stop if error is found. Commit actions up to error.
+                    excess = i;
+                    idsToDelete = stagedActionIds.slice(1, excess + 1);
+                    break;
+                  } else {
+                    delete actionsById[idsToDelete[i]];
+                  }
+                }
+
+                skippedActionIds = skippedActionIds.filter(
+                /**
+                * @param {?} id
+                * @return {?}
+                */
+                function (id) {
+                  return idsToDelete.indexOf(id) === -1;
+                });
+                stagedActionIds = [0].concat(_toConsumableArray(stagedActionIds.slice(excess + 1)));
+                committedState = computedStates[excess].state;
+                computedStates = computedStates.slice(excess);
+                currentStateIndex = currentStateIndex > excess ? currentStateIndex - excess : 0;
+              }
+              /**
+               * @return {?}
+               */
+
+
+              function commitChanges() {
+                // Consider the last committed state the new starting point.
+                // Squash any staged actions into a single committed state.
+                actionsById = {
+                  0: liftAction(INIT_ACTION)
+                };
+                nextActionId = 1;
+                stagedActionIds = [0];
+                skippedActionIds = [];
+                committedState = computedStates[currentStateIndex].state;
+                currentStateIndex = 0;
+                computedStates = [];
+              } // By default, aggressively recompute every state whatever happens.
+              // This has O(n) performance, so we'll override this to a sensible
+              // value whenever we feel like we don't have to recompute the states.
+
+              /** @type {?} */
+
+
+              var minInvalidatedStateIndex = 0;
+
+              switch (liftedAction.type) {
+                case LOCK_CHANGES:
+                  {
+                    isLocked = liftedAction.status;
+                    minInvalidatedStateIndex = Infinity;
+                    break;
+                  }
+
+                case PAUSE_RECORDING:
+                  {
+                    isPaused = liftedAction.status;
+
+                    if (isPaused) {
+                      // Add a pause action to signal the devtools-user the recording is paused.
+                      // The corresponding state will be overwritten on each update to always contain
+                      // the latest state (see Actions.PERFORM_ACTION).
+                      stagedActionIds = [].concat(_toConsumableArray(stagedActionIds), [nextActionId]);
+                      actionsById[nextActionId] = new PerformAction({
+                        type: '@ngrx/devtools/pause'
+                      }, +Date.now());
+                      nextActionId++;
+                      minInvalidatedStateIndex = stagedActionIds.length - 1;
+                      computedStates = computedStates.concat(computedStates[computedStates.length - 1]);
+
+                      if (currentStateIndex === stagedActionIds.length - 2) {
+                        currentStateIndex++;
+                      }
+
+                      minInvalidatedStateIndex = Infinity;
+                    } else {
+                      commitChanges();
+                    }
+
+                    break;
+                  }
+
+                case RESET:
+                  {
+                    // Get back to the state the store was created with.
+                    actionsById = {
+                      0: liftAction(INIT_ACTION)
+                    };
+                    nextActionId = 1;
+                    stagedActionIds = [0];
+                    skippedActionIds = [];
+                    committedState = initialCommittedState;
+                    currentStateIndex = 0;
+                    computedStates = [];
+                    break;
+                  }
+
+                case COMMIT:
+                  {
+                    commitChanges();
+                    break;
+                  }
+
+                case ROLLBACK:
+                  {
+                    // Forget about any staged actions.
+                    // Start again from the last committed state.
+                    actionsById = {
+                      0: liftAction(INIT_ACTION)
+                    };
+                    nextActionId = 1;
+                    stagedActionIds = [0];
+                    skippedActionIds = [];
+                    currentStateIndex = 0;
+                    computedStates = [];
+                    break;
+                  }
+
+                case TOGGLE_ACTION:
+                  {
+                    // Toggle whether an action with given ID is skipped.
+                    // Being skipped means it is a no-op during the computation.
+                    var actionId = liftedAction.id;
+                    /** @type {?} */
+
+                    var index = skippedActionIds.indexOf(actionId);
+
+                    if (index === -1) {
+                      skippedActionIds = [actionId].concat(_toConsumableArray(skippedActionIds));
+                    } else {
+                      skippedActionIds = skippedActionIds.filter(
+                      /**
+                      * @param {?} id
+                      * @return {?}
+                      */
+                      function (id) {
+                        return id !== actionId;
+                      });
+                    } // Optimization: we know history before this action hasn't changed
+
+
+                    minInvalidatedStateIndex = stagedActionIds.indexOf(actionId);
+                    break;
+                  }
+
+                case SET_ACTIONS_ACTIVE:
+                  {
+                    // Toggle whether an action with given ID is skipped.
+                    // Being skipped means it is a no-op during the computation.
+                    var start = liftedAction.start,
+                        end = liftedAction.end,
+                        active = liftedAction.active;
+                    /** @type {?} */
+
+                    var actionIds = [];
+
+                    for (var i = start; i < end; i++) {
+                      actionIds.push(i);
+                    }
+
+                    if (active) {
+                      skippedActionIds = difference(skippedActionIds, actionIds);
+                    } else {
+                      skippedActionIds = [].concat(_toConsumableArray(skippedActionIds), actionIds);
+                    } // Optimization: we know history before this action hasn't changed
+
+
+                    minInvalidatedStateIndex = stagedActionIds.indexOf(start);
+                    break;
+                  }
+
+                case JUMP_TO_STATE:
+                  {
+                    // Without recomputing anything, move the pointer that tell us
+                    // which state is considered the current one. Useful for sliders.
+                    currentStateIndex = liftedAction.index; // Optimization: we know the history has not changed.
+
+                    minInvalidatedStateIndex = Infinity;
+                    break;
+                  }
+
+                case JUMP_TO_ACTION:
+                  {
+                    // Jumps to a corresponding state to a specific action.
+                    // Useful when filtering actions.
+
+                    /** @type {?} */
+                    var _index2 = stagedActionIds.indexOf(liftedAction.actionId);
+
+                    if (_index2 !== -1) currentStateIndex = _index2;
+                    minInvalidatedStateIndex = Infinity;
+                    break;
+                  }
+
+                case SWEEP:
+                  {
+                    // Forget any actions that are currently being skipped.
+                    stagedActionIds = difference(stagedActionIds, skippedActionIds);
+                    skippedActionIds = [];
+                    currentStateIndex = Math.min(currentStateIndex, stagedActionIds.length - 1);
+                    break;
+                  }
+
+                case PERFORM_ACTION:
+                  {
+                    // Ignore action and return state as is if recording is locked
+                    if (isLocked) {
+                      return liftedState || initialLiftedState;
+                    }
+
+                    if (isPaused || liftedState && isActionFiltered(liftedState.computedStates[currentStateIndex], liftedAction, options.predicate, options.actionsSafelist, options.actionsBlocklist)) {
+                      // If recording is paused or if the action should be ignored, overwrite the last state
+                      // (corresponds to the pause action) and keep everything else as is.
+                      // This way, the app gets the new current state while the devtools
+                      // do not record another action.
+
+                      /** @type {?} */
+                      var lastState = computedStates[computedStates.length - 1];
+                      computedStates = [].concat(_toConsumableArray(computedStates.slice(0, -1)), [computeNextEntry(reducer, liftedAction.action, lastState.state, lastState.error, errorHandler)]);
+                      minInvalidatedStateIndex = Infinity;
+                      break;
+                    } // Auto-commit as new actions come in.
+
+
+                    if (options.maxAge && stagedActionIds.length === options.maxAge) {
+                      commitExcessActions(1);
+                    }
+
+                    if (currentStateIndex === stagedActionIds.length - 1) {
+                      currentStateIndex++;
+                    }
+                    /** @type {?} */
+
+
+                    var _actionId = nextActionId++; // Mutation! This is the hottest path, and we optimize on purpose.
+                    // It is safe because we set a new key in a cache dictionary.
+
+
+                    actionsById[_actionId] = liftedAction;
+                    stagedActionIds = [].concat(_toConsumableArray(stagedActionIds), [_actionId]); // Optimization: we know that only the new action needs computing.
+
+                    minInvalidatedStateIndex = stagedActionIds.length - 1;
+                    break;
+                  }
+
+                case IMPORT_STATE:
+                  {
+                    // Completely replace everything.
+                    var _liftedAction$nextLif = liftedAction.nextLiftedState;
+                    monitorState = _liftedAction$nextLif.monitorState;
+                    actionsById = _liftedAction$nextLif.actionsById;
+                    nextActionId = _liftedAction$nextLif.nextActionId;
+                    stagedActionIds = _liftedAction$nextLif.stagedActionIds;
+                    skippedActionIds = _liftedAction$nextLif.skippedActionIds;
+                    committedState = _liftedAction$nextLif.committedState;
+                    currentStateIndex = _liftedAction$nextLif.currentStateIndex;
+                    computedStates = _liftedAction$nextLif.computedStates;
+                    isLocked = _liftedAction$nextLif.isLocked;
+                    isPaused = _liftedAction$nextLif.isPaused;
+                    break;
+                  }
+
+                case _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["INIT"]:
+                  {
+                    // Always recompute states on hot reload and init.
+                    minInvalidatedStateIndex = 0;
+
+                    if (options.maxAge && stagedActionIds.length > options.maxAge) {
+                      // States must be recomputed before committing excess.
+                      computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+                      commitExcessActions(stagedActionIds.length - options.maxAge); // Avoid double computation.
+
+                      minInvalidatedStateIndex = Infinity;
+                    }
+
+                    break;
+                  }
+
+                case _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["UPDATE"]:
+                  {
+                    /** @type {?} */
+                    var stateHasErrors = computedStates.filter(
+                    /**
+                    * @param {?} state
+                    * @return {?}
+                    */
+                    function (state) {
+                      return state.error;
+                    }).length > 0;
+
+                    if (stateHasErrors) {
+                      // Recompute all states
+                      minInvalidatedStateIndex = 0;
+
+                      if (options.maxAge && stagedActionIds.length > options.maxAge) {
+                        // States must be recomputed before committing excess.
+                        computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+                        commitExcessActions(stagedActionIds.length - options.maxAge); // Avoid double computation.
+
+                        minInvalidatedStateIndex = Infinity;
+                      }
+                    } else {
+                      // If not paused/locked, add a new action to signal devtools-user
+                      // that there was a reducer update.
+                      if (!isPaused && !isLocked) {
+                        if (currentStateIndex === stagedActionIds.length - 1) {
+                          currentStateIndex++;
+                        } // Add a new action to only recompute state
+
+                        /** @type {?} */
+
+
+                        var _actionId2 = nextActionId++;
+
+                        actionsById[_actionId2] = new PerformAction(liftedAction, +Date.now());
+                        stagedActionIds = [].concat(_toConsumableArray(stagedActionIds), [_actionId2]);
+                        minInvalidatedStateIndex = stagedActionIds.length - 1;
+                        computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+                      } // Recompute state history with latest reducer and update action
+
+
+                      computedStates = computedStates.map(
+                      /**
+                      * @param {?} cmp
+                      * @return {?}
+                      */
+                      function (cmp) {
+                        return Object.assign(Object.assign({}, cmp), {
+                          state: reducer(cmp.state, RECOMPUTE_ACTION)
+                        });
+                      });
+                      currentStateIndex = stagedActionIds.length - 1;
+
+                      if (options.maxAge && stagedActionIds.length > options.maxAge) {
+                        commitExcessActions(stagedActionIds.length - options.maxAge);
+                      } // Avoid double computation.
+
+
+                      minInvalidatedStateIndex = Infinity;
+                    }
+
+                    break;
+                  }
+
+                default:
+                  {
+                    // If the action is not recognized, it's a monitor action.
+                    // Optimization: a monitor action can't change history.
+                    minInvalidatedStateIndex = Infinity;
+                    break;
+                  }
+              }
+
+              computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+              monitorState = monitorReducer(monitorState, liftedAction);
+              return {
+                monitorState: monitorState,
+                actionsById: actionsById,
+                nextActionId: nextActionId,
+                stagedActionIds: stagedActionIds,
+                skippedActionIds: skippedActionIds,
+                committedState: committedState,
+                currentStateIndex: currentStateIndex,
+                computedStates: computedStates,
+                isLocked: isLocked,
+                isPaused: isPaused
+              };
+            }
+          );
+        }
+      );
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/devtools.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var StoreDevtools = /*#__PURE__*/function () {
+      /**
+       * @param {?} dispatcher
+       * @param {?} actions$
+       * @param {?} reducers$
+       * @param {?} extension
+       * @param {?} scannedActions
+       * @param {?} errorHandler
+       * @param {?} initialState
+       * @param {?} config
+       */
+      function StoreDevtools(dispatcher, actions$, reducers$, extension, scannedActions, errorHandler, initialState, config) {
+        var _this148 = this;
+
+        _classCallCheck(this, StoreDevtools);
+
+        /** @type {?} */
+        var liftedInitialState = liftInitialState(initialState, config.monitor);
+        /** @type {?} */
+
+        var liftReducer = liftReducerWith(initialState, liftedInitialState, errorHandler, config.monitor, config);
+        /** @type {?} */
+
+        var liftedAction$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["merge"])(actions$.asObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["skip"])(1)), extension.actions$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(liftAction)), dispatcher, extension.liftedActions$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["observeOn"])(rxjs__WEBPACK_IMPORTED_MODULE_2__["queueScheduler"]));
+        /** @type {?} */
+
+        var liftedReducer$ = reducers$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(liftReducer));
+        /** @type {?} */
+
+        var liftedStateSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"](1);
+        /** @type {?} */
+
+        var liftedStateSubscription = liftedAction$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["withLatestFrom"])(liftedReducer$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["scan"])(
+        /**
+        * @param {?} __0
+        * @param {?} __1
+        * @return {?}
+        */
+        function (_ref13, _ref14) {
+          var liftedState = _ref13.state;
+
+          var _ref15 = _slicedToArray(_ref14, 2),
+              action = _ref15[0],
+              reducer = _ref15[1];
+
+          /** @type {?} */
+          var reducedLiftedState = reducer(liftedState, action); // On full state update
+          // If we have actions filters, we must filter completely our lifted state to be sync with the extension
+
+          if (action.type !== PERFORM_ACTION && shouldFilterActions(config)) {
+            reducedLiftedState = filterLiftedState(reducedLiftedState, config.predicate, config.actionsSafelist, config.actionsBlocklist);
+          } // Extension should be sent the sanitized lifted state
+
+
+          extension.notify(action, reducedLiftedState);
+          return {
+            state: reducedLiftedState,
+            action: action
+          };
+        }, {
+          state: liftedInitialState,
+          action:
+          /** @type {?} */
+          null
+        })).subscribe(
+        /**
+        * @param {?} __0
+        * @return {?}
+        */
+        function (_ref16) {
+          var state = _ref16.state,
+              action = _ref16.action;
+          liftedStateSubject.next(state);
+
+          if (action.type === PERFORM_ACTION) {
+            /** @type {?} */
+            var unliftedAction =
+            /** @type {?} */
+            action.action;
+            scannedActions.next(unliftedAction);
+          }
+        });
+        /** @type {?} */
+
+        var extensionStartSubscription = extension.start$.subscribe(
+        /**
+        * @return {?}
+        */
+        function () {
+          _this148.refresh();
+        });
+        /** @type {?} */
+
+        var liftedState$ =
+        /** @type {?} */
+        liftedStateSubject.asObservable();
+        /** @type {?} */
+
+        var state$ = liftedState$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(unliftState));
+        this.extensionStartSubscription = extensionStartSubscription;
+        this.stateSubscription = liftedStateSubscription;
+        this.dispatcher = dispatcher;
+        this.liftedState = liftedState$;
+        this.state = state$;
+      }
+      /**
+       * @param {?} action
+       * @return {?}
+       */
+
+
+      _createClass2(StoreDevtools, [{
+        key: "dispatch",
+        value: function dispatch(action) {
+          this.dispatcher.next(action);
+        }
+        /**
+         * @param {?} action
+         * @return {?}
+         */
+
+      }, {
+        key: "next",
+        value: function next(action) {
+          this.dispatcher.next(action);
+        }
+        /**
+         * @param {?} error
+         * @return {?}
+         */
+
+      }, {
+        key: "error",
+        value: function error(_error) {}
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "complete",
+        value: function complete() {}
+        /**
+         * @param {?} action
+         * @return {?}
+         */
+
+      }, {
+        key: "performAction",
+        value: function performAction(action) {
+          this.dispatch(new PerformAction(action, +Date.now()));
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "refresh",
+        value: function refresh() {
+          this.dispatch(new Refresh());
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "reset",
+        value: function reset() {
+          this.dispatch(new Reset(+Date.now()));
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "rollback",
+        value: function rollback() {
+          this.dispatch(new Rollback(+Date.now()));
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "commit",
+        value: function commit() {
+          this.dispatch(new Commit(+Date.now()));
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "sweep",
+        value: function sweep() {
+          this.dispatch(new Sweep());
+        }
+        /**
+         * @param {?} id
+         * @return {?}
+         */
+
+      }, {
+        key: "toggleAction",
+        value: function toggleAction(id) {
+          this.dispatch(new ToggleAction(id));
+        }
+        /**
+         * @param {?} actionId
+         * @return {?}
+         */
+
+      }, {
+        key: "jumpToAction",
+        value: function jumpToAction(actionId) {
+          this.dispatch(new JumpToAction(actionId));
+        }
+        /**
+         * @param {?} index
+         * @return {?}
+         */
+
+      }, {
+        key: "jumpToState",
+        value: function jumpToState(index) {
+          this.dispatch(new JumpToState(index));
+        }
+        /**
+         * @param {?} nextLiftedState
+         * @return {?}
+         */
+
+      }, {
+        key: "importState",
+        value: function importState(nextLiftedState) {
+          this.dispatch(new ImportState(nextLiftedState));
+        }
+        /**
+         * @param {?} status
+         * @return {?}
+         */
+
+      }, {
+        key: "lockChanges",
+        value: function lockChanges(status) {
+          this.dispatch(new LockChanges(status));
+        }
+        /**
+         * @param {?} status
+         * @return {?}
+         */
+
+      }, {
+        key: "pauseRecording",
+        value: function pauseRecording(status) {
+          this.dispatch(new PauseRecording(status));
+        }
+      }]);
+
+      return StoreDevtools;
+    }();
+
+    StoreDevtools.ɵfac = function StoreDevtools_Factory(t) {
+      return new (t || StoreDevtools)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](DevtoolsDispatcher), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ActionsSubject"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ReducerObservable"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](DevtoolsExtension), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ScannedActionsSubject"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["INITIAL_STATE"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](STORE_DEVTOOLS_CONFIG));
+    };
+
+    StoreDevtools.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: StoreDevtools,
+      factory: StoreDevtools.ɵfac
+    });
+    /** @nocollapse */
+
+    StoreDevtools.ctorParameters = function () {
+      return [{
+        type: DevtoolsDispatcher
+      }, {
+        type: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ActionsSubject"]
+      }, {
+        type: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ReducerObservable"]
+      }, {
+        type: DevtoolsExtension
+      }, {
+        type: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ScannedActionsSubject"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"]
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["INITIAL_STATE"]]
+        }]
+      }, {
+        type: StoreDevtoolsConfig,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [STORE_DEVTOOLS_CONFIG]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](StoreDevtools, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: DevtoolsDispatcher
+        }, {
+          type: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ActionsSubject"]
+        }, {
+          type: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ReducerObservable"]
+        }, {
+          type: DevtoolsExtension
+        }, {
+          type: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ScannedActionsSubject"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ErrorHandler"]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["INITIAL_STATE"]]
+          }]
+        }, {
+          type: StoreDevtoolsConfig,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [STORE_DEVTOOLS_CONFIG]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/instrument.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var IS_EXTENSION_OR_MONITOR_PRESENT = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('Is Devtools Extension or Monitor Present');
+    /**
+     * @param {?} extension
+     * @param {?} config
+     * @return {?}
+     */
+
+    function createIsExtensionOrMonitorPresent(extension, config) {
+      return Boolean(extension) || config.monitor !== noMonitor;
+    }
+    /**
+     * @return {?}
+     */
+
+
+    function createReduxDevtoolsExtension() {
+      /** @type {?} */
+      var extensionKey = '__REDUX_DEVTOOLS_EXTENSION__';
+
+      if (typeof window === 'object' && typeof
+      /** @type {?} */
+      window[extensionKey] !== 'undefined') {
+        return (
+          /** @type {?} */
+          window[extensionKey]
+        );
+      } else {
+        return null;
+      }
+    }
+    /**
+     * @param {?} devtools
+     * @return {?}
+     */
+
+
+    function createStateObservable(devtools) {
+      return devtools.state;
+    }
+
+    var StoreDevtoolsModule = /*#__PURE__*/function () {
+      function StoreDevtoolsModule() {
+        _classCallCheck(this, StoreDevtoolsModule);
+      }
+
+      _createClass2(StoreDevtoolsModule, null, [{
+        key: "instrument",
+
+        /**
+         * @param {?=} options
+         * @return {?}
+         */
+        value: function instrument() {
+          var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          return {
+            ngModule: StoreDevtoolsModule,
+            providers: [DevtoolsExtension, DevtoolsDispatcher, StoreDevtools, {
+              provide: INITIAL_OPTIONS,
+              useValue: options
+            }, {
+              provide: IS_EXTENSION_OR_MONITOR_PRESENT,
+              deps: [REDUX_DEVTOOLS_EXTENSION, STORE_DEVTOOLS_CONFIG],
+              useFactory: createIsExtensionOrMonitorPresent
+            }, {
+              provide: REDUX_DEVTOOLS_EXTENSION,
+              useFactory: createReduxDevtoolsExtension
+            }, {
+              provide: STORE_DEVTOOLS_CONFIG,
+              deps: [INITIAL_OPTIONS],
+              useFactory: createConfig
+            }, {
+              provide: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["StateObservable"],
+              deps: [StoreDevtools],
+              useFactory: createStateObservable
+            }, {
+              provide: _ngrx_store__WEBPACK_IMPORTED_MODULE_1__["ReducerManagerDispatcher"],
+              useExisting: DevtoolsDispatcher
+            }]
+          };
+        }
+      }]);
+
+      return StoreDevtoolsModule;
+    }();
+
+    StoreDevtoolsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: StoreDevtoolsModule
+    });
+    StoreDevtoolsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function StoreDevtoolsModule_Factory(t) {
+        return new (t || StoreDevtoolsModule)();
+      }
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](StoreDevtoolsModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{}]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: public_api.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: ngrx-store-devtools.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+    //# sourceMappingURL=ngrx-store-devtools.js.map
+
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js":
+  /*!**********************************************************************!*\
+    !*** ./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js ***!
+    \**********************************************************************/
+
+  /*! exports provided: ActionsSubject, FEATURE_REDUCERS, INIT, INITIAL_REDUCERS, INITIAL_STATE, META_REDUCERS, REDUCER_FACTORY, ReducerManager, ReducerManagerDispatcher, ReducerObservable, STORE_FEATURES, ScannedActionsSubject, State, StateObservable, Store, StoreFeatureModule, StoreModule, StoreRootModule, UPDATE, USER_PROVIDED_META_REDUCERS, USER_RUNTIME_CHECKS, combineReducers, compose, createAction, createFeatureSelector, createReducer, createReducerFactory, createSelector, createSelectorFactory, defaultMemoize, defaultStateFn, isNgrxMockEnvironment, on, props, reduceState, resultMemoize, select, setNgrxMockEnvironment, union, ɵb, ɵba, ɵbb, ɵbc, ɵbd, ɵbe, ɵbf, ɵbg, ɵbh, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo, ɵp, ɵq, ɵr, ɵs, ɵt, ɵu, ɵv, ɵw, ɵx, ɵy, ɵz */
+
+  /***/
+  function node_modulesNgrxStore__ivy_ngcc__Fesm2015NgrxStoreJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ActionsSubject", function () {
+      return ActionsSubject;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FEATURE_REDUCERS", function () {
+      return FEATURE_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "INIT", function () {
+      return INIT;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "INITIAL_REDUCERS", function () {
+      return INITIAL_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "INITIAL_STATE", function () {
+      return INITIAL_STATE;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "META_REDUCERS", function () {
+      return META_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "REDUCER_FACTORY", function () {
+      return REDUCER_FACTORY;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ReducerManager", function () {
+      return ReducerManager;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ReducerManagerDispatcher", function () {
+      return ReducerManagerDispatcher;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ReducerObservable", function () {
+      return ReducerObservable;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "STORE_FEATURES", function () {
+      return STORE_FEATURES;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ScannedActionsSubject", function () {
+      return ScannedActionsSubject;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "State", function () {
+      return State;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StateObservable", function () {
+      return StateObservable;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "Store", function () {
+      return Store;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StoreFeatureModule", function () {
+      return StoreFeatureModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StoreModule", function () {
+      return StoreModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "StoreRootModule", function () {
+      return StoreRootModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UPDATE", function () {
+      return UPDATE;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "USER_PROVIDED_META_REDUCERS", function () {
+      return USER_PROVIDED_META_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "USER_RUNTIME_CHECKS", function () {
+      return USER_RUNTIME_CHECKS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "combineReducers", function () {
+      return combineReducers;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "compose", function () {
+      return compose;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "createAction", function () {
+      return createAction;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "createFeatureSelector", function () {
+      return createFeatureSelector;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "createReducer", function () {
+      return createReducer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "createReducerFactory", function () {
+      return createReducerFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "createSelector", function () {
+      return createSelector;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "createSelectorFactory", function () {
+      return createSelectorFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "defaultMemoize", function () {
+      return defaultMemoize;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "defaultStateFn", function () {
+      return defaultStateFn;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "isNgrxMockEnvironment", function () {
+      return isNgrxMockEnvironment;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "on", function () {
+      return on;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "props", function () {
+      return props;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "reduceState", function () {
+      return reduceState;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "resultMemoize", function () {
+      return resultMemoize;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "select", function () {
+      return _select2;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "setNgrxMockEnvironment", function () {
+      return setNgrxMockEnvironment;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "union", function () {
+      return union;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵb", function () {
+      return STORE_PROVIDERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵba", function () {
+      return createActiveRuntimeChecks;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵbb", function () {
+      return createSerializationCheckMetaReducer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵbc", function () {
+      return createImmutabilityCheckMetaReducer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵbd", function () {
+      return createInNgZoneCheckMetaReducer;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵbe", function () {
+      return provideRuntimeChecks;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵbf", function () {
+      return checkForActionTypeUniqueness;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵbg", function () {
+      return _runtimeChecksFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵbh", function () {
+      return _actionTypeUniquenessCheck;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵc", function () {
+      return ACTIONS_SUBJECT_PROVIDERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵd", function () {
+      return REDUCER_MANAGER_PROVIDERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵe", function () {
+      return SCANNED_ACTIONS_SUBJECT_PROVIDERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵf", function () {
+      return isEqualCheck;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵg", function () {
+      return STATE_PROVIDERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵh", function () {
+      return _ROOT_STORE_GUARD;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵi", function () {
+      return _INITIAL_STATE;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵj", function () {
+      return _REDUCER_FACTORY;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵk", function () {
+      return _INITIAL_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵl", function () {
+      return _STORE_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵm", function () {
+      return _FEATURE_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵn", function () {
+      return _FEATURE_CONFIGS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵo", function () {
+      return _STORE_FEATURES;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵp", function () {
+      return _FEATURE_REDUCERS_TOKEN;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵq", function () {
+      return _RESOLVED_META_REDUCERS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵr", function () {
+      return _USER_RUNTIME_CHECKS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵs", function () {
+      return _ACTIVE_RUNTIME_CHECKS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵt", function () {
+      return _ACTION_TYPE_UNIQUENESS_CHECK;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵu", function () {
+      return _createStoreReducers;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵv", function () {
+      return _createFeatureStore;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵw", function () {
+      return _createFeatureReducers;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵx", function () {
+      return _initialStateFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵy", function () {
+      return _concatMetaReducers;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵz", function () {
+      return _provideForRootGuard;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/globals.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var REGISTERED_ACTION_TYPES = {};
+    /**
+     * @return {?}
+     */
+
+    function resetRegisteredActionTypes() {
+      for (var _i24 = 0, _Object$keys3 = Object.keys(REGISTERED_ACTION_TYPES); _i24 < _Object$keys3.length; _i24++) {
+        var key = _Object$keys3[_i24];
+        delete REGISTERED_ACTION_TYPES[key];
+      }
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/action_creator.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * \@description
+     * Creates a configured `Creator` function that, when called, returns an object in the shape of the `Action` interface.
+     *
+     * Action creators reduce the explicitness of class-based action creators.
+     *
+     * \@usageNotes
+     *
+     * **Declaring an action creator**
+     *
+     * Without additional metadata:
+     * ```ts
+     * export const increment = createAction('[Counter] Increment');
+     * ```
+     * With additional metadata:
+     * ```ts
+     * export const loginSuccess = createAction(
+     *   '[Auth/API] Login Success',
+     *   props<{ user: User }>()
+     * );
+     * ```
+     * With a function:
+     * ```ts
+     * export const loginSuccess = createAction(
+     *   '[Auth/API] Login Success',
+     *   (response: Response) => response.user
+     * );
+     * ```
+     *
+     * **Dispatching an action**
+     *
+     * Without additional metadata:
+     * ```ts
+     * store.dispatch(increment());
+     * ```
+     * With additional metadata:
+     * ```ts
+     * store.dispatch(loginSuccess({ user: newUser }));
+     * ```
+     *
+     * **Referencing an action in a reducer**
+     *
+     * Using a switch statement:
+     * ```ts
+     * switch (action.type) {
+     *   // ...
+     *   case AuthApiActions.loginSuccess.type: {
+     *     return {
+     *       ...state,
+     *       user: action.user
+     *     };
+     *   }
+     * }
+     * ```
+     * Using a reducer creator:
+     * ```ts
+     * on(AuthApiActions.loginSuccess, (state, { user }) => ({ ...state, user }))
+     * ```
+     *
+     *  **Referencing an action in an effect**
+     * ```ts
+     * effectName$ = createEffect(
+     *   () => this.actions$.pipe(
+     *     ofType(AuthApiActions.loginSuccess),
+     *     // ...
+     *   )
+     * );
+     * ```
+     * @template T, C
+     * @param {?} type Describes the action that will be dispatched
+     * @param {?=} config Additional metadata needed for the handling of the action.  See {\@link createAction#usage-notes Usage Notes}.
+     *
+     * @return {?}
+     */
+
+
+    function createAction(type, config) {
+      REGISTERED_ACTION_TYPES[type] = (REGISTERED_ACTION_TYPES[type] || 0) + 1;
+
+      if (typeof config === 'function') {
+        return defineType(type,
+        /**
+        * @param {...?} args
+        * @return {?}
+        */
+        function () {
+          return Object.assign(Object.assign({}, config.apply(void 0, arguments)), {
+            type: type
+          });
+        });
+      }
+      /** @type {?} */
+
+
+      var as = config ? config._as : 'empty';
+
+      switch (as) {
+        case 'empty':
+          return defineType(type,
+          /**
+          * @return {?}
+          */
+          function () {
+            return {
+              type: type
+            };
+          });
+
+        case 'props':
+          return defineType(type,
+          /**
+          * @param {?} props
+          * @return {?}
+          */
+          function (props) {
+            return Object.assign(Object.assign({}, props), {
+              type: type
+            });
+          });
+
+        default:
+          throw new Error('Unexpected config.');
+      }
+    }
+    /**
+     * @template P
+     * @return {?}
+     */
+
+
+    function props() {
+      return {
+        _as: 'props',
+        _p:
+        /** @type {?} */
+        undefined
+      };
+    }
+    /**
+     * @template C
+     * @param {?} creators
+     * @return {?}
+     */
+
+
+    function union(creators) {
+      return (
+        /** @type {?} */
+        undefined
+      );
+    }
+    /**
+     * @template T
+     * @param {?} type
+     * @param {?} creator
+     * @return {?}
+     */
+
+
+    function defineType(type, creator) {
+      return Object.defineProperty(creator, 'type', {
+        value: type,
+        writable: false
+      });
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/actions_subject.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var INIT =
+    /** @type {?} */
+    '@ngrx/store/init';
+
+    var ActionsSubject = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT2) {
+      _inherits(ActionsSubject, _rxjs__WEBPACK_IMPORT2);
+
+      var _super67 = _createSuper(ActionsSubject);
+
+      function ActionsSubject() {
+        _classCallCheck(this, ActionsSubject);
+
+        return _super67.call(this, {
+          type: INIT
+        });
+      }
+      /**
+       * @param {?} action
+       * @return {?}
+       */
+
+
+      _createClass2(ActionsSubject, [{
+        key: "next",
+        value: function next(action) {
+          if (typeof action === 'function') {
+            throw new TypeError("\n        Dispatch expected an object, instead it received a function.\n        If you're using the createAction function, make sure to invoke the function\n        before dispatching the action. For example, someAction should be someAction().");
+          } else if (typeof action === 'undefined') {
+            throw new TypeError("Actions must be objects");
+          } else if (typeof action.type === 'undefined') {
+            throw new TypeError("Actions must have a type property");
+          }
+
+          _get(_getPrototypeOf(ActionsSubject.prototype), "next", this).call(this, action);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "complete",
+        value: function complete() {
+          /* noop */
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          _get(_getPrototypeOf(ActionsSubject.prototype), "complete", this).call(this);
+        }
+      }]);
+
+      return ActionsSubject;
+    }(rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]);
+
+    ActionsSubject.ɵfac = function ActionsSubject_Factory(t) {
+      return new (t || ActionsSubject)();
+    };
+
+    ActionsSubject.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: ActionsSubject,
+      factory: ActionsSubject.ɵfac
+    });
+    /** @nocollapse */
+
+    ActionsSubject.ctorParameters = function () {
+      return [];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ActionsSubject, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /** @type {?} */
+
+
+    var ACTIONS_SUBJECT_PROVIDERS = [ActionsSubject];
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/tokens.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+    var _ROOT_STORE_GUARD = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Root Guard');
+    /** @type {?} */
+
+
+    var _INITIAL_STATE = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Initial State');
+    /** @type {?} */
+
+
+    var INITIAL_STATE = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Initial State');
+    /** @type {?} */
+
+    var REDUCER_FACTORY = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Reducer Factory');
+    /** @type {?} */
+
+    var _REDUCER_FACTORY = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Reducer Factory Provider');
+    /** @type {?} */
+
+
+    var INITIAL_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Initial Reducers');
+    /** @type {?} */
+
+    var _INITIAL_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Initial Reducers');
+    /** @type {?} */
+
+
+    var STORE_FEATURES = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Store Features');
+    /** @type {?} */
+
+    var _STORE_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Store Reducers');
+    /** @type {?} */
+
+
+    var _FEATURE_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Feature Reducers');
+    /** @type {?} */
+
+
+    var _FEATURE_CONFIGS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Feature Configs');
+    /** @type {?} */
+
+
+    var _STORE_FEATURES = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Store Features');
+    /** @type {?} */
+
+
+    var _FEATURE_REDUCERS_TOKEN = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Feature Reducers Token');
+    /** @type {?} */
+
+
+    var FEATURE_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Feature Reducers');
+    /**
+     * User-defined meta reducers from StoreModule.forRoot()
+     * @type {?}
+     */
+
+    var USER_PROVIDED_META_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store User Provided Meta Reducers');
+    /**
+     * Meta reducers defined either internally by \@ngrx/store or by library authors
+     * @type {?}
+     */
+
+    var META_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Meta Reducers');
+    /**
+     * Concats the user provided meta reducers and the meta reducers provided on the multi
+     * injection token
+     * @type {?}
+     */
+
+    var _RESOLVED_META_REDUCERS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Resolved Meta Reducers');
+    /**
+     * Runtime checks defined by the user via an InjectionToken
+     * Defaults to `_USER_RUNTIME_CHECKS`
+     * @type {?}
+     */
+
+
+    var USER_RUNTIME_CHECKS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store User Runtime Checks Config');
+    /**
+     * Runtime checks defined by the user via forRoot()
+     * @type {?}
+     */
+
+    var _USER_RUNTIME_CHECKS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal User Runtime Checks Config');
+    /**
+     * Runtime checks currently in use
+     * @type {?}
+     */
+
+
+    var _ACTIVE_RUNTIME_CHECKS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Internal Runtime Checks');
+    /** @type {?} */
+
+
+    var _ACTION_TYPE_UNIQUENESS_CHECK = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('@ngrx/store Check if Action types are unique');
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/utils.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @param {?} reducers
+     * @param {?=} initialState
+     * @return {?}
+     */
+
+
+    function combineReducers(reducers) {
+      var initialState = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+      /** @type {?} */
+      var reducerKeys = Object.keys(reducers);
+      /** @type {?} */
+
+      var finalReducers = {};
+
+      for (var i = 0; i < reducerKeys.length; i++) {
+        /** @type {?} */
+        var key = reducerKeys[i];
+
+        if (typeof reducers[key] === 'function') {
+          finalReducers[key] = reducers[key];
+        }
+      }
+      /** @type {?} */
+
+
+      var finalReducerKeys = Object.keys(finalReducers);
+      return (
+        /**
+        * @param {?} state
+        * @param {?} action
+        * @return {?}
+        */
+        function combination(state, action) {
+          state = state === undefined ? initialState : state;
+          /** @type {?} */
+
+          var hasChanged = false;
+          /** @type {?} */
+
+          var nextState = {};
+
+          for (var _i25 = 0; _i25 < finalReducerKeys.length; _i25++) {
+            /** @type {?} */
+            var _key15 = finalReducerKeys[_i25];
+            /** @type {?} */
+
+            var reducer = finalReducers[_key15];
+            /** @type {?} */
+
+            var previousStateForKey = state[_key15];
+            /** @type {?} */
+
+            var nextStateForKey = reducer(previousStateForKey, action);
+            nextState[_key15] = nextStateForKey;
+            hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+          }
+
+          return hasChanged ? nextState : state;
+        }
+      );
+    }
+    /**
+     * @template T
+     * @param {?} object
+     * @param {?} keyToRemove
+     * @return {?}
+     */
+
+
+    function omit(object, keyToRemove) {
+      return Object.keys(object).filter(
+      /**
+      * @param {?} key
+      * @return {?}
+      */
+      function (key) {
+        return key !== keyToRemove;
+      }).reduce(
+      /**
+      * @param {?} result
+      * @param {?} key
+      * @return {?}
+      */
+      function (result, key) {
+        return Object.assign(result, _defineProperty({}, key, object[key]));
+      }, {});
+    }
+    /**
+     * @param {...?} functions
+     * @return {?}
+     */
+
+
+    function compose() {
+      for (var _len15 = arguments.length, functions = new Array(_len15), _key16 = 0; _key16 < _len15; _key16++) {
+        functions[_key16] = arguments[_key16];
+      }
+
+      return (
+        /**
+        * @param {?} arg
+        * @return {?}
+        */
+        function (arg) {
+          if (functions.length === 0) {
+            return arg;
+          }
+          /** @type {?} */
+
+
+          var last = functions[functions.length - 1];
+          /** @type {?} */
+
+          var rest = functions.slice(0, -1);
+          return rest.reduceRight(
+          /**
+          * @param {?} composed
+          * @param {?} fn
+          * @return {?}
+          */
+          function (composed, fn) {
+            return fn(composed);
+          }, last(arg));
+        }
+      );
+    }
+    /**
+     * @template T, V
+     * @param {?} reducerFactory
+     * @param {?=} metaReducers
+     * @return {?}
+     */
+
+
+    function createReducerFactory(reducerFactory, metaReducers) {
+      if (Array.isArray(metaReducers) && metaReducers.length > 0) {
+        /** @type {?} */
+        reducerFactory = compose.apply(null, [].concat(_toConsumableArray(metaReducers), [reducerFactory]));
+      }
+
+      return (
+        /**
+        * @param {?} reducers
+        * @param {?=} initialState
+        * @return {?}
+        */
+        function (reducers, initialState) {
+          /** @type {?} */
+          var reducer = reducerFactory(reducers);
+          return (
+            /**
+            * @param {?} state
+            * @param {?} action
+            * @return {?}
+            */
+            function (state, action) {
+              state = state === undefined ?
+              /** @type {?} */
+              initialState : state;
+              return reducer(state, action);
+            }
+          );
+        }
+      );
+    }
+    /**
+     * @template T, V
+     * @param {?=} metaReducers
+     * @return {?}
+     */
+
+
+    function createFeatureReducerFactory(metaReducers) {
+      /** @type {?} */
+      var reducerFactory = Array.isArray(metaReducers) && metaReducers.length > 0 ? compose.apply(void 0, _toConsumableArray(metaReducers)) :
+      /**
+      * @param {?} r
+      * @return {?}
+      */
+      function (r) {
+        return r;
+      };
+      return (
+        /**
+        * @param {?} reducer
+        * @param {?=} initialState
+        * @return {?}
+        */
+        function (reducer, initialState) {
+          reducer = reducerFactory(reducer);
+          return (
+            /**
+            * @param {?} state
+            * @param {?} action
+            * @return {?}
+            */
+            function (state, action) {
+              state = state === undefined ? initialState : state;
+              return reducer(state, action);
+            }
+          );
+        }
+      );
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/reducer_manager.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @abstract
+     */
+
+
+    var ReducerObservable = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT3) {
+      _inherits(ReducerObservable, _rxjs__WEBPACK_IMPORT3);
+
+      var _super68 = _createSuper(ReducerObservable);
+
+      function ReducerObservable() {
+        _classCallCheck(this, ReducerObservable);
+
+        return _super68.apply(this, arguments);
+      }
+
+      return ReducerObservable;
+    }(rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"]);
+    /**
+     * @abstract
+     */
+
+
+    var ReducerManagerDispatcher = /*#__PURE__*/function (_ActionsSubject) {
+      _inherits(ReducerManagerDispatcher, _ActionsSubject);
+
+      var _super69 = _createSuper(ReducerManagerDispatcher);
+
+      function ReducerManagerDispatcher() {
+        _classCallCheck(this, ReducerManagerDispatcher);
+
+        return _super69.apply(this, arguments);
+      }
+
+      return ReducerManagerDispatcher;
+    }(ActionsSubject);
+    /** @type {?} */
+
+
+    var UPDATE =
+    /** @type {?} */
+    '@ngrx/store/update-reducers';
+
+    var ReducerManager = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT4) {
+      _inherits(ReducerManager, _rxjs__WEBPACK_IMPORT4);
+
+      var _super70 = _createSuper(ReducerManager);
+
+      /**
+       * @param {?} dispatcher
+       * @param {?} initialState
+       * @param {?} reducers
+       * @param {?} reducerFactory
+       */
+      function ReducerManager(dispatcher, initialState, reducers, reducerFactory) {
+        var _this149;
+
+        _classCallCheck(this, ReducerManager);
+
+        _this149 = _super70.call(this, reducerFactory(reducers, initialState));
+        _this149.dispatcher = dispatcher;
+        _this149.initialState = initialState;
+        _this149.reducers = reducers;
+        _this149.reducerFactory = reducerFactory;
+        return _this149;
+      }
+      /**
+       * @param {?} feature
+       * @return {?}
+       */
+
+
+      _createClass2(ReducerManager, [{
+        key: "addFeature",
+        value: function addFeature(feature) {
+          this.addFeatures([feature]);
+        }
+        /**
+         * @param {?} features
+         * @return {?}
+         */
+
+      }, {
+        key: "addFeatures",
+        value: function addFeatures(features) {
+          /** @type {?} */
+          var reducers = features.reduce(
+          /**
+          * @param {?} reducerDict
+          * @param {?} __1
+          * @return {?}
+          */
+          function (reducerDict, _ref17) {
+            var reducers = _ref17.reducers,
+                reducerFactory = _ref17.reducerFactory,
+                metaReducers = _ref17.metaReducers,
+                initialState = _ref17.initialState,
+                key = _ref17.key;
+
+            /** @type {?} */
+            var reducer = typeof reducers === 'function' ? createFeatureReducerFactory(metaReducers)(reducers, initialState) : createReducerFactory(reducerFactory, metaReducers)(reducers, initialState);
+            reducerDict[key] = reducer;
+            return reducerDict;
+          },
+          /** @type {?} */
+          {});
+          this.addReducers(reducers);
+        }
+        /**
+         * @param {?} feature
+         * @return {?}
+         */
+
+      }, {
+        key: "removeFeature",
+        value: function removeFeature(feature) {
+          this.removeFeatures([feature]);
+        }
+        /**
+         * @param {?} features
+         * @return {?}
+         */
+
+      }, {
+        key: "removeFeatures",
+        value: function removeFeatures(features) {
+          this.removeReducers(features.map(
+          /**
+          * @param {?} p
+          * @return {?}
+          */
+          function (p) {
+            return p.key;
+          }));
+        }
+        /**
+         * @param {?} key
+         * @param {?} reducer
+         * @return {?}
+         */
+
+      }, {
+        key: "addReducer",
+        value: function addReducer(key, reducer) {
+          this.addReducers(_defineProperty({}, key, reducer));
+        }
+        /**
+         * @param {?} reducers
+         * @return {?}
+         */
+
+      }, {
+        key: "addReducers",
+        value: function addReducers(reducers) {
+          this.reducers = Object.assign(Object.assign({}, this.reducers), reducers);
+          this.updateReducers(Object.keys(reducers));
+        }
+        /**
+         * @param {?} featureKey
+         * @return {?}
+         */
+
+      }, {
+        key: "removeReducer",
+        value: function removeReducer(featureKey) {
+          this.removeReducers([featureKey]);
+        }
+        /**
+         * @param {?} featureKeys
+         * @return {?}
+         */
+
+      }, {
+        key: "removeReducers",
+        value: function removeReducers(featureKeys) {
+          var _this150 = this;
+
+          featureKeys.forEach(
+          /**
+          * @param {?} key
+          * @return {?}
+          */
+          function (key) {
+            _this150.reducers =
+            /** @type {?} */
+            omit(_this150.reducers, key)
+            /*TODO(#823)*/
+            ;
+          });
+          this.updateReducers(featureKeys);
+        }
+        /**
+         * @private
+         * @param {?} featureKeys
+         * @return {?}
+         */
+
+      }, {
+        key: "updateReducers",
+        value: function updateReducers(featureKeys) {
+          this.next(this.reducerFactory(this.reducers, this.initialState));
+          this.dispatcher.next(
+          /** @type {?} */
+          {
+            type: UPDATE,
+            features: featureKeys
+          });
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this.complete();
+        }
+      }]);
+
+      return ReducerManager;
+    }(rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]);
+
+    ReducerManager.ɵfac = function ReducerManager_Factory(t) {
+      return new (t || ReducerManager)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ReducerManagerDispatcher), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](INITIAL_STATE), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](INITIAL_REDUCERS), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](REDUCER_FACTORY));
+    };
+
+    ReducerManager.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: ReducerManager,
+      factory: ReducerManager.ɵfac
+    });
+    /** @nocollapse */
+
+    ReducerManager.ctorParameters = function () {
+      return [{
+        type: ReducerManagerDispatcher
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [INITIAL_STATE]
+        }]
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [INITIAL_REDUCERS]
+        }]
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [REDUCER_FACTORY]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ReducerManager, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: ReducerManagerDispatcher
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [INITIAL_STATE]
+          }]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [INITIAL_REDUCERS]
+          }]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [REDUCER_FACTORY]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /** @type {?} */
+
+
+    var REDUCER_MANAGER_PROVIDERS = [ReducerManager, {
+      provide: ReducerObservable,
+      useExisting: ReducerManager
+    }, {
+      provide: ReducerManagerDispatcher,
+      useExisting: ActionsSubject
+    }];
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/scanned_actions_subject.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    var ScannedActionsSubject = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT5) {
+      _inherits(ScannedActionsSubject, _rxjs__WEBPACK_IMPORT5);
+
+      var _super71 = _createSuper(ScannedActionsSubject);
+
+      function ScannedActionsSubject() {
+        _classCallCheck(this, ScannedActionsSubject);
+
+        return _super71.apply(this, arguments);
+      }
+
+      _createClass2(ScannedActionsSubject, [{
+        key: "ngOnDestroy",
+
+        /**
+         * @return {?}
+         */
+        value: function ngOnDestroy() {
+          this.complete();
+        }
+      }]);
+
+      return ScannedActionsSubject;
+    }(rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]);
+
+    ScannedActionsSubject.ɵfac = function ScannedActionsSubject_Factory(t) {
+      return ɵScannedActionsSubject_BaseFactory(t || ScannedActionsSubject);
+    };
+
+    ScannedActionsSubject.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: ScannedActionsSubject,
+      factory: ScannedActionsSubject.ɵfac
+    });
+
+    var ɵScannedActionsSubject_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](ScannedActionsSubject);
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ScannedActionsSubject, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], null, null);
+    })();
+    /** @type {?} */
+
+
+    var SCANNED_ACTIONS_SUBJECT_PROVIDERS = [ScannedActionsSubject];
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/state.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @abstract
+     */
+
+    var StateObservable = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT6) {
+      _inherits(StateObservable, _rxjs__WEBPACK_IMPORT6);
+
+      var _super72 = _createSuper(StateObservable);
+
+      function StateObservable() {
+        _classCallCheck(this, StateObservable);
+
+        return _super72.apply(this, arguments);
+      }
+
+      return StateObservable;
+    }(rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"]);
+    /**
+     * @template T
+     */
+
+
+    var State = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT7) {
+      _inherits(State, _rxjs__WEBPACK_IMPORT7);
+
+      var _super73 = _createSuper(State);
+
+      /**
+       * @param {?} actions$
+       * @param {?} reducer$
+       * @param {?} scannedActions
+       * @param {?} initialState
+       */
+      function State(actions$, reducer$, scannedActions, initialState) {
+        var _this151;
+
+        _classCallCheck(this, State);
+
+        _this151 = _super73.call(this, initialState);
+        /** @type {?} */
+
+        var actionsOnQueue$ = actions$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["observeOn"])(rxjs__WEBPACK_IMPORTED_MODULE_1__["queueScheduler"]));
+        /** @type {?} */
+
+        var withLatestReducer$ = actionsOnQueue$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["withLatestFrom"])(reducer$));
+        /** @type {?} */
+
+        var seed = {
+          state: initialState
+        };
+        /** @type {?} */
+
+        var stateAndAction$ = withLatestReducer$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["scan"])(reduceState, seed));
+        _this151.stateSubscription = stateAndAction$.subscribe(
+        /**
+        * @param {?} __0
+        * @return {?}
+        */
+        function (_ref18) {
+          var state = _ref18.state,
+              action = _ref18.action;
+
+          _this151.next(state);
+
+          scannedActions.next(
+          /** @type {?} */
+          action);
+        });
+        return _this151;
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(State, [{
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this.stateSubscription.unsubscribe();
+          this.complete();
+        }
+      }]);
+
+      return State;
+    }(rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"]);
+
+    State.ɵfac = function State_Factory(t) {
+      return new (t || State)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ActionsSubject), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ReducerObservable), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ScannedActionsSubject), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](INITIAL_STATE));
+    };
+
+    State.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: State,
+      factory: State.ɵfac
+    });
+    State.INIT = INIT;
+    /** @nocollapse */
+
+    State.ctorParameters = function () {
+      return [{
+        type: ActionsSubject
+      }, {
+        type: ReducerObservable
+      }, {
+        type: ScannedActionsSubject
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [INITIAL_STATE]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](State, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: ActionsSubject
+        }, {
+          type: ReducerObservable
+        }, {
+          type: ScannedActionsSubject
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [INITIAL_STATE]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @template T, V
+     * @param {?=} stateActionPair
+     * @param {?=} __1
+     * @return {?}
+     */
+
+
+    function reduceState() {
+      var stateActionPair = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+        state: undefined
+      };
+
+      var _ref19 = arguments.length > 1 ? arguments[1] : undefined,
+          _ref20 = _slicedToArray(_ref19, 2),
+          action = _ref20[0],
+          reducer = _ref20[1];
+
+      var state = stateActionPair.state;
+      return {
+        state: reducer(state, action),
+        action: action
+      };
+    }
+    /** @type {?} */
+
+
+    var STATE_PROVIDERS = [State, {
+      provide: StateObservable,
+      useExisting: State
+    }];
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/store.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @template T
+     */
+
+    var Store = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT8) {
+      _inherits(Store, _rxjs__WEBPACK_IMPORT8);
+
+      var _super74 = _createSuper(Store);
+
+      /**
+       * @param {?} state$
+       * @param {?} actionsObserver
+       * @param {?} reducerManager
+       */
+      function Store(state$, actionsObserver, reducerManager) {
+        var _this152;
+
+        _classCallCheck(this, Store);
+
+        _this152 = _super74.call(this);
+        _this152.actionsObserver = actionsObserver;
+        _this152.reducerManager = reducerManager;
+        _this152.source = state$;
+        return _this152;
+      }
+      /**
+       * @template Props, K
+       * @param {?} pathOrMapFn
+       * @param {...?} paths
+       * @return {?}
+       */
+
+
+      _createClass2(Store, [{
+        key: "select",
+        value: function select(pathOrMapFn) {
+          for (var _len16 = arguments.length, paths = new Array(_len16 > 1 ? _len16 - 1 : 0), _key17 = 1; _key17 < _len16; _key17++) {
+            paths[_key17 - 1] = arguments[_key17];
+          }
+
+          return (
+            /** @type {?} */
+            _select2.call.apply(_select2, [null, pathOrMapFn].concat(paths))(this)
+          );
+        }
+        /**
+         * @template R
+         * @param {?} operator
+         * @return {?}
+         */
+
+      }, {
+        key: "lift",
+        value: function lift(operator) {
+          /** @type {?} */
+          var store = new Store(this, this.actionsObserver, this.reducerManager);
+          store.operator = operator;
+          return store;
+        }
+        /**
+         * @template V
+         * @param {?} action
+         * @return {?}
+         */
+
+      }, {
+        key: "dispatch",
+        value: function dispatch(action) {
+          this.actionsObserver.next(action);
+        }
+        /**
+         * @param {?} action
+         * @return {?}
+         */
+
+      }, {
+        key: "next",
+        value: function next(action) {
+          this.actionsObserver.next(action);
+        }
+        /**
+         * @param {?} err
+         * @return {?}
+         */
+
+      }, {
+        key: "error",
+        value: function error(err) {
+          this.actionsObserver.error(err);
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "complete",
+        value: function complete() {
+          this.actionsObserver.complete();
+        }
+        /**
+         * @template State, Actions
+         * @param {?} key
+         * @param {?} reducer
+         * @return {?}
+         */
+
+      }, {
+        key: "addReducer",
+        value: function addReducer(key, reducer) {
+          this.reducerManager.addReducer(key, reducer);
+        }
+        /**
+         * @template Key
+         * @param {?} key
+         * @return {?}
+         */
+
+      }, {
+        key: "removeReducer",
+        value: function removeReducer(key) {
+          this.reducerManager.removeReducer(key);
+        }
+      }]);
+
+      return Store;
+    }(rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"]);
+
+    Store.ɵfac = function Store_Factory(t) {
+      return new (t || Store)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](StateObservable), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ActionsSubject), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ReducerManager));
+    };
+
+    Store.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: Store,
+      factory: Store.ɵfac
+    });
+    /** @nocollapse */
+
+    Store.ctorParameters = function () {
+      return [{
+        type: StateObservable
+      }, {
+        type: ActionsSubject
+      }, {
+        type: ReducerManager
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Store, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: StateObservable
+        }, {
+          type: ActionsSubject
+        }, {
+          type: ReducerManager
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /** @type {?} */
+
+
+    var STORE_PROVIDERS = [Store];
+    /**
+     * @template T, Props, K
+     * @param {?} pathOrMapFn
+     * @param {?=} propsOrPath
+     * @param {...?} paths
+     * @return {?}
+     */
+
+    function _select2(pathOrMapFn, propsOrPath) {
+      for (var _len17 = arguments.length, paths = new Array(_len17 > 2 ? _len17 - 2 : 0), _key18 = 2; _key18 < _len17; _key18++) {
+        paths[_key18 - 2] = arguments[_key18];
+      }
+
+      return (
+        /**
+        * @param {?} source$
+        * @return {?}
+        */
+        function selectOperator(source$) {
+          /** @type {?} */
+          var mapped$;
+
+          if (typeof pathOrMapFn === 'string') {
+            /** @type {?} */
+            var pathSlices = [
+            /** @type {?} */
+            propsOrPath].concat(paths).filter(Boolean);
+            mapped$ = source$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["pluck"]).apply(void 0, [pathOrMapFn].concat(_toConsumableArray(pathSlices))));
+          } else if (typeof pathOrMapFn === 'function') {
+            mapped$ = source$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(
+            /**
+            * @param {?} source
+            * @return {?}
+            */
+            function (source) {
+              return pathOrMapFn(source,
+              /** @type {?} */
+              propsOrPath);
+            }));
+          } else {
+            throw new TypeError("Unexpected type '".concat(typeof pathOrMapFn, "' in select operator,") + " expected 'string' or 'function'");
+          }
+
+          return mapped$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["distinctUntilChanged"])());
+        }
+      );
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/flags.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var _ngrxMockEnvironment = false;
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+
+    function setNgrxMockEnvironment(value) {
+      _ngrxMockEnvironment = value;
+    }
+    /**
+     * @return {?}
+     */
+
+
+    function isNgrxMockEnvironment() {
+      return _ngrxMockEnvironment;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/selector.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @record
+     * @template State, Result, ProjectorFn
+     */
+
+
+    function MemoizedSelector() {}
+
+    if (false) {}
+    /**
+     * @record
+     * @template State, Props, Result, ProjectorFn
+     */
+
+
+    function MemoizedSelectorWithProps() {}
+
+    if (false) {}
+    /**
+     * @param {?} a
+     * @param {?} b
+     * @return {?}
+     */
+
+
+    function isEqualCheck(a, b) {
+      return a === b;
+    }
+    /**
+     * @param {?} args
+     * @param {?} lastArguments
+     * @param {?} comparator
+     * @return {?}
+     */
+
+
+    function isArgumentsChanged(args, lastArguments, comparator) {
+      for (var i = 0; i < args.length; i++) {
+        if (!comparator(args[i], lastArguments[i])) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+    /**
+     * @param {?} projectionFn
+     * @param {?} isResultEqual
+     * @return {?}
+     */
+
+
+    function resultMemoize(projectionFn, isResultEqual) {
+      return defaultMemoize(projectionFn, isEqualCheck, isResultEqual);
+    }
+    /**
+     * @param {?} projectionFn
+     * @param {?=} isArgumentsEqual
+     * @param {?=} isResultEqual
+     * @return {?}
+     */
+
+
+    function defaultMemoize(projectionFn) {
+      var isArgumentsEqual = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : isEqualCheck;
+      var isResultEqual = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : isEqualCheck;
+
+      /** @type {?} */
+      var lastArguments = null; // tslint:disable-next-line:no-any anything could be the result.
+
+      /** @type {?} */
+
+      var lastResult = null;
+      /** @type {?} */
+
+      var overrideResult;
+      /**
+       * @return {?}
+       */
+
+      function reset() {
+        lastArguments = null;
+        lastResult = null;
+      }
+      /**
+       * @param {?=} result
+       * @return {?}
+       */
+
+
+      function setResult() {
+        var result = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
+        overrideResult = {
+          result: result
+        };
+      }
+      /**
+       * @return {?}
+       */
+
+
+      function clearResult() {
+        overrideResult = undefined;
+      } // tslint:disable-next-line:no-any anything could be the result.
+
+      /**
+       * @return {?}
+       */
+
+
+      function memoized() {
+        if (overrideResult !== undefined) {
+          return overrideResult.result;
+        }
+
+        if (!lastArguments) {
+          lastResult = projectionFn.apply(null,
+          /** @type {?} */
+          arguments);
+          lastArguments = arguments;
+          return lastResult;
+        }
+
+        if (!isArgumentsChanged(arguments, lastArguments, isArgumentsEqual)) {
+          return lastResult;
+        }
+        /** @type {?} */
+
+
+        var newResult = projectionFn.apply(null,
+        /** @type {?} */
+        arguments);
+        lastArguments = arguments;
+
+        if (isResultEqual(lastResult, newResult)) {
+          return lastResult;
+        }
+
+        lastResult = newResult;
+        return newResult;
+      }
+
+      return {
+        memoized: memoized,
+        reset: reset,
+        setResult: setResult,
+        clearResult: clearResult
+      };
+    }
+    /**
+     * @param {...?} input
+     * @return {?}
+     */
+
+
+    function createSelector() {
+      return createSelectorFactory(defaultMemoize).apply(void 0, arguments);
+    }
+    /**
+     * @param {?} state
+     * @param {?} selectors
+     * @param {?} props
+     * @param {?} memoizedProjector
+     * @return {?}
+     */
+
+
+    function defaultStateFn(state, selectors, props, memoizedProjector) {
+      if (props === undefined) {
+        /** @type {?} */
+        var _args =
+        /** @type {?} */
+        selectors.map(
+        /**
+        * @param {?} fn
+        * @return {?}
+        */
+        function (fn) {
+          return fn(state);
+        });
+
+        return memoizedProjector.memoized.apply(null, _args);
+      }
+      /** @type {?} */
+
+
+      var args =
+      /** @type {?} */
+      selectors.map(
+      /**
+      * @param {?} fn
+      * @return {?}
+      */
+      function (fn) {
+        return fn(state, props);
+      });
+      return memoizedProjector.memoized.apply(null, [].concat(_toConsumableArray(args), [props]));
+    }
+    /**
+     * @param {?} memoize
+     * @param {?=} options
+     * @return {?}
+     */
+
+
+    function createSelectorFactory(memoize) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+        stateFn: defaultStateFn
+      };
+      return (
+        /**
+        * @param {...?} input
+        * @return {?}
+        */
+        function () {
+          for (var _len18 = arguments.length, input = new Array(_len18), _key19 = 0; _key19 < _len18; _key19++) {
+            input[_key19] = arguments[_key19];
+          }
+
+          /** @type {?} */
+          var args = input;
+
+          if (Array.isArray(args[0])) {
+            var _args2 = args,
+                _args3 = _toArray(_args2),
+                head = _args3[0],
+                tail = _args3.slice(1);
+
+            args = [].concat(_toConsumableArray(head), _toConsumableArray(tail));
+          }
+          /** @type {?} */
+
+
+          var selectors = args.slice(0, args.length - 1);
+          /** @type {?} */
+
+          var projector = args[args.length - 1];
+          /** @type {?} */
+
+          var memoizedSelectors = selectors.filter(
+          /**
+          * @param {?} selector
+          * @return {?}
+          */
+          function (selector) {
+            return selector.release && typeof selector.release === 'function';
+          });
+          /** @type {?} */
+
+          var memoizedProjector = memoize(
+          /**
+          * @param {...?} selectors
+          * @return {?}
+          */
+          function () {
+            for (var _len19 = arguments.length, selectors = new Array(_len19), _key20 = 0; _key20 < _len19; _key20++) {
+              selectors[_key20] = arguments[_key20];
+            }
+
+            return projector.apply(null, selectors);
+          });
+          /** @type {?} */
+
+          var memoizedState = defaultMemoize(
+          /**
+          * @param {?} state
+          * @param {?} props
+          * @return {?}
+          */
+          function (state, props) {
+            return options.stateFn.apply(null, [state, selectors, props, memoizedProjector]);
+          });
+          /**
+           * @return {?}
+           */
+
+          function release() {
+            memoizedState.reset();
+            memoizedProjector.reset();
+            memoizedSelectors.forEach(
+            /**
+            * @param {?} selector
+            * @return {?}
+            */
+            function (selector) {
+              return selector.release();
+            });
+          }
+
+          return Object.assign(memoizedState.memoized, {
+            release: release,
+            projector: memoizedProjector.memoized,
+            setResult: memoizedState.setResult,
+            clearResult: memoizedState.clearResult
+          });
+        }
+      );
+    }
+    /**
+     * @param {?} featureName
+     * @return {?}
+     */
+
+
+    function createFeatureSelector(featureName) {
+      return createSelector(
+      /**
+      * @param {?} state
+      * @return {?}
+      */
+      function (state) {
+        /** @type {?} */
+        var featureState = state[featureName];
+
+        if (!isNgrxMockEnvironment() && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])() && !(featureName in state)) {
+          console.warn("@ngrx/store: The feature name \"".concat(featureName, "\" does ") + 'not exist in the state, therefore createFeatureSelector ' + 'cannot access it.  Be sure it is imported in a loaded module ' + "using StoreModule.forRoot('".concat(featureName, "', ...) or ") + "StoreModule.forFeature('".concat(featureName, "', ...).  If the default ") + 'state is intended to be undefined, as is the case with router ' + 'state, this development-only warning message can be ignored.');
+        }
+
+        return featureState;
+      },
+      /**
+      * @param {?} featureState
+      * @return {?}
+      */
+      function (featureState) {
+        return featureState;
+      });
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/meta-reducers/utils.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var RUNTIME_CHECK_URL = 'https://ngrx.io/guide/store/configuration/runtime-checks';
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+    function isUndefined(target) {
+      return target === undefined;
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isNull(target) {
+      return target === null;
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isArray(target) {
+      return Array.isArray(target);
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isString(target) {
+      return typeof target === 'string';
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isBoolean(target) {
+      return typeof target === 'boolean';
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isNumber(target) {
+      return typeof target === 'number';
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isObjectLike(target) {
+      return typeof target === 'object' && target !== null;
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isObject(target) {
+      return isObjectLike(target) && !isArray(target);
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isPlainObject(target) {
+      if (!isObject(target)) {
+        return false;
+      }
+      /** @type {?} */
+
+
+      var targetPrototype = Object.getPrototypeOf(target);
+      return targetPrototype === Object.prototype || targetPrototype === null;
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isFunction(target) {
+      return typeof target === 'function';
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function isComponent(target) {
+      return isFunction(target) && target.hasOwnProperty('ɵcmp');
+    }
+    /**
+     * @param {?} target
+     * @param {?} propertyName
+     * @return {?}
+     */
+
+
+    function hasOwnProperty(target, propertyName) {
+      return Object.prototype.hasOwnProperty.call(target, propertyName);
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/meta-reducers/immutability_reducer.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @param {?} reducer
+     * @param {?} checks
+     * @return {?}
+     */
+
+
+    function immutabilityCheckMetaReducer(reducer, checks) {
+      return (
+        /**
+        * @param {?} state
+        * @param {?} action
+        * @return {?}
+        */
+        function (state, action) {
+          /** @type {?} */
+          var act = checks.action(action) ? freeze(action) : action;
+          /** @type {?} */
+
+          var nextState = reducer(state, act);
+          return checks.state() ? freeze(nextState) : nextState;
+        }
+      );
+    }
+    /**
+     * @param {?} target
+     * @return {?}
+     */
+
+
+    function freeze(target) {
+      Object.freeze(target);
+      /** @type {?} */
+
+      var targetIsFunction = isFunction(target);
+      Object.getOwnPropertyNames(target).forEach(
+      /**
+      * @param {?} prop
+      * @return {?}
+      */
+      function (prop) {
+        // Ignore Ivy properties, ref: https://github.com/ngrx/platform/issues/2109#issuecomment-582689060
+        if (prop.startsWith('ɵ')) {
+          return;
+        }
+
+        if (hasOwnProperty(target, prop) && (targetIsFunction ? prop !== 'caller' && prop !== 'callee' && prop !== 'arguments' : true)) {
+          /** @type {?} */
+          var propValue = target[prop];
+
+          if ((isObjectLike(propValue) || isFunction(propValue)) && !Object.isFrozen(propValue)) {
+            freeze(propValue);
+          }
+        }
+      });
+      return target;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/meta-reducers/serialization_reducer.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @param {?} reducer
+     * @param {?} checks
+     * @return {?}
+     */
+
+
+    function serializationCheckMetaReducer(reducer, checks) {
+      return (
+        /**
+        * @param {?} state
+        * @param {?} action
+        * @return {?}
+        */
+        function (state, action) {
+          if (checks.action(action)) {
+            /** @type {?} */
+            var unserializableAction = getUnserializable(action);
+            throwIfUnserializable(unserializableAction, 'action');
+          }
+          /** @type {?} */
+
+
+          var nextState = reducer(state, action);
+
+          if (checks.state()) {
+            /** @type {?} */
+            var unserializableState = getUnserializable(nextState);
+            throwIfUnserializable(unserializableState, 'state');
+          }
+
+          return nextState;
+        }
+      );
+    }
+    /**
+     * @param {?=} target
+     * @param {?=} path
+     * @return {?}
+     */
+
+
+    function getUnserializable(target) {
+      var path = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+      // Guard against undefined and null, e.g. a reducer that returns undefined
+      if ((isUndefined(target) || isNull(target)) && path.length === 0) {
+        return {
+          path: ['root'],
+          value: target
+        };
+      }
+      /** @type {?} */
+
+
+      var keys = Object.keys(target);
+      return keys.reduce(
+      /**
+      * @param {?} result
+      * @param {?} key
+      * @return {?}
+      */
+      function (result, key) {
+        if (result) {
+          return result;
+        }
+        /** @type {?} */
+
+
+        var value =
+        /** @type {?} */
+        target[key]; // Ignore Ivy components
+
+        if (isComponent(value)) {
+          return result;
+        }
+
+        if (isUndefined(value) || isNull(value) || isNumber(value) || isBoolean(value) || isString(value) || isArray(value)) {
+          return false;
+        }
+
+        if (isPlainObject(value)) {
+          return getUnserializable(value, [].concat(_toConsumableArray(path), [key]));
+        }
+
+        return {
+          path: [].concat(_toConsumableArray(path), [key]),
+          value: value
+        };
+      }, false);
+    }
+    /**
+     * @param {?} unserializable
+     * @param {?} context
+     * @return {?}
+     */
+
+
+    function throwIfUnserializable(unserializable, context) {
+      if (unserializable === false) {
+        return;
+      }
+      /** @type {?} */
+
+
+      var unserializablePath = unserializable.path.join('.');
+      /** @type {?} */
+
+      var error = new Error("Detected unserializable ".concat(context, " at \"").concat(unserializablePath, "\". ").concat(RUNTIME_CHECK_URL, "#strict").concat(context, "serializability"));
+      error.value = unserializable.value;
+      error.unserializablePath = unserializablePath;
+      throw error;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/meta-reducers/inNgZoneAssert_reducer.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @param {?} reducer
+     * @param {?} checks
+     * @return {?}
+     */
+
+
+    function inNgZoneAssertMetaReducer(reducer, checks) {
+      return (
+        /**
+        * @param {?} state
+        * @param {?} action
+        * @return {?}
+        */
+        function (state, action) {
+          if (checks.action(action) && !_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"].isInAngularZone()) {
+            throw new Error("Action '".concat(action.type, "' running outside NgZone. ").concat(RUNTIME_CHECK_URL, "#strictactionwithinngzone"));
+          }
+
+          return reducer(state, action);
+        }
+      );
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/meta-reducers/index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/runtime_checks.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @param {?=} runtimeChecks
+     * @return {?}
+     */
+
+
+    function createActiveRuntimeChecks(runtimeChecks) {
+      if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["isDevMode"])()) {
+        return Object.assign({
+          strictStateSerializability: false,
+          strictActionSerializability: false,
+          strictStateImmutability: true,
+          strictActionImmutability: true,
+          strictActionWithinNgZone: false,
+          strictActionTypeUniqueness: false
+        }, runtimeChecks);
+      }
+
+      return {
+        strictStateSerializability: false,
+        strictActionSerializability: false,
+        strictStateImmutability: false,
+        strictActionImmutability: false,
+        strictActionWithinNgZone: false,
+        strictActionTypeUniqueness: false
+      };
+    }
+    /**
+     * @param {?} __0
+     * @return {?}
+     */
+
+
+    function createSerializationCheckMetaReducer(_ref21) {
+      var strictActionSerializability = _ref21.strictActionSerializability,
+          strictStateSerializability = _ref21.strictStateSerializability;
+      return (
+        /**
+        * @param {?} reducer
+        * @return {?}
+        */
+        function (reducer) {
+          return strictActionSerializability || strictStateSerializability ? serializationCheckMetaReducer(reducer, {
+            action:
+            /**
+            * @param {?} action
+            * @return {?}
+            */
+            function action(_action) {
+              return strictActionSerializability && !ignoreNgrxAction(_action);
+            },
+            state:
+            /**
+            * @return {?}
+            */
+            function state() {
+              return strictStateSerializability;
+            }
+          }) : reducer;
+        }
+      );
+    }
+    /**
+     * @param {?} __0
+     * @return {?}
+     */
+
+
+    function createImmutabilityCheckMetaReducer(_ref22) {
+      var strictActionImmutability = _ref22.strictActionImmutability,
+          strictStateImmutability = _ref22.strictStateImmutability;
+      return (
+        /**
+        * @param {?} reducer
+        * @return {?}
+        */
+        function (reducer) {
+          return strictActionImmutability || strictStateImmutability ? immutabilityCheckMetaReducer(reducer, {
+            action:
+            /**
+            * @param {?} action
+            * @return {?}
+            */
+            function action(_action2) {
+              return strictActionImmutability && !ignoreNgrxAction(_action2);
+            },
+            state:
+            /**
+            * @return {?}
+            */
+            function state() {
+              return strictStateImmutability;
+            }
+          }) : reducer;
+        }
+      );
+    }
+    /**
+     * @param {?} action
+     * @return {?}
+     */
+
+
+    function ignoreNgrxAction(action) {
+      return action.type.startsWith('@ngrx');
+    }
+    /**
+     * @param {?} __0
+     * @return {?}
+     */
+
+
+    function createInNgZoneCheckMetaReducer(_ref23) {
+      var strictActionWithinNgZone = _ref23.strictActionWithinNgZone;
+      return (
+        /**
+        * @param {?} reducer
+        * @return {?}
+        */
+        function (reducer) {
+          return strictActionWithinNgZone ? inNgZoneAssertMetaReducer(reducer, {
+            action:
+            /**
+            * @param {?} action
+            * @return {?}
+            */
+            function action(_action3) {
+              return strictActionWithinNgZone && !ignoreNgrxAction(_action3);
+            }
+          }) : reducer;
+        }
+      );
+    }
+    /**
+     * @param {?=} runtimeChecks
+     * @return {?}
+     */
+
+
+    function provideRuntimeChecks(runtimeChecks) {
+      return [{
+        provide: _USER_RUNTIME_CHECKS,
+        useValue: runtimeChecks
+      }, {
+        provide: USER_RUNTIME_CHECKS,
+        useFactory: _runtimeChecksFactory,
+        deps: [_USER_RUNTIME_CHECKS]
+      }, {
+        provide: _ACTIVE_RUNTIME_CHECKS,
+        deps: [USER_RUNTIME_CHECKS],
+        useFactory: createActiveRuntimeChecks
+      }, {
+        provide: META_REDUCERS,
+        multi: true,
+        deps: [_ACTIVE_RUNTIME_CHECKS],
+        useFactory: createImmutabilityCheckMetaReducer
+      }, {
+        provide: META_REDUCERS,
+        multi: true,
+        deps: [_ACTIVE_RUNTIME_CHECKS],
+        useFactory: createSerializationCheckMetaReducer
+      }, {
+        provide: META_REDUCERS,
+        multi: true,
+        deps: [_ACTIVE_RUNTIME_CHECKS],
+        useFactory: createInNgZoneCheckMetaReducer
+      }];
+    }
+    /**
+     * @return {?}
+     */
+
+
+    function checkForActionTypeUniqueness() {
+      return [{
+        provide: _ACTION_TYPE_UNIQUENESS_CHECK,
+        multi: true,
+        deps: [_ACTIVE_RUNTIME_CHECKS],
+        useFactory: _actionTypeUniquenessCheck
+      }];
+    }
+    /**
+     * @param {?} runtimeChecks
+     * @return {?}
+     */
+
+
+    function _runtimeChecksFactory(runtimeChecks) {
+      return runtimeChecks;
+    }
+    /**
+     * @param {?} config
+     * @return {?}
+     */
+
+
+    function _actionTypeUniquenessCheck(config) {
+      if (!config.strictActionTypeUniqueness) {
+        return;
+      }
+      /** @type {?} */
+
+
+      var duplicates = Object.entries(REGISTERED_ACTION_TYPES).filter(
+      /**
+      * @param {?} __0
+      * @return {?}
+      */
+      function (_ref24) {
+        var _ref25 = _slicedToArray(_ref24, 2),
+            registrations = _ref25[1];
+
+        return registrations > 1;
+      }).map(
+      /**
+      * @param {?} __0
+      * @return {?}
+      */
+      function (_ref26) {
+        var _ref27 = _slicedToArray(_ref26, 1),
+            type = _ref27[0];
+
+        return type;
+      });
+
+      if (duplicates.length) {
+        throw new Error("Action types are registered more than once, ".concat(duplicates.map(
+        /**
+        * @param {?} type
+        * @return {?}
+        */
+        function (type) {
+          return "\"".concat(type, "\"");
+        }).join(', '), ". ").concat(RUNTIME_CHECK_URL, "#strictactiontypeuniqueness"));
+      }
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/store_module.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var StoreRootModule =
+    /**
+     * @param {?} actions$
+     * @param {?} reducer$
+     * @param {?} scannedActions$
+     * @param {?} store
+     * @param {?} guard
+     * @param {?} actionCheck
+     */
+    function StoreRootModule(actions$, reducer$, scannedActions$, store, guard, actionCheck) {
+      _classCallCheck(this, StoreRootModule);
+    };
+
+    StoreRootModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: StoreRootModule
+    });
+    StoreRootModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function StoreRootModule_Factory(t) {
+        return new (t || StoreRootModule)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ActionsSubject), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ReducerObservable), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ScannedActionsSubject), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](Store), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ROOT_STORE_GUARD, 8), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ACTION_TYPE_UNIQUENESS_CHECK, 8));
+      }
+    });
+    /** @nocollapse */
+
+    StoreRootModule.ctorParameters = function () {
+      return [{
+        type: ActionsSubject
+      }, {
+        type: ReducerObservable
+      }, {
+        type: ScannedActionsSubject
+      }, {
+        type: Store
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_ROOT_STORE_GUARD]
+        }]
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_ACTION_TYPE_UNIQUENESS_CHECK]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](StoreRootModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{}]
+      }], function () {
+        return [{
+          type: ActionsSubject
+        }, {
+          type: ReducerObservable
+        }, {
+          type: ScannedActionsSubject
+        }, {
+          type: Store
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_ROOT_STORE_GUARD]
+          }]
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_ACTION_TYPE_UNIQUENESS_CHECK]
+          }]
+        }];
+      }, null);
+    })();
+
+    var StoreFeatureModule = /*#__PURE__*/function () {
+      /**
+       * @param {?} features
+       * @param {?} featureReducers
+       * @param {?} reducerManager
+       * @param {?} root
+       * @param {?} actionCheck
+       */
+      function StoreFeatureModule(features, featureReducers, reducerManager, root, actionCheck) {
+        _classCallCheck(this, StoreFeatureModule);
+
+        this.features = features;
+        this.featureReducers = featureReducers;
+        this.reducerManager = reducerManager;
+        /** @type {?} */
+
+        var feats = features.map(
+        /**
+        * @param {?} feature
+        * @param {?} index
+        * @return {?}
+        */
+        function (feature, index) {
+          /** @type {?} */
+          var featureReducerCollection = featureReducers.shift();
+          /** @type {?} */
+
+          var reducers =
+          /** @type {?} */
+          featureReducerCollection
+          /*TODO(#823)*/
+          [index];
+          return Object.assign(Object.assign({}, feature), {
+            reducers: reducers,
+            initialState: _initialStateFactory(feature.initialState)
+          });
+        });
+        reducerManager.addFeatures(feats);
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(StoreFeatureModule, [{
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this.reducerManager.removeFeatures(this.features);
+        }
+      }]);
+
+      return StoreFeatureModule;
+    }();
+
+    StoreFeatureModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: StoreFeatureModule
+    });
+    StoreFeatureModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function StoreFeatureModule_Factory(t) {
+        return new (t || StoreFeatureModule)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_STORE_FEATURES), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](FEATURE_REDUCERS), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ReducerManager), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](StoreRootModule), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ACTION_TYPE_UNIQUENESS_CHECK, 8));
+      }
+    });
+    /** @nocollapse */
+
+    StoreFeatureModule.ctorParameters = function () {
+      return [{
+        type: Array,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_STORE_FEATURES]
+        }]
+      }, {
+        type: Array,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [FEATURE_REDUCERS]
+        }]
+      }, {
+        type: ReducerManager
+      }, {
+        type: StoreRootModule
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_ACTION_TYPE_UNIQUENESS_CHECK]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](StoreFeatureModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{}]
+      }], function () {
+        return [{
+          type: Array,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_STORE_FEATURES]
+          }]
+        }, {
+          type: Array,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [FEATURE_REDUCERS]
+          }]
+        }, {
+          type: ReducerManager
+        }, {
+          type: StoreRootModule
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_ACTION_TYPE_UNIQUENESS_CHECK]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @record
+     * @template T, V
+     */
+
+
+    function StoreConfig() {}
+
+    if (false) {}
+    /**
+     * @record
+     * @template T, V
+     */
+
+
+    function RootStoreConfig() {}
+
+    if (false) {}
+
+    var StoreModule = /*#__PURE__*/function () {
+      function StoreModule() {
+        _classCallCheck(this, StoreModule);
+      }
+
+      _createClass2(StoreModule, null, [{
+        key: "forRoot",
+
+        /**
+         * @param {?} reducers
+         * @param {?=} config
+         * @return {?}
+         */
+        value: function forRoot(reducers) {
+          var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+          return {
+            ngModule: StoreRootModule,
+            providers: [{
+              provide: _ROOT_STORE_GUARD,
+              useFactory: _provideForRootGuard,
+              deps: [[Store, new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Optional"](), new _angular_core__WEBPACK_IMPORTED_MODULE_0__["SkipSelf"]()]]
+            }, {
+              provide: _INITIAL_STATE,
+              useValue: config.initialState
+            }, {
+              provide: INITIAL_STATE,
+              useFactory: _initialStateFactory,
+              deps: [_INITIAL_STATE]
+            }, {
+              provide: _INITIAL_REDUCERS,
+              useValue: reducers
+            }, {
+              provide: _STORE_REDUCERS,
+              useExisting: reducers instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"] ? reducers : _INITIAL_REDUCERS
+            }, {
+              provide: INITIAL_REDUCERS,
+              deps: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _INITIAL_REDUCERS, [new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"](_STORE_REDUCERS)]],
+              useFactory: _createStoreReducers
+            }, {
+              provide: USER_PROVIDED_META_REDUCERS,
+              useValue: config.metaReducers ? config.metaReducers : []
+            }, {
+              provide: _RESOLVED_META_REDUCERS,
+              deps: [META_REDUCERS, USER_PROVIDED_META_REDUCERS],
+              useFactory: _concatMetaReducers
+            }, {
+              provide: _REDUCER_FACTORY,
+              useValue: config.reducerFactory ? config.reducerFactory : combineReducers
+            }, {
+              provide: REDUCER_FACTORY,
+              deps: [_REDUCER_FACTORY, _RESOLVED_META_REDUCERS],
+              useFactory: createReducerFactory
+            }, ACTIONS_SUBJECT_PROVIDERS, REDUCER_MANAGER_PROVIDERS, SCANNED_ACTIONS_SUBJECT_PROVIDERS, STATE_PROVIDERS, STORE_PROVIDERS, provideRuntimeChecks(config.runtimeChecks), checkForActionTypeUniqueness()]
+          };
+        }
+        /**
+         * @param {?} featureName
+         * @param {?} reducers
+         * @param {?=} config
+         * @return {?}
+         */
+
+      }, {
+        key: "forFeature",
+        value: function forFeature(featureName, reducers) {
+          var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          return {
+            ngModule: StoreFeatureModule,
+            providers: [{
+              provide: _FEATURE_CONFIGS,
+              multi: true,
+              useValue: config
+            }, {
+              provide: STORE_FEATURES,
+              multi: true,
+              useValue: {
+                key: featureName,
+                reducerFactory: !(config instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]) && config.reducerFactory ? config.reducerFactory : combineReducers,
+                metaReducers: !(config instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]) && config.metaReducers ? config.metaReducers : [],
+                initialState: !(config instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]) && config.initialState ? config.initialState : undefined
+              }
+            }, {
+              provide: _STORE_FEATURES,
+              deps: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _FEATURE_CONFIGS, STORE_FEATURES],
+              useFactory: _createFeatureStore
+            }, {
+              provide: _FEATURE_REDUCERS,
+              multi: true,
+              useValue: reducers
+            }, {
+              provide: _FEATURE_REDUCERS_TOKEN,
+              multi: true,
+              useExisting: reducers instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"] ? reducers : _FEATURE_REDUCERS
+            }, {
+              provide: FEATURE_REDUCERS,
+              multi: true,
+              deps: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"], _FEATURE_REDUCERS, [new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"](_FEATURE_REDUCERS_TOKEN)]],
+              useFactory: _createFeatureReducers
+            }, checkForActionTypeUniqueness()]
+          };
+        }
+      }]);
+
+      return StoreModule;
+    }();
+
+    StoreModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: StoreModule
+    });
+    StoreModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function StoreModule_Factory(t) {
+        return new (t || StoreModule)();
+      }
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](StoreModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{}]
+      }], null, null);
+    })();
+    /**
+     * @param {?} injector
+     * @param {?} reducers
+     * @return {?}
+     */
+
+
+    function _createStoreReducers(injector, reducers) {
+      return reducers instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"] ? injector.get(reducers) : reducers;
+    }
+    /**
+     * @param {?} injector
+     * @param {?} configs
+     * @param {?} featureStores
+     * @return {?}
+     */
+
+
+    function _createFeatureStore(injector, configs, featureStores) {
+      return featureStores.map(
+      /**
+      * @param {?} feat
+      * @param {?} index
+      * @return {?}
+      */
+      function (feat, index) {
+        if (configs[index] instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]) {
+          /** @type {?} */
+          var conf = injector.get(configs[index]);
+          return {
+            key: feat.key,
+            reducerFactory: conf.reducerFactory ? conf.reducerFactory : combineReducers,
+            metaReducers: conf.metaReducers ? conf.metaReducers : [],
+            initialState: conf.initialState
+          };
+        }
+
+        return feat;
+      });
+    }
+    /**
+     * @param {?} injector
+     * @param {?} reducerCollection
+     * @return {?}
+     */
+
+
+    function _createFeatureReducers(injector, reducerCollection) {
+      /** @type {?} */
+      var reducers = reducerCollection.map(
+      /**
+      * @param {?} reducer
+      * @return {?}
+      */
+      function (reducer) {
+        return reducer instanceof _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"] ? injector.get(reducer) : reducer;
+      });
+      return reducers;
+    }
+    /**
+     * @param {?} initialState
+     * @return {?}
+     */
+
+
+    function _initialStateFactory(initialState) {
+      if (typeof initialState === 'function') {
+        return initialState();
+      }
+
+      return initialState;
+    }
+    /**
+     * @param {?} metaReducers
+     * @param {?} userProvidedMetaReducers
+     * @return {?}
+     */
+
+
+    function _concatMetaReducers(metaReducers, userProvidedMetaReducers) {
+      return metaReducers.concat(userProvidedMetaReducers);
+    }
+    /**
+     * @param {?} store
+     * @return {?}
+     */
+
+
+    function _provideForRootGuard(store) {
+      if (store) {
+        throw new TypeError("StoreModule.forRoot() called twice. Feature modules should use StoreModule.forFeature() instead.");
+      }
+
+      return 'guarded';
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/reducer_creator.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @record
+     * @template S
+     */
+
+
+    function On() {}
+
+    if (false) {}
+    /**
+     * @record
+     * @template S, C
+     */
+
+
+    function OnReducer() {}
+    /**
+     * \@description
+     * Associates actions with a given state change function.
+     * A state change function must be provided as the last parameter.
+     *
+     * @param {...?} args `ActionCreator`'s followed by a state change function.
+     *
+     * **To maintain type-safety**: pass 10 or less `ActionCreator`'s.
+     * @return {?} an association of action types with a state change function.
+     */
+
+
+    function on() {
+      for (var _len20 = arguments.length, args = new Array(_len20), _key21 = 0; _key21 < _len20; _key21++) {
+        args[_key21] = arguments[_key21];
+      }
+
+      /** @type {?} */
+      var reducer =
+      /** @type {?} */
+      args.pop();
+      /** @type {?} */
+
+      var types = args.reduce(
+      /**
+      * @param {?} result
+      * @param {?} creator
+      * @return {?}
+      */
+      function (result, creator) {
+        return [].concat(_toConsumableArray(result), [
+        /** @type {?} */
+        creator.type]);
+      },
+      /** @type {?} */
+      []);
+      return {
+        reducer: reducer,
+        types: types
+      };
+    }
+    /**
+     * \@description
+     * Creates a reducer function to handle state transitions.
+     *
+     * Reducer creators reduce the explicitness of reducer functions with switch statements.
+     *
+     * \@usageNotes
+     *
+     * - Must be used with `ActionCreator`'s (returned by `createAction`). Cannot be used with class-based action creators.
+     * - The returned `ActionReducer` should additionally be wrapped with another function, if you are using View Engine AOT.
+     * In case you are using Ivy (or only JIT View Engine) the extra wrapper function is not required.
+     *
+     * **Declaring a reducer creator**
+     *
+     * ```ts
+     * export const reducer = createReducer(
+     *   initialState,
+     *   on(
+     *     featureActions.actionOne,
+     *     featureActions.actionTwo,
+     *     (state, { updatedValue }) => ({ ...state, prop: updatedValue })
+     *   ),
+     *   on(featureActions.actionThree, () => initialState);
+     * );
+     * ```
+     *
+     * **Declaring a reducer creator using a wrapper function (Only needed if using View Engine AOT)**
+     *
+     * ```ts
+     * const featureReducer = createReducer(
+     *   initialState,
+     *   on(
+     *     featureActions.actionOne,
+     *     featureActions.actionTwo,
+     *     (state, { updatedValue }) => ({ ...state, prop: updatedValue })
+     *   ),
+     *   on(featureActions.actionThree, () => initialState);
+     * );
+     *
+     * export function reducer(state: State | undefined, action: Action) {
+     *   return featureReducer(state, action);
+     * }
+     * ```
+     * @template S, A
+     * @param {?} initialState Provides a state value if the current state is `undefined`, as it is initially.
+     * @param {...?} ons Associations between actions and state changes.
+     * @return {?} A reducer function.
+     *
+     */
+
+
+    function createReducer(initialState) {
+      /** @type {?} */
+      var map = new Map();
+
+      for (var _len21 = arguments.length, ons = new Array(_len21 > 1 ? _len21 - 1 : 0), _key22 = 1; _key22 < _len21; _key22++) {
+        ons[_key22 - 1] = arguments[_key22];
+      }
+
+      var _loop3 = function _loop3() {
+        var on = _ons[_i26];
+
+        var _iterator20 = _createForOfIteratorHelper(on.types),
+            _step20;
+
+        try {
+          for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+            var type = _step20.value;
+
+            if (map.has(type)) {
+              (function () {
+                /** @type {?} */
+                var existingReducer =
+                /** @type {?} */
+                map.get(type);
+                /** @type {?} */
+
+                var newReducer =
+                /**
+                * @param {?} state
+                * @param {?} action
+                * @return {?}
+                */
+                function newReducer(state, action) {
+                  return on.reducer(existingReducer(state, action), action);
+                };
+
+                map.set(type, newReducer);
+              })();
+            } else {
+              map.set(type, on.reducer);
+            }
+          }
+        } catch (err) {
+          _iterator20.e(err);
+        } finally {
+          _iterator20.f();
+        }
+      };
+
+      for (var _i26 = 0, _ons = ons; _i26 < _ons.length; _i26++) {
+        _loop3();
+      }
+
+      return (
+        /**
+        * @param {?=} state
+        * @param {?=} action
+        * @return {?}
+        */
+        function () {
+          var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+          var action = arguments.length > 1 ? arguments[1] : undefined;
+
+          /** @type {?} */
+          var reducer = map.get(action.type);
+          return reducer ? reducer(state, action) : state;
+        }
+      );
+    }
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: src/index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: public_api.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: ngrx-store.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+    //# sourceMappingURL=ngrx-store.js.map
+
+    /***/
+
+  },
+
+  /***/
   "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js":
   /*!*************************************************************************************!*\
     !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js ***!
@@ -98656,10 +104302,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "classes",
         get: function get() {
-          var _ref12;
+          var _ref28;
 
           var CLASS_NAME = 'sds-button';
-          return _ref12 = {}, _defineProperty(_ref12, "".concat(CLASS_NAME, "-").concat(this.buttonType), this.buttonType), _defineProperty(_ref12, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref12, "".concat(CLASS_NAME, "--disabled"), this.disabled), _defineProperty(_ref12, "".concat(CLASS_NAME, "--destructive"), this.destructive), _ref12;
+          return _ref28 = {}, _defineProperty(_ref28, "".concat(CLASS_NAME, "-").concat(this.buttonType), this.buttonType), _defineProperty(_ref28, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref28, "".concat(CLASS_NAME, "--disabled"), this.disabled), _defineProperty(_ref28, "".concat(CLASS_NAME, "--destructive"), this.destructive), _ref28;
         }
       }]);
 
@@ -98931,10 +104577,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "classes",
         get: function get() {
-          var _ref13;
+          var _ref29;
 
           var CLASS_NAME = 'sds-checkbox';
-          return _ref13 = {}, _defineProperty(_ref13, "".concat(CLASS_NAME, "--error"), this.error), _defineProperty(_ref13, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref13, "".concat(CLASS_NAME, "--disabled"), this.disabled), _ref13;
+          return _ref29 = {}, _defineProperty(_ref29, "".concat(CLASS_NAME, "--error"), this.error), _defineProperty(_ref29, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref29, "".concat(CLASS_NAME, "--disabled"), this.disabled), _ref29;
         }
       }]);
 
@@ -99238,10 +104884,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "classes",
         get: function get() {
-          var _ref14;
+          var _ref30;
 
           var CLASS_NAME = 'sds-dropdown-option';
-          return _ref14 = {}, _defineProperty(_ref14, "".concat(CLASS_NAME, "--focused"), this.isFocused), _defineProperty(_ref14, "".concat(CLASS_NAME, "--selected"), this.selected), _ref14;
+          return _ref30 = {}, _defineProperty(_ref30, "".concat(CLASS_NAME, "--focused"), this.isFocused), _defineProperty(_ref30, "".concat(CLASS_NAME, "--selected"), this.selected), _ref30;
         }
       }]);
 
@@ -99387,7 +105033,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngAfterContentInit",
         value: function ngAfterContentInit() {
-          var _this145 = this;
+          var _this153 = this;
 
           if (!this.optionsComponents) {
             return;
@@ -99400,7 +105046,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.optionsComponents.changes.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this._unsubscribe)).subscribe(function (newOptions) {
             // This subscription runs after content checked, so this needs to be deffered until the next render
             requestAnimationFrame(function () {
-              return _this145._setupOptionsSelectedSubscription(newOptions);
+              return _this153._setupOptionsSelectedSubscription(newOptions);
             });
           });
         }
@@ -99516,11 +105162,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onBlur",
         value: function onBlur() {
-          var _this146 = this;
+          var _this154 = this;
 
           // Ensures that the click event is registered before the element closes
           requestAnimationFrame(function () {
-            _this146.toggleOpen(false);
+            _this154.toggleOpen(false);
           });
         }
         /**
@@ -99567,7 +105213,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_setupOptionsSelectedSubscription",
         value: function _setupOptionsSelectedSubscription(optionsComponents) {
-          var _this147 = this;
+          var _this155 = this;
 
           var _a; // Add all of the options outputs into an array of observables
 
@@ -99580,17 +105226,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             option.index = index;
             option.setsize = optionsComponents.length;
-            option.identifier = "".concat(_this147.identifier, "__option_").concat(index); // If one of the children is selected then set the value of the dropdown
+            option.identifier = "".concat(_this155.identifier, "__option_").concat(index); // If one of the children is selected then set the value of the dropdown
 
             if (option.selected === true) {
-              _this147.value = option.value;
-              _this147.selectedOptionIndex = index;
+              _this155.value = option.value;
+              _this155.selectedOptionIndex = index;
               return;
             } // If the value of the option is the same as the value already set, then set it to selected
 
 
-            if (_this147.value == option.value) {
-              _this147.selectedOptionIndex = index;
+            if (_this155.value == option.value) {
+              _this155.selectedOptionIndex = index;
               option.selected = true;
               return;
             }
@@ -99599,7 +105245,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           (_a = this._optionsChangedSubscription) === null || _a === void 0 ? void 0 : _a.unsubscribe(); // Merge the clickevent observables together into one stream
 
           this._optionsChangedSubscription = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["merge"]).apply(void 0, optionsEvents).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this._unsubscribe)).subscribe(function (args) {
-            return _this147._handleOptionClicked(optionsComponents, args);
+            return _this155._handleOptionClicked(optionsComponents, args);
           });
         }
         /**
@@ -99609,18 +105255,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       }, {
         key: "_handleOptionClicked",
-        value: function _handleOptionClicked(optionsComponents, _ref15) {
-          var _this148 = this;
+        value: function _handleOptionClicked(optionsComponents, _ref31) {
+          var _this156 = this;
 
-          var _ref16 = _slicedToArray(_ref15, 3),
-              optionValue = _ref16[0],
-              index = _ref16[1],
-              _ = _ref16[2];
+          var _ref32 = _slicedToArray(_ref31, 3),
+              optionValue = _ref32[0],
+              index = _ref32[1],
+              _ = _ref32[2];
 
           this.value = optionValue;
           this.selectedOptionIndex = index;
           optionsComponents.forEach(function (option) {
-            option.selected = option.value === _this148.value;
+            option.selected = option.value === _this156.value;
           });
           this.toggleOpen(false);
         }
@@ -99680,10 +105326,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "classes",
         get: function get() {
-          var _ref17;
+          var _ref33;
 
           var CLASS_NAME = 'sds-dropdown';
-          return _ref17 = {}, _defineProperty(_ref17, "".concat(CLASS_NAME, "--").concat(this.align), this.align), _defineProperty(_ref17, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref17, "".concat(CLASS_NAME, "--disabled"), this.disabled), _defineProperty(_ref17, "".concat(CLASS_NAME, "--read-only"), this.readOnly), _defineProperty(_ref17, "".concat(CLASS_NAME, "--placeholder"), !this.value), _defineProperty(_ref17, "".concat(CLASS_NAME, "--open"), this.isOpen), _ref17;
+          return _ref33 = {}, _defineProperty(_ref33, "".concat(CLASS_NAME, "--").concat(this.align), this.align), _defineProperty(_ref33, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref33, "".concat(CLASS_NAME, "--disabled"), this.disabled), _defineProperty(_ref33, "".concat(CLASS_NAME, "--read-only"), this.readOnly), _defineProperty(_ref33, "".concat(CLASS_NAME, "--placeholder"), !this.value), _defineProperty(_ref33, "".concat(CLASS_NAME, "--open"), this.isOpen), _ref33;
         }
         /**
          * @description
@@ -100051,9 +105697,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(IconComponent, [{
         key: "classes",
         get: function get() {
-          var _ref18;
+          var _ref34;
 
-          return _ref18 = {}, _defineProperty(_ref18, "sds-icon-".concat(this.iconType), this.iconType), _defineProperty(_ref18, "sds-icon--".concat(this.type), this.type), _ref18;
+          return _ref34 = {}, _defineProperty(_ref34, "sds-icon-".concat(this.iconType), this.iconType), _defineProperty(_ref34, "sds-icon--".concat(this.type), this.type), _ref34;
         }
       }]);
 
@@ -100355,10 +106001,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "classes",
         get: function get() {
-          var _ref19;
+          var _ref35;
 
           var CLASS_NAME = 'sds-input-text__field';
-          return _ref19 = {}, _defineProperty(_ref19, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref19, "".concat(CLASS_NAME, "--error"), this.errorType === 'error' && this.errors), _defineProperty(_ref19, "".concat(CLASS_NAME, "--read-only"), this.readOnly), _ref19;
+          return _ref35 = {}, _defineProperty(_ref35, "".concat(CLASS_NAME, "--").concat(this.size), this.size), _defineProperty(_ref35, "".concat(CLASS_NAME, "--error"), this.errorType === 'error' && this.errors), _defineProperty(_ref35, "".concat(CLASS_NAME, "--read-only"), this.readOnly), _ref35;
         }
         /**
          * @description
@@ -100574,6 +106220,799 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tabs.js":
+  /*!***********************************************************************************!*\
+    !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tabs.js ***!
+    \***********************************************************************************/
+
+  /*! exports provided: TabsModule, ɵa, ɵb, ɵc, ɵd */
+
+  /***/
+  function node_modulesSageNgCarbon__ivy_ngcc__Fesm2015SageNgCarbonTabsJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TabsModule", function () {
+      return TabsModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵa", function () {
+      return TabsComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵb", function () {
+      return TabComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵc", function () {
+      return TabHeaderComponent;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵd", function () {
+      return TabContentComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    function TabHeaderComponent_ng_template_0_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function TabHeaderComponent_ng_template_0_Template_div_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r2);
+
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r1.tabSelected.emit();
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx_r0.classes);
+      }
+    }
+
+    var _c0 = ["*"];
+
+    function TabContentComponent_ng_template_0_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](0);
+      }
+    }
+
+    var _c1 = ["headerTabs"];
+
+    function TabsComponent_div_2_ng_container_2_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](1, 7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
+      }
+
+      if (rf & 2) {
+        var tab_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", tab_r2.tabHeader.header);
+      }
+    }
+
+    function TabsComponent_div_2_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 4, 5);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function TabsComponent_div_2_Template_div_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+
+          var i_r3 = ctx.index;
+
+          var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r7.selectTab(i_r3);
+        })("keydown.home", function TabsComponent_div_2_Template_div_keydown_home_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+
+          var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r9.switchTab(0);
+        })("keydown.end", function TabsComponent_div_2_Template_div_keydown_end_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+
+          var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r10.switchTab(ctx_r10.tabs.length - 1);
+        })("keydown.ArrowLeft", function TabsComponent_div_2_Template_div_keydown_ArrowLeft_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+
+          var i_r3 = ctx.index;
+
+          var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r11.switchTab(i_r3 - 1);
+        })("keydown.ArrowUp", function TabsComponent_div_2_Template_div_keydown_ArrowUp_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+
+          var i_r3 = ctx.index;
+
+          var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r12.switchTab(i_r3 - 1);
+        })("keydown.ArrowRight", function TabsComponent_div_2_Template_div_keydown_ArrowRight_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+
+          var i_r3 = ctx.index;
+
+          var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r13.switchTab(i_r3 + 1);
+        })("keydown.ArrowDown", function TabsComponent_div_2_Template_div_keydown_ArrowDown_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r8);
+
+          var i_r3 = ctx.index;
+
+          var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+          return ctx_r14.switchTab(i_r3 + 1);
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, TabsComponent_div_2_ng_container_2_Template, 2, 1, "ng-container", 6);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var tab_r2 = ctx.$implicit;
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", tab_r2.tabHeader.identifier);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("tabindex", tab_r2.tabHeader.active ? "0" : "-1")("aria-selected", tab_r2.tabHeader.active)("aria-controls", tab_r2.tabContent.identifier);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", tab_r2.tabHeader);
+      }
+    }
+
+    function TabsComponent_ng_container_3_div_1_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainer"](1, 7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var tab_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
+
+        var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassProp"]("sds-tabs__content--active", ctx_r16.renderHiddenTabs && tab_r15.tabHeader.active);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("id", tab_r15.tabContent.identifier);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("tabindex", tab_r15.tabHeader.active ? "0" : "-1")("aria-labelledby", tab_r15.tabHeader.identifier);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngTemplateOutlet", tab_r15.tabContent.content);
+      }
+    }
+
+    function TabsComponent_ng_container_3_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, TabsComponent_ng_container_3_div_1_Template, 2, 6, "div", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
+      }
+
+      if (rf & 2) {
+        var tab_r15 = ctx.$implicit;
+
+        var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx_r1.renderHiddenTabs || tab_r15.tabHeader.active);
+      }
+    }
+
+    var TabHeaderComponent = /*#__PURE__*/function () {
+      function TabHeaderComponent() {
+        _classCallCheck(this, TabHeaderComponent);
+
+        // Whether or not the tab is active
+        this.active = false; // Shows an error border
+
+        this.error = false; // The ID of the tab header element
+
+        this.identifier = "tab-header-".concat(Math.random().toString().substring(2, 10) + Math.random().toString().substring(2, 10)); // Emitter for selection of tab
+
+        this.tabSelected = new _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"](); // property to be altered by tabs component
+
+        this.size = 'default'; // property to be altered by tabs component
+
+        this.position = 'top';
+      }
+      /**
+       * @description
+       * css classes for the tab header component
+       */
+
+
+      _createClass2(TabHeaderComponent, [{
+        key: "classes",
+        get: function get() {
+          var _ref36;
+
+          var base = 'sds-tab-header';
+          return _ref36 = {}, _defineProperty(_ref36, "".concat(base), true), _defineProperty(_ref36, "".concat(base, "--active"), this.active), _defineProperty(_ref36, "".concat(base, "--left"), this.position === 'left'), _defineProperty(_ref36, "".concat(base, "--large"), this.size === 'large'), _defineProperty(_ref36, "".concat(base, "--error"), this.error), _ref36;
+        }
+      }]);
+
+      return TabHeaderComponent;
+    }();
+
+    TabHeaderComponent.ɵfac = function TabHeaderComponent_Factory(t) {
+      return new (t || TabHeaderComponent)();
+    };
+
+    TabHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: TabHeaderComponent,
+      selectors: [["sds-tab-header"]],
+      viewQuery: function TabHeaderComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵviewQuery"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"], true);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.header = _t.first);
+        }
+      },
+      inputs: {
+        active: "active",
+        error: "error",
+        identifier: "identifier"
+      },
+      outputs: {
+        tabSelected: "tabSelected"
+      },
+      ngContentSelectors: _c0,
+      decls: 1,
+      vars: 0,
+      consts: [[3, "ngClass", "click"], [1, "sds-tab-header__content"]],
+      template: function TabHeaderComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, TabHeaderComponent_ng_template_0_Template, 3, 1, "ng-template");
+        }
+      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]],
+      styles: [".sds-tab-header[_ngcontent-%COMP%]{min-height:2.8571428571em;font-weight:600;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 1.1428571429em;cursor:pointer}.sds-tab-header__content[_ngcontent-%COMP%]{padding:.2857142857em 0;display:block}.sds-tab-header[_ngcontent-%COMP%]:hover:not(.sds-tab-header--active){background-color:var(--color-slate-90)}.sds-tab-header--active[_ngcontent-%COMP%]{background-color:#fff;-webkit-box-shadow:inset 0 -2px 0 0 var(--color-secondary);box-shadow:inset 0 -2px 0 0 var(--color-secondary)}.sds-tab-header--active.sds-tab-header--left[_ngcontent-%COMP%]:not(.sds-tab-header--error){-webkit-box-shadow:inset -2px 0 0 0 var(--color-secondary);box-shadow:inset -2px 0 0 0 var(--color-secondary)}.sds-tab-header--active.sds-tab-header--large[_ngcontent-%COMP%]:not(.sds-tab-header--error){-webkit-box-shadow:inset 0 -3px 0 0 var(--color-secondary);box-shadow:inset 0 -3px 0 0 var(--color-secondary)}.sds-tab-header--active.sds-tab-header--left.sds-tab-header--large[_ngcontent-%COMP%]:not(.sds-tab-header--error){-webkit-box-shadow:inset -3px 0 0 0 var(--color-secondary);box-shadow:inset -3px 0 0 0 var(--color-secondary)}.sds-tab-header--large[_ngcontent-%COMP%]{font-size:1.1428571429em;min-height:3em;padding:0 1.5em}.sds-tab-header--large.sds-tab-header--left[_ngcontent-%COMP%]{min-height:4em}.sds-tab-header--error[_ngcontent-%COMP%]{-webkit-box-shadow:inset 0 0 0 2px var(--color-error);box-shadow:inset 0 0 0 2px var(--color-error)}.sds-tab-header--error.sds-tab-header--large[_ngcontent-%COMP%]{-webkit-box-shadow:inset 0 0 0 3px var(--color-error);box-shadow:inset 0 0 0 3px var(--color-error)}"]
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"])(_angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"])], TabHeaderComponent.prototype, "header", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabHeaderComponent.prototype, "active", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabHeaderComponent.prototype, "error", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabHeaderComponent.prototype, "identifier", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["EventEmitter"])], TabHeaderComponent.prototype, "tabSelected", void 0);
+
+    var TabContentComponent = function TabContentComponent() {
+      _classCallCheck(this, TabContentComponent);
+
+      // The ID of the tab content element
+      this.identifier = "tab-content-".concat(Math.random().toString().substring(2, 10) + Math.random().toString().substring(2, 10));
+    };
+
+    TabContentComponent.ɵfac = function TabContentComponent_Factory(t) {
+      return new (t || TabContentComponent)();
+    };
+
+    TabContentComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: TabContentComponent,
+      selectors: [["sds-tab-content"]],
+      viewQuery: function TabContentComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵviewQuery"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"], true);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.content = _t.first);
+        }
+      },
+      inputs: {
+        identifier: "identifier"
+      },
+      ngContentSelectors: _c0,
+      decls: 1,
+      vars: 0,
+      template: function TabContentComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, TabContentComponent_ng_template_0_Template, 1, 0, "ng-template");
+        }
+      },
+      encapsulation: 2
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"])(_angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"])], TabContentComponent.prototype, "content", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabContentComponent.prototype, "identifier", void 0);
+
+    var TabComponent = function TabComponent() {
+      _classCallCheck(this, TabComponent);
+    };
+
+    TabComponent.ɵfac = function TabComponent_Factory(t) {
+      return new (t || TabComponent)();
+    };
+
+    TabComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: TabComponent,
+      selectors: [["sds-tab"]],
+      contentQueries: function TabComponent_ContentQueries(rf, ctx, dirIndex) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵcontentQuery"](dirIndex, TabHeaderComponent, true);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵcontentQuery"](dirIndex, TabContentComponent, true);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.tabHeader = _t.first);
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.tabContent = _t.first);
+        }
+      },
+      ngContentSelectors: _c0,
+      decls: 1,
+      vars: 0,
+      template: function TabComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojectionDef"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵprojection"](0);
+        }
+      },
+      encapsulation: 2
+    });
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChild"])(TabHeaderComponent), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", TabHeaderComponent)], TabComponent.prototype, "tabHeader", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChild"])(TabContentComponent), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", TabContentComponent)], TabComponent.prototype, "tabContent", void 0);
+
+    var TabsComponent = /*#__PURE__*/function () {
+      function TabsComponent(changeDetectorRef) {
+        _classCallCheck(this, TabsComponent);
+
+        this.changeDetectorRef = changeDetectorRef; // Size to display the tabs
+
+        this.size = 'default'; // Position of the tabs
+
+        this.position = 'top'; // Whether to display a border around each tab
+
+        this.borders = false; // Wraps the tab panel in a container.
+
+        this.contentContainer = true; // Renders all tab panels and hides inactive ones
+
+        this.renderHiddenTabs = false; // Unique label for the component
+
+        this.label = "tablist-".concat(Math.random().toString().substring(2, 10) + Math.random().toString().substring(2, 10));
+      }
+      /**
+       * @description
+       * Handles set up of the tabs when the component first loads
+       */
+
+
+      _createClass2(TabsComponent, [{
+        key: "ngAfterViewInit",
+        value: function ngAfterViewInit() {
+          var _a;
+
+          this._updateHeaders(this.size, this.position);
+
+          var activeTab = (_a = this.tabs) === null || _a === void 0 ? void 0 : _a.find(function (tab) {
+            return tab.tabHeader.active === true;
+          }); // if no tab is active, set the first
+
+          if (!activeTab) {
+            this.tabs.first.tabHeader.active = true;
+          }
+
+          this.changeDetectorRef.detectChanges();
+        }
+        /**
+         * @description
+         * Alters the tabs when relevant changes are detected
+         */
+
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          var _a, _b, _c, _d;
+
+          if (((_a = changes.size) === null || _a === void 0 ? void 0 : _a.currentValue) && !((_b = changes.size) === null || _b === void 0 ? void 0 : _b.firstChange) || ((_c = changes.position) === null || _c === void 0 ? void 0 : _c.currentValue) && !((_d = changes.position) === null || _d === void 0 ? void 0 : _d.firstChange)) {
+            this._updateHeaders(this.size, this.position);
+          }
+        }
+        /**
+         * @description
+         * Updates the size and position of all tab components in the tabs component
+         */
+
+      }, {
+        key: "_updateHeaders",
+        value: function _updateHeaders(headerSize, position) {
+          var _a;
+
+          (_a = this.tabs) === null || _a === void 0 ? void 0 : _a.forEach(function (tabComponent) {
+            tabComponent.tabHeader.size = headerSize;
+            tabComponent.tabHeader.position = position;
+          });
+        }
+        /**
+         * @description
+         * Updates the active tab when selected
+         */
+
+      }, {
+        key: "selectTab",
+        value: function selectTab(index) {
+          var _a;
+
+          (_a = this.tabs) === null || _a === void 0 ? void 0 : _a.forEach(function (tabComponent, tabIndex) {
+            tabComponent.tabHeader.active = tabIndex === index;
+          });
+        }
+        /**
+         * @description
+         * handles the selection of a new tab when a relevant keypress is detected
+         */
+
+      }, {
+        key: "switchTab",
+        value: function switchTab(index) {
+          // logic to determine whether to loop round the tabs
+          if (index < 0) {
+            index = this.tabs.length - 1;
+          } else if (index >= this.tabs.length) {
+            index = 0;
+          } // select the tab and focus it
+
+
+          this.selectTab(index);
+          this.headerTabs.toArray()[index].nativeElement.focus(); // force the emitter on the tab
+
+          this.tabs.toArray()[index].tabHeader.tabSelected.emit();
+        }
+        /**
+         * @description
+         * css classes for the tabs component
+         */
+
+      }, {
+        key: "classes",
+        get: function get() {
+          var _ref37;
+
+          var base = 'sds-tabs';
+          return _ref37 = {}, _defineProperty(_ref37, "".concat(base), true), _defineProperty(_ref37, "".concat(base, "--borders"), this.borders), _defineProperty(_ref37, "".concat(base, "--large"), this.size === 'large'), _defineProperty(_ref37, "".concat(base, "--left"), this.position === 'left'), _defineProperty(_ref37, "".concat(base, "--hidden"), this.renderHiddenTabs), _defineProperty(_ref37, "".concat(base, "--container"), this.contentContainer), _ref37;
+        }
+      }]);
+
+      return TabsComponent;
+    }();
+
+    TabsComponent.ɵfac = function TabsComponent_Factory(t) {
+      return new (t || TabsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectorRef"]));
+    };
+
+    TabsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({
+      type: TabsComponent,
+      selectors: [["sds-tabs"]],
+      contentQueries: function TabsComponent_ContentQueries(rf, ctx, dirIndex) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵcontentQuery"](dirIndex, TabComponent, false);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.tabs = _t);
+        }
+      },
+      viewQuery: function TabsComponent_Query(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵviewQuery"](_c1, true);
+        }
+
+        if (rf & 2) {
+          var _t;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.headerTabs = _t);
+        }
+      },
+      inputs: {
+        size: "size",
+        position: "position",
+        borders: "borders",
+        contentContainer: "contentContainer",
+        renderHiddenTabs: "renderHiddenTabs",
+        label: "label"
+      },
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵNgOnChangesFeature"]],
+      decls: 4,
+      vars: 4,
+      consts: [[3, "ngClass"], ["role", "tablist", 1, "sds-tabs__header"], ["class", "sds-tabs__tab", "role", "tab", 3, "id", "click", "keydown.home", "keydown.end", "keydown.ArrowLeft", "keydown.ArrowUp", "keydown.ArrowRight", "keydown.ArrowDown", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["role", "tab", 1, "sds-tabs__tab", 3, "id", "click", "keydown.home", "keydown.end", "keydown.ArrowLeft", "keydown.ArrowUp", "keydown.ArrowRight", "keydown.ArrowDown"], ["headerTabs", ""], [4, "ngIf"], [3, "ngTemplateOutlet"], ["class", "sds-tabs__content", "role", "tabpanel", 3, "id", "sds-tabs__content--active", 4, "ngIf"], ["role", "tabpanel", 1, "sds-tabs__content", 3, "id"]],
+      template: function TabsComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, TabsComponent_div_2_Template, 3, 5, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, TabsComponent_ng_container_3_Template, 2, 1, "ng-container", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx.classes);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵattribute"]("aria-label", ctx.label);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.tabs);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.tabs);
+        }
+      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgTemplateOutlet"]],
+      styles: [".sds-tabs[_ngcontent-%COMP%]{font-family:var(--font-default-body)}.sds-tabs__header[_ngcontent-%COMP%]{min-height:2.8571428571em;-webkit-box-shadow:inset 0 -2px 0 0 var(--color-slate-90);box-shadow:inset 0 -2px 0 0 var(--color-slate-90);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.sds-tabs__tab[_ngcontent-%COMP%]{-webkit-box-sizing:border-box;box-sizing:border-box;position:relative}.sds-tabs__tab[_ngcontent-%COMP%]:focus{z-index:1;outline:3px solid var(--color-focus)}.sds-tabs__content[_ngcontent-%COMP%]:focus{outline:3px solid var(--color-focus)}.sds-tabs--borders[_ngcontent-%COMP%]   .sds-tabs__tab[_ngcontent-%COMP%]{border:1px solid var(--color-slate-90);border-width:1px 1px 0 0}.sds-tabs--borders[_ngcontent-%COMP%]   .sds-tabs__tab[_ngcontent-%COMP%]:first-child{border-left-width:1px}.sds-tabs--large[_ngcontent-%COMP%]   .sds-tabs__header[_ngcontent-%COMP%]{min-height:3.4285714286em;-webkit-box-shadow:inset 0 -3px 0 0 var(--color-slate-90);box-shadow:inset 0 -3px 0 0 var(--color-slate-90)}.sds-tabs--large.sds-tabs--left[_ngcontent-%COMP%]   .sds-tabs__header[_ngcontent-%COMP%]{-webkit-box-shadow:inset -3px 0 0 0 var(--color-slate-90);box-shadow:inset -3px 0 0 0 var(--color-slate-90)}.sds-tabs--container[_ngcontent-%COMP%]   .sds-tabs__content[_ngcontent-%COMP%]{background-color:#fff;border:1px solid var(--color-slate-90);border-top-width:0;padding:2.8571428571em}.sds-tabs--left[_ngcontent-%COMP%]{display:-webkit-box;display:-ms-flexbox;display:flex}.sds-tabs--left[_ngcontent-%COMP%]   .sds-tabs__header[_ngcontent-%COMP%]{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-shadow:inset -2px 0 0 0 var(--color-slate-90);box-shadow:inset -2px 0 0 0 var(--color-slate-90)}.sds-tabs--left[_ngcontent-%COMP%]   .sds-tabs__tab[_ngcontent-%COMP%]{border-width:0 0 1px 1px}.sds-tabs--left[_ngcontent-%COMP%]   .sds-tabs__tab[_ngcontent-%COMP%]:first-child{border-top-width:1px}.sds-tabs--left[_ngcontent-%COMP%]   .sds-tabs__content[_ngcontent-%COMP%]{-webkit-box-flex:1;-ms-flex:1;flex:1;border-width:1px 1px 1px 0}.sds-tabs--hidden[_ngcontent-%COMP%]   .sds-tabs__content[_ngcontent-%COMP%]{display:none}.sds-tabs--hidden[_ngcontent-%COMP%]   .sds-tabs__content--active[_ngcontent-%COMP%]{display:block}"],
+      changeDetection: 0
+    });
+
+    TabsComponent.ctorParameters = function () {
+      return [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectorRef"]
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChildren"])(TabComponent), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["QueryList"])], TabsComponent.prototype, "tabs", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChildren"])('headerTabs'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_2__["QueryList"])], TabsComponent.prototype, "headerTabs", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], TabsComponent.prototype, "size", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], TabsComponent.prototype, "position", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabsComponent.prototype, "borders", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabsComponent.prototype, "contentContainer", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabsComponent.prototype, "renderHiddenTabs", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TabsComponent.prototype, "label", void 0);
+    TabsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectorRef"]])], TabsComponent);
+
+    var TabsModule = function TabsModule() {
+      _classCallCheck(this, TabsModule);
+    };
+
+    TabsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({
+      type: TabsModule
+    });
+    TabsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({
+      factory: function TabsModule_Factory(t) {
+        return new (t || TabsModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TabHeaderComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-tab-header',
+          template: "\n    <ng-template>\n      <div [ngClass]=\"classes\" (click)=\"tabSelected.emit()\">\n        <div class=\"sds-tab-header__content\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n    </ng-template>\n  ",
+          styles: [".sds-tab-header{min-height:2.8571428571em;font-weight:600;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 1.1428571429em;cursor:pointer}.sds-tab-header__content{padding:.2857142857em 0;display:block}.sds-tab-header:hover:not(.sds-tab-header--active){background-color:var(--color-slate-90)}.sds-tab-header--active{background-color:#fff;-webkit-box-shadow:inset 0 -2px 0 0 var(--color-secondary);box-shadow:inset 0 -2px 0 0 var(--color-secondary)}.sds-tab-header--active.sds-tab-header--left:not(.sds-tab-header--error){-webkit-box-shadow:inset -2px 0 0 0 var(--color-secondary);box-shadow:inset -2px 0 0 0 var(--color-secondary)}.sds-tab-header--active.sds-tab-header--large:not(.sds-tab-header--error){-webkit-box-shadow:inset 0 -3px 0 0 var(--color-secondary);box-shadow:inset 0 -3px 0 0 var(--color-secondary)}.sds-tab-header--active.sds-tab-header--left.sds-tab-header--large:not(.sds-tab-header--error){-webkit-box-shadow:inset -3px 0 0 0 var(--color-secondary);box-shadow:inset -3px 0 0 0 var(--color-secondary)}.sds-tab-header--large{font-size:1.1428571429em;min-height:3em;padding:0 1.5em}.sds-tab-header--large.sds-tab-header--left{min-height:4em}.sds-tab-header--error{-webkit-box-shadow:inset 0 0 0 2px var(--color-error);box-shadow:inset 0 0 0 2px var(--color-error)}.sds-tab-header--error.sds-tab-header--large{-webkit-box-shadow:inset 0 0 0 3px var(--color-error);box-shadow:inset 0 0 0 3px var(--color-error)}"]
+        }]
+      }], function () {
+        return [];
+      }, {
+        active: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        error: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        identifier: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        tabSelected: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Output"]
+        }],
+        header: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"],
+          args: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"]]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TabContentComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-tab-content',
+          template: "\n    <ng-template><ng-content></ng-content></ng-template>\n  "
+        }]
+      }], function () {
+        return [];
+      }, {
+        identifier: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        content: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"],
+          args: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["TemplateRef"]]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TabComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-tab',
+          template: "\n    <ng-content></ng-content>\n  "
+        }]
+      }], null, {
+        tabHeader: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChild"],
+          args: [TabHeaderComponent]
+        }],
+        tabContent: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChild"],
+          args: [TabContentComponent]
+        }]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TabsComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"],
+        args: [{
+          selector: 'sds-tabs',
+          template: "\n    <div [ngClass]=\"classes\">\n      <div class=\"sds-tabs__header\" role=\"tablist\" [attr.aria-label]=\"label\">\n        <div\n          #headerTabs\n          *ngFor=\"let tab of tabs; index as i\"\n          id=\"{{ tab.tabHeader.identifier }}\"\n          class=\"sds-tabs__tab\"\n          role=\"tab\"\n          [attr.tabindex]=\"tab.tabHeader.active ? '0' : '-1'\"\n          [attr.aria-selected]=\"tab.tabHeader.active\"\n          [attr.aria-controls]=\"tab.tabContent.identifier\"\n          (click)=\"selectTab(i)\"\n          (keydown.home)=\"switchTab(0)\"\n          (keydown.end)=\"switchTab(tabs.length - 1)\"\n          (keydown.ArrowLeft)=\"switchTab(i - 1)\"\n          (keydown.ArrowUp)=\"switchTab(i - 1)\"\n          (keydown.ArrowRight)=\"switchTab(i + 1)\"\n          (keydown.ArrowDown)=\"switchTab(i + 1)\"\n        >\n          <ng-container *ngIf=\"tab.tabHeader\">\n            <ng-container [ngTemplateOutlet]=\"tab.tabHeader.header\"> </ng-container>\n          </ng-container>\n        </div>\n      </div>\n\n      <ng-container *ngFor=\"let tab of tabs\">\n        <div\n          *ngIf=\"renderHiddenTabs || tab.tabHeader.active\"\n          id=\"{{ tab.tabContent.identifier }}\"\n          class=\"sds-tabs__content\"\n          [class.sds-tabs__content--active]=\"renderHiddenTabs && tab.tabHeader.active\"\n          role=\"tabpanel\"\n          [attr.tabindex]=\"tab.tabHeader.active ? '0' : '-1'\"\n          [attr.aria-labelledby]=\"tab.tabHeader.identifier\"\n        >\n          <ng-container [ngTemplateOutlet]=\"tab.tabContent.content\"> </ng-container>\n        </div>\n      </ng-container>\n    </div>\n  ",
+          changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectionStrategy"].OnPush,
+          styles: [".sds-tabs{font-family:var(--font-default-body)}.sds-tabs__header{min-height:2.8571428571em;-webkit-box-shadow:inset 0 -2px 0 0 var(--color-slate-90);box-shadow:inset 0 -2px 0 0 var(--color-slate-90);display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.sds-tabs__tab{-webkit-box-sizing:border-box;box-sizing:border-box;position:relative}.sds-tabs__tab:focus{z-index:1;outline:3px solid var(--color-focus)}.sds-tabs__content:focus{outline:3px solid var(--color-focus)}.sds-tabs--borders .sds-tabs__tab{border:1px solid var(--color-slate-90);border-width:1px 1px 0 0}.sds-tabs--borders .sds-tabs__tab:first-child{border-left-width:1px}.sds-tabs--large .sds-tabs__header{min-height:3.4285714286em;-webkit-box-shadow:inset 0 -3px 0 0 var(--color-slate-90);box-shadow:inset 0 -3px 0 0 var(--color-slate-90)}.sds-tabs--large.sds-tabs--left .sds-tabs__header{-webkit-box-shadow:inset -3px 0 0 0 var(--color-slate-90);box-shadow:inset -3px 0 0 0 var(--color-slate-90)}.sds-tabs--container .sds-tabs__content{background-color:#fff;border:1px solid var(--color-slate-90);border-top-width:0;padding:2.8571428571em}.sds-tabs--left{display:-webkit-box;display:-ms-flexbox;display:flex}.sds-tabs--left .sds-tabs__header{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-shadow:inset -2px 0 0 0 var(--color-slate-90);box-shadow:inset -2px 0 0 0 var(--color-slate-90)}.sds-tabs--left .sds-tabs__tab{border-width:0 0 1px 1px}.sds-tabs--left .sds-tabs__tab:first-child{border-top-width:1px}.sds-tabs--left .sds-tabs__content{-webkit-box-flex:1;-ms-flex:1;flex:1;border-width:1px 1px 1px 0}.sds-tabs--hidden .sds-tabs__content{display:none}.sds-tabs--hidden .sds-tabs__content--active{display:block}"]
+        }]
+      }], function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ChangeDetectorRef"]
+        }];
+      }, {
+        size: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        position: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        borders: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        contentContainer: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        renderHiddenTabs: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        label: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["Input"]
+        }],
+        tabs: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ContentChildren"],
+          args: [TabComponent]
+        }],
+        headerTabs: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChildren"],
+          args: ['headerTabs']
+        }]
+      });
+    })();
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](TabsModule, {
+        declarations: function declarations() {
+          return [TabsComponent, TabComponent, TabHeaderComponent, TabContentComponent];
+        },
+        imports: function imports() {
+          return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]];
+        },
+        exports: function exports() {
+          return [TabsComponent, TabComponent, TabHeaderComponent, TabContentComponent];
+        }
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵsetClassMetadata"](TabsModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"],
+        args: [{
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+          exports: [TabsComponent, TabComponent, TabHeaderComponent, TabContentComponent],
+          declarations: [TabsComponent, TabComponent, TabHeaderComponent, TabContentComponent]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=sage-ng-carbon-tabs.js.map
+
+    /***/
+
+  },
+
+  /***/
   "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js":
   /*!**************************************************************************************!*\
     !*** ./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tooltip.js ***!
@@ -100661,9 +107100,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "classes",
         get: function get() {
-          var _ref20;
+          var _ref38;
 
-          return _ref20 = {}, _defineProperty(_ref20, "sds-tooltip--".concat(this.position), this.position), _defineProperty(_ref20, "sds-tooltip--error", this.error), _ref20;
+          return _ref38 = {}, _defineProperty(_ref38, "sds-tooltip--".concat(this.position), this.position), _defineProperty(_ref38, "sds-tooltip--error", this.error), _ref38;
         }
       }]);
 
@@ -101508,18 +107947,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP) {
       _inherits(AsyncSubject, _Subject__WEBPACK_IMP);
 
-      var _super66 = _createSuper(AsyncSubject);
+      var _super75 = _createSuper(AsyncSubject);
 
       function AsyncSubject() {
-        var _this149;
+        var _this157;
 
         _classCallCheck(this, AsyncSubject);
 
-        _this149 = _super66.apply(this, arguments);
-        _this149.value = null;
-        _this149.hasNext = false;
-        _this149.hasCompleted = false;
-        return _this149;
+        _this157 = _super75.apply(this, arguments);
+        _this157.value = null;
+        _this157.hasNext = false;
+        _this157.hasCompleted = false;
+        return _this157;
       }
 
       _createClass2(AsyncSubject, [{
@@ -101546,9 +107985,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "error",
-        value: function error(_error) {
+        value: function error(_error2) {
           if (!this.hasCompleted) {
-            _get(_getPrototypeOf(AsyncSubject.prototype), "error", this).call(this, _error);
+            _get(_getPrototypeOf(AsyncSubject.prototype), "error", this).call(this, _error2);
           }
         }
       }, {
@@ -101606,16 +108045,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BehaviorSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP2) {
       _inherits(BehaviorSubject, _Subject__WEBPACK_IMP2);
 
-      var _super67 = _createSuper(BehaviorSubject);
+      var _super76 = _createSuper(BehaviorSubject);
 
       function BehaviorSubject(_value) {
-        var _this150;
+        var _this158;
 
         _classCallCheck(this, BehaviorSubject);
 
-        _this150 = _super67.call(this);
-        _this150._value = _value;
-        return _this150;
+        _this158 = _super76.call(this);
+        _this158._value = _value;
+        return _this158;
       }
 
       _createClass2(BehaviorSubject, [{
@@ -101688,19 +108127,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var InnerSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_) {
       _inherits(InnerSubscriber, _Subscriber__WEBPACK_);
 
-      var _super68 = _createSuper(InnerSubscriber);
+      var _super77 = _createSuper(InnerSubscriber);
 
       function InnerSubscriber(parent, outerValue, outerIndex) {
-        var _this151;
+        var _this159;
 
         _classCallCheck(this, InnerSubscriber);
 
-        _this151 = _super68.call(this);
-        _this151.parent = parent;
-        _this151.outerValue = outerValue;
-        _this151.outerIndex = outerIndex;
-        _this151.index = 0;
-        return _this151;
+        _this159 = _super77.call(this);
+        _this159.parent = parent;
+        _this159.outerValue = outerValue;
+        _this159.outerIndex = outerIndex;
+        _this159.index = 0;
+        return _this159;
       }
 
       _createClass2(InnerSubscriber, [{
@@ -101992,12 +108431,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "forEach",
         value: function forEach(next, promiseCtor) {
-          var _this152 = this;
+          var _this160 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var subscription;
-            subscription = _this152.subscribe(function (value) {
+            subscription = _this160.subscribe(function (value) {
               try {
                 next(value);
               } catch (err) {
@@ -102024,8 +108463,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "pipe",
         value: function pipe() {
-          for (var _len15 = arguments.length, operations = new Array(_len15), _key15 = 0; _key15 < _len15; _key15++) {
-            operations[_key15] = arguments[_key15];
+          for (var _len22 = arguments.length, operations = new Array(_len22), _key23 = 0; _key23 < _len22; _key23++) {
+            operations[_key23] = arguments[_key23];
           }
 
           if (operations.length === 0) {
@@ -102037,13 +108476,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toPromise",
         value: function toPromise(promiseCtor) {
-          var _this153 = this;
+          var _this161 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var value;
 
-            _this153.subscribe(function (x) {
+            _this161.subscribe(function (x) {
               return value = x;
             }, function (err) {
               return reject(err);
@@ -102154,12 +108593,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var OuterSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_2) {
       _inherits(OuterSubscriber, _Subscriber__WEBPACK_2);
 
-      var _super69 = _createSuper(OuterSubscriber);
+      var _super78 = _createSuper(OuterSubscriber);
 
       function OuterSubscriber() {
         _classCallCheck(this, OuterSubscriber);
 
-        return _super69.apply(this, arguments);
+        return _super78.apply(this, arguments);
       }
 
       _createClass2(OuterSubscriber, [{
@@ -102245,10 +108684,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ReplaySubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP3) {
       _inherits(ReplaySubject, _Subject__WEBPACK_IMP3);
 
-      var _super70 = _createSuper(ReplaySubject);
+      var _super79 = _createSuper(ReplaySubject);
 
       function ReplaySubject() {
-        var _this154;
+        var _this162;
 
         var bufferSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Number.POSITIVE_INFINITY;
         var windowTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
@@ -102256,21 +108695,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, ReplaySubject);
 
-        _this154 = _super70.call(this);
-        _this154.scheduler = scheduler;
-        _this154._events = [];
-        _this154._infiniteTimeWindow = false;
-        _this154._bufferSize = bufferSize < 1 ? 1 : bufferSize;
-        _this154._windowTime = windowTime < 1 ? 1 : windowTime;
+        _this162 = _super79.call(this);
+        _this162.scheduler = scheduler;
+        _this162._events = [];
+        _this162._infiniteTimeWindow = false;
+        _this162._bufferSize = bufferSize < 1 ? 1 : bufferSize;
+        _this162._windowTime = windowTime < 1 ? 1 : windowTime;
 
         if (windowTime === Number.POSITIVE_INFINITY) {
-          _this154._infiniteTimeWindow = true;
-          _this154.next = _this154.nextInfiniteTimeWindow;
+          _this162._infiniteTimeWindow = true;
+          _this162.next = _this162.nextInfiniteTimeWindow;
         } else {
-          _this154.next = _this154.nextTimeWindow;
+          _this162.next = _this162.nextTimeWindow;
         }
 
-        return _this154;
+        return _this162;
       }
 
       _createClass2(ReplaySubject, [{
@@ -102324,8 +108763,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subscriber.next(_events[i]);
             }
           } else {
-            for (var _i24 = 0; _i24 < len && !subscriber.closed; _i24++) {
-              subscriber.next(_events[_i24].value);
+            for (var _i27 = 0; _i27 < len && !subscriber.closed; _i27++) {
+              subscriber.next(_events[_i27].value);
             }
           }
 
@@ -102508,16 +108947,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubjectSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_3) {
       _inherits(SubjectSubscriber, _Subscriber__WEBPACK_3);
 
-      var _super71 = _createSuper(SubjectSubscriber);
+      var _super80 = _createSuper(SubjectSubscriber);
 
       function SubjectSubscriber(destination) {
-        var _this155;
+        var _this163;
 
         _classCallCheck(this, SubjectSubscriber);
 
-        _this155 = _super71.call(this, destination);
-        _this155.destination = destination;
-        return _this155;
+        _this163 = _super80.call(this, destination);
+        _this163.destination = destination;
+        return _this163;
       }
 
       return SubjectSubscriber;
@@ -102526,20 +108965,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Subject = /*#__PURE__*/function (_Observable__WEBPACK_) {
       _inherits(Subject, _Observable__WEBPACK_);
 
-      var _super72 = _createSuper(Subject);
+      var _super81 = _createSuper(Subject);
 
       function Subject() {
-        var _this156;
+        var _this164;
 
         _classCallCheck(this, Subject);
 
-        _this156 = _super72.call(this);
-        _this156.observers = [];
-        _this156.closed = false;
-        _this156.isStopped = false;
-        _this156.hasError = false;
-        _this156.thrownError = null;
-        return _this156;
+        _this164 = _super81.call(this);
+        _this164.observers = [];
+        _this164.closed = false;
+        _this164.isStopped = false;
+        _this164.hasError = false;
+        _this164.thrownError = null;
+        return _this164;
       }
 
       _createClass2(Subject, [{
@@ -102563,10 +109002,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (!this.isStopped) {
             var observers = this.observers;
-            var _len16 = observers.length;
+            var _len23 = observers.length;
             var copy = observers.slice();
 
-            for (var i = 0; i < _len16; i++) {
+            for (var i = 0; i < _len23; i++) {
               copy[i].next(value);
             }
           }
@@ -102660,17 +109099,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnonymousSubject = /*#__PURE__*/function (_Subject) {
       _inherits(AnonymousSubject, _Subject);
 
-      var _super73 = _createSuper(AnonymousSubject);
+      var _super82 = _createSuper(AnonymousSubject);
 
       function AnonymousSubject(destination, source) {
-        var _this157;
+        var _this165;
 
         _classCallCheck(this, AnonymousSubject);
 
-        _this157 = _super73.call(this);
-        _this157.destination = destination;
-        _this157.source = source;
-        return _this157;
+        _this165 = _super82.call(this);
+        _this165.destination = destination;
+        _this165.source = source;
+        return _this165;
       }
 
       _createClass2(AnonymousSubject, [{
@@ -102749,18 +109188,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubjectSubscription = /*#__PURE__*/function (_Subscription__WEBPAC) {
       _inherits(SubjectSubscription, _Subscription__WEBPAC);
 
-      var _super74 = _createSuper(SubjectSubscription);
+      var _super83 = _createSuper(SubjectSubscription);
 
       function SubjectSubscription(subject, subscriber) {
-        var _this158;
+        var _this166;
 
         _classCallCheck(this, SubjectSubscription);
 
-        _this158 = _super74.call(this);
-        _this158.subject = subject;
-        _this158.subscriber = subscriber;
-        _this158.closed = false;
-        return _this158;
+        _this166 = _super83.call(this);
+        _this166.subject = subject;
+        _this166.subscriber = subscriber;
+        _this166.closed = false;
+        return _this166;
       }
 
       _createClass2(SubjectSubscription, [{
@@ -102859,50 +109298,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Subscriber = /*#__PURE__*/function (_Subscription__WEBPAC2) {
       _inherits(Subscriber, _Subscription__WEBPAC2);
 
-      var _super75 = _createSuper(Subscriber);
+      var _super84 = _createSuper(Subscriber);
 
       function Subscriber(destinationOrNext, error, complete) {
-        var _this159;
+        var _this167;
 
         _classCallCheck(this, Subscriber);
 
-        _this159 = _super75.call(this);
-        _this159.syncErrorValue = null;
-        _this159.syncErrorThrown = false;
-        _this159.syncErrorThrowable = false;
-        _this159.isStopped = false;
+        _this167 = _super84.call(this);
+        _this167.syncErrorValue = null;
+        _this167.syncErrorThrown = false;
+        _this167.syncErrorThrowable = false;
+        _this167.isStopped = false;
 
         switch (arguments.length) {
           case 0:
-            _this159.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+            _this167.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
             break;
 
           case 1:
             if (!destinationOrNext) {
-              _this159.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+              _this167.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
               break;
             }
 
             if (typeof destinationOrNext === 'object') {
               if (destinationOrNext instanceof Subscriber) {
-                _this159.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
-                _this159.destination = destinationOrNext;
-                destinationOrNext.add(_assertThisInitialized(_this159));
+                _this167.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
+                _this167.destination = destinationOrNext;
+                destinationOrNext.add(_assertThisInitialized(_this167));
               } else {
-                _this159.syncErrorThrowable = true;
-                _this159.destination = new SafeSubscriber(_assertThisInitialized(_this159), destinationOrNext);
+                _this167.syncErrorThrowable = true;
+                _this167.destination = new SafeSubscriber(_assertThisInitialized(_this167), destinationOrNext);
               }
 
               break;
             }
 
           default:
-            _this159.syncErrorThrowable = true;
-            _this159.destination = new SafeSubscriber(_assertThisInitialized(_this159), destinationOrNext, error, complete);
+            _this167.syncErrorThrowable = true;
+            _this167.destination = new SafeSubscriber(_assertThisInitialized(_this167), destinationOrNext, error, complete);
             break;
         }
 
-        return _this159;
+        return _this167;
       }
 
       _createClass2(Subscriber, [{
@@ -102989,18 +109428,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeSubscriber = /*#__PURE__*/function (_Subscriber) {
       _inherits(SafeSubscriber, _Subscriber);
 
-      var _super76 = _createSuper(SafeSubscriber);
+      var _super85 = _createSuper(SafeSubscriber);
 
       function SafeSubscriber(_parentSubscriber, observerOrNext, error, complete) {
-        var _this160;
+        var _this168;
 
         _classCallCheck(this, SafeSubscriber);
 
-        _this160 = _super76.call(this);
-        _this160._parentSubscriber = _parentSubscriber;
+        _this168 = _super85.call(this);
+        _this168._parentSubscriber = _parentSubscriber;
         var next;
 
-        var context = _assertThisInitialized(_this160);
+        var context = _assertThisInitialized(_this168);
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(observerOrNext)) {
           next = observerOrNext;
@@ -103013,18 +109452,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             context = Object.create(observerOrNext);
 
             if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(context.unsubscribe)) {
-              _this160.add(context.unsubscribe.bind(context));
+              _this168.add(context.unsubscribe.bind(context));
             }
 
-            context.unsubscribe = _this160.unsubscribe.bind(_assertThisInitialized(_this160));
+            context.unsubscribe = _this168.unsubscribe.bind(_assertThisInitialized(_this168));
           }
         }
 
-        _this160._context = context;
-        _this160._next = next;
-        _this160._error = error;
-        _this160._complete = complete;
-        return _this160;
+        _this168._context = context;
+        _this168._next = next;
+        _this168._error = error;
+        _this168._complete = complete;
+        return _this168;
       }
 
       _createClass2(SafeSubscriber, [{
@@ -103080,14 +109519,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "complete",
         value: function complete() {
-          var _this161 = this;
+          var _this169 = this;
 
           if (!this.isStopped) {
             var _parentSubscriber = this._parentSubscriber;
 
             if (this._complete) {
               var wrappedComplete = function wrappedComplete() {
-                return _this161._complete.call(_this161._context);
+                return _this169._complete.call(_this169._context);
               };
 
               if (!_config__WEBPACK_IMPORTED_MODULE_4__["config"].useDeprecatedSynchronousErrorHandling || !_parentSubscriber.syncErrorThrowable) {
@@ -103250,12 +109689,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           if (Object(_util_isArray__WEBPACK_IMPORTED_MODULE_0__["isArray"])(_subscriptions)) {
-            var _index2 = -1;
+            var _index3 = -1;
 
-            var _len17 = _subscriptions.length;
+            var _len24 = _subscriptions.length;
 
-            while (++_index2 < _len17) {
-              var sub = _subscriptions[_index2];
+            while (++_index3 < _len24) {
+              var sub = _subscriptions[_index3];
 
               if (Object(_util_isObject__WEBPACK_IMPORTED_MODULE_1__["isObject"])(sub)) {
                 try {
@@ -103473,19 +109912,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ConnectableObservable = /*#__PURE__*/function (_Observable__WEBPACK_2) {
       _inherits(ConnectableObservable, _Observable__WEBPACK_2);
 
-      var _super77 = _createSuper(ConnectableObservable);
+      var _super86 = _createSuper(ConnectableObservable);
 
       function ConnectableObservable(source, subjectFactory) {
-        var _this162;
+        var _this170;
 
         _classCallCheck(this, ConnectableObservable);
 
-        _this162 = _super77.call(this);
-        _this162.source = source;
-        _this162.subjectFactory = subjectFactory;
-        _this162._refCount = 0;
-        _this162._isComplete = false;
-        return _this162;
+        _this170 = _super86.call(this);
+        _this170.source = source;
+        _this170.subjectFactory = subjectFactory;
+        _this170._refCount = 0;
+        _this170._isComplete = false;
+        return _this170;
       }
 
       _createClass2(ConnectableObservable, [{
@@ -103572,16 +110011,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ConnectableSubscriber = /*#__PURE__*/function (_Subject__WEBPACK_IMP4) {
       _inherits(ConnectableSubscriber, _Subject__WEBPACK_IMP4);
 
-      var _super78 = _createSuper(ConnectableSubscriber);
+      var _super87 = _createSuper(ConnectableSubscriber);
 
       function ConnectableSubscriber(destination, connectable) {
-        var _this163;
+        var _this171;
 
         _classCallCheck(this, ConnectableSubscriber);
 
-        _this163 = _super78.call(this, destination);
-        _this163.connectable = connectable;
-        return _this163;
+        _this171 = _super87.call(this, destination);
+        _this171.connectable = connectable;
+        return _this171;
       }
 
       _createClass2(ConnectableSubscriber, [{
@@ -103651,16 +110090,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RefCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_4) {
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_4);
 
-      var _super79 = _createSuper(RefCountSubscriber);
+      var _super88 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this164;
+        var _this172;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this164 = _super79.call(this, destination);
-        _this164.connectable = connectable;
-        return _this164;
+        _this172 = _super88.call(this, destination);
+        _this172.connectable = connectable;
+        return _this172;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -103746,30 +110185,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscribeOnObservable = /*#__PURE__*/function (_Observable__WEBPACK_3) {
       _inherits(SubscribeOnObservable, _Observable__WEBPACK_3);
 
-      var _super80 = _createSuper(SubscribeOnObservable);
+      var _super89 = _createSuper(SubscribeOnObservable);
 
       function SubscribeOnObservable(source) {
-        var _this165;
+        var _this173;
 
         var delayTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         var scheduler = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
 
         _classCallCheck(this, SubscribeOnObservable);
 
-        _this165 = _super80.call(this);
-        _this165.source = source;
-        _this165.delayTime = delayTime;
-        _this165.scheduler = scheduler;
+        _this173 = _super89.call(this);
+        _this173.source = source;
+        _this173.delayTime = delayTime;
+        _this173.scheduler = scheduler;
 
         if (!Object(_util_isNumeric__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(delayTime) || delayTime < 0) {
-          _this165.delayTime = 0;
+          _this173.delayTime = 0;
         }
 
         if (!scheduler || typeof scheduler.schedule !== 'function') {
-          _this165.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
+          _this173.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
         }
 
-        return _this165;
+        return _this173;
       }
 
       _createClass2(SubscribeOnObservable, [{
@@ -103876,8 +110315,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       return function () {
-        for (var _len18 = arguments.length, args = new Array(_len18), _key16 = 0; _key16 < _len18; _key16++) {
-          args[_key16] = arguments[_key16];
+        for (var _len25 = arguments.length, args = new Array(_len25), _key24 = 0; _key24 < _len25; _key24++) {
+          args[_key24] = arguments[_key24];
         }
 
         var context = this;
@@ -103894,8 +110333,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
               var handler = function handler() {
-                for (var _len19 = arguments.length, innerArgs = new Array(_len19), _key17 = 0; _key17 < _len19; _key17++) {
-                  innerArgs[_key17] = arguments[_key17];
+                for (var _len26 = arguments.length, innerArgs = new Array(_len26), _key25 = 0; _key25 < _len26; _key25++) {
+                  innerArgs[_key25] = arguments[_key25];
                 }
 
                 subject.next(innerArgs.length <= 1 ? innerArgs[0] : innerArgs);
@@ -103927,7 +110366,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this166 = this;
+      var _this174 = this;
 
       var self = this;
       var args = state.args,
@@ -103942,13 +110381,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
         var handler = function handler() {
-          for (var _len20 = arguments.length, innerArgs = new Array(_len20), _key18 = 0; _key18 < _len20; _key18++) {
-            innerArgs[_key18] = arguments[_key18];
+          for (var _len27 = arguments.length, innerArgs = new Array(_len27), _key26 = 0; _key26 < _len27; _key26++) {
+            innerArgs[_key26] = arguments[_key26];
           }
 
           var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-          _this166.add(scheduler.schedule(dispatchNext, 0, {
+          _this174.add(scheduler.schedule(dispatchNext, 0, {
             value: value,
             subject: subject
           }));
@@ -104051,8 +110490,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       return function () {
-        for (var _len21 = arguments.length, args = new Array(_len21), _key19 = 0; _key19 < _len21; _key19++) {
-          args[_key19] = arguments[_key19];
+        for (var _len28 = arguments.length, args = new Array(_len28), _key27 = 0; _key27 < _len28; _key27++) {
+          args[_key27] = arguments[_key27];
         }
 
         var params = {
@@ -104071,8 +110510,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
               var handler = function handler() {
-                for (var _len22 = arguments.length, innerArgs = new Array(_len22), _key20 = 0; _key20 < _len22; _key20++) {
-                  innerArgs[_key20] = arguments[_key20];
+                for (var _len29 = arguments.length, innerArgs = new Array(_len29), _key28 = 0; _key28 < _len29; _key28++) {
+                  innerArgs[_key28] = arguments[_key28];
                 }
 
                 var err = innerArgs.shift();
@@ -104110,7 +110549,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this167 = this;
+      var _this175 = this;
 
       var params = state.params,
           subscriber = state.subscriber,
@@ -104124,21 +110563,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
         var handler = function handler() {
-          for (var _len23 = arguments.length, innerArgs = new Array(_len23), _key21 = 0; _key21 < _len23; _key21++) {
-            innerArgs[_key21] = arguments[_key21];
+          for (var _len30 = arguments.length, innerArgs = new Array(_len30), _key29 = 0; _key29 < _len30; _key29++) {
+            innerArgs[_key29] = arguments[_key29];
           }
 
           var err = innerArgs.shift();
 
           if (err) {
-            _this167.add(scheduler.schedule(dispatchError, 0, {
+            _this175.add(scheduler.schedule(dispatchError, 0, {
               err: err,
               subject: subject
             }));
           } else {
             var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-            _this167.add(scheduler.schedule(dispatchNext, 0, {
+            _this175.add(scheduler.schedule(dispatchNext, 0, {
               value: value,
               subject: subject
             }));
@@ -104240,8 +110679,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NONE = {};
 
     function combineLatest() {
-      for (var _len24 = arguments.length, observables = new Array(_len24), _key22 = 0; _key22 < _len24; _key22++) {
-        observables[_key22] = arguments[_key22];
+      for (var _len31 = arguments.length, observables = new Array(_len31), _key30 = 0; _key30 < _len31; _key30++) {
+        observables[_key30] = arguments[_key30];
       }
 
       var resultSelector = null;
@@ -104282,19 +110721,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CombineLatestSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB) {
       _inherits(CombineLatestSubscriber, _OuterSubscriber__WEB);
 
-      var _super81 = _createSuper(CombineLatestSubscriber);
+      var _super90 = _createSuper(CombineLatestSubscriber);
 
       function CombineLatestSubscriber(destination, resultSelector) {
-        var _this168;
+        var _this176;
 
         _classCallCheck(this, CombineLatestSubscriber);
 
-        _this168 = _super81.call(this, destination);
-        _this168.resultSelector = resultSelector;
-        _this168.active = 0;
-        _this168.values = [];
-        _this168.observables = [];
-        return _this168;
+        _this176 = _super90.call(this, destination);
+        _this176.resultSelector = resultSelector;
+        _this176.active = 0;
+        _this176.values = [];
+        _this176.observables = [];
+        return _this176;
       }
 
       _createClass2(CombineLatestSubscriber, [{
@@ -104568,8 +111007,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/from.js");
 
     function forkJoin() {
-      for (var _len25 = arguments.length, sources = new Array(_len25), _key23 = 0; _key23 < _len25; _key23++) {
-        sources[_key23] = arguments[_key23];
+      for (var _len32 = arguments.length, sources = new Array(_len32), _key31 = 0; _key31 < _len32; _key31++) {
+        sources[_key31] = arguments[_key31];
       }
 
       if (sources.length === 1) {
@@ -104611,7 +111050,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var completed = 0;
         var emitted = 0;
 
-        var _loop3 = function _loop3(i) {
+        var _loop4 = function _loop4(i) {
           var source = Object(_from__WEBPACK_IMPORTED_MODULE_4__["from"])(sources[i]);
           var hasValue = false;
           subscriber.add(source.subscribe({
@@ -104643,7 +111082,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
 
         for (var i = 0; i < len; i++) {
-          _loop3(i);
+          _loop4(i);
         }
       });
     } //# sourceMappingURL=forkJoin.js.map
@@ -104854,7 +111293,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return _source2.removeListener(eventName, handler);
         };
       } else if (sourceObj && sourceObj.length) {
-        for (var i = 0, _len26 = sourceObj.length; i < _len26; i++) {
+        for (var i = 0, _len33 = sourceObj.length; i < _len33; i++) {
           setupSubscription(sourceObj[i], eventName, handler, subscriber, options);
         }
       } else {
@@ -104933,8 +111372,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       return new _Observable__WEBPACK_IMPORTED_MODULE_0__["Observable"](function (subscriber) {
         var handler = function handler() {
-          for (var _len27 = arguments.length, e = new Array(_len27), _key24 = 0; _key24 < _len27; _key24++) {
-            e[_key24] = arguments[_key24];
+          for (var _len34 = arguments.length, e = new Array(_len34), _key32 = 0; _key32 < _len34; _key32++) {
+            e[_key32] = arguments[_key32];
           }
 
           return subscriber.next(e.length === 1 ? e[0] : e);
@@ -105311,8 +111750,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var concurrent = Number.POSITIVE_INFINITY;
       var scheduler = null;
 
-      for (var _len28 = arguments.length, observables = new Array(_len28), _key25 = 0; _key25 < _len28; _key25++) {
-        observables[_key25] = arguments[_key25];
+      for (var _len35 = arguments.length, observables = new Array(_len35), _key33 = 0; _key33 < _len35; _key33++) {
+        observables[_key33] = arguments[_key33];
       }
 
       var last = observables[observables.length - 1];
@@ -105425,8 +111864,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/scheduled/scheduleArray.js");
 
     function of() {
-      for (var _len29 = arguments.length, args = new Array(_len29), _key26 = 0; _key26 < _len29; _key26++) {
-        args[_key26] = arguments[_key26];
+      for (var _len36 = arguments.length, args = new Array(_len36), _key34 = 0; _key34 < _len36; _key34++) {
+        args[_key34] = arguments[_key34];
       }
 
       var scheduler = args[args.length - 1];
@@ -105488,8 +111927,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/empty.js");
 
     function onErrorResumeNext() {
-      for (var _len30 = arguments.length, sources = new Array(_len30), _key27 = 0; _key27 < _len30; _key27++) {
-        sources[_key27] = arguments[_key27];
+      for (var _len37 = arguments.length, sources = new Array(_len37), _key35 = 0; _key35 < _len37; _key35++) {
+        sources[_key35] = arguments[_key35];
       }
 
       if (sources.length === 0) {
@@ -105728,8 +112167,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function race() {
-      for (var _len31 = arguments.length, observables = new Array(_len31), _key28 = 0; _key28 < _len31; _key28++) {
-        observables[_key28] = arguments[_key28];
+      for (var _len38 = arguments.length, observables = new Array(_len38), _key36 = 0; _key36 < _len38; _key36++) {
+        observables[_key36] = arguments[_key36];
       }
 
       if (observables.length === 1) {
@@ -105761,18 +112200,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RaceSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB2) {
       _inherits(RaceSubscriber, _OuterSubscriber__WEB2);
 
-      var _super82 = _createSuper(RaceSubscriber);
+      var _super91 = _createSuper(RaceSubscriber);
 
       function RaceSubscriber(destination) {
-        var _this169;
+        var _this177;
 
         _classCallCheck(this, RaceSubscriber);
 
-        _this169 = _super82.call(this, destination);
-        _this169.hasFirst = false;
-        _this169.observables = [];
-        _this169.subscriptions = [];
-        return _this169;
+        _this177 = _super91.call(this, destination);
+        _this177.hasFirst = false;
+        _this177.observables = [];
+        _this177.subscriptions = [];
+        return _this177;
       }
 
       _createClass2(RaceSubscriber, [{
@@ -105969,9 +112408,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function dispatch(_ref21) {
-      var error = _ref21.error,
-          subscriber = _ref21.subscriber;
+    function dispatch(_ref39) {
+      var error = _ref39.error,
+          subscriber = _ref39.subscriber;
       subscriber.error(error);
     } //# sourceMappingURL=throwError.js.map
 
@@ -106212,8 +112651,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/symbol/iterator.js");
 
     function zip() {
-      for (var _len32 = arguments.length, observables = new Array(_len32), _key29 = 0; _key29 < _len32; _key29++) {
-        observables[_key29] = arguments[_key29];
+      for (var _len39 = arguments.length, observables = new Array(_len39), _key37 = 0; _key37 < _len39; _key37++) {
+        observables[_key37] = arguments[_key37];
       }
 
       var resultSelector = observables[observables.length - 1];
@@ -106245,21 +112684,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ZipSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_5) {
       _inherits(ZipSubscriber, _Subscriber__WEBPACK_5);
 
-      var _super83 = _createSuper(ZipSubscriber);
+      var _super92 = _createSuper(ZipSubscriber);
 
       function ZipSubscriber(destination, resultSelector) {
-        var _this170;
+        var _this178;
 
         var values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.create(null);
 
         _classCallCheck(this, ZipSubscriber);
 
-        _this170 = _super83.call(this, destination);
-        _this170.iterators = [];
-        _this170.active = 0;
-        _this170.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
-        _this170.values = values;
-        return _this170;
+        _this178 = _super92.call(this, destination);
+        _this178.iterators = [];
+        _this178.active = 0;
+        _this178.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
+        _this178.values = values;
+        return _this178;
       }
 
       _createClass2(ZipSubscriber, [{
@@ -106327,12 +112766,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var shouldComplete = false;
           var args = [];
 
-          for (var _i25 = 0; _i25 < len; _i25++) {
-            var _iterator20 = iterators[_i25];
+          for (var _i28 = 0; _i28 < len; _i28++) {
+            var _iterator21 = iterators[_i28];
 
-            var result = _iterator20.next();
+            var result = _iterator21.next();
 
-            if (_iterator20.hasCompleted()) {
+            if (_iterator21.hasCompleted()) {
               shouldComplete = true;
             }
 
@@ -106450,20 +112889,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ZipBufferIterator = /*#__PURE__*/function (_OuterSubscriber__WEB3) {
       _inherits(ZipBufferIterator, _OuterSubscriber__WEB3);
 
-      var _super84 = _createSuper(ZipBufferIterator);
+      var _super93 = _createSuper(ZipBufferIterator);
 
       function ZipBufferIterator(destination, parent, observable) {
-        var _this171;
+        var _this179;
 
         _classCallCheck(this, ZipBufferIterator);
 
-        _this171 = _super84.call(this, destination);
-        _this171.parent = parent;
-        _this171.observable = observable;
-        _this171.stillUnsubscribed = true;
-        _this171.buffer = [];
-        _this171.isComplete = false;
-        return _this171;
+        _this179 = _super93.call(this, destination);
+        _this179.parent = parent;
+        _this179.observable = observable;
+        _this179.stillUnsubscribed = true;
+        _this179.buffer = [];
+        _this179.isComplete = false;
+        return _this179;
       }
 
       _createClass2(ZipBufferIterator, [{
@@ -106586,17 +113025,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AuditSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB4) {
       _inherits(AuditSubscriber, _OuterSubscriber__WEB4);
 
-      var _super85 = _createSuper(AuditSubscriber);
+      var _super94 = _createSuper(AuditSubscriber);
 
       function AuditSubscriber(destination, durationSelector) {
-        var _this172;
+        var _this180;
 
         _classCallCheck(this, AuditSubscriber);
 
-        _this172 = _super85.call(this, destination);
-        _this172.durationSelector = durationSelector;
-        _this172.hasValue = false;
-        return _this172;
+        _this180 = _super94.call(this, destination);
+        _this180.durationSelector = durationSelector;
+        _this180.hasValue = false;
+        return _this180;
       }
 
       _createClass2(AuditSubscriber, [{
@@ -106769,19 +113208,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB5) {
       _inherits(BufferSubscriber, _OuterSubscriber__WEB5);
 
-      var _super86 = _createSuper(BufferSubscriber);
+      var _super95 = _createSuper(BufferSubscriber);
 
       function BufferSubscriber(destination, closingNotifier) {
-        var _this173;
+        var _this181;
 
         _classCallCheck(this, BufferSubscriber);
 
-        _this173 = _super86.call(this, destination);
-        _this173.buffer = [];
+        _this181 = _super95.call(this, destination);
+        _this181.buffer = [];
 
-        _this173.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this173), closingNotifier));
+        _this181.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this181), closingNotifier));
 
-        return _this173;
+        return _this181;
       }
 
       _createClass2(BufferSubscriber, [{
@@ -106865,17 +113304,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_6) {
       _inherits(BufferCountSubscriber, _Subscriber__WEBPACK_6);
 
-      var _super87 = _createSuper(BufferCountSubscriber);
+      var _super96 = _createSuper(BufferCountSubscriber);
 
       function BufferCountSubscriber(destination, bufferSize) {
-        var _this174;
+        var _this182;
 
         _classCallCheck(this, BufferCountSubscriber);
 
-        _this174 = _super87.call(this, destination);
-        _this174.bufferSize = bufferSize;
-        _this174.buffer = [];
-        return _this174;
+        _this182 = _super96.call(this, destination);
+        _this182.bufferSize = bufferSize;
+        _this182.buffer = [];
+        return _this182;
       }
 
       _createClass2(BufferCountSubscriber, [{
@@ -106908,19 +113347,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferSkipCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_7) {
       _inherits(BufferSkipCountSubscriber, _Subscriber__WEBPACK_7);
 
-      var _super88 = _createSuper(BufferSkipCountSubscriber);
+      var _super97 = _createSuper(BufferSkipCountSubscriber);
 
       function BufferSkipCountSubscriber(destination, bufferSize, startBufferEvery) {
-        var _this175;
+        var _this183;
 
         _classCallCheck(this, BufferSkipCountSubscriber);
 
-        _this175 = _super88.call(this, destination);
-        _this175.bufferSize = bufferSize;
-        _this175.startBufferEvery = startBufferEvery;
-        _this175.buffers = [];
-        _this175.count = 0;
-        return _this175;
+        _this183 = _super97.call(this, destination);
+        _this183.bufferSize = bufferSize;
+        _this183.startBufferEvery = startBufferEvery;
+        _this183.buffers = [];
+        _this183.count = 0;
+        return _this183;
       }
 
       _createClass2(BufferSkipCountSubscriber, [{
@@ -107064,50 +113503,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_8) {
       _inherits(BufferTimeSubscriber, _Subscriber__WEBPACK_8);
 
-      var _super89 = _createSuper(BufferTimeSubscriber);
+      var _super98 = _createSuper(BufferTimeSubscriber);
 
       function BufferTimeSubscriber(destination, bufferTimeSpan, bufferCreationInterval, maxBufferSize, scheduler) {
-        var _this176;
+        var _this184;
 
         _classCallCheck(this, BufferTimeSubscriber);
 
-        _this176 = _super89.call(this, destination);
-        _this176.bufferTimeSpan = bufferTimeSpan;
-        _this176.bufferCreationInterval = bufferCreationInterval;
-        _this176.maxBufferSize = maxBufferSize;
-        _this176.scheduler = scheduler;
-        _this176.contexts = [];
+        _this184 = _super98.call(this, destination);
+        _this184.bufferTimeSpan = bufferTimeSpan;
+        _this184.bufferCreationInterval = bufferCreationInterval;
+        _this184.maxBufferSize = maxBufferSize;
+        _this184.scheduler = scheduler;
+        _this184.contexts = [];
 
-        var context = _this176.openContext();
+        var context = _this184.openContext();
 
-        _this176.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
+        _this184.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
 
-        if (_this176.timespanOnly) {
+        if (_this184.timespanOnly) {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this176),
+            subscriber: _assertThisInitialized(_this184),
             context: context,
             bufferTimeSpan: bufferTimeSpan
           };
 
-          _this176.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
+          _this184.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
         } else {
           var closeState = {
-            subscriber: _assertThisInitialized(_this176),
+            subscriber: _assertThisInitialized(_this184),
             context: context
           };
           var creationState = {
             bufferTimeSpan: bufferTimeSpan,
             bufferCreationInterval: bufferCreationInterval,
-            subscriber: _assertThisInitialized(_this176),
+            subscriber: _assertThisInitialized(_this184),
             scheduler: scheduler
           };
 
-          _this176.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
+          _this184.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
 
-          _this176.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
+          _this184.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
         }
 
-        return _this176;
+        return _this184;
       }
 
       _createClass2(BufferTimeSubscriber, [{
@@ -107304,21 +113743,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferToggleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB6) {
       _inherits(BufferToggleSubscriber, _OuterSubscriber__WEB6);
 
-      var _super90 = _createSuper(BufferToggleSubscriber);
+      var _super99 = _createSuper(BufferToggleSubscriber);
 
       function BufferToggleSubscriber(destination, openings, closingSelector) {
-        var _this177;
+        var _this185;
 
         _classCallCheck(this, BufferToggleSubscriber);
 
-        _this177 = _super90.call(this, destination);
-        _this177.openings = openings;
-        _this177.closingSelector = closingSelector;
-        _this177.contexts = [];
+        _this185 = _super99.call(this, destination);
+        _this185.openings = openings;
+        _this185.closingSelector = closingSelector;
+        _this185.contexts = [];
 
-        _this177.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this177), openings));
+        _this185.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this185), openings));
 
-        return _this177;
+        return _this185;
       }
 
       _createClass2(BufferToggleSubscriber, [{
@@ -107496,20 +113935,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB7) {
       _inherits(BufferWhenSubscriber, _OuterSubscriber__WEB7);
 
-      var _super91 = _createSuper(BufferWhenSubscriber);
+      var _super100 = _createSuper(BufferWhenSubscriber);
 
       function BufferWhenSubscriber(destination, closingSelector) {
-        var _this178;
+        var _this186;
 
         _classCallCheck(this, BufferWhenSubscriber);
 
-        _this178 = _super91.call(this, destination);
-        _this178.closingSelector = closingSelector;
-        _this178.subscribing = false;
+        _this186 = _super100.call(this, destination);
+        _this186.closingSelector = closingSelector;
+        _this186.subscribing = false;
 
-        _this178.openBuffer();
+        _this186.openBuffer();
 
-        return _this178;
+        return _this186;
       }
 
       _createClass2(BufferWhenSubscriber, [{
@@ -107656,17 +114095,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CatchSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB8) {
       _inherits(CatchSubscriber, _OuterSubscriber__WEB8);
 
-      var _super92 = _createSuper(CatchSubscriber);
+      var _super101 = _createSuper(CatchSubscriber);
 
       function CatchSubscriber(destination, selector, caught) {
-        var _this179;
+        var _this187;
 
         _classCallCheck(this, CatchSubscriber);
 
-        _this179 = _super92.call(this, destination);
-        _this179.selector = selector;
-        _this179.caught = caught;
-        return _this179;
+        _this187 = _super101.call(this, destination);
+        _this187.selector = selector;
+        _this187.caught = caught;
+        return _this187;
       }
 
       _createClass2(CatchSubscriber, [{
@@ -107780,8 +114219,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var none = {};
 
     function combineLatest() {
-      for (var _len33 = arguments.length, observables = new Array(_len33), _key30 = 0; _key30 < _len33; _key30++) {
-        observables[_key30] = arguments[_key30];
+      for (var _len40 = arguments.length, observables = new Array(_len40), _key38 = 0; _key38 < _len40; _key38++) {
+        observables[_key38] = arguments[_key38];
       }
 
       var project = null;
@@ -107830,8 +114269,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/concat.js");
 
     function concat() {
-      for (var _len34 = arguments.length, observables = new Array(_len34), _key31 = 0; _key31 < _len34; _key31++) {
-        observables[_key31] = arguments[_key31];
+      for (var _len41 = arguments.length, observables = new Array(_len41), _key39 = 0; _key39 < _len41; _key39++) {
+        observables[_key39] = arguments[_key39];
       }
 
       return function (source) {
@@ -108000,19 +114439,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_9) {
       _inherits(CountSubscriber, _Subscriber__WEBPACK_9);
 
-      var _super93 = _createSuper(CountSubscriber);
+      var _super102 = _createSuper(CountSubscriber);
 
       function CountSubscriber(destination, predicate, source) {
-        var _this180;
+        var _this188;
 
         _classCallCheck(this, CountSubscriber);
 
-        _this180 = _super93.call(this, destination);
-        _this180.predicate = predicate;
-        _this180.source = source;
-        _this180.count = 0;
-        _this180.index = 0;
-        return _this180;
+        _this188 = _super102.call(this, destination);
+        _this188.predicate = predicate;
+        _this188.source = source;
+        _this188.count = 0;
+        _this188.index = 0;
+        return _this188;
       }
 
       _createClass2(CountSubscriber, [{
@@ -108113,18 +114552,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebounceSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB9) {
       _inherits(DebounceSubscriber, _OuterSubscriber__WEB9);
 
-      var _super94 = _createSuper(DebounceSubscriber);
+      var _super103 = _createSuper(DebounceSubscriber);
 
       function DebounceSubscriber(destination, durationSelector) {
-        var _this181;
+        var _this189;
 
         _classCallCheck(this, DebounceSubscriber);
 
-        _this181 = _super94.call(this, destination);
-        _this181.durationSelector = durationSelector;
-        _this181.hasValue = false;
-        _this181.durationSubscription = null;
-        return _this181;
+        _this189 = _super103.call(this, destination);
+        _this189.durationSelector = durationSelector;
+        _this189.hasValue = false;
+        _this189.durationSubscription = null;
+        return _this189;
       }
 
       _createClass2(DebounceSubscriber, [{
@@ -108262,20 +114701,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebounceTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_10) {
       _inherits(DebounceTimeSubscriber, _Subscriber__WEBPACK_10);
 
-      var _super95 = _createSuper(DebounceTimeSubscriber);
+      var _super104 = _createSuper(DebounceTimeSubscriber);
 
       function DebounceTimeSubscriber(destination, dueTime, scheduler) {
-        var _this182;
+        var _this190;
 
         _classCallCheck(this, DebounceTimeSubscriber);
 
-        _this182 = _super95.call(this, destination);
-        _this182.dueTime = dueTime;
-        _this182.scheduler = scheduler;
-        _this182.debouncedSubscription = null;
-        _this182.lastValue = null;
-        _this182.hasValue = false;
-        return _this182;
+        _this190 = _super104.call(this, destination);
+        _this190.dueTime = dueTime;
+        _this190.scheduler = scheduler;
+        _this190.debouncedSubscription = null;
+        _this190.lastValue = null;
+        _this190.hasValue = false;
+        return _this190;
       }
 
       _createClass2(DebounceTimeSubscriber, [{
@@ -108381,17 +114820,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DefaultIfEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_11) {
       _inherits(DefaultIfEmptySubscriber, _Subscriber__WEBPACK_11);
 
-      var _super96 = _createSuper(DefaultIfEmptySubscriber);
+      var _super105 = _createSuper(DefaultIfEmptySubscriber);
 
       function DefaultIfEmptySubscriber(destination, defaultValue) {
-        var _this183;
+        var _this191;
 
         _classCallCheck(this, DefaultIfEmptySubscriber);
 
-        _this183 = _super96.call(this, destination);
-        _this183.defaultValue = defaultValue;
-        _this183.isEmpty = true;
-        return _this183;
+        _this191 = _super105.call(this, destination);
+        _this191.defaultValue = defaultValue;
+        _this191.isEmpty = true;
+        return _this191;
       }
 
       _createClass2(DefaultIfEmptySubscriber, [{
@@ -108492,20 +114931,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DelaySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_12) {
       _inherits(DelaySubscriber, _Subscriber__WEBPACK_12);
 
-      var _super97 = _createSuper(DelaySubscriber);
+      var _super106 = _createSuper(DelaySubscriber);
 
       function DelaySubscriber(destination, delay, scheduler) {
-        var _this184;
+        var _this192;
 
         _classCallCheck(this, DelaySubscriber);
 
-        _this184 = _super97.call(this, destination);
-        _this184.delay = delay;
-        _this184.scheduler = scheduler;
-        _this184.queue = [];
-        _this184.active = false;
-        _this184.errored = false;
-        return _this184;
+        _this192 = _super106.call(this, destination);
+        _this192.delay = delay;
+        _this192.scheduler = scheduler;
+        _this192.queue = [];
+        _this192.active = false;
+        _this192.errored = false;
+        return _this192;
       }
 
       _createClass2(DelaySubscriber, [{
@@ -108666,19 +115105,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DelayWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB10) {
       _inherits(DelayWhenSubscriber, _OuterSubscriber__WEB10);
 
-      var _super98 = _createSuper(DelayWhenSubscriber);
+      var _super107 = _createSuper(DelayWhenSubscriber);
 
       function DelayWhenSubscriber(destination, delayDurationSelector) {
-        var _this185;
+        var _this193;
 
         _classCallCheck(this, DelayWhenSubscriber);
 
-        _this185 = _super98.call(this, destination);
-        _this185.delayDurationSelector = delayDurationSelector;
-        _this185.completed = false;
-        _this185.delayNotifierSubscriptions = [];
-        _this185.index = 0;
-        return _this185;
+        _this193 = _super107.call(this, destination);
+        _this193.delayDurationSelector = delayDurationSelector;
+        _this193.completed = false;
+        _this193.delayNotifierSubscriptions = [];
+        _this193.index = 0;
+        return _this193;
       }
 
       _createClass2(DelayWhenSubscriber, [{
@@ -108764,17 +115203,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscriptionDelayObservable = /*#__PURE__*/function (_Observable__WEBPACK_4) {
       _inherits(SubscriptionDelayObservable, _Observable__WEBPACK_4);
 
-      var _super99 = _createSuper(SubscriptionDelayObservable);
+      var _super108 = _createSuper(SubscriptionDelayObservable);
 
       function SubscriptionDelayObservable(source, subscriptionDelay) {
-        var _this186;
+        var _this194;
 
         _classCallCheck(this, SubscriptionDelayObservable);
 
-        _this186 = _super99.call(this);
-        _this186.source = source;
-        _this186.subscriptionDelay = subscriptionDelay;
-        return _this186;
+        _this194 = _super108.call(this);
+        _this194.source = source;
+        _this194.subscriptionDelay = subscriptionDelay;
+        return _this194;
       }
 
       _createClass2(SubscriptionDelayObservable, [{
@@ -108790,18 +115229,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscriptionDelaySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_13) {
       _inherits(SubscriptionDelaySubscriber, _Subscriber__WEBPACK_13);
 
-      var _super100 = _createSuper(SubscriptionDelaySubscriber);
+      var _super109 = _createSuper(SubscriptionDelaySubscriber);
 
       function SubscriptionDelaySubscriber(parent, source) {
-        var _this187;
+        var _this195;
 
         _classCallCheck(this, SubscriptionDelaySubscriber);
 
-        _this187 = _super100.call(this);
-        _this187.parent = parent;
-        _this187.source = source;
-        _this187.sourceSubscribed = false;
-        return _this187;
+        _this195 = _super109.call(this);
+        _this195.parent = parent;
+        _this195.source = source;
+        _this195.sourceSubscribed = false;
+        return _this195;
       }
 
       _createClass2(SubscriptionDelaySubscriber, [{
@@ -108889,12 +115328,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DeMaterializeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_14) {
       _inherits(DeMaterializeSubscriber, _Subscriber__WEBPACK_14);
 
-      var _super101 = _createSuper(DeMaterializeSubscriber);
+      var _super110 = _createSuper(DeMaterializeSubscriber);
 
       function DeMaterializeSubscriber(destination) {
         _classCallCheck(this, DeMaterializeSubscriber);
 
-        return _super101.call(this, destination);
+        return _super110.call(this, destination);
       }
 
       _createClass2(DeMaterializeSubscriber, [{
@@ -108976,22 +115415,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DistinctSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB11) {
       _inherits(DistinctSubscriber, _OuterSubscriber__WEB11);
 
-      var _super102 = _createSuper(DistinctSubscriber);
+      var _super111 = _createSuper(DistinctSubscriber);
 
       function DistinctSubscriber(destination, keySelector, flushes) {
-        var _this188;
+        var _this196;
 
         _classCallCheck(this, DistinctSubscriber);
 
-        _this188 = _super102.call(this, destination);
-        _this188.keySelector = keySelector;
-        _this188.values = new Set();
+        _this196 = _super111.call(this, destination);
+        _this196.keySelector = keySelector;
+        _this196.values = new Set();
 
         if (flushes) {
-          _this188.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this188), flushes));
+          _this196.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this196), flushes));
         }
 
-        return _this188;
+        return _this196;
       }
 
       _createClass2(DistinctSubscriber, [{
@@ -109100,22 +115539,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DistinctUntilChangedSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_15) {
       _inherits(DistinctUntilChangedSubscriber, _Subscriber__WEBPACK_15);
 
-      var _super103 = _createSuper(DistinctUntilChangedSubscriber);
+      var _super112 = _createSuper(DistinctUntilChangedSubscriber);
 
       function DistinctUntilChangedSubscriber(destination, compare, keySelector) {
-        var _this189;
+        var _this197;
 
         _classCallCheck(this, DistinctUntilChangedSubscriber);
 
-        _this189 = _super103.call(this, destination);
-        _this189.keySelector = keySelector;
-        _this189.hasKey = false;
+        _this197 = _super112.call(this, destination);
+        _this197.keySelector = keySelector;
+        _this197.hasKey = false;
 
         if (typeof compare === 'function') {
-          _this189.compare = compare;
+          _this197.compare = compare;
         }
 
-        return _this189;
+        return _this197;
       }
 
       _createClass2(DistinctUntilChangedSubscriber, [{
@@ -109300,8 +115739,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/of.js");
 
     function endWith() {
-      for (var _len35 = arguments.length, array = new Array(_len35), _key32 = 0; _key32 < _len35; _key32++) {
-        array[_key32] = arguments[_key32];
+      for (var _len42 = arguments.length, array = new Array(_len42), _key40 = 0; _key40 < _len42; _key40++) {
+        array[_key40] = arguments[_key40];
       }
 
       return function (source) {
@@ -109367,20 +115806,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EverySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_16) {
       _inherits(EverySubscriber, _Subscriber__WEBPACK_16);
 
-      var _super104 = _createSuper(EverySubscriber);
+      var _super113 = _createSuper(EverySubscriber);
 
       function EverySubscriber(destination, predicate, thisArg, source) {
-        var _this190;
+        var _this198;
 
         _classCallCheck(this, EverySubscriber);
 
-        _this190 = _super104.call(this, destination);
-        _this190.predicate = predicate;
-        _this190.thisArg = thisArg;
-        _this190.source = source;
-        _this190.index = 0;
-        _this190.thisArg = thisArg || _assertThisInitialized(_this190);
-        return _this190;
+        _this198 = _super113.call(this, destination);
+        _this198.predicate = predicate;
+        _this198.thisArg = thisArg;
+        _this198.source = source;
+        _this198.index = 0;
+        _this198.thisArg = thisArg || _assertThisInitialized(_this198);
+        return _this198;
       }
 
       _createClass2(EverySubscriber, [{
@@ -109475,17 +115914,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SwitchFirstSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB12) {
       _inherits(SwitchFirstSubscriber, _OuterSubscriber__WEB12);
 
-      var _super105 = _createSuper(SwitchFirstSubscriber);
+      var _super114 = _createSuper(SwitchFirstSubscriber);
 
       function SwitchFirstSubscriber(destination) {
-        var _this191;
+        var _this199;
 
         _classCallCheck(this, SwitchFirstSubscriber);
 
-        _this191 = _super105.call(this, destination);
-        _this191.hasCompleted = false;
-        _this191.hasSubscription = false;
-        return _this191;
+        _this199 = _super114.call(this, destination);
+        _this199.hasCompleted = false;
+        _this199.hasSubscription = false;
+        return _this199;
       }
 
       _createClass2(SwitchFirstSubscriber, [{
@@ -109610,19 +116049,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ExhaustMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB13) {
       _inherits(ExhaustMapSubscriber, _OuterSubscriber__WEB13);
 
-      var _super106 = _createSuper(ExhaustMapSubscriber);
+      var _super115 = _createSuper(ExhaustMapSubscriber);
 
       function ExhaustMapSubscriber(destination, project) {
-        var _this192;
+        var _this200;
 
         _classCallCheck(this, ExhaustMapSubscriber);
 
-        _this192 = _super106.call(this, destination);
-        _this192.project = project;
-        _this192.hasSubscription = false;
-        _this192.hasCompleted = false;
-        _this192.index = 0;
-        return _this192;
+        _this200 = _super115.call(this, destination);
+        _this200.project = project;
+        _this200.hasSubscription = false;
+        _this200.hasCompleted = false;
+        _this200.index = 0;
+        return _this200;
       }
 
       _createClass2(ExhaustMapSubscriber, [{
@@ -109777,26 +116216,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ExpandSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB14) {
       _inherits(ExpandSubscriber, _OuterSubscriber__WEB14);
 
-      var _super107 = _createSuper(ExpandSubscriber);
+      var _super116 = _createSuper(ExpandSubscriber);
 
       function ExpandSubscriber(destination, project, concurrent, scheduler) {
-        var _this193;
+        var _this201;
 
         _classCallCheck(this, ExpandSubscriber);
 
-        _this193 = _super107.call(this, destination);
-        _this193.project = project;
-        _this193.concurrent = concurrent;
-        _this193.scheduler = scheduler;
-        _this193.index = 0;
-        _this193.active = 0;
-        _this193.hasCompleted = false;
+        _this201 = _super116.call(this, destination);
+        _this201.project = project;
+        _this201.concurrent = concurrent;
+        _this201.scheduler = scheduler;
+        _this201.index = 0;
+        _this201.active = 0;
+        _this201.hasCompleted = false;
 
         if (concurrent < Number.POSITIVE_INFINITY) {
-          _this193.buffer = [];
+          _this201.buffer = [];
         }
 
-        return _this193;
+        return _this201;
       }
 
       _createClass2(ExpandSubscriber, [{
@@ -109949,18 +116388,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FilterSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_17) {
       _inherits(FilterSubscriber, _Subscriber__WEBPACK_17);
 
-      var _super108 = _createSuper(FilterSubscriber);
+      var _super117 = _createSuper(FilterSubscriber);
 
       function FilterSubscriber(destination, predicate, thisArg) {
-        var _this194;
+        var _this202;
 
         _classCallCheck(this, FilterSubscriber);
 
-        _this194 = _super108.call(this, destination);
-        _this194.predicate = predicate;
-        _this194.thisArg = thisArg;
-        _this194.count = 0;
-        return _this194;
+        _this202 = _super117.call(this, destination);
+        _this202.predicate = predicate;
+        _this202.thisArg = thisArg;
+        _this202.count = 0;
+        return _this202;
       }
 
       _createClass2(FilterSubscriber, [{
@@ -110046,18 +116485,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FinallySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_18) {
       _inherits(FinallySubscriber, _Subscriber__WEBPACK_18);
 
-      var _super109 = _createSuper(FinallySubscriber);
+      var _super118 = _createSuper(FinallySubscriber);
 
       function FinallySubscriber(destination, callback) {
-        var _this195;
+        var _this203;
 
         _classCallCheck(this, FinallySubscriber);
 
-        _this195 = _super109.call(this, destination);
+        _this203 = _super118.call(this, destination);
 
-        _this195.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
+        _this203.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
 
-        return _this195;
+        return _this203;
       }
 
       return FinallySubscriber;
@@ -110138,20 +116577,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FindValueSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_19) {
       _inherits(FindValueSubscriber, _Subscriber__WEBPACK_19);
 
-      var _super110 = _createSuper(FindValueSubscriber);
+      var _super119 = _createSuper(FindValueSubscriber);
 
       function FindValueSubscriber(destination, predicate, source, yieldIndex, thisArg) {
-        var _this196;
+        var _this204;
 
         _classCallCheck(this, FindValueSubscriber);
 
-        _this196 = _super110.call(this, destination);
-        _this196.predicate = predicate;
-        _this196.source = source;
-        _this196.yieldIndex = yieldIndex;
-        _this196.thisArg = thisArg;
-        _this196.index = 0;
-        return _this196;
+        _this204 = _super119.call(this, destination);
+        _this204.predicate = predicate;
+        _this204.source = source;
+        _this204.yieldIndex = yieldIndex;
+        _this204.thisArg = thisArg;
+        _this204.index = 0;
+        return _this204;
       }
 
       _createClass2(FindValueSubscriber, [{
@@ -110379,22 +116818,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupBySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_20) {
       _inherits(GroupBySubscriber, _Subscriber__WEBPACK_20);
 
-      var _super111 = _createSuper(GroupBySubscriber);
+      var _super120 = _createSuper(GroupBySubscriber);
 
       function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector, subjectSelector) {
-        var _this197;
+        var _this205;
 
         _classCallCheck(this, GroupBySubscriber);
 
-        _this197 = _super111.call(this, destination);
-        _this197.keySelector = keySelector;
-        _this197.elementSelector = elementSelector;
-        _this197.durationSelector = durationSelector;
-        _this197.subjectSelector = subjectSelector;
-        _this197.groups = null;
-        _this197.attemptedToUnsubscribe = false;
-        _this197.count = 0;
-        return _this197;
+        _this205 = _super120.call(this, destination);
+        _this205.keySelector = keySelector;
+        _this205.elementSelector = elementSelector;
+        _this205.durationSelector = durationSelector;
+        _this205.subjectSelector = subjectSelector;
+        _this205.groups = null;
+        _this205.attemptedToUnsubscribe = false;
+        _this205.count = 0;
+        return _this205;
       }
 
       _createClass2(GroupBySubscriber, [{
@@ -110509,18 +116948,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupDurationSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_21) {
       _inherits(GroupDurationSubscriber, _Subscriber__WEBPACK_21);
 
-      var _super112 = _createSuper(GroupDurationSubscriber);
+      var _super121 = _createSuper(GroupDurationSubscriber);
 
       function GroupDurationSubscriber(key, group, parent) {
-        var _this198;
+        var _this206;
 
         _classCallCheck(this, GroupDurationSubscriber);
 
-        _this198 = _super112.call(this, group);
-        _this198.key = key;
-        _this198.group = group;
-        _this198.parent = parent;
-        return _this198;
+        _this206 = _super121.call(this, group);
+        _this206.key = key;
+        _this206.group = group;
+        _this206.parent = parent;
+        return _this206;
       }
 
       _createClass2(GroupDurationSubscriber, [{
@@ -110547,18 +116986,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupedObservable = /*#__PURE__*/function (_Observable__WEBPACK_5) {
       _inherits(GroupedObservable, _Observable__WEBPACK_5);
 
-      var _super113 = _createSuper(GroupedObservable);
+      var _super122 = _createSuper(GroupedObservable);
 
       function GroupedObservable(key, groupSubject, refCountSubscription) {
-        var _this199;
+        var _this207;
 
         _classCallCheck(this, GroupedObservable);
 
-        _this199 = _super113.call(this);
-        _this199.key = key;
-        _this199.groupSubject = groupSubject;
-        _this199.refCountSubscription = refCountSubscription;
-        return _this199;
+        _this207 = _super122.call(this);
+        _this207.key = key;
+        _this207.groupSubject = groupSubject;
+        _this207.refCountSubscription = refCountSubscription;
+        return _this207;
       }
 
       _createClass2(GroupedObservable, [{
@@ -110583,17 +117022,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var InnerRefCountSubscription = /*#__PURE__*/function (_Subscription__WEBPAC3) {
       _inherits(InnerRefCountSubscription, _Subscription__WEBPAC3);
 
-      var _super114 = _createSuper(InnerRefCountSubscription);
+      var _super123 = _createSuper(InnerRefCountSubscription);
 
       function InnerRefCountSubscription(parent) {
-        var _this200;
+        var _this208;
 
         _classCallCheck(this, InnerRefCountSubscription);
 
-        _this200 = _super114.call(this);
-        _this200.parent = parent;
+        _this208 = _super123.call(this);
+        _this208.parent = parent;
         parent.count++;
-        return _this200;
+        return _this208;
       }
 
       _createClass2(InnerRefCountSubscription, [{
@@ -110670,12 +117109,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var IgnoreElementsSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_22) {
       _inherits(IgnoreElementsSubscriber, _Subscriber__WEBPACK_22);
 
-      var _super115 = _createSuper(IgnoreElementsSubscriber);
+      var _super124 = _createSuper(IgnoreElementsSubscriber);
 
       function IgnoreElementsSubscriber() {
         _classCallCheck(this, IgnoreElementsSubscriber);
 
-        return _super115.apply(this, arguments);
+        return _super124.apply(this, arguments);
       }
 
       _createClass2(IgnoreElementsSubscriber, [{
@@ -110740,12 +117179,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var IsEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_23) {
       _inherits(IsEmptySubscriber, _Subscriber__WEBPACK_23);
 
-      var _super116 = _createSuper(IsEmptySubscriber);
+      var _super125 = _createSuper(IsEmptySubscriber);
 
       function IsEmptySubscriber(destination) {
         _classCallCheck(this, IsEmptySubscriber);
 
-        return _super116.call(this, destination);
+        return _super125.call(this, destination);
       }
 
       _createClass2(IsEmptySubscriber, [{
@@ -110908,18 +117347,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MapSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_24) {
       _inherits(MapSubscriber, _Subscriber__WEBPACK_24);
 
-      var _super117 = _createSuper(MapSubscriber);
+      var _super126 = _createSuper(MapSubscriber);
 
       function MapSubscriber(destination, project, thisArg) {
-        var _this201;
+        var _this209;
 
         _classCallCheck(this, MapSubscriber);
 
-        _this201 = _super117.call(this, destination);
-        _this201.project = project;
-        _this201.count = 0;
-        _this201.thisArg = thisArg || _assertThisInitialized(_this201);
-        return _this201;
+        _this209 = _super126.call(this, destination);
+        _this209.project = project;
+        _this209.count = 0;
+        _this209.thisArg = thisArg || _assertThisInitialized(_this209);
+        return _this209;
       }
 
       _createClass2(MapSubscriber, [{
@@ -110997,16 +117436,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MapToSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_25) {
       _inherits(MapToSubscriber, _Subscriber__WEBPACK_25);
 
-      var _super118 = _createSuper(MapToSubscriber);
+      var _super127 = _createSuper(MapToSubscriber);
 
       function MapToSubscriber(destination, value) {
-        var _this202;
+        var _this210;
 
         _classCallCheck(this, MapToSubscriber);
 
-        _this202 = _super118.call(this, destination);
-        _this202.value = value;
-        return _this202;
+        _this210 = _super127.call(this, destination);
+        _this210.value = value;
+        return _this210;
       }
 
       _createClass2(MapToSubscriber, [{
@@ -111079,12 +117518,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MaterializeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_26) {
       _inherits(MaterializeSubscriber, _Subscriber__WEBPACK_26);
 
-      var _super119 = _createSuper(MaterializeSubscriber);
+      var _super128 = _createSuper(MaterializeSubscriber);
 
       function MaterializeSubscriber(destination) {
         _classCallCheck(this, MaterializeSubscriber);
 
-        return _super119.call(this, destination);
+        return _super128.call(this, destination);
       }
 
       _createClass2(MaterializeSubscriber, [{
@@ -111181,8 +117620,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/merge.js");
 
     function merge() {
-      for (var _len36 = arguments.length, observables = new Array(_len36), _key33 = 0; _key33 < _len36; _key33++) {
-        observables[_key33] = arguments[_key33];
+      for (var _len43 = arguments.length, observables = new Array(_len43), _key41 = 0; _key41 < _len43; _key41++) {
+        observables[_key41] = arguments[_key41];
       }
 
       return function (source) {
@@ -111340,23 +117779,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MergeMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB15) {
       _inherits(MergeMapSubscriber, _OuterSubscriber__WEB15);
 
-      var _super120 = _createSuper(MergeMapSubscriber);
+      var _super129 = _createSuper(MergeMapSubscriber);
 
       function MergeMapSubscriber(destination, project) {
-        var _this203;
+        var _this211;
 
         var concurrent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, MergeMapSubscriber);
 
-        _this203 = _super120.call(this, destination);
-        _this203.project = project;
-        _this203.concurrent = concurrent;
-        _this203.hasCompleted = false;
-        _this203.buffer = [];
-        _this203.active = 0;
-        _this203.index = 0;
-        return _this203;
+        _this211 = _super129.call(this, destination);
+        _this211.project = project;
+        _this211.concurrent = concurrent;
+        _this211.hasCompleted = false;
+        _this211.buffer = [];
+        _this211.active = 0;
+        _this211.index = 0;
+        return _this211;
       }
 
       _createClass2(MergeMapSubscriber, [{
@@ -111562,23 +118001,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MergeScanSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB16) {
       _inherits(MergeScanSubscriber, _OuterSubscriber__WEB16);
 
-      var _super121 = _createSuper(MergeScanSubscriber);
+      var _super130 = _createSuper(MergeScanSubscriber);
 
       function MergeScanSubscriber(destination, accumulator, acc, concurrent) {
-        var _this204;
+        var _this212;
 
         _classCallCheck(this, MergeScanSubscriber);
 
-        _this204 = _super121.call(this, destination);
-        _this204.accumulator = accumulator;
-        _this204.acc = acc;
-        _this204.concurrent = concurrent;
-        _this204.hasValue = false;
-        _this204.hasCompleted = false;
-        _this204.buffer = [];
-        _this204.active = 0;
-        _this204.index = 0;
-        return _this204;
+        _this212 = _super130.call(this, destination);
+        _this212.accumulator = accumulator;
+        _this212.acc = acc;
+        _this212.concurrent = concurrent;
+        _this212.hasValue = false;
+        _this212.hasCompleted = false;
+        _this212.buffer = [];
+        _this212.active = 0;
+        _this212.index = 0;
+        return _this212;
       }
 
       _createClass2(MergeScanSubscriber, [{
@@ -111865,19 +118304,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ObserveOnSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_27) {
       _inherits(ObserveOnSubscriber, _Subscriber__WEBPACK_27);
 
-      var _super122 = _createSuper(ObserveOnSubscriber);
+      var _super131 = _createSuper(ObserveOnSubscriber);
 
       function ObserveOnSubscriber(destination, scheduler) {
-        var _this205;
+        var _this213;
 
         var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
         _classCallCheck(this, ObserveOnSubscriber);
 
-        _this205 = _super122.call(this, destination);
-        _this205.scheduler = scheduler;
-        _this205.delay = delay;
-        return _this205;
+        _this213 = _super131.call(this, destination);
+        _this213.scheduler = scheduler;
+        _this213.delay = delay;
+        return _this213;
       }
 
       _createClass2(ObserveOnSubscriber, [{
@@ -111984,8 +118423,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function onErrorResumeNext() {
-      for (var _len37 = arguments.length, nextSources = new Array(_len37), _key34 = 0; _key34 < _len37; _key34++) {
-        nextSources[_key34] = arguments[_key34];
+      for (var _len44 = arguments.length, nextSources = new Array(_len44), _key42 = 0; _key42 < _len44; _key42++) {
+        nextSources[_key42] = arguments[_key42];
       }
 
       if (nextSources.length === 1 && Object(_util_isArray__WEBPACK_IMPORTED_MODULE_1__["isArray"])(nextSources[0])) {
@@ -111998,8 +118437,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function onErrorResumeNextStatic() {
-      for (var _len38 = arguments.length, nextSources = new Array(_len38), _key35 = 0; _key35 < _len38; _key35++) {
-        nextSources[_key35] = arguments[_key35];
+      for (var _len45 = arguments.length, nextSources = new Array(_len45), _key43 = 0; _key43 < _len45; _key43++) {
+        nextSources[_key43] = arguments[_key43];
       }
 
       var source = null;
@@ -112032,17 +118471,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var OnErrorResumeNextSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB17) {
       _inherits(OnErrorResumeNextSubscriber, _OuterSubscriber__WEB17);
 
-      var _super123 = _createSuper(OnErrorResumeNextSubscriber);
+      var _super132 = _createSuper(OnErrorResumeNextSubscriber);
 
       function OnErrorResumeNextSubscriber(destination, nextSources) {
-        var _this206;
+        var _this214;
 
         _classCallCheck(this, OnErrorResumeNextSubscriber);
 
-        _this206 = _super123.call(this, destination);
-        _this206.destination = destination;
-        _this206.nextSources = nextSources;
-        return _this206;
+        _this214 = _super132.call(this, destination);
+        _this214.destination = destination;
+        _this214.nextSources = nextSources;
+        return _this214;
       }
 
       _createClass2(OnErrorResumeNextSubscriber, [{
@@ -112144,16 +118583,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var PairwiseSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_28) {
       _inherits(PairwiseSubscriber, _Subscriber__WEBPACK_28);
 
-      var _super124 = _createSuper(PairwiseSubscriber);
+      var _super133 = _createSuper(PairwiseSubscriber);
 
       function PairwiseSubscriber(destination) {
-        var _this207;
+        var _this215;
 
         _classCallCheck(this, PairwiseSubscriber);
 
-        _this207 = _super124.call(this, destination);
-        _this207.hasPrev = false;
-        return _this207;
+        _this215 = _super133.call(this, destination);
+        _this215.hasPrev = false;
+        return _this215;
       }
 
       _createClass2(PairwiseSubscriber, [{
@@ -112251,8 +118690,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/operators/map.js");
 
     function pluck() {
-      for (var _len39 = arguments.length, properties = new Array(_len39), _key36 = 0; _key36 < _len39; _key36++) {
-        properties[_key36] = arguments[_key36];
+      for (var _len46 = arguments.length, properties = new Array(_len46), _key44 = 0; _key44 < _len46; _key44++) {
+        properties[_key44] = arguments[_key44];
       }
 
       var length = properties.length;
@@ -112499,8 +118938,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/race.js");
 
     function race() {
-      for (var _len40 = arguments.length, observables = new Array(_len40), _key37 = 0; _key37 < _len40; _key37++) {
-        observables[_key37] = arguments[_key37];
+      for (var _len47 = arguments.length, observables = new Array(_len47), _key45 = 0; _key45 < _len47; _key45++) {
+        observables[_key45] = arguments[_key45];
       }
 
       return function raceOperatorFunction(source) {
@@ -112639,16 +119078,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RefCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_29) {
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_29);
 
-      var _super125 = _createSuper(RefCountSubscriber);
+      var _super134 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this208;
+        var _this216;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this208 = _super125.call(this, destination);
-        _this208.connectable = connectable;
-        return _this208;
+        _this216 = _super134.call(this, destination);
+        _this216.connectable = connectable;
+        return _this216;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -112759,17 +119198,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RepeatSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_30) {
       _inherits(RepeatSubscriber, _Subscriber__WEBPACK_30);
 
-      var _super126 = _createSuper(RepeatSubscriber);
+      var _super135 = _createSuper(RepeatSubscriber);
 
       function RepeatSubscriber(destination, count, source) {
-        var _this209;
+        var _this217;
 
         _classCallCheck(this, RepeatSubscriber);
 
-        _this209 = _super126.call(this, destination);
-        _this209.count = count;
-        _this209.source = source;
-        return _this209;
+        _this217 = _super135.call(this, destination);
+        _this217.count = count;
+        _this217.source = source;
+        return _this217;
       }
 
       _createClass2(RepeatSubscriber, [{
@@ -112861,18 +119300,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RepeatWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB18) {
       _inherits(RepeatWhenSubscriber, _OuterSubscriber__WEB18);
 
-      var _super127 = _createSuper(RepeatWhenSubscriber);
+      var _super136 = _createSuper(RepeatWhenSubscriber);
 
       function RepeatWhenSubscriber(destination, notifier, source) {
-        var _this210;
+        var _this218;
 
         _classCallCheck(this, RepeatWhenSubscriber);
 
-        _this210 = _super127.call(this, destination);
-        _this210.notifier = notifier;
-        _this210.source = source;
-        _this210.sourceIsBeingSubscribedTo = true;
-        return _this210;
+        _this218 = _super136.call(this, destination);
+        _this218.notifier = notifier;
+        _this218.source = source;
+        _this218.sourceIsBeingSubscribedTo = true;
+        return _this218;
       }
 
       _createClass2(RepeatWhenSubscriber, [{
@@ -113015,17 +119454,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RetrySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_31) {
       _inherits(RetrySubscriber, _Subscriber__WEBPACK_31);
 
-      var _super128 = _createSuper(RetrySubscriber);
+      var _super137 = _createSuper(RetrySubscriber);
 
       function RetrySubscriber(destination, count, source) {
-        var _this211;
+        var _this219;
 
         _classCallCheck(this, RetrySubscriber);
 
-        _this211 = _super128.call(this, destination);
-        _this211.count = count;
-        _this211.source = source;
-        return _this211;
+        _this219 = _super137.call(this, destination);
+        _this219.count = count;
+        _this219.source = source;
+        return _this219;
       }
 
       _createClass2(RetrySubscriber, [{
@@ -113118,17 +119557,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RetryWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB19) {
       _inherits(RetryWhenSubscriber, _OuterSubscriber__WEB19);
 
-      var _super129 = _createSuper(RetryWhenSubscriber);
+      var _super138 = _createSuper(RetryWhenSubscriber);
 
       function RetryWhenSubscriber(destination, notifier, source) {
-        var _this212;
+        var _this220;
 
         _classCallCheck(this, RetryWhenSubscriber);
 
-        _this212 = _super129.call(this, destination);
-        _this212.notifier = notifier;
-        _this212.source = source;
-        return _this212;
+        _this220 = _super138.call(this, destination);
+        _this220.notifier = notifier;
+        _this220.source = source;
+        return _this220;
       }
 
       _createClass2(RetryWhenSubscriber, [{
@@ -113262,16 +119701,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SampleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB20) {
       _inherits(SampleSubscriber, _OuterSubscriber__WEB20);
 
-      var _super130 = _createSuper(SampleSubscriber);
+      var _super139 = _createSuper(SampleSubscriber);
 
       function SampleSubscriber() {
-        var _this213;
+        var _this221;
 
         _classCallCheck(this, SampleSubscriber);
 
-        _this213 = _super130.apply(this, arguments);
-        _this213.hasValue = false;
-        return _this213;
+        _this221 = _super139.apply(this, arguments);
+        _this221.hasValue = false;
+        return _this221;
       }
 
       _createClass2(SampleSubscriber, [{
@@ -113367,24 +119806,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SampleTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_32) {
       _inherits(SampleTimeSubscriber, _Subscriber__WEBPACK_32);
 
-      var _super131 = _createSuper(SampleTimeSubscriber);
+      var _super140 = _createSuper(SampleTimeSubscriber);
 
       function SampleTimeSubscriber(destination, period, scheduler) {
-        var _this214;
+        var _this222;
 
         _classCallCheck(this, SampleTimeSubscriber);
 
-        _this214 = _super131.call(this, destination);
-        _this214.period = period;
-        _this214.scheduler = scheduler;
-        _this214.hasValue = false;
+        _this222 = _super140.call(this, destination);
+        _this222.period = period;
+        _this222.scheduler = scheduler;
+        _this222.hasValue = false;
 
-        _this214.add(scheduler.schedule(dispatchNotification, period, {
-          subscriber: _assertThisInitialized(_this214),
+        _this222.add(scheduler.schedule(dispatchNotification, period, {
+          subscriber: _assertThisInitialized(_this222),
           period: period
         }));
 
-        return _this214;
+        return _this222;
       }
 
       _createClass2(SampleTimeSubscriber, [{
@@ -113479,19 +119918,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ScanSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_33) {
       _inherits(ScanSubscriber, _Subscriber__WEBPACK_33);
 
-      var _super132 = _createSuper(ScanSubscriber);
+      var _super141 = _createSuper(ScanSubscriber);
 
       function ScanSubscriber(destination, accumulator, _seed, hasSeed) {
-        var _this215;
+        var _this223;
 
         _classCallCheck(this, ScanSubscriber);
 
-        _this215 = _super132.call(this, destination);
-        _this215.accumulator = accumulator;
-        _this215._seed = _seed;
-        _this215.hasSeed = hasSeed;
-        _this215.index = 0;
-        return _this215;
+        _this223 = _super141.call(this, destination);
+        _this223.accumulator = accumulator;
+        _this223._seed = _seed;
+        _this223.hasSeed = hasSeed;
+        _this223.index = 0;
+        return _this223;
       }
 
       _createClass2(ScanSubscriber, [{
@@ -113602,23 +120041,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SequenceEqualSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_34) {
       _inherits(SequenceEqualSubscriber, _Subscriber__WEBPACK_34);
 
-      var _super133 = _createSuper(SequenceEqualSubscriber);
+      var _super142 = _createSuper(SequenceEqualSubscriber);
 
       function SequenceEqualSubscriber(destination, compareTo, comparator) {
-        var _this216;
+        var _this224;
 
         _classCallCheck(this, SequenceEqualSubscriber);
 
-        _this216 = _super133.call(this, destination);
-        _this216.compareTo = compareTo;
-        _this216.comparator = comparator;
-        _this216._a = [];
-        _this216._b = [];
-        _this216._oneComplete = false;
+        _this224 = _super142.call(this, destination);
+        _this224.compareTo = compareTo;
+        _this224.comparator = comparator;
+        _this224._a = [];
+        _this224._b = [];
+        _this224._oneComplete = false;
 
-        _this216.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this216))));
+        _this224.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this224))));
 
-        return _this216;
+        return _this224;
       }
 
       _createClass2(SequenceEqualSubscriber, [{
@@ -113703,16 +120142,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SequenceEqualCompareToSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_35) {
       _inherits(SequenceEqualCompareToSubscriber, _Subscriber__WEBPACK_35);
 
-      var _super134 = _createSuper(SequenceEqualCompareToSubscriber);
+      var _super143 = _createSuper(SequenceEqualCompareToSubscriber);
 
       function SequenceEqualCompareToSubscriber(destination, parent) {
-        var _this217;
+        var _this225;
 
         _classCallCheck(this, SequenceEqualCompareToSubscriber);
 
-        _this217 = _super134.call(this, destination);
-        _this217.parent = parent;
-        return _this217;
+        _this225 = _super143.call(this, destination);
+        _this225.parent = parent;
+        return _this225;
       }
 
       _createClass2(SequenceEqualCompareToSubscriber, [{
@@ -113838,13 +120277,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       };
     }
 
-    function shareReplayOperator(_ref22) {
-      var _ref22$bufferSize = _ref22.bufferSize,
-          bufferSize = _ref22$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref22$bufferSize,
-          _ref22$windowTime = _ref22.windowTime,
-          windowTime = _ref22$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref22$windowTime,
-          useRefCount = _ref22.refCount,
-          scheduler = _ref22.scheduler;
+    function shareReplayOperator(_ref40) {
+      var _ref40$bufferSize = _ref40.bufferSize,
+          bufferSize = _ref40$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref40$bufferSize,
+          _ref40$windowTime = _ref40.windowTime,
+          windowTime = _ref40$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref40$windowTime,
+          useRefCount = _ref40.refCount,
+          scheduler = _ref40.scheduler;
       var subject;
       var refCount = 0;
       var subscription;
@@ -113949,19 +120388,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SingleSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_36) {
       _inherits(SingleSubscriber, _Subscriber__WEBPACK_36);
 
-      var _super135 = _createSuper(SingleSubscriber);
+      var _super144 = _createSuper(SingleSubscriber);
 
       function SingleSubscriber(destination, predicate, source) {
-        var _this218;
+        var _this226;
 
         _classCallCheck(this, SingleSubscriber);
 
-        _this218 = _super135.call(this, destination);
-        _this218.predicate = predicate;
-        _this218.source = source;
-        _this218.seenValue = false;
-        _this218.index = 0;
-        return _this218;
+        _this226 = _super144.call(this, destination);
+        _this226.predicate = predicate;
+        _this226.source = source;
+        _this226.seenValue = false;
+        _this226.index = 0;
+        return _this226;
       }
 
       _createClass2(SingleSubscriber, [{
@@ -114069,17 +120508,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_37) {
       _inherits(SkipSubscriber, _Subscriber__WEBPACK_37);
 
-      var _super136 = _createSuper(SkipSubscriber);
+      var _super145 = _createSuper(SkipSubscriber);
 
       function SkipSubscriber(destination, total) {
-        var _this219;
+        var _this227;
 
         _classCallCheck(this, SkipSubscriber);
 
-        _this219 = _super136.call(this, destination);
-        _this219.total = total;
-        _this219.count = 0;
-        return _this219;
+        _this227 = _super145.call(this, destination);
+        _this227.total = total;
+        _this227.count = 0;
+        return _this227;
       }
 
       _createClass2(SkipSubscriber, [{
@@ -114164,18 +120603,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipLastSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_38) {
       _inherits(SkipLastSubscriber, _Subscriber__WEBPACK_38);
 
-      var _super137 = _createSuper(SkipLastSubscriber);
+      var _super146 = _createSuper(SkipLastSubscriber);
 
       function SkipLastSubscriber(destination, _skipCount) {
-        var _this220;
+        var _this228;
 
         _classCallCheck(this, SkipLastSubscriber);
 
-        _this220 = _super137.call(this, destination);
-        _this220._skipCount = _skipCount;
-        _this220._count = 0;
-        _this220._ring = new Array(_skipCount);
-        return _this220;
+        _this228 = _super146.call(this, destination);
+        _this228._skipCount = _skipCount;
+        _this228._count = 0;
+        _this228._ring = new Array(_skipCount);
+        return _this228;
       }
 
       _createClass2(SkipLastSubscriber, [{
@@ -114267,29 +120706,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipUntilSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB21) {
       _inherits(SkipUntilSubscriber, _OuterSubscriber__WEB21);
 
-      var _super138 = _createSuper(SkipUntilSubscriber);
+      var _super147 = _createSuper(SkipUntilSubscriber);
 
       function SkipUntilSubscriber(destination, notifier) {
-        var _this221;
+        var _this229;
 
         _classCallCheck(this, SkipUntilSubscriber);
 
-        _this221 = _super138.call(this, destination);
-        _this221.hasValue = false;
-        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this221), undefined, undefined);
+        _this229 = _super147.call(this, destination);
+        _this229.hasValue = false;
+        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this229), undefined, undefined);
 
-        _this221.add(innerSubscriber);
+        _this229.add(innerSubscriber);
 
-        _this221.innerSubscription = innerSubscriber;
-        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this221), notifier, undefined, undefined, innerSubscriber);
+        _this229.innerSubscription = innerSubscriber;
+        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this229), notifier, undefined, undefined, innerSubscriber);
 
         if (innerSubscription !== innerSubscriber) {
-          _this221.add(innerSubscription);
+          _this229.add(innerSubscription);
 
-          _this221.innerSubscription = innerSubscription;
+          _this229.innerSubscription = innerSubscription;
         }
 
-        return _this221;
+        return _this229;
       }
 
       _createClass2(SkipUntilSubscriber, [{
@@ -114372,18 +120811,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipWhileSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_39) {
       _inherits(SkipWhileSubscriber, _Subscriber__WEBPACK_39);
 
-      var _super139 = _createSuper(SkipWhileSubscriber);
+      var _super148 = _createSuper(SkipWhileSubscriber);
 
       function SkipWhileSubscriber(destination, predicate) {
-        var _this222;
+        var _this230;
 
         _classCallCheck(this, SkipWhileSubscriber);
 
-        _this222 = _super139.call(this, destination);
-        _this222.predicate = predicate;
-        _this222.skipping = true;
-        _this222.index = 0;
-        return _this222;
+        _this230 = _super148.call(this, destination);
+        _this230.predicate = predicate;
+        _this230.skipping = true;
+        _this230.index = 0;
+        return _this230;
       }
 
       _createClass2(SkipWhileSubscriber, [{
@@ -114451,8 +120890,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/isScheduler.js");
 
     function startWith() {
-      for (var _len41 = arguments.length, array = new Array(_len41), _key38 = 0; _key38 < _len41; _key38++) {
-        array[_key38] = arguments[_key38];
+      for (var _len48 = arguments.length, array = new Array(_len48), _key46 = 0; _key46 < _len48; _key46++) {
+        array[_key46] = arguments[_key46];
       }
 
       var scheduler = array[array.length - 1];
@@ -114654,17 +121093,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SwitchMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB22) {
       _inherits(SwitchMapSubscriber, _OuterSubscriber__WEB22);
 
-      var _super140 = _createSuper(SwitchMapSubscriber);
+      var _super149 = _createSuper(SwitchMapSubscriber);
 
       function SwitchMapSubscriber(destination, project) {
-        var _this223;
+        var _this231;
 
         _classCallCheck(this, SwitchMapSubscriber);
 
-        _this223 = _super140.call(this, destination);
-        _this223.project = project;
-        _this223.index = 0;
-        return _this223;
+        _this231 = _super149.call(this, destination);
+        _this231.project = project;
+        _this231.index = 0;
+        return _this231;
       }
 
       _createClass2(SwitchMapSubscriber, [{
@@ -114851,17 +121290,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_40) {
       _inherits(TakeSubscriber, _Subscriber__WEBPACK_40);
 
-      var _super141 = _createSuper(TakeSubscriber);
+      var _super150 = _createSuper(TakeSubscriber);
 
       function TakeSubscriber(destination, total) {
-        var _this224;
+        var _this232;
 
         _classCallCheck(this, TakeSubscriber);
 
-        _this224 = _super141.call(this, destination);
-        _this224.total = total;
-        _this224.count = 0;
-        return _this224;
+        _this232 = _super150.call(this, destination);
+        _this232.total = total;
+        _this232.count = 0;
+        return _this232;
       }
 
       _createClass2(TakeSubscriber, [{
@@ -114960,18 +121399,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeLastSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_41) {
       _inherits(TakeLastSubscriber, _Subscriber__WEBPACK_41);
 
-      var _super142 = _createSuper(TakeLastSubscriber);
+      var _super151 = _createSuper(TakeLastSubscriber);
 
       function TakeLastSubscriber(destination, total) {
-        var _this225;
+        var _this233;
 
         _classCallCheck(this, TakeLastSubscriber);
 
-        _this225 = _super142.call(this, destination);
-        _this225.total = total;
-        _this225.ring = new Array();
-        _this225.count = 0;
-        return _this225;
+        _this233 = _super151.call(this, destination);
+        _this233.total = total;
+        _this233.ring = new Array();
+        _this233.count = 0;
+        return _this233;
       }
 
       _createClass2(TakeLastSubscriber, [{
@@ -115081,16 +121520,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeUntilSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB23) {
       _inherits(TakeUntilSubscriber, _OuterSubscriber__WEB23);
 
-      var _super143 = _createSuper(TakeUntilSubscriber);
+      var _super152 = _createSuper(TakeUntilSubscriber);
 
       function TakeUntilSubscriber(destination) {
-        var _this226;
+        var _this234;
 
         _classCallCheck(this, TakeUntilSubscriber);
 
-        _this226 = _super143.call(this, destination);
-        _this226.seenValue = false;
-        return _this226;
+        _this234 = _super152.call(this, destination);
+        _this234.seenValue = false;
+        return _this234;
       }
 
       _createClass2(TakeUntilSubscriber, [{
@@ -115165,18 +121604,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeWhileSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_42) {
       _inherits(TakeWhileSubscriber, _Subscriber__WEBPACK_42);
 
-      var _super144 = _createSuper(TakeWhileSubscriber);
+      var _super153 = _createSuper(TakeWhileSubscriber);
 
       function TakeWhileSubscriber(destination, predicate, inclusive) {
-        var _this227;
+        var _this235;
 
         _classCallCheck(this, TakeWhileSubscriber);
 
-        _this227 = _super144.call(this, destination);
-        _this227.predicate = predicate;
-        _this227.inclusive = inclusive;
-        _this227.index = 0;
-        return _this227;
+        _this235 = _super153.call(this, destination);
+        _this235.predicate = predicate;
+        _this235.inclusive = inclusive;
+        _this235.index = 0;
+        return _this235;
       }
 
       _createClass2(TakeWhileSubscriber, [{
@@ -115284,31 +121723,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TapSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_43) {
       _inherits(TapSubscriber, _Subscriber__WEBPACK_43);
 
-      var _super145 = _createSuper(TapSubscriber);
+      var _super154 = _createSuper(TapSubscriber);
 
       function TapSubscriber(destination, observerOrNext, error, complete) {
-        var _this228;
+        var _this236;
 
         _classCallCheck(this, TapSubscriber);
 
-        _this228 = _super145.call(this, destination);
-        _this228._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this228._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this228._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this228._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this228._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this236 = _super154.call(this, destination);
+        _this236._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this236._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this236._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this236._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this236._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_2__["isFunction"])(observerOrNext)) {
-          _this228._context = _assertThisInitialized(_this228);
-          _this228._tapNext = observerOrNext;
+          _this236._context = _assertThisInitialized(_this236);
+          _this236._tapNext = observerOrNext;
         } else if (observerOrNext) {
-          _this228._context = observerOrNext;
-          _this228._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this228._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this228._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this236._context = observerOrNext;
+          _this236._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this236._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this236._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
         }
 
-        return _this228;
+        return _this236;
       }
 
       _createClass2(TapSubscriber, [{
@@ -115428,20 +121867,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrottleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB24) {
       _inherits(ThrottleSubscriber, _OuterSubscriber__WEB24);
 
-      var _super146 = _createSuper(ThrottleSubscriber);
+      var _super155 = _createSuper(ThrottleSubscriber);
 
       function ThrottleSubscriber(destination, durationSelector, _leading, _trailing) {
-        var _this229;
+        var _this237;
 
         _classCallCheck(this, ThrottleSubscriber);
 
-        _this229 = _super146.call(this, destination);
-        _this229.destination = destination;
-        _this229.durationSelector = durationSelector;
-        _this229._leading = _leading;
-        _this229._trailing = _trailing;
-        _this229._hasValue = false;
-        return _this229;
+        _this237 = _super155.call(this, destination);
+        _this237.destination = destination;
+        _this237.durationSelector = durationSelector;
+        _this237._leading = _leading;
+        _this237._trailing = _trailing;
+        _this237._hasValue = false;
+        return _this237;
       }
 
       _createClass2(ThrottleSubscriber, [{
@@ -115595,21 +122034,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrottleTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_44) {
       _inherits(ThrottleTimeSubscriber, _Subscriber__WEBPACK_44);
 
-      var _super147 = _createSuper(ThrottleTimeSubscriber);
+      var _super156 = _createSuper(ThrottleTimeSubscriber);
 
       function ThrottleTimeSubscriber(destination, duration, scheduler, leading, trailing) {
-        var _this230;
+        var _this238;
 
         _classCallCheck(this, ThrottleTimeSubscriber);
 
-        _this230 = _super147.call(this, destination);
-        _this230.duration = duration;
-        _this230.scheduler = scheduler;
-        _this230.leading = leading;
-        _this230.trailing = trailing;
-        _this230._hasTrailingValue = false;
-        _this230._trailingValue = null;
-        return _this230;
+        _this238 = _super156.call(this, destination);
+        _this238.duration = duration;
+        _this238.scheduler = scheduler;
+        _this238.leading = leading;
+        _this238.trailing = trailing;
+        _this238._hasTrailingValue = false;
+        _this238._trailingValue = null;
+        return _this238;
       }
 
       _createClass2(ThrottleTimeSubscriber, [{
@@ -115733,17 +122172,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrowIfEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_45) {
       _inherits(ThrowIfEmptySubscriber, _Subscriber__WEBPACK_45);
 
-      var _super148 = _createSuper(ThrowIfEmptySubscriber);
+      var _super157 = _createSuper(ThrowIfEmptySubscriber);
 
       function ThrowIfEmptySubscriber(destination, errorFactory) {
-        var _this231;
+        var _this239;
 
         _classCallCheck(this, ThrowIfEmptySubscriber);
 
-        _this231 = _super148.call(this, destination);
-        _this231.errorFactory = errorFactory;
-        _this231.hasValue = false;
-        return _this231;
+        _this239 = _super157.call(this, destination);
+        _this239.errorFactory = errorFactory;
+        _this239.hasValue = false;
+        return _this239;
       }
 
       _createClass2(ThrowIfEmptySubscriber, [{
@@ -115836,8 +122275,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var scheduler = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _scheduler_async__WEBPACK_IMPORTED_MODULE_0__["async"];
       return function (source) {
         return Object(_observable_defer__WEBPACK_IMPORTED_MODULE_2__["defer"])(function () {
-          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref23, value) {
-            var current = _ref23.current;
+          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref41, value) {
+            var current = _ref41.current;
             return {
               value: value,
               current: scheduler.now(),
@@ -115847,10 +122286,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             current: scheduler.now(),
             value: undefined,
             last: undefined
-          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref24) {
-            var current = _ref24.current,
-                last = _ref24.last,
-                value = _ref24.value;
+          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref42) {
+            var current = _ref42.current,
+                last = _ref42.last,
+                value = _ref42.value;
             return new TimeInterval(value, current - last);
           }));
         });
@@ -115997,23 +122436,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TimeoutWithSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB25) {
       _inherits(TimeoutWithSubscriber, _OuterSubscriber__WEB25);
 
-      var _super149 = _createSuper(TimeoutWithSubscriber);
+      var _super158 = _createSuper(TimeoutWithSubscriber);
 
       function TimeoutWithSubscriber(destination, absoluteTimeout, waitFor, withObservable, scheduler) {
-        var _this232;
+        var _this240;
 
         _classCallCheck(this, TimeoutWithSubscriber);
 
-        _this232 = _super149.call(this, destination);
-        _this232.absoluteTimeout = absoluteTimeout;
-        _this232.waitFor = waitFor;
-        _this232.withObservable = withObservable;
-        _this232.scheduler = scheduler;
-        _this232.action = null;
+        _this240 = _super158.call(this, destination);
+        _this240.absoluteTimeout = absoluteTimeout;
+        _this240.waitFor = waitFor;
+        _this240.withObservable = withObservable;
+        _this240.scheduler = scheduler;
+        _this240.action = null;
 
-        _this232.scheduleTimeout();
+        _this240.scheduleTimeout();
 
-        return _this232;
+        return _this240;
       }
 
       _createClass2(TimeoutWithSubscriber, [{
@@ -116231,17 +122670,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB26) {
       _inherits(WindowSubscriber, _OuterSubscriber__WEB26);
 
-      var _super150 = _createSuper(WindowSubscriber);
+      var _super159 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination) {
-        var _this233;
+        var _this241;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this233 = _super150.call(this, destination);
-        _this233.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
-        destination.next(_this233.window);
-        return _this233;
+        _this241 = _super159.call(this, destination);
+        _this241.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        destination.next(_this241.window);
+        return _this241;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -116363,21 +122802,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_46) {
       _inherits(WindowCountSubscriber, _Subscriber__WEBPACK_46);
 
-      var _super151 = _createSuper(WindowCountSubscriber);
+      var _super160 = _createSuper(WindowCountSubscriber);
 
       function WindowCountSubscriber(destination, windowSize, startWindowEvery) {
-        var _this234;
+        var _this242;
 
         _classCallCheck(this, WindowCountSubscriber);
 
-        _this234 = _super151.call(this, destination);
-        _this234.destination = destination;
-        _this234.windowSize = windowSize;
-        _this234.startWindowEvery = startWindowEvery;
-        _this234.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
-        _this234.count = 0;
-        destination.next(_this234.windows[0]);
-        return _this234;
+        _this242 = _super160.call(this, destination);
+        _this242.destination = destination;
+        _this242.windowSize = windowSize;
+        _this242.startWindowEvery = startWindowEvery;
+        _this242.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
+        _this242.count = 0;
+        destination.next(_this242.windows[0]);
+        return _this242;
       }
 
       _createClass2(WindowCountSubscriber, [{
@@ -116546,16 +122985,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CountedSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP5) {
       _inherits(CountedSubject, _Subject__WEBPACK_IMP5);
 
-      var _super152 = _createSuper(CountedSubject);
+      var _super161 = _createSuper(CountedSubject);
 
       function CountedSubject() {
-        var _this235;
+        var _this243;
 
         _classCallCheck(this, CountedSubject);
 
-        _this235 = _super152.apply(this, arguments);
-        _this235._numberOfNextedValues = 0;
-        return _this235;
+        _this243 = _super161.apply(this, arguments);
+        _this243._numberOfNextedValues = 0;
+        return _this243;
       }
 
       _createClass2(CountedSubject, [{
@@ -116578,50 +123017,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_47) {
       _inherits(WindowTimeSubscriber, _Subscriber__WEBPACK_47);
 
-      var _super153 = _createSuper(WindowTimeSubscriber);
+      var _super162 = _createSuper(WindowTimeSubscriber);
 
       function WindowTimeSubscriber(destination, windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler) {
-        var _this236;
+        var _this244;
 
         _classCallCheck(this, WindowTimeSubscriber);
 
-        _this236 = _super153.call(this, destination);
-        _this236.destination = destination;
-        _this236.windowTimeSpan = windowTimeSpan;
-        _this236.windowCreationInterval = windowCreationInterval;
-        _this236.maxWindowSize = maxWindowSize;
-        _this236.scheduler = scheduler;
-        _this236.windows = [];
+        _this244 = _super162.call(this, destination);
+        _this244.destination = destination;
+        _this244.windowTimeSpan = windowTimeSpan;
+        _this244.windowCreationInterval = windowCreationInterval;
+        _this244.maxWindowSize = maxWindowSize;
+        _this244.scheduler = scheduler;
+        _this244.windows = [];
 
-        var window = _this236.openWindow();
+        var window = _this244.openWindow();
 
         if (windowCreationInterval !== null && windowCreationInterval >= 0) {
           var closeState = {
-            subscriber: _assertThisInitialized(_this236),
+            subscriber: _assertThisInitialized(_this244),
             window: window,
             context: null
           };
           var creationState = {
             windowTimeSpan: windowTimeSpan,
             windowCreationInterval: windowCreationInterval,
-            subscriber: _assertThisInitialized(_this236),
+            subscriber: _assertThisInitialized(_this244),
             scheduler: scheduler
           };
 
-          _this236.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
+          _this244.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
 
-          _this236.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
+          _this244.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
         } else {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this236),
+            subscriber: _assertThisInitialized(_this244),
             window: window,
             windowTimeSpan: windowTimeSpan
           };
 
-          _this236.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
+          _this244.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
         }
 
-        return _this236;
+        return _this244;
       }
 
       _createClass2(WindowTimeSubscriber, [{
@@ -116810,21 +123249,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowToggleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB27) {
       _inherits(WindowToggleSubscriber, _OuterSubscriber__WEB27);
 
-      var _super154 = _createSuper(WindowToggleSubscriber);
+      var _super163 = _createSuper(WindowToggleSubscriber);
 
       function WindowToggleSubscriber(destination, openings, closingSelector) {
-        var _this237;
+        var _this245;
 
         _classCallCheck(this, WindowToggleSubscriber);
 
-        _this237 = _super154.call(this, destination);
-        _this237.openings = openings;
-        _this237.closingSelector = closingSelector;
-        _this237.contexts = [];
+        _this245 = _super163.call(this, destination);
+        _this245.openings = openings;
+        _this245.closingSelector = closingSelector;
+        _this245.contexts = [];
 
-        _this237.add(_this237.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this237), openings, openings));
+        _this245.add(_this245.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this245), openings, openings));
 
-        return _this237;
+        return _this245;
       }
 
       _createClass2(WindowToggleSubscriber, [{
@@ -116833,9 +123272,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var contexts = this.contexts;
 
           if (contexts) {
-            var _len42 = contexts.length;
+            var _len49 = contexts.length;
 
-            for (var i = 0; i < _len42; i++) {
+            for (var i = 0; i < _len49; i++) {
               contexts[i].window.next(value);
             }
           }
@@ -116847,10 +123286,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len43 = contexts.length;
+            var _len50 = contexts.length;
             var index = -1;
 
-            while (++index < _len43) {
+            while (++index < _len50) {
               var context = contexts[index];
               context.window.error(err);
               context.subscription.unsubscribe();
@@ -116866,10 +123305,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len44 = contexts.length;
+            var _len51 = contexts.length;
             var index = -1;
 
-            while (++index < _len44) {
+            while (++index < _len51) {
               var context = contexts[index];
               context.window.complete();
               context.subscription.unsubscribe();
@@ -116885,10 +123324,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len45 = contexts.length;
+            var _len52 = contexts.length;
             var index = -1;
 
-            while (++index < _len45) {
+            while (++index < _len52) {
               var context = contexts[index];
               context.window.unsubscribe();
               context.subscription.unsubscribe();
@@ -117030,20 +123469,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB28) {
       _inherits(WindowSubscriber, _OuterSubscriber__WEB28);
 
-      var _super155 = _createSuper(WindowSubscriber);
+      var _super164 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination, closingSelector) {
-        var _this238;
+        var _this246;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this238 = _super155.call(this, destination);
-        _this238.destination = destination;
-        _this238.closingSelector = closingSelector;
+        _this246 = _super164.call(this, destination);
+        _this246.destination = destination;
+        _this246.closingSelector = closingSelector;
 
-        _this238.openWindow();
+        _this246.openWindow();
 
-        return _this238;
+        return _this246;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -117160,8 +123599,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function withLatestFrom() {
-      for (var _len46 = arguments.length, args = new Array(_len46), _key39 = 0; _key39 < _len46; _key39++) {
-        args[_key39] = arguments[_key39];
+      for (var _len53 = arguments.length, args = new Array(_len53), _key47 = 0; _key47 < _len53; _key47++) {
+        args[_key47] = arguments[_key47];
       }
 
       return function (source) {
@@ -117197,31 +123636,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WithLatestFromSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB29) {
       _inherits(WithLatestFromSubscriber, _OuterSubscriber__WEB29);
 
-      var _super156 = _createSuper(WithLatestFromSubscriber);
+      var _super165 = _createSuper(WithLatestFromSubscriber);
 
       function WithLatestFromSubscriber(destination, observables, project) {
-        var _this239;
+        var _this247;
 
         _classCallCheck(this, WithLatestFromSubscriber);
 
-        _this239 = _super156.call(this, destination);
-        _this239.observables = observables;
-        _this239.project = project;
-        _this239.toRespond = [];
+        _this247 = _super165.call(this, destination);
+        _this247.observables = observables;
+        _this247.project = project;
+        _this247.toRespond = [];
         var len = observables.length;
-        _this239.values = new Array(len);
+        _this247.values = new Array(len);
 
         for (var i = 0; i < len; i++) {
-          _this239.toRespond.push(i);
+          _this247.toRespond.push(i);
         }
 
-        for (var _i26 = 0; _i26 < len; _i26++) {
-          var observable = observables[_i26];
+        for (var _i29 = 0; _i29 < len; _i29++) {
+          var observable = observables[_i29];
 
-          _this239.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this239), observable, observable, _i26));
+          _this247.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this247), observable, observable, _i29));
         }
 
-        return _this239;
+        return _this247;
       }
 
       _createClass2(WithLatestFromSubscriber, [{
@@ -117304,8 +123743,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/zip.js");
 
     function zip() {
-      for (var _len47 = arguments.length, observables = new Array(_len47), _key40 = 0; _key40 < _len47; _key40++) {
-        observables[_key40] = arguments[_key40];
+      for (var _len54 = arguments.length, observables = new Array(_len54), _key48 = 0; _key48 < _len54; _key48++) {
+        observables[_key48] = arguments[_key48];
       }
 
       return function zipOperatorFunction(source) {
@@ -117739,12 +124178,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Action = /*#__PURE__*/function (_Subscription__WEBPAC4) {
       _inherits(Action, _Subscription__WEBPAC4);
 
-      var _super157 = _createSuper(Action);
+      var _super166 = _createSuper(Action);
 
       function Action(scheduler, work) {
         _classCallCheck(this, Action);
 
-        return _super157.call(this);
+        return _super166.call(this);
       }
 
       _createClass2(Action, [{
@@ -117791,17 +124230,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnimationFrameAction = /*#__PURE__*/function (_AsyncAction__WEBPACK) {
       _inherits(AnimationFrameAction, _AsyncAction__WEBPACK);
 
-      var _super158 = _createSuper(AnimationFrameAction);
+      var _super167 = _createSuper(AnimationFrameAction);
 
       function AnimationFrameAction(scheduler, work) {
-        var _this240;
+        var _this248;
 
         _classCallCheck(this, AnimationFrameAction);
 
-        _this240 = _super158.call(this, scheduler, work);
-        _this240.scheduler = scheduler;
-        _this240.work = work;
-        return _this240;
+        _this248 = _super167.call(this, scheduler, work);
+        _this248.scheduler = scheduler;
+        _this248.work = work;
+        return _this248;
       }
 
       _createClass2(AnimationFrameAction, [{
@@ -117872,12 +124311,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnimationFrameScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP) {
       _inherits(AnimationFrameScheduler, _AsyncScheduler__WEBP);
 
-      var _super159 = _createSuper(AnimationFrameScheduler);
+      var _super168 = _createSuper(AnimationFrameScheduler);
 
       function AnimationFrameScheduler() {
         _classCallCheck(this, AnimationFrameScheduler);
 
-        return _super159.apply(this, arguments);
+        return _super168.apply(this, arguments);
       }
 
       _createClass2(AnimationFrameScheduler, [{
@@ -117951,17 +124390,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsapAction = /*#__PURE__*/function (_AsyncAction__WEBPACK2) {
       _inherits(AsapAction, _AsyncAction__WEBPACK2);
 
-      var _super160 = _createSuper(AsapAction);
+      var _super169 = _createSuper(AsapAction);
 
       function AsapAction(scheduler, work) {
-        var _this241;
+        var _this249;
 
         _classCallCheck(this, AsapAction);
 
-        _this241 = _super160.call(this, scheduler, work);
-        _this241.scheduler = scheduler;
-        _this241.work = work;
-        return _this241;
+        _this249 = _super169.call(this, scheduler, work);
+        _this249.scheduler = scheduler;
+        _this249.work = work;
+        return _this249;
       }
 
       _createClass2(AsapAction, [{
@@ -118031,12 +124470,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsapScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP2) {
       _inherits(AsapScheduler, _AsyncScheduler__WEBP2);
 
-      var _super161 = _createSuper(AsapScheduler);
+      var _super170 = _createSuper(AsapScheduler);
 
       function AsapScheduler() {
         _classCallCheck(this, AsapScheduler);
 
-        return _super161.apply(this, arguments);
+        return _super170.apply(this, arguments);
       }
 
       _createClass2(AsapScheduler, [{
@@ -118104,18 +124543,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncAction = /*#__PURE__*/function (_Action__WEBPACK_IMPO) {
       _inherits(AsyncAction, _Action__WEBPACK_IMPO);
 
-      var _super162 = _createSuper(AsyncAction);
+      var _super171 = _createSuper(AsyncAction);
 
       function AsyncAction(scheduler, work) {
-        var _this242;
+        var _this250;
 
         _classCallCheck(this, AsyncAction);
 
-        _this242 = _super162.call(this, scheduler, work);
-        _this242.scheduler = scheduler;
-        _this242.work = work;
-        _this242.pending = false;
-        return _this242;
+        _this250 = _super171.call(this, scheduler, work);
+        _this250.scheduler = scheduler;
+        _this250.work = work;
+        _this250.pending = false;
+        return _this250;
       }
 
       _createClass2(AsyncAction, [{
@@ -118253,26 +124692,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncScheduler = /*#__PURE__*/function (_Scheduler__WEBPACK_I) {
       _inherits(AsyncScheduler, _Scheduler__WEBPACK_I);
 
-      var _super163 = _createSuper(AsyncScheduler);
+      var _super172 = _createSuper(AsyncScheduler);
 
       function AsyncScheduler(SchedulerAction) {
-        var _this243;
+        var _this251;
 
         var now = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Scheduler__WEBPACK_IMPORTED_MODULE_0__["Scheduler"].now;
 
         _classCallCheck(this, AsyncScheduler);
 
-        _this243 = _super163.call(this, SchedulerAction, function () {
-          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this243)) {
+        _this251 = _super172.call(this, SchedulerAction, function () {
+          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this251)) {
             return AsyncScheduler.delegate.now();
           } else {
             return now();
           }
         });
-        _this243.actions = [];
-        _this243.active = false;
-        _this243.scheduled = undefined;
-        return _this243;
+        _this251.actions = [];
+        _this251.active = false;
+        _this251.scheduled = undefined;
+        return _this251;
       }
 
       _createClass2(AsyncScheduler, [{
@@ -118354,17 +124793,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var QueueAction = /*#__PURE__*/function (_AsyncAction__WEBPACK3) {
       _inherits(QueueAction, _AsyncAction__WEBPACK3);
 
-      var _super164 = _createSuper(QueueAction);
+      var _super173 = _createSuper(QueueAction);
 
       function QueueAction(scheduler, work) {
-        var _this244;
+        var _this252;
 
         _classCallCheck(this, QueueAction);
 
-        _this244 = _super164.call(this, scheduler, work);
-        _this244.scheduler = scheduler;
-        _this244.work = work;
-        return _this244;
+        _this252 = _super173.call(this, scheduler, work);
+        _this252.scheduler = scheduler;
+        _this252.work = work;
+        return _this252;
       }
 
       _createClass2(QueueAction, [{
@@ -118435,12 +124874,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var QueueScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP3) {
       _inherits(QueueScheduler, _AsyncScheduler__WEBP3);
 
-      var _super165 = _createSuper(QueueScheduler);
+      var _super174 = _createSuper(QueueScheduler);
 
       function QueueScheduler() {
         _classCallCheck(this, QueueScheduler);
 
-        return _super165.apply(this, arguments);
+        return _super174.apply(this, arguments);
       }
 
       return QueueScheduler;
@@ -118491,23 +124930,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VirtualTimeScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP4) {
       _inherits(VirtualTimeScheduler, _AsyncScheduler__WEBP4);
 
-      var _super166 = _createSuper(VirtualTimeScheduler);
+      var _super175 = _createSuper(VirtualTimeScheduler);
 
       function VirtualTimeScheduler() {
-        var _this245;
+        var _this253;
 
         var SchedulerAction = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : VirtualAction;
         var maxFrames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, VirtualTimeScheduler);
 
-        _this245 = _super166.call(this, SchedulerAction, function () {
-          return _this245.frame;
+        _this253 = _super175.call(this, SchedulerAction, function () {
+          return _this253.frame;
         });
-        _this245.maxFrames = maxFrames;
-        _this245.frame = 0;
-        _this245.index = -1;
-        return _this245;
+        _this253.maxFrames = maxFrames;
+        _this253.frame = 0;
+        _this253.index = -1;
+        return _this253;
       }
 
       _createClass2(VirtualTimeScheduler, [{
@@ -118544,22 +124983,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VirtualAction = /*#__PURE__*/function (_AsyncAction__WEBPACK4) {
       _inherits(VirtualAction, _AsyncAction__WEBPACK4);
 
-      var _super167 = _createSuper(VirtualAction);
+      var _super176 = _createSuper(VirtualAction);
 
       function VirtualAction(scheduler, work) {
-        var _this246;
+        var _this254;
 
         var index = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : scheduler.index += 1;
 
         _classCallCheck(this, VirtualAction);
 
-        _this246 = _super167.call(this, scheduler, work);
-        _this246.scheduler = scheduler;
-        _this246.work = work;
-        _this246.index = index;
-        _this246.active = true;
-        _this246.index = scheduler.index = index;
-        return _this246;
+        _this254 = _super176.call(this, scheduler, work);
+        _this254.scheduler = scheduler;
+        _this254.work = work;
+        _this254.index = index;
+        _this254.active = true;
+        _this254.index = scheduler.index = index;
+        return _this254;
       }
 
       _createClass2(VirtualAction, [{
@@ -119669,8 +126108,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/identity.js");
 
     function pipe() {
-      for (var _len48 = arguments.length, fns = new Array(_len48), _key41 = 0; _key41 < _len48; _key41++) {
-        fns[_key41] = arguments[_key41];
+      for (var _len55 = arguments.length, fns = new Array(_len55), _key49 = 0; _key49 < _len55; _key49++) {
+        fns[_key49] = arguments[_key49];
       }
 
       return pipeFromArray(fns);
@@ -119812,7 +126251,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var subscribeToArray = function subscribeToArray(array) {
       return function (subscriber) {
-        for (var i = 0, _len49 = array.length; i < _len49 && !subscriber.closed; i++) {
+        for (var i = 0, _len56 = array.length; i < _len56 && !subscriber.closed; i++) {
           subscriber.next(array[i]);
         }
 
