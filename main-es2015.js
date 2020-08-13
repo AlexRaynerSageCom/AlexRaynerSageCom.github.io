@@ -1112,7 +1112,7 @@ function builderReducer(state = defaultBuilderState, action) {
         ////////////////////////////////////////////////////////////////////////////////
         case _app_action__WEBPACK_IMPORTED_MODULE_0__["ADD_ROW"]: {
             return Object.assign(Object.assign({}, state), { grid: Object.assign(Object.assign({}, state.grid), { rows: [
-                        ...state.grid.columns,
+                        ...state.grid.rows,
                         action.row
                     ] }) });
         }

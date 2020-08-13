@@ -1826,7 +1826,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           {
             return Object.assign(Object.assign({}, state), {
               grid: Object.assign(Object.assign({}, state.grid), {
-                rows: [].concat(_toConsumableArray(state.grid.columns), [action.row])
+                rows: [].concat(_toConsumableArray(state.grid.rows), [action.row])
               })
             });
           }
