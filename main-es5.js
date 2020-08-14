@@ -260,81 +260,93 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/platform-browser/animations */
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
+    /* harmony import */
+
+
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
     /* harmony import */
 
 
-    var _ngrx_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _ngrx_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @ngrx/store */
     "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
     /* harmony import */
 
 
-    var _store_app_reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _store_app_reducer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./store/app.reducer */
     "./src/app/store/app.reducer.ts");
     /* harmony import */
 
 
-    var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @ngrx/store-devtools */
     "./node_modules/@ngrx/store-devtools/__ivy_ngcc__/fesm2015/ngrx-store-devtools.js");
     /* harmony import */
 
 
-    var _services__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _services__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./services */
     "./src/app/services/index.ts");
     /* harmony import */
 
 
-    var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./app.component */
     "./src/app/app.component.ts");
     /* harmony import */
 
 
-    var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./components */
     "./src/app/components/index.ts");
     /* harmony import */
 
 
-    var _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! @sage/ng-carbon/button */
     "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js");
     /* harmony import */
 
 
-    var _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @sage/ng-carbon/dropdown */
     "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js");
     /* harmony import */
 
 
-    var _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! @sage/ng-carbon/input-text */
     "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-input-text.js");
     /* harmony import */
 
 
-    var _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! @sage/ng-carbon/checkbox */
     "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-checkbox.js");
     /* harmony import */
 
 
-    var _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! @sage/ng-carbon/icon */
     "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js");
     /* harmony import */
 
 
-    var _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! @sage/ng-carbon/tabs */
-    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tabs.js"); // Angular
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-tabs.js");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    /*! @sage/ng-carbon/dialog */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dialog.js"); // Angular
     // Modules
     // ngrx
     // Services
@@ -348,22 +360,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
       type: AppModule,
-      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
+      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
     });
     AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
       factory: function AppModule_Factory(t) {
         return new (t || AppModule)();
       },
-      providers: [_services__WEBPACK_IMPORTED_MODULE_8__["FormsService"]],
-      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_5__["StoreModule"].forRoot(_store_app_reducer__WEBPACK_IMPORTED_MODULE_6__["appReducers"]), _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__["StoreDevtoolsModule"].instrument({
+      providers: [_services__WEBPACK_IMPORTED_MODULE_9__["FormsService"]],
+      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreModule"].forRoot(_store_app_reducer__WEBPACK_IMPORTED_MODULE_7__["appReducers"]), _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_8__["StoreDevtoolsModule"].instrument({
         maxAge: 20
-      }), _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_11__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_12__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_13__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_14__["CheckboxModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_15__["IconModule"], _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_16__["TabsModule"]]]
+      }), _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_12__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_13__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_14__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_15__["CheckboxModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_16__["IconModule"], _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_17__["TabsModule"], _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_18__["DialogModule"]]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["AxisFormComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["GridFormComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["GridViewComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["SidebarComponent"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_5__["StoreRootModule"], _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__["StoreDevtoolsModule"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_11__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_12__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_13__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_14__["CheckboxModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_15__["IconModule"], _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_16__["TabsModule"]]
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["AxisFormComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["EditAxisDialogComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["GridFormComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["GridViewComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["SidebarComponent"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreRootModule"], _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_8__["StoreDevtoolsModule"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_12__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_13__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_14__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_15__["CheckboxModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_16__["IconModule"], _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_17__["TabsModule"], _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_18__["DialogModule"]]
       });
     })();
     /*@__PURE__*/
@@ -373,12 +385,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_5__["StoreModule"].forRoot(_store_app_reducer__WEBPACK_IMPORTED_MODULE_6__["appReducers"]), _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__["StoreDevtoolsModule"].instrument({
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreModule"].forRoot(_store_app_reducer__WEBPACK_IMPORTED_MODULE_7__["appReducers"]), _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_8__["StoreDevtoolsModule"].instrument({
             maxAge: 20
-          }), _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_11__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_12__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_13__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_14__["CheckboxModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_15__["IconModule"], _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_16__["TabsModule"]],
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["AxisFormComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["GridFormComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["GridViewComponent"], _components__WEBPACK_IMPORTED_MODULE_10__["SidebarComponent"]],
-          providers: [_services__WEBPACK_IMPORTED_MODULE_8__["FormsService"]],
-          bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
+          }), _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_12__["ButtonModule"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_13__["DropdownModule"], _sage_ng_carbon_input_text__WEBPACK_IMPORTED_MODULE_14__["InputTextModule"], _sage_ng_carbon_checkbox__WEBPACK_IMPORTED_MODULE_15__["CheckboxModule"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_16__["IconModule"], _sage_ng_carbon_tabs__WEBPACK_IMPORTED_MODULE_17__["TabsModule"], _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_18__["DialogModule"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["AxisFormComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["EditAxisDialogComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["GridFormComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["GridViewComponent"], _components__WEBPACK_IMPORTED_MODULE_11__["SidebarComponent"]],
+          providers: [_services__WEBPACK_IMPORTED_MODULE_9__["FormsService"]],
+          bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
         }]
       }], null, null);
     })();
@@ -445,7 +457,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function AxisFormComponent_form_0_sds_dropdown_option_5_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-dropdown-option", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-dropdown-option", 8);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -453,28 +465,52 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var option_r2 = ctx.$implicit;
+        var option_r3 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", option_r2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", option_r3);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", option_r2, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", option_r3, " ");
+      }
+    }
+
+    function AxisFormComponent_form_0_sds_button_6_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-button", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickEvent", function AxisFormComponent_form_0_sds_button_6_Template_sds_button_clickEvent_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
+
+          var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+          return ctx_r4.remove();
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Remove ");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("destructive", true);
       }
     }
 
     function AxisFormComponent_form_0_Template(rf, ctx) {
       if (rf & 1) {
-        var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function AxisFormComponent_form_0_Template_form_ngSubmit_0_listener() {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7);
 
-          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          return ctx_r3.addAxis();
+          return ctx_r6.addAxis();
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
@@ -493,9 +529,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "sds-button", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, AxisFormComponent_form_0_sds_button_6_Template, 2, 1, "sds-button", 6);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Add");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "sds-button", 7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -518,6 +556,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.axisUnits);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.showDeleteButton);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r0.showDeleteButton ? "Update" : "Add", " ");
       }
     }
 
@@ -525,7 +571,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function AxisFormComponent() {
         _classCallCheck(this, AxisFormComponent);
 
+        this.showDeleteButton = false;
         this.axisAdded = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.axisRemoved = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.axisUnits = ['fr', '%', 'px', 'auto'];
       }
 
@@ -539,6 +587,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           this.axisAdded.emit();
+        }
+      }, {
+        key: "remove",
+        value: function remove() {
+          this.axisRemoved.emit();
         }
       }, {
         key: "isFieldInvalid",
@@ -558,17 +611,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: AxisFormComponent,
       selectors: [["app-axis-form"]],
       inputs: {
-        axisForm: "axisForm"
+        axisForm: "axisForm",
+        showDeleteButton: "showDeleteButton"
       },
       outputs: {
-        axisAdded: "axisAdded"
+        axisAdded: "axisAdded",
+        axisRemoved: "axisRemoved"
       },
       decls: 1,
       vars: 1,
-      consts: [[3, "formGroup", "ngSubmit", 4, "ngIf"], [3, "formGroup", "ngSubmit"], [1, "input-field"], ["formControlName", "size", "placeholderText", "size..", "errorType", "error", 3, "errors"], ["formControlName", "unit", "placeholder", "unit..", "errorType", "error", 3, "errors"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "submit"], [3, "value"]],
+      consts: [[3, "formGroup", "ngSubmit", 4, "ngIf"], [3, "formGroup", "ngSubmit"], [1, "input-field"], ["formControlName", "size", "placeholderText", "size..", "errorType", "error", 3, "errors"], ["formControlName", "unit", "placeholder", "unit..", "errorType", "error", 3, "errors"], [3, "value", 4, "ngFor", "ngForOf"], ["buttonType", "tertiary", 3, "destructive", "clickEvent", 4, "ngIf"], ["type", "submit"], [3, "value"], ["buttonType", "tertiary", 3, "destructive", "clickEvent"]],
       template: function AxisFormComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AxisFormComponent_form_0_Template, 8, 4, "form", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AxisFormComponent_form_0_Template, 9, 6, "form", 0);
         }
 
         if (rf & 2) {
@@ -585,17 +640,195 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
           selector: 'app-axis-form',
-          template: "\n    <form\n      *ngIf=\"axisForm\"\n      [formGroup]=\"axisForm\"\n      (ngSubmit)=\"addAxis()\"\n    >\n      <div class=\"input-field\">\n        <sds-input-text\n          formControlName=\"size\"\n          placeholderText=\"size..\"\n          errorType=\"error\"\n          [errors]=\"isFieldInvalid(axisForm, 'size')\"\n        >\n        </sds-input-text>\n      </div>\n\n      <div class=\"input-field\">\n        <sds-dropdown\n          formControlName=\"unit\"\n          placeholder=\"unit..\"\n          errorType=\"error\"\n          [errors]=\"isFieldInvalid(axisForm, 'unit')\"\n        >\n          <sds-dropdown-option\n            *ngFor=\"let option of axisUnits\"\n            [value]=\"option\"\n          >\n            {{ option }}\n          </sds-dropdown-option>\n        </sds-dropdown>\n      </div>\n\n      <sds-button type=\"submit\">Add</sds-button>\n    </form>\n  ",
+          template: "\n    <form\n      *ngIf=\"axisForm\"\n      [formGroup]=\"axisForm\"\n      (ngSubmit)=\"addAxis()\"\n    >\n      <div class=\"input-field\">\n        <sds-input-text\n          formControlName=\"size\"\n          placeholderText=\"size..\"\n          errorType=\"error\"\n          [errors]=\"isFieldInvalid(axisForm, 'size')\"\n        >\n        </sds-input-text>\n      </div>\n\n      <div class=\"input-field\">\n        <sds-dropdown\n          formControlName=\"unit\"\n          placeholder=\"unit..\"\n          errorType=\"error\"\n          [errors]=\"isFieldInvalid(axisForm, 'unit')\"\n        >\n          <sds-dropdown-option\n            *ngFor=\"let option of axisUnits\"\n            [value]=\"option\"\n          >\n            {{ option }}\n          </sds-dropdown-option>\n        </sds-dropdown>\n      </div>\n\n      <sds-button\n        *ngIf=\"showDeleteButton\"\n        buttonType=\"tertiary\"\n        [destructive]=\"true\"\n        (clickEvent)=\"remove()\"\n      >\n        Remove\n      </sds-button>\n\n      <sds-button type=\"submit\">\n        {{ showDeleteButton ? 'Update' : 'Add' }}\n      </sds-button>\n    </form>\n  ",
           styleUrls: ['./axis-form.component.scss']
         }]
       }], null, {
         axisForm: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
+        showDeleteButton: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
         axisAdded: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }],
+        axisRemoved: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }]
       });
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/components/edit-axis-dialog/edit-axis-dialog.component.ts":
+  /*!***************************************************************************!*\
+    !*** ./src/app/components/edit-axis-dialog/edit-axis-dialog.component.ts ***!
+    \***************************************************************************/
+
+  /*! exports provided: EditAxisDialogComponent */
+
+  /***/
+  function srcAppComponentsEditAxisDialogEditAxisDialogComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "EditAxisDialogComponent", function () {
+      return EditAxisDialogComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_store_app_action__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! src/app/store/app.action */
+    "./src/app/store/app.action.ts");
+    /* harmony import */
+
+
+    var src_app_services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/services */
+    "./src/app/services/index.ts");
+    /* harmony import */
+
+
+    var _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @sage/ng-carbon/dialog */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dialog.js");
+    /* harmony import */
+
+
+    var _ngrx_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ngrx/store */
+    "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
+    /* harmony import */
+
+
+    var _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../axis-form/axis-form.component */
+    "./src/app/components/axis-form/axis-form.component.ts");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js"); // Angular
+
+
+    var EditAxisDialogComponent = /*#__PURE__*/function () {
+      function EditAxisDialogComponent(formsService, config, dialogRef, store) {
+        _classCallCheck(this, EditAxisDialogComponent);
+
+        this.formsService = formsService;
+        this.config = config;
+        this.dialogRef = dialogRef;
+        this.store = store;
+        this.axisForm = this.formsService.createAxisForm(config.data.axis);
+        this.axisType = config.data.axisType;
+        this.position = config.data.position;
+      }
+
+      _createClass(EditAxisDialogComponent, [{
+        key: "update",
+        value: function update() {
+          var action = this.axisType === 'column' ? new src_app_store_app_action__WEBPACK_IMPORTED_MODULE_1__["UpdateColumn"]({
+            index: this.position,
+            axis: this.axisForm.value
+          }) : new src_app_store_app_action__WEBPACK_IMPORTED_MODULE_1__["UpdateRow"]({
+            index: this.position,
+            axis: this.axisForm.value
+          });
+          this.store.dispatch(action);
+          this.dialogRef.close();
+        }
+      }, {
+        key: "remove",
+        value: function remove() {
+          this.dialogRef.close('Delete');
+        }
+      }]);
+
+      return EditAxisDialogComponent;
+    }();
+
+    EditAxisDialogComponent.ɵfac = function EditAxisDialogComponent_Factory(t) {
+      return new (t || EditAxisDialogComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_services__WEBPACK_IMPORTED_MODULE_2__["FormsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_3__["DialogConfig"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_3__["DialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"]));
+    };
+
+    EditAxisDialogComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: EditAxisDialogComponent,
+      selectors: [["ng-component"]],
+      decls: 5,
+      vars: 6,
+      consts: [[3, "showDeleteButton", "axisForm", "axisAdded", "axisRemoved"]],
+      template: function EditAxisDialogComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-dialog-header");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "titlecase");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "sds-dialog-content");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "app-axis-form", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("axisAdded", function EditAxisDialogComponent_Template_app_axis_form_axisAdded_4_listener() {
+            return ctx.update();
+          })("axisRemoved", function EditAxisDialogComponent_Template_app_axis_form_axisRemoved_4_listener() {
+            return ctx.remove();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" Edit ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 4, ctx.axisType), " ", ctx.position + 1, " ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("showDeleteButton", true)("axisForm", ctx.axisForm);
+        }
+      },
+      directives: [_sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_3__["DialogHeaderComponent"], _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_3__["DialogContentComponent"], _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_5__["AxisFormComponent"]],
+      pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["TitleCasePipe"]],
+      encapsulation: 2
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](EditAxisDialogComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          template: "\n    <sds-dialog-header>\n      Edit {{ axisType | titlecase }} {{ position + 1  }}\n    </sds-dialog-header>\n\n    <sds-dialog-content>\n      <app-axis-form\n        [showDeleteButton]=\"true\"\n        [axisForm]=\"axisForm\"\n        (axisAdded)=\"update()\"\n        (axisRemoved)=\"remove()\"\n      >\n      </app-axis-form>\n    </sds-dialog-content>\n  "
+        }]
+      }], function () {
+        return [{
+          type: src_app_services__WEBPACK_IMPORTED_MODULE_2__["FormsService"]
+        }, {
+          type: _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_3__["DialogConfig"]
+        }, {
+          type: _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_3__["DialogRef"]
+        }, {
+          type: _ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"]
+        }];
+      }, null);
     })();
     /***/
 
@@ -795,16 +1028,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _ngrx_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _edit_axis_dialog_edit_axis_dialog_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../edit-axis-dialog/edit-axis-dialog.component */
+    "./src/app/components/edit-axis-dialog/edit-axis-dialog.component.ts");
+    /* harmony import */
+
+
+    var _ngrx_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @ngrx/store */
     "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @sage/ng-carbon/dialog */
+    "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dialog.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js"); // Angular
     // libs
+    // Components
 
 
     function GridViewComponent_div_1_div_1_Template(rf, ctx) {
@@ -820,10 +1066,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-          return ctx_r6.removeColumn(i_r5);
+          return ctx_r6.editAxis(i_r5, "column");
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " DELETE ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " EDIT ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -862,10 +1108,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-          return ctx_r11.removeRow(i_r10);
+          return ctx_r11.editAxis(i_r10, "row");
         });
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " DELETE ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " EDIT ");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -920,10 +1166,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     var GridViewComponent = /*#__PURE__*/function () {
-      function GridViewComponent(store) {
+      function GridViewComponent(store, dialogService) {
         _classCallCheck(this, GridViewComponent);
 
         this.store = store;
+        this.dialogService = dialogService;
         this.unsubscribe$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
       }
 
@@ -934,6 +1181,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.store.select(_store_app_selector__WEBPACK_IMPORTED_MODULE_1__["selectGrid"]).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["takeUntil"])(this.unsubscribe$)).subscribe(function (grid) {
             _this.grid = grid;
+          });
+        }
+      }, {
+        key: "editAxis",
+        value: function editAxis(index, axisType) {
+          var _this2 = this;
+
+          this.dialogService.open(_edit_axis_dialog_edit_axis_dialog_component__WEBPACK_IMPORTED_MODULE_5__["EditAxisDialogComponent"], {
+            size: 'medium-small',
+            showCloseIcon: true,
+            data: {
+              axis: this.grid["".concat(axisType, "s")][index],
+              axisType: axisType,
+              position: index
+            }
+          }).onClosed.subscribe(function (result) {
+            if (result === 'Delete') {
+              if (axisType === 'column') {
+                _this2.removeColumn(index);
+              } else {
+                _this2.removeRow(index);
+              }
+            }
           });
         }
       }, {
@@ -1000,7 +1270,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     GridViewComponent.ɵfac = function GridViewComponent_Factory(t) {
-      return new (t || GridViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_5__["Store"]));
+      return new (t || GridViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_7__["DialogService"]));
     };
 
     GridViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1044,8 +1314,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.grid == null ? null : ctx.grid.fillGrid);
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"]],
-      styles: ["[_nghost-%COMP%] {\n  display: block;\n  flex: 1;\n}\n\n.grid-view[_ngcontent-%COMP%] {\n  height: calc(100% - 32px);\n  padding: 16px;\n  display: grid;\n  grid-template-columns: auto 1fr;\n  grid-template-rows: auto 1fr;\n  gap: 10px;\n}\n\n.columns[_ngcontent-%COMP%], .rows[_ngcontent-%COMP%] {\n  display: grid;\n  font-weight: bold;\n  color: var(--color-error);\n  text-align: center;\n  cursor: pointer;\n}\n\n.columns[_ngcontent-%COMP%] {\n  grid-column: 2;\n  grid-row: 1;\n}\n\n.rows[_ngcontent-%COMP%] {\n  grid-template-columns: -webkit-min-content;\n  grid-template-columns: min-content;\n  grid-column: 1;\n  grid-row: 2;\n}\n\n.rows[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  writing-mode: vertical-lr;\n  transform: rotate(-180deg);\n}\n\n.grid[_ngcontent-%COMP%] {\n  grid-column: 2;\n  grid-row: 2;\n}\n\n.grid__item[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  background-color: var(--color-primary);\n  color: #fff;\n  font-weight: bold;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLXZpZXdcXGdyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtFQUNBLE9BQUE7QUNDRjs7QURFQTtFQUNFLHlCQUFBO0VBQ0EsYUFBQTtFQUNBLGFBQUE7RUFDQSwrQkFBQTtFQUNBLDRCQUFBO0VBQ0EsU0FBQTtBQ0NGOztBREVBO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EseUJBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7QUNDRjs7QURFQTtFQUNFLGNBQUE7RUFDQSxXQUFBO0FDQ0Y7O0FERUE7RUFDRSwwQ0FBQTtFQUFBLGtDQUFBO0VBQ0EsY0FBQTtFQUNBLFdBQUE7QUNDRjs7QURDRTtFQUNFLHlCQUFBO0VBQ0EsMEJBQUE7QUNDSjs7QURHQTtFQUNFLGNBQUE7RUFDQSxXQUFBO0FDQUY7O0FERUU7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLHNDQUFBO0VBQ0EsV0FBQTtFQUNBLGlCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZ3JpZC12aWV3L2dyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBmbGV4OiAxXHJcbn1cclxuXHJcbi5ncmlkLXZpZXcge1xyXG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzJweCk7XHJcbiAgcGFkZGluZzogMTZweDtcclxuICBkaXNwbGF5OiBncmlkO1xyXG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byAxZnI7XHJcbiAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiBhdXRvIDFmcjtcclxuICBnYXA6IDEwcHg7XHJcbn1cclxuXHJcbi5jb2x1bW5zLCAucm93cyB7XHJcbiAgZGlzcGxheTogZ3JpZDtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBjb2xvcjogdmFyKC0tY29sb3ItZXJyb3IpO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcbi5jb2x1bW5zIHtcclxuICBncmlkLWNvbHVtbjogMjtcclxuICBncmlkLXJvdzogMTtcclxufVxyXG5cclxuLnJvd3Mge1xyXG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogbWluLWNvbnRlbnQ7XHJcbiAgZ3JpZC1jb2x1bW46IDE7XHJcbiAgZ3JpZC1yb3c6IDI7XHJcbiAgXHJcbiAgPiAqIHtcclxuICAgIHdyaXRpbmctbW9kZTogdmVydGljYWwtbHI7XHJcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtMTgwZGVnKTtcclxuICB9XHJcbn1cclxuXHJcbi5ncmlkIHtcclxuICBncmlkLWNvbHVtbjogMjtcclxuICBncmlkLXJvdzogMjtcclxuXHJcbiAgJl9faXRlbSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWNvbG9yLXByaW1hcnkpO1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgfVxyXG59XHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGZsZXg6IDE7XG59XG5cbi5ncmlkLXZpZXcge1xuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDMycHgpO1xuICBwYWRkaW5nOiAxNnB4O1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG8gMWZyO1xuICBncmlkLXRlbXBsYXRlLXJvd3M6IGF1dG8gMWZyO1xuICBnYXA6IDEwcHg7XG59XG5cbi5jb2x1bW5zLCAucm93cyB7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBjb2xvcjogdmFyKC0tY29sb3ItZXJyb3IpO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmNvbHVtbnMge1xuICBncmlkLWNvbHVtbjogMjtcbiAgZ3JpZC1yb3c6IDE7XG59XG5cbi5yb3dzIHtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBtaW4tY29udGVudDtcbiAgZ3JpZC1jb2x1bW46IDE7XG4gIGdyaWQtcm93OiAyO1xufVxuLnJvd3MgPiAqIHtcbiAgd3JpdGluZy1tb2RlOiB2ZXJ0aWNhbC1scjtcbiAgdHJhbnNmb3JtOiByb3RhdGUoLTE4MGRlZyk7XG59XG5cbi5ncmlkIHtcbiAgZ3JpZC1jb2x1bW46IDI7XG4gIGdyaWQtcm93OiAyO1xufVxuLmdyaWRfX2l0ZW0ge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1wcmltYXJ5KTtcbiAgY29sb3I6ICNmZmY7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn0iXX0= */"]
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"]],
+      styles: ["[_nghost-%COMP%] {\n  display: block;\n  flex: 1;\n}\n\n.grid-view[_ngcontent-%COMP%] {\n  height: calc(100% - 32px);\n  padding: 16px;\n  display: grid;\n  grid-template-columns: auto 1fr;\n  grid-template-rows: auto 1fr;\n  gap: 10px;\n}\n\n.columns[_ngcontent-%COMP%], .rows[_ngcontent-%COMP%] {\n  display: grid;\n  font-weight: bold;\n  color: var(--color-primary);\n  text-align: center;\n  cursor: pointer;\n}\n\n.columns[_ngcontent-%COMP%] {\n  grid-column: 2;\n  grid-row: 1;\n}\n\n.rows[_ngcontent-%COMP%] {\n  grid-template-columns: -webkit-min-content;\n  grid-template-columns: min-content;\n  grid-column: 1;\n  grid-row: 2;\n}\n\n.rows[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  writing-mode: vertical-lr;\n  transform: rotate(-180deg);\n}\n\n.grid[_ngcontent-%COMP%] {\n  grid-column: 2;\n  grid-row: 2;\n}\n\n.grid__item[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  background-color: var(--color-primary);\n  color: #fff;\n  font-weight: bold;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLXZpZXdcXGdyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtFQUNBLE9BQUE7QUNDRjs7QURFQTtFQUNFLHlCQUFBO0VBQ0EsYUFBQTtFQUNBLGFBQUE7RUFDQSwrQkFBQTtFQUNBLDRCQUFBO0VBQ0EsU0FBQTtBQ0NGOztBREVBO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsMkJBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7QUNDRjs7QURFQTtFQUNFLGNBQUE7RUFDQSxXQUFBO0FDQ0Y7O0FERUE7RUFDRSwwQ0FBQTtFQUFBLGtDQUFBO0VBQ0EsY0FBQTtFQUNBLFdBQUE7QUNDRjs7QURDRTtFQUNFLHlCQUFBO0VBQ0EsMEJBQUE7QUNDSjs7QURHQTtFQUNFLGNBQUE7RUFDQSxXQUFBO0FDQUY7O0FERUU7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLHNDQUFBO0VBQ0EsV0FBQTtFQUNBLGlCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZ3JpZC12aWV3L2dyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBmbGV4OiAxXHJcbn1cclxuXHJcbi5ncmlkLXZpZXcge1xyXG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzJweCk7XHJcbiAgcGFkZGluZzogMTZweDtcclxuICBkaXNwbGF5OiBncmlkO1xyXG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byAxZnI7XHJcbiAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiBhdXRvIDFmcjtcclxuICBnYXA6IDEwcHg7XHJcbn1cclxuXHJcbi5jb2x1bW5zLCAucm93cyB7XHJcbiAgZGlzcGxheTogZ3JpZDtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBjb2xvcjogdmFyKC0tY29sb3ItcHJpbWFyeSk7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLmNvbHVtbnMge1xyXG4gIGdyaWQtY29sdW1uOiAyO1xyXG4gIGdyaWQtcm93OiAxO1xyXG59XHJcblxyXG4ucm93cyB7XHJcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBtaW4tY29udGVudDtcclxuICBncmlkLWNvbHVtbjogMTtcclxuICBncmlkLXJvdzogMjtcclxuICBcclxuICA+ICoge1xyXG4gICAgd3JpdGluZy1tb2RlOiB2ZXJ0aWNhbC1scjtcclxuICAgIHRyYW5zZm9ybTogcm90YXRlKC0xODBkZWcpO1xyXG4gIH1cclxufVxyXG5cclxuLmdyaWQge1xyXG4gIGdyaWQtY29sdW1uOiAyO1xyXG4gIGdyaWQtcm93OiAyO1xyXG5cclxuICAmX19pdGVtIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29sb3ItcHJpbWFyeSk7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICB9XHJcbn1cclxuIiwiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgZmxleDogMTtcbn1cblxuLmdyaWQtdmlldyB7XG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzJweCk7XG4gIHBhZGRpbmc6IDE2cHg7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byAxZnI7XG4gIGdyaWQtdGVtcGxhdGUtcm93czogYXV0byAxZnI7XG4gIGdhcDogMTBweDtcbn1cblxuLmNvbHVtbnMsIC5yb3dzIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGNvbG9yOiB2YXIoLS1jb2xvci1wcmltYXJ5KTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5jb2x1bW5zIHtcbiAgZ3JpZC1jb2x1bW46IDI7XG4gIGdyaWQtcm93OiAxO1xufVxuXG4ucm93cyB7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogbWluLWNvbnRlbnQ7XG4gIGdyaWQtY29sdW1uOiAxO1xuICBncmlkLXJvdzogMjtcbn1cbi5yb3dzID4gKiB7XG4gIHdyaXRpbmctbW9kZTogdmVydGljYWwtbHI7XG4gIHRyYW5zZm9ybTogcm90YXRlKC0xODBkZWcpO1xufVxuXG4uZ3JpZCB7XG4gIGdyaWQtY29sdW1uOiAyO1xuICBncmlkLXJvdzogMjtcbn1cbi5ncmlkX19pdGVtIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29sb3ItcHJpbWFyeSk7XG4gIGNvbG9yOiAjZmZmO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -1054,12 +1324,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
           selector: 'app-grid-view',
-          template: "\n    <div class=\"grid-view\">\n      <div\n        *ngIf=\"grid.columns.length > 0\"\n        class=\"columns\"\n        [style]=\"columnStyles\"\n      >\n        <div\n          *ngFor=\"let col of columnCount; let i = index\"\n          tabIndex=\"0\"\n          (click)=\"removeColumn(i)\"\n        >\n          DELETE\n        </div>\n      </div>\n\n      <div\n        *ngIf=\"grid.rows.length > 0\"\n        class=\"rows\"\n        [style]=\"rowStyles\"\n      >\n        <div\n          *ngFor=\"let row of rowCount; let i = index\"\n          tabIndex=\"0\"\n          (click)=\"removeRow(i)\"\n        >\n          DELETE\n        </div>\n      </div>\n\n      <div\n        id=\"grid\"\n        class=\"grid\"\n        [style]=\"styles\"\n      >\n        <ng-container *ngIf=\"grid?.fillGrid\">\n          <div\n            *ngFor=\"let item of count\"\n            class=\"grid__item\"\n          >\n            ITEM\n          </div>\n        </ng-container>\n      </div>\n    </div>\n  ",
+          template: "\n    <div class=\"grid-view\">\n      <div\n        *ngIf=\"grid.columns.length > 0\"\n        class=\"columns\"\n        [style]=\"columnStyles\"\n      >\n        <div\n          *ngFor=\"let col of columnCount; let i = index\"\n          tabIndex=\"0\"\n          (click)=\"editAxis(i, 'column')\"\n        >\n          EDIT\n        </div>\n      </div>\n\n      <div\n        *ngIf=\"grid.rows.length > 0\"\n        class=\"rows\"\n        [style]=\"rowStyles\"\n      >\n        <div\n          *ngFor=\"let row of rowCount; let i = index\"\n          tabIndex=\"0\"\n          (click)=\"editAxis(i, 'row')\"\n        >\n          EDIT\n        </div>\n      </div>\n\n      <div\n        id=\"grid\"\n        class=\"grid\"\n        [style]=\"styles\"\n      >\n        <ng-container *ngIf=\"grid?.fillGrid\">\n          <div\n            *ngFor=\"let item of count\"\n            class=\"grid__item\"\n          >\n            ITEM\n          </div>\n        </ng-container>\n      </div>\n    </div>\n  ",
           styleUrls: ['./grid-view.component.scss']
         }]
       }], function () {
         return [{
-          type: _ngrx_store__WEBPACK_IMPORTED_MODULE_5__["Store"]
+          type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]
+        }, {
+          type: _sage_ng_carbon_dialog__WEBPACK_IMPORTED_MODULE_7__["DialogService"]
         }];
       }, null);
     })();
@@ -1073,7 +1345,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/components/index.ts ***!
     \*************************************/
 
-  /*! exports provided: AxisFormComponent, GridFormComponent, GridViewComponent, SidebarComponent */
+  /*! exports provided: AxisFormComponent, EditAxisDialogComponent, GridFormComponent, GridViewComponent, SidebarComponent */
 
   /***/
   function srcAppComponentsIndexTs(module, __webpack_exports__, __webpack_require__) {
@@ -1095,38 +1367,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _edit_axis_dialog_edit_axis_dialog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ./edit-axis-dialog/edit-axis-dialog.component */
+    "./src/app/components/edit-axis-dialog/edit-axis-dialog.component.ts");
+    /* harmony reexport (safe) */
+
+
+    __webpack_require__.d(__webpack_exports__, "EditAxisDialogComponent", function () {
+      return _edit_axis_dialog_edit_axis_dialog_component__WEBPACK_IMPORTED_MODULE_1__["EditAxisDialogComponent"];
+    });
+    /* harmony import */
+
+
+    var _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ./grid-form/grid-form.component */
     "./src/app/components/grid-form/grid-form.component.ts");
     /* harmony reexport (safe) */
 
 
     __webpack_require__.d(__webpack_exports__, "GridFormComponent", function () {
-      return _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_1__["GridFormComponent"];
+      return _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_2__["GridFormComponent"];
     });
     /* harmony import */
 
 
-    var _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ./grid-view/grid-view.component */
     "./src/app/components/grid-view/grid-view.component.ts");
     /* harmony reexport (safe) */
 
 
     __webpack_require__.d(__webpack_exports__, "GridViewComponent", function () {
-      return _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_2__["GridViewComponent"];
+      return _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_3__["GridViewComponent"];
     });
     /* harmony import */
 
 
-    var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./sidebar/sidebar.component */
     "./src/app/components/sidebar/sidebar.component.ts");
     /* harmony reexport (safe) */
 
 
     __webpack_require__.d(__webpack_exports__, "SidebarComponent", function () {
-      return _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_3__["SidebarComponent"];
+      return _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_4__["SidebarComponent"];
     });
     /***/
 
@@ -1249,13 +1533,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SidebarComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this2 = this;
+          var _this3 = this;
 
           this.store.select(_store_app_selector__WEBPACK_IMPORTED_MODULE_1__["selectGrid"]).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1)).subscribe(function (grid) {
-            _this2.gridForm = _this2.formsService.createGridForm(grid);
+            _this3.gridForm = _this3.formsService.createGridForm(grid);
 
-            _this2.gridForm.valueChanges.subscribe(function (updatedGrid) {
-              _this2.store.dispatch(new src_app_store_app_action__WEBPACK_IMPORTED_MODULE_2__["UpdateGrid"](updatedGrid));
+            _this3.gridForm.valueChanges.subscribe(function (updatedGrid) {
+              _this3.store.dispatch(new src_app_store_app_action__WEBPACK_IMPORTED_MODULE_2__["UpdateGrid"](updatedGrid));
             });
           });
           this.columnForm = this.formsService.createAxisForm();
@@ -1655,7 +1939,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/store/app.action.ts ***!
     \*************************************/
 
-  /*! exports provided: UPDATE_GRID, UpdateGrid, ADD_COLUMN, AddColumn, ADD_ROW, AddRow, DELETE_COLUMN, DeleteColumn, DELETE_ROW, DeleteRow */
+  /*! exports provided: UPDATE_GRID, UpdateGrid, ADD_COLUMN, AddColumn, ADD_ROW, AddRow, UPDATE_COLUMN, UpdateColumn, UPDATE_ROW, UpdateRow, DELETE_COLUMN, DeleteColumn, DELETE_ROW, DeleteRow */
 
   /***/
   function srcAppStoreAppActionTs(module, __webpack_exports__, __webpack_require__) {
@@ -1697,6 +1981,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     __webpack_require__.d(__webpack_exports__, "AddRow", function () {
       return AddRow;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UPDATE_COLUMN", function () {
+      return UPDATE_COLUMN;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UpdateColumn", function () {
+      return UpdateColumn;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UPDATE_ROW", function () {
+      return UPDATE_ROW;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UpdateRow", function () {
+      return UpdateRow;
     });
     /* harmony export (binding) */
 
@@ -1757,6 +2065,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       this.row = row;
       this.type = ADD_ROW;
+    }; ////////////////////////////////////////////////////////////////////////////////
+    // Update Column
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    var UPDATE_COLUMN = '[Builder] UPDATE_COLUMN';
+
+    var UpdateColumn = function UpdateColumn(column) {
+      _classCallCheck(this, UpdateColumn);
+
+      this.column = column;
+      this.type = UPDATE_COLUMN;
+    }; ////////////////////////////////////////////////////////////////////////////////
+    // Update Column
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    var UPDATE_ROW = '[Builder] UPDATE_ROW';
+
+    var UpdateRow = function UpdateRow(row) {
+      _classCallCheck(this, UpdateRow);
+
+      this.row = row;
+      this.type = UPDATE_ROW;
     }; ////////////////////////////////////////////////////////////////////////////////
     // Delete Column
     ////////////////////////////////////////////////////////////////////////////////
@@ -1863,6 +2195,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return Object.assign(Object.assign({}, state), {
               grid: Object.assign(Object.assign({}, state.grid), {
                 rows: [].concat(_toConsumableArray(state.grid.rows), [action.row])
+              })
+            });
+          }
+        ////////////////////////////////////////////////////////////////////////////////
+        // Update Column
+        ////////////////////////////////////////////////////////////////////////////////
+
+        case _app_action__WEBPACK_IMPORTED_MODULE_0__["UPDATE_COLUMN"]:
+          {
+            return Object.assign(Object.assign({}, state), {
+              grid: Object.assign(Object.assign({}, state.grid), {
+                columns: state.grid.columns.map(function (column, index) {
+                  return action.column.index === index ? action.column.axis : column;
+                })
+              })
+            });
+          }
+        ////////////////////////////////////////////////////////////////////////////////
+        // Update Row
+        ////////////////////////////////////////////////////////////////////////////////
+
+        case _app_action__WEBPACK_IMPORTED_MODULE_0__["UPDATE_ROW"]:
+          {
+            return Object.assign(Object.assign({}, state), {
+              grid: Object.assign(Object.assign({}, state.grid), {
+                rows: state.grid.rows.map(function (row, index) {
+                  return action.row.index === index ? action.row.axis : row;
+                })
               })
             });
           }
