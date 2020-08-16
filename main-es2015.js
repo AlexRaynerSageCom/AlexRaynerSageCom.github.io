@@ -41,6 +41,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// TODO: remove routing
 const routes = [
     {
         path: '',
@@ -78,13 +79,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_app_selector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store/app.selector */ "./src/app/store/app.selector.ts");
 /* harmony import */ var _store_app_action__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/app.action */ "./src/app/store/app.action.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services */ "./src/app/services/index.ts");
-/* harmony import */ var _components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
-/* harmony import */ var _components_grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/grid-form/grid-form.component */ "./src/app/components/grid-form/grid-form.component.ts");
-/* harmony import */ var _components_grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/grid-view/grid-view.component */ "./src/app/components/grid-view/grid-view.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _pipes_camel_to_kebab_pipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pipes/camel-to-kebab.pipe */ "./src/app/pipes/camel-to-kebab.pipe.ts");
+/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./models */ "./src/app/models/index.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services */ "./src/app/services/index.ts");
+/* harmony import */ var _components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
+/* harmony import */ var _components_grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/grid-form/grid-form.component */ "./src/app/components/grid-form/grid-form.component.ts");
+/* harmony import */ var _components_grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/grid-view/grid-view.component */ "./src/app/components/grid-view/grid-view.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @sage/ng-carbon/button */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js");
+/* harmony import */ var _pipes_camel_to_kebab_pipe__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pipes/camel-to-kebab.pipe */ "./src/app/pipes/camel-to-kebab.pipe.ts");
 // Angular
 
 
@@ -99,8 +102,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 function AppComponent_span_13_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "camelToKebab");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -125,8 +130,12 @@ class AppComponent {
                 this.store.dispatch(new _store_app_action__WEBPACK_IMPORTED_MODULE_2__["UpdateGrid"](updatedGrid));
             });
         });
-        this.columnForm = this.formsService.createAxisForm();
-        this.rowForm = this.formsService.createAxisForm();
+    }
+    createGridForm(grid) {
+        this.gridForm = this.formsService.createGridForm(grid);
+        this.gridForm.valueChanges.subscribe(updatedGrid => {
+            this.store.dispatch(new _store_app_action__WEBPACK_IMPORTED_MODULE_2__["UpdateGrid"](updatedGrid));
+        });
     }
     addColumn() {
         const columnForms = this.gridForm.get('columns');
@@ -136,9 +145,14 @@ class AppComponent {
         const rowForms = this.gridForm.get('rows');
         rowForms.push(this.formsService.createAxisForm({ size: '1', unit: 'fr' }));
     }
+    resetForm() {
+        const defaultGrid = Object(_models__WEBPACK_IMPORTED_MODULE_4__["getInitialGrid"])();
+        this.store.dispatch(new _store_app_action__WEBPACK_IMPORTED_MODULE_2__["ResetGrid"](defaultGrid));
+        this.createGridForm(defaultGrid);
+    }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services__WEBPACK_IMPORTED_MODULE_5__["FormsService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 26, vars: 9, consts: [[1, "title"], [3, "gridForm", "columnAdded", "rowAdded"], [1, "content"], [1, "heading"], [1, "generated-styles"], ["class", "css-style", 4, "ngFor", "ngForOf"], [1, "css-style"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_5__["Store"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services__WEBPACK_IMPORTED_MODULE_6__["FormsService"])); };
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 28, vars: 9, consts: [[1, "title"], [3, "gridForm", "columnAdded", "rowAdded"], [1, "content"], [1, "heading"], [1, "generated-styles"], ["class", "css-style", 4, "ngFor", "ngForOf"], [3, "clickEvent"], [1, "css-style"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-sidebar");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Grid Layout Builder ");
@@ -176,6 +190,10 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "\n      ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "sds-button", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickEvent", function AppComponent_Template_sds_button_clickEvent_26_listener() { return ctx.resetForm(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " Reset ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
@@ -184,7 +202,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](14, 3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](15, 5, ctx.styles$)));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](24, 7, ctx.html$));
-    } }, directives: [_components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_6__["SidebarComponent"], _components_grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_7__["GridFormComponent"], _components_grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_8__["GridViewComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["KeyValuePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["AsyncPipe"], _pipes_camel_to_kebab_pipe__WEBPACK_IMPORTED_MODULE_10__["CamelToKebabPipe"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  height: 100%;\n  width: 100%;\n}\n\n.content[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.title[_ngcontent-%COMP%] {\n  font-size: 1.5em;\n  font-weight: bold;\n  margin-bottom: 16px;\n}\n\n.generated-styles[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  padding: 8px;\n  width: 100%;\n  background-color: var(--color-slate-90);\n  font-family: monospace;\n  word-break: break-all;\n  word-break: break-word;\n  white-space: pre-wrap;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtBQ0NGOztBREVBO0VBQ0UsT0FBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtBQ0NGOztBREVBO0VBQ0UsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0FDQ0Y7O0FERUE7RUFDRSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsdUNBQUE7RUFDQSxzQkFBQTtFQUNBLHFCQUFBO0VBQ0Esc0JBQUE7RUFDQSxxQkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uY29udGVudCB7XHJcbiAgZmxleDogMTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbn1cclxuXHJcbi50aXRsZSB7XHJcbiAgZm9udC1zaXplOiAxLjVlbTtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBtYXJnaW4tYm90dG9tOiAxNnB4O1xyXG59XHJcblxyXG4uZ2VuZXJhdGVkLXN0eWxlcyB7XHJcbiAgZm9udC1zaXplOiAwLjllbTtcclxuICBwYWRkaW5nOiA4cHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29sb3Itc2xhdGUtOTApO1xyXG4gIGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7XHJcbiAgd29yZC1icmVhazogYnJlYWstYWxsO1xyXG4gIHdvcmQtYnJlYWs6IGJyZWFrLXdvcmQ7XHJcbiAgd2hpdGUtc3BhY2U6IHByZS13cmFwO1xyXG59XHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNvbnRlbnQge1xuICBmbGV4OiAxO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG4udGl0bGUge1xuICBmb250LXNpemU6IDEuNWVtO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgbWFyZ2luLWJvdHRvbTogMTZweDtcbn1cblxuLmdlbmVyYXRlZC1zdHlsZXMge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBwYWRkaW5nOiA4cHg7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1zbGF0ZS05MCk7XG4gIGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7XG4gIHdvcmQtYnJlYWs6IGJyZWFrLWFsbDtcbiAgd29yZC1icmVhazogYnJlYWstd29yZDtcbiAgd2hpdGUtc3BhY2U6IHByZS13cmFwO1xufSJdfQ== */"] });
+    } }, directives: [_components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"], _components_grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_8__["GridFormComponent"], _components_grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_9__["GridViewComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_11__["ButtonComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["KeyValuePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["AsyncPipe"], _pipes_camel_to_kebab_pipe__WEBPACK_IMPORTED_MODULE_12__["CamelToKebabPipe"]], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  height: 100%;\n  width: 100%;\n}\n\n.content[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.title[_ngcontent-%COMP%] {\n  font-size: 1.5em;\n  font-weight: bold;\n  margin-bottom: 16px;\n}\n\n.generated-styles[_ngcontent-%COMP%] {\n  font-size: 0.9em;\n  padding: 8px;\n  width: 100%;\n  background-color: var(--color-slate-90);\n  font-family: monospace;\n  word-break: break-all;\n  word-break: break-word;\n  white-space: pre-wrap;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtBQ0NGOztBREVBO0VBQ0UsT0FBQTtFQUNBLGFBQUE7RUFDQSxzQkFBQTtBQ0NGOztBREVBO0VBQ0UsZ0JBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0FDQ0Y7O0FERUE7RUFDRSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsdUNBQUE7RUFDQSxzQkFBQTtFQUNBLHFCQUFBO0VBQ0Esc0JBQUE7RUFDQSxxQkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uY29udGVudCB7XHJcbiAgZmxleDogMTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbn1cclxuXHJcbi50aXRsZSB7XHJcbiAgZm9udC1zaXplOiAxLjVlbTtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBtYXJnaW4tYm90dG9tOiAxNnB4O1xyXG59XHJcblxyXG4uZ2VuZXJhdGVkLXN0eWxlcyB7XHJcbiAgZm9udC1zaXplOiAwLjllbTtcclxuICBwYWRkaW5nOiA4cHg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29sb3Itc2xhdGUtOTApO1xyXG4gIGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7XHJcbiAgd29yZC1icmVhazogYnJlYWstYWxsO1xyXG4gIHdvcmQtYnJlYWs6IGJyZWFrLXdvcmQ7XHJcbiAgd2hpdGUtc3BhY2U6IHByZS13cmFwO1xyXG59XHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmNvbnRlbnQge1xuICBmbGV4OiAxO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG4udGl0bGUge1xuICBmb250LXNpemU6IDEuNWVtO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgbWFyZ2luLWJvdHRvbTogMTZweDtcbn1cblxuLmdlbmVyYXRlZC1zdHlsZXMge1xuICBmb250LXNpemU6IDAuOWVtO1xuICBwYWRkaW5nOiA4cHg7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1zbGF0ZS05MCk7XG4gIGZvbnQtZmFtaWx5OiBtb25vc3BhY2U7XG4gIHdvcmQtYnJlYWs6IGJyZWFrLWFsbDtcbiAgd29yZC1icmVhazogYnJlYWstd29yZDtcbiAgd2hpdGUtc3BhY2U6IHByZS13cmFwO1xufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -225,11 +243,15 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
       <pre>
         <div class="generated-styles">{{ html$ | async }}</div>
       </pre>
+
+      <sds-button (clickEvent)="resetForm()">
+        Reset
+      </sds-button>
     </app-sidebar>
   `,
                 styleUrls: ['./app.component.scss']
             }]
-    }], function () { return [{ type: _ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"] }, { type: _services__WEBPACK_IMPORTED_MODULE_5__["FormsService"] }]; }, null); })();
+    }], function () { return [{ type: _ngrx_store__WEBPACK_IMPORTED_MODULE_5__["Store"] }, { type: _services__WEBPACK_IMPORTED_MODULE_6__["FormsService"] }]; }, null); })();
 
 
 /***/ }),
@@ -320,6 +342,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         // Components
         _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
         _components__WEBPACK_IMPORTED_MODULE_11__["AxisFormComponent"],
+        _components__WEBPACK_IMPORTED_MODULE_11__["AxisGapFormComponent"],
         _components__WEBPACK_IMPORTED_MODULE_11__["GridFormComponent"],
         _components__WEBPACK_IMPORTED_MODULE_11__["GridViewComponent"],
         _components__WEBPACK_IMPORTED_MODULE_11__["SidebarComponent"],
@@ -360,6 +383,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     // Components
                     _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
                     _components__WEBPACK_IMPORTED_MODULE_11__["AxisFormComponent"],
+                    _components__WEBPACK_IMPORTED_MODULE_11__["AxisGapFormComponent"],
                     _components__WEBPACK_IMPORTED_MODULE_11__["GridFormComponent"],
                     _components__WEBPACK_IMPORTED_MODULE_11__["GridViewComponent"],
                     _components__WEBPACK_IMPORTED_MODULE_11__["SidebarComponent"],
@@ -463,6 +487,7 @@ function AxisFormComponent_form_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("destructive", true);
 } }
+// TODO: need to set a default minmax when selected
 class AxisFormComponent {
     constructor() {
         this.axisRemoved = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -556,6 +581,110 @@ AxisFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 
 /***/ }),
 
+/***/ "./src/app/components/axis-gap-form/axis-gap-form.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/axis-gap-form/axis-gap-form.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: AxisGapFormComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AxisGapFormComponent", function() { return AxisGapFormComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models */ "./src/app/models/index.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @sage/ng-carbon/dropdown */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-dropdown.js");
+// Angular
+
+// Models
+
+
+
+
+
+function AxisGapFormComponent_form_0_sds_dropdown_option_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "sds-dropdown-option", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const option_r2 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", option_r2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", option_r2, " ");
+} }
+function AxisGapFormComponent_form_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "input", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "sds-dropdown", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, AxisGapFormComponent_form_0_sds_dropdown_option_3_Template, 2, 2, "sds-dropdown-option", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx_r0.axisGapForm);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("input-error", ctx_r0.isFieldInvalid(ctx_r0.axisGapForm, "size"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.gapOptions);
+} }
+class AxisGapFormComponent {
+    constructor() {
+        this.gapOptions = _models__WEBPACK_IMPORTED_MODULE_1__["GapUnits"];
+    }
+    isFieldInvalid(form, field) {
+        return form.get(field).touched && form.get(field).errors
+            ? 'This field is required.'
+            : null;
+    }
+}
+AxisGapFormComponent.ɵfac = function AxisGapFormComponent_Factory(t) { return new (t || AxisGapFormComponent)(); };
+AxisGapFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AxisGapFormComponent, selectors: [["app-axis-gap-form"]], inputs: { axisGapForm: "axisGapForm" }, decls: 1, vars: 1, consts: [["class", "axis-gap-form", 3, "formGroup", 4, "ngIf"], [1, "axis-gap-form", 3, "formGroup"], ["type", "number", "placeholder", "size", "min", "0", "formControlName", "size"], ["formControlName", "unit", "placeholder", "unit"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AxisGapFormComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AxisGapFormComponent_form_0_Template, 4, 4, "form", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.axisGapForm);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlName"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_4__["DropdownComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _sage_ng_carbon_dropdown__WEBPACK_IMPORTED_MODULE_4__["DropdownOptionComponent"]], styles: [".axis-gap-form[_ngcontent-%COMP%] {\n  display: grid;\n  margin-bottom: 8px;\n  grid-template-columns: 1fr 1fr;\n  grid-column-gap: 8px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9heGlzLWdhcC1mb3JtL0M6XFxVc2Vyc1xcYWxleC5yYXluZXJcXERldmVsb3BtZW50XFxsYXlvdXQtYnVpbGRlci9zcmNcXGFwcFxcY29tcG9uZW50c1xcYXhpcy1nYXAtZm9ybVxcYXhpcy1nYXAtZm9ybS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9heGlzLWdhcC1mb3JtL2F4aXMtZ2FwLWZvcm0uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSw4QkFBQTtFQUNBLG9CQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2F4aXMtZ2FwLWZvcm0vYXhpcy1nYXAtZm9ybS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5heGlzLWdhcC1mb3JtIHtcclxuICBkaXNwbGF5OiBncmlkO1xyXG4gIG1hcmdpbi1ib3R0b206IDhweDtcclxuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAxZnI7XHJcbiAgZ3JpZC1jb2x1bW4tZ2FwOiA4cHg7XHJcbn0iLCIuYXhpcy1nYXAtZm9ybSB7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyO1xuICBncmlkLWNvbHVtbi1nYXA6IDhweDtcbn0iXX0= */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AxisGapFormComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-axis-gap-form',
+                template: `
+    <form
+      *ngIf="axisGapForm"
+      class="axis-gap-form"
+      [formGroup]="axisGapForm"
+    >
+      <input
+        [class.input-error]="isFieldInvalid(axisGapForm, 'size')"
+        type="number"
+        placeholder="size"
+        min="0"
+        formControlName="size"
+      />
+
+      <sds-dropdown
+        formControlName="unit"
+        placeholder="unit"
+      >
+        <sds-dropdown-option
+          *ngFor="let option of gapOptions"
+          [value]="option"
+        >
+          {{ option }}
+        </sds-dropdown-option>
+      </sds-dropdown>
+    </form>
+  `,
+                styleUrls: ['./axis-gap-form.component.scss']
+            }]
+    }], null, { axisGapForm: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }] }); })();
+
+
+/***/ }),
+
 /***/ "./src/app/components/grid-form/grid-form.component.ts":
 /*!*************************************************************!*\
   !*** ./src/app/components/grid-form/grid-form.component.ts ***!
@@ -570,8 +699,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 /* harmony import */ var _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @sage/ng-carbon/button */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-button.js");
-/* harmony import */ var _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../axis-form/axis-form.component */ "./src/app/components/axis-form/axis-form.component.ts");
+/* harmony import */ var _axis_gap_form_axis_gap_form_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../axis-gap-form/axis-gap-form.component */ "./src/app/components/axis-gap-form/axis-gap-form.component.ts");
+/* harmony import */ var _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../axis-form/axis-form.component */ "./src/app/components/axis-form/axis-form.component.ts");
 // Angular
+
 
 
 
@@ -580,7 +711,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function GridFormComponent_form_0_app_axis_form_5_Template(rf, ctx) { if (rf & 1) {
     const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-axis-form", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-axis-form", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("axisRemoved", function GridFormComponent_form_0_app_axis_form_5_Template_app_axis_form_axisRemoved_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); const i_r4 = ctx.index; const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r5.removeColumn(i_r4); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -589,7 +720,7 @@ function GridFormComponent_form_0_app_axis_form_5_Template(rf, ctx) { if (rf & 1
 } }
 function GridFormComponent_form_0_app_axis_form_10_Template(rf, ctx) { if (rf & 1) {
     const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-axis-form", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-axis-form", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("axisRemoved", function GridFormComponent_form_0_app_axis_form_10_Template_app_axis_form_axisRemoved_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r10); const i_r8 = ctx.index; const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r9.removeRow(i_r8); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -615,18 +746,14 @@ function GridFormComponent_form_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " Add ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, GridFormComponent_form_0_app_axis_form_10_Template, 1, 1, "app-axis-form", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " Column Gap (px): ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "input", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Column Gap:");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "app-axis-gap-form", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Row Gap:");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "label");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " Row Gap (px): ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "input", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "app-axis-gap-form", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -635,6 +762,10 @@ function GridFormComponent_form_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.columnForms.controls);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.rowForms.controls);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("axisGapForm", ctx_r0.gridForm.get("columnGap"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("axisGapForm", ctx_r0.gridForm.get("rowGap"));
 } }
 class GridFormComponent {
     constructor() {
@@ -663,11 +794,11 @@ class GridFormComponent {
     }
 }
 GridFormComponent.ɵfac = function GridFormComponent_Factory(t) { return new (t || GridFormComponent)(); };
-GridFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridFormComponent, selectors: [["app-grid-form"]], inputs: { gridForm: "gridForm" }, outputs: { columnAdded: "columnAdded", rowAdded: "rowAdded" }, decls: 1, vars: 1, consts: [[3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "sub-heading"], ["type", "button", 1, "add-button", 3, "clickEvent"], [3, "axisForm", "axisRemoved", 4, "ngFor", "ngForOf"], [1, "input-field"], ["type", "number", "min", "0", "formControlName", "columnGap"], ["type", "number", "min", "0", "formControlName", "rowGap"], [3, "axisForm", "axisRemoved"]], template: function GridFormComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, GridFormComponent_form_0_Template, 19, 3, "form", 0);
+GridFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridFormComponent, selectors: [["app-grid-form"]], inputs: { gridForm: "gridForm" }, outputs: { columnAdded: "columnAdded", rowAdded: "rowAdded" }, decls: 1, vars: 1, consts: [[3, "formGroup", 4, "ngIf"], [3, "formGroup"], [1, "sub-heading"], ["type", "button", 1, "add-button", 3, "clickEvent"], [3, "axisForm", "axisRemoved", 4, "ngFor", "ngForOf"], [3, "axisGapForm"], [3, "axisForm", "axisRemoved"]], template: function GridFormComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, GridFormComponent_form_0_Template, 17, 5, "form", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.gridForm);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupDirective"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_3__["ButtonComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControlName"], _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_4__["AxisFormComponent"]], styles: [".add-button[_ngcontent-%COMP%] {\n  display: block;\n  margin-bottom: 8px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLWZvcm0vQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLWZvcm1cXGdyaWQtZm9ybS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLWZvcm0vZ3JpZC1mb3JtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtFQUNBLGtCQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2dyaWQtZm9ybS9ncmlkLWZvcm0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYWRkLWJ1dHRvbiB7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgbWFyZ2luLWJvdHRvbTogOHB4O1xyXG59XHJcbiIsIi5hZGQtYnV0dG9uIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbn0iXX0= */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupDirective"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_3__["ButtonComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _axis_gap_form_axis_gap_form_component__WEBPACK_IMPORTED_MODULE_4__["AxisGapFormComponent"], _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_5__["AxisFormComponent"]], styles: [".add-button[_ngcontent-%COMP%] {\n  display: block;\n  margin-bottom: 8px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLWZvcm0vQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLWZvcm1cXGdyaWQtZm9ybS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLWZvcm0vZ3JpZC1mb3JtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtFQUNBLGtCQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2dyaWQtZm9ybS9ncmlkLWZvcm0uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYWRkLWJ1dHRvbiB7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgbWFyZ2luLWJvdHRvbTogOHB4O1xyXG59XHJcbiIsIi5hZGQtYnV0dG9uIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi1ib3R0b206IDhweDtcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GridFormComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -708,19 +839,13 @@ GridFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
       >
       </app-axis-form>
 
-      <div class="input-field">
-        <label>
-          Column Gap (px):
-          <input type="number" min="0" formControlName="columnGap"/>
-        </label>
-      </div>
+      <div class="sub-heading">Column Gap:</div>
+      <app-axis-gap-form [axisGapForm]="gridForm.get('columnGap')">
+      </app-axis-gap-form>
 
-      <div class="input-field">
-        <label>
-          Row Gap (px):
-          <input type="number" min="0" formControlName="rowGap"/>
-        </label>
-      </div>
+      <div class="sub-heading">Row Gap:</div>
+      <app-axis-gap-form [axisGapForm]="gridForm.get('rowGap')">
+      </app-axis-gap-form>
     </form>
   `,
                 styleUrls: ['./grid-form.component.scss']
@@ -750,8 +875,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_app_selector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../store/app.selector */ "./src/app/store/app.selector.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var src_app_store_app_action__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/store/app.action */ "./src/app/store/app.action.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @sage/ng-carbon/icon */ "./node_modules/@sage/ng-carbon/__ivy_ngcc__/fesm2015/sage-ng-carbon-icon.js");
 // Angular
 
 
@@ -761,8 +888,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 function GridViewComponent_div_2_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "div");
+} if (rf & 2) {
+    const itemStyle_r2 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](itemStyle_r2);
+} }
+function GridViewComponent_div_3_Template(rf, ctx) { if (rf & 1) {
+    const _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridViewComponent_div_3_Template_div_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6); const i_r4 = ctx.index; const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r5.addItem(i_r4); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "sds-icon", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 class GridViewComponent {
     constructor(store) {
@@ -776,26 +915,45 @@ class GridViewComponent {
             .subscribe(grid => {
             this.grid = grid;
         });
+        this.store.select(_store_app_selector__WEBPACK_IMPORTED_MODULE_1__["selectGridItemStyles"])
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this.unsubscribe$))
+            .subscribe(gridItemStyles => {
+            this.itemStyles = gridItemStyles;
+        });
     }
     get count() {
-        return new Array(this.grid.columns.length * Math.max(1, this.grid.rows.length));
+        return new Array(this.grid.columns.length * Math.max(1, this.grid.rows.length) - this.itemStyles.length);
+    }
+    addItem(index) {
+        const column = (index % this.grid.columns.length) + 1;
+        const row = Math.floor(index / this.grid.columns.length) + 1;
+        const item = {
+            columnStart: column,
+            columnEnd: column + 1,
+            rowStart: row,
+            rowEnd: row + 1
+        };
+        this.store.dispatch(new src_app_store_app_action__WEBPACK_IMPORTED_MODULE_4__["AddGridItem"](item));
     }
     ngOnDestroy() {
         this.unsubscribe$.next();
         this.unsubscribe$.complete();
     }
 }
-GridViewComponent.ɵfac = function GridViewComponent_Factory(t) { return new (t || GridViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"])); };
-GridViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridViewComponent, selectors: [["app-grid-view"]], decls: 3, vars: 5, consts: [["id", "grid", 1, "grid"], ["class", "grid__item", 4, "ngFor", "ngForOf"], [1, "grid__item"]], template: function GridViewComponent_Template(rf, ctx) { if (rf & 1) {
+GridViewComponent.ɵfac = function GridViewComponent_Factory(t) { return new (t || GridViewComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_5__["Store"])); };
+GridViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridViewComponent, selectors: [["app-grid-view"]], decls: 4, vars: 6, consts: [["id", "grid", 1, "grid"], [3, "style", 4, "ngFor", "ngForOf"], ["class", "grid__item", 3, "click", 4, "ngFor", "ngForOf"], [1, "grid__item", 3, "click"], ["iconType", "plus", 1, "grid__item--add"]], template: function GridViewComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "async");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, GridViewComponent_div_2_Template, 1, 0, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, GridViewComponent_div_2_Template, 1, 2, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, GridViewComponent_div_3_Template, 2, 0, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 3, ctx.styles$));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMap"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 4, ctx.styles$));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.itemStyles);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.count);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["AsyncPipe"]], styles: ["[_nghost-%COMP%] {\n  display: block;\n  flex: 1;\n}\n\n.grid[_ngcontent-%COMP%] {\n  height: calc(100% - 32px);\n  padding: 16px;\n}\n\n.grid__item[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  background-color: #fff;\n  font-weight: bold;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.grid__item[_ngcontent-%COMP%]::before {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  display: block;\n  pointer-events: none;\n  outline: 1px dashed #fff;\n}\n\n.grid__item[_ngcontent-%COMP%]:hover {\n  background-color: var(--color-slate-95);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLXZpZXdcXGdyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtFQUNBLE9BQUE7QUNDRjs7QURFQTtFQUNFLHlCQUFBO0VBQ0EsYUFBQTtBQ0NGOztBRENFO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLHNCQUFBO0VBQ0EsaUJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtBQ0NKOztBRENJO0VBQ0UsV0FBQTtFQUNBLGtCQUFBO0VBQ0EsT0FBQTtFQUNBLE1BQUE7RUFDQSxTQUFBO0VBQ0EsUUFBQTtFQUNBLGNBQUE7RUFDQSxvQkFBQTtFQUNBLHdCQUFBO0FDQ047O0FERUk7RUFDRSx1Q0FBQTtBQ0FOIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIGZsZXg6IDFcclxufVxyXG5cclxuLmdyaWQge1xyXG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzJweCk7XHJcbiAgcGFkZGluZzogMTZweDtcclxuXHJcbiAgJl9faXRlbSB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcblxyXG4gICAgJjo6YmVmb3JlIHtcclxuICAgICAgY29udGVudDogXCJcIjtcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICBsZWZ0OiAwO1xyXG4gICAgICB0b3A6IDA7XHJcbiAgICAgIGJvdHRvbTogMDtcclxuICAgICAgcmlnaHQ6IDA7XHJcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcclxuICAgICAgb3V0bGluZTogMXB4IGRhc2hlZCAjZmZmO1xyXG4gICAgfVxyXG5cclxuICAgICY6aG92ZXIge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1zbGF0ZS05NSk7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGZsZXg6IDE7XG59XG5cbi5ncmlkIHtcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSAzMnB4KTtcbiAgcGFkZGluZzogMTZweDtcbn1cbi5ncmlkX19pdGVtIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG59XG4uZ3JpZF9faXRlbTo6YmVmb3JlIHtcbiAgY29udGVudDogXCJcIjtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIGJvdHRvbTogMDtcbiAgcmlnaHQ6IDA7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgb3V0bGluZTogMXB4IGRhc2hlZCAjZmZmO1xufVxuLmdyaWRfX2l0ZW06aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1zbGF0ZS05NSk7XG59Il19 */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _sage_ng_carbon_icon__WEBPACK_IMPORTED_MODULE_7__["IconComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["AsyncPipe"]], styles: ["[_nghost-%COMP%] {\n  display: block;\n  flex: 1;\n}\n\n.grid[_ngcontent-%COMP%] {\n  height: calc(100% - 32px);\n  padding: 16px;\n}\n\n.grid__item[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  background-color: #fff;\n  font-weight: bold;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n}\n\n.grid__item[_ngcontent-%COMP%]::before {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  display: block;\n  pointer-events: none;\n  outline: 1px dashed #fff;\n}\n\n.grid__item[_ngcontent-%COMP%]:hover {\n  background-color: var(--color-slate-95);\n}\n\n.grid__item[_ngcontent-%COMP%]:hover   .grid__item--add[_ngcontent-%COMP%] {\n  display: block;\n}\n\n.grid__item--add[_ngcontent-%COMP%] {\n  font-size: 1.4em;\n  display: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvQzpcXFVzZXJzXFxhbGV4LnJheW5lclxcRGV2ZWxvcG1lbnRcXGxheW91dC1idWlsZGVyL3NyY1xcYXBwXFxjb21wb25lbnRzXFxncmlkLXZpZXdcXGdyaWQtdmlldy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsY0FBQTtFQUNBLE9BQUE7QUNDRjs7QURFQTtFQUNFLHlCQUFBO0VBQ0EsYUFBQTtBQ0NGOztBRENFO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLHNCQUFBO0VBQ0EsaUJBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGVBQUE7QUNDSjs7QURDSTtFQUNFLFdBQUE7RUFDQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxNQUFBO0VBQ0EsU0FBQTtFQUNBLFFBQUE7RUFDQSxjQUFBO0VBQ0Esb0JBQUE7RUFDQSx3QkFBQTtBQ0NOOztBREVJO0VBQ0UsdUNBQUE7QUNBTjs7QURFTTtFQUNFLGNBQUE7QUNBUjs7QURJSTtFQUNFLGdCQUFBO0VBQ0EsYUFBQTtBQ0ZOIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9ncmlkLXZpZXcvZ3JpZC12aWV3LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIGZsZXg6IDFcclxufVxyXG5cclxuLmdyaWQge1xyXG4gIGhlaWdodDogY2FsYygxMDAlIC0gMzJweCk7XHJcbiAgcGFkZGluZzogMTZweDtcclxuXHJcbiAgJl9faXRlbSB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcblxyXG4gICAgJjo6YmVmb3JlIHtcclxuICAgICAgY29udGVudDogXCJcIjtcclxuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICBsZWZ0OiAwO1xyXG4gICAgICB0b3A6IDA7XHJcbiAgICAgIGJvdHRvbTogMDtcclxuICAgICAgcmlnaHQ6IDA7XHJcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcclxuICAgICAgb3V0bGluZTogMXB4IGRhc2hlZCAjZmZmO1xyXG4gICAgfVxyXG5cclxuICAgICY6aG92ZXIge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1zbGF0ZS05NSk7XHJcblxyXG4gICAgICAuZ3JpZF9faXRlbS0tYWRkIHtcclxuICAgICAgICBkaXNwbGF5OiBibG9jaztcclxuICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICYtLWFkZCB7XHJcbiAgICAgIGZvbnQtc2l6ZTogMS40ZW07XHJcbiAgICAgIGRpc3BsYXk6IG5vbmU7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGZsZXg6IDE7XG59XG5cbi5ncmlkIHtcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSAzMnB4KTtcbiAgcGFkZGluZzogMTZweDtcbn1cbi5ncmlkX19pdGVtIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbi5ncmlkX19pdGVtOjpiZWZvcmUge1xuICBjb250ZW50OiBcIlwiO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgYm90dG9tOiAwO1xuICByaWdodDogMDtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHBvaW50ZXItZXZlbnRzOiBub25lO1xuICBvdXRsaW5lOiAxcHggZGFzaGVkICNmZmY7XG59XG4uZ3JpZF9faXRlbTpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWNvbG9yLXNsYXRlLTk1KTtcbn1cbi5ncmlkX19pdGVtOmhvdmVyIC5ncmlkX19pdGVtLS1hZGQge1xuICBkaXNwbGF5OiBibG9jaztcbn1cbi5ncmlkX19pdGVtLS1hZGQge1xuICBmb250LXNpemU6IDEuNGVtO1xuICBkaXNwbGF5OiBub25lO1xufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GridViewComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -807,14 +965,26 @@ GridViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
       [style]="styles$ | async"
     >
       <div
-        *ngFor="let item of count"
-        class="grid__item"
+        *ngFor="let itemStyle of itemStyles"
+        [style]="itemStyle"
       ></div>
+
+      <div
+        *ngFor="let item of count; let i = index"
+        class="grid__item"
+        (click)="addItem(i)"
+      >
+        <sds-icon
+          class="grid__item--add"
+          iconType="plus"
+        >
+        </sds-icon>
+      </div>
     </div>
   `,
                 styleUrls: ['./grid-view.component.scss']
             }]
-    }], function () { return [{ type: _ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"] }]; }, null); })();
+    }], function () { return [{ type: _ngrx_store__WEBPACK_IMPORTED_MODULE_5__["Store"] }]; }, null); })();
 
 
 /***/ }),
@@ -823,7 +993,7 @@ GridViewComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 /*!*************************************!*\
   !*** ./src/app/components/index.ts ***!
   \*************************************/
-/*! exports provided: AxisFormComponent, GridFormComponent, GridViewComponent, SidebarComponent */
+/*! exports provided: AxisFormComponent, AxisGapFormComponent, GridFormComponent, GridViewComponent, SidebarComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -831,14 +1001,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./axis-form/axis-form.component */ "./src/app/components/axis-form/axis-form.component.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AxisFormComponent", function() { return _axis_form_axis_form_component__WEBPACK_IMPORTED_MODULE_0__["AxisFormComponent"]; });
 
-/* harmony import */ var _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./grid-form/grid-form.component */ "./src/app/components/grid-form/grid-form.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GridFormComponent", function() { return _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_1__["GridFormComponent"]; });
+/* harmony import */ var _axis_gap_form_axis_gap_form_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./axis-gap-form/axis-gap-form.component */ "./src/app/components/axis-gap-form/axis-gap-form.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AxisGapFormComponent", function() { return _axis_gap_form_axis_gap_form_component__WEBPACK_IMPORTED_MODULE_1__["AxisGapFormComponent"]; });
 
-/* harmony import */ var _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./grid-view/grid-view.component */ "./src/app/components/grid-view/grid-view.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GridViewComponent", function() { return _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_2__["GridViewComponent"]; });
+/* harmony import */ var _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./grid-form/grid-form.component */ "./src/app/components/grid-form/grid-form.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GridFormComponent", function() { return _grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_2__["GridFormComponent"]; });
 
-/* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SidebarComponent", function() { return _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_3__["SidebarComponent"]; });
+/* harmony import */ var _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./grid-view/grid-view.component */ "./src/app/components/grid-view/grid-view.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GridViewComponent", function() { return _grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_3__["GridViewComponent"]; });
+
+/* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SidebarComponent", function() { return _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_4__["SidebarComponent"]; });
+
 
 
 
@@ -888,6 +1062,25 @@ SidebarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
 
 /***/ }),
 
+/***/ "./src/app/models/axis-gap.model.ts":
+/*!******************************************!*\
+  !*** ./src/app/models/axis-gap.model.ts ***!
+  \******************************************/
+/*! exports provided: GapUnits, getInitialAxisGap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GapUnits", function() { return GapUnits; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInitialAxisGap", function() { return getInitialAxisGap; });
+const GapUnits = ['%', 'px', 'em'];
+const getInitialAxisGap = () => {
+    return { size: 1, unit: 'px' };
+};
+
+
+/***/ }),
+
 /***/ "./src/app/models/axis.model.ts":
 /*!**************************************!*\
   !*** ./src/app/models/axis.model.ts ***!
@@ -907,6 +1100,28 @@ const getInitialAxis = () => {
 
 /***/ }),
 
+/***/ "./src/app/models/grid-item.model.ts":
+/*!*******************************************!*\
+  !*** ./src/app/models/grid-item.model.ts ***!
+  \*******************************************/
+/*! exports provided: getInitialGridItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInitialGridItem", function() { return getInitialGridItem; });
+const getInitialGridItem = () => {
+    return {
+        columnStart: 1,
+        columnEnd: 1,
+        rowStart: 1,
+        rowEnd: 1
+    };
+};
+
+
+/***/ }),
+
 /***/ "./src/app/models/grid.model.ts":
 /*!**************************************!*\
   !*** ./src/app/models/grid.model.ts ***!
@@ -918,6 +1133,8 @@ const getInitialAxis = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInitialGrid", function() { return getInitialGrid; });
 /* harmony import */ var _axis_model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./axis.model */ "./src/app/models/axis.model.ts");
+/* harmony import */ var _axis_gap_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./axis-gap.model */ "./src/app/models/axis-gap.model.ts");
+
 
 const getInitialGrid = () => {
     return {
@@ -933,9 +1150,9 @@ const getInitialGrid = () => {
             Object(_axis_model__WEBPACK_IMPORTED_MODULE_0__["getInitialAxis"])(),
             Object(_axis_model__WEBPACK_IMPORTED_MODULE_0__["getInitialAxis"])()
         ],
-        columnGap: 1,
-        rowGap: 1,
-        fillGrid: true
+        columnGap: Object(_axis_gap_model__WEBPACK_IMPORTED_MODULE_1__["getInitialAxisGap"])(),
+        rowGap: Object(_axis_gap_model__WEBPACK_IMPORTED_MODULE_1__["getInitialAxisGap"])(),
+        items: []
     };
 };
 
@@ -946,7 +1163,7 @@ const getInitialGrid = () => {
 /*!*********************************!*\
   !*** ./src/app/models/index.ts ***!
   \*********************************/
-/*! exports provided: Units, getInitialAxis, getInitialGrid */
+/*! exports provided: Units, getInitialAxis, GapUnits, getInitialAxisGap, getInitialGrid, getInitialGridItem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -956,8 +1173,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getInitialAxis", function() { return _axis_model__WEBPACK_IMPORTED_MODULE_0__["getInitialAxis"]; });
 
-/* harmony import */ var _grid_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./grid.model */ "./src/app/models/grid.model.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getInitialGrid", function() { return _grid_model__WEBPACK_IMPORTED_MODULE_1__["getInitialGrid"]; });
+/* harmony import */ var _axis_gap_model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./axis-gap.model */ "./src/app/models/axis-gap.model.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GapUnits", function() { return _axis_gap_model__WEBPACK_IMPORTED_MODULE_1__["GapUnits"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getInitialAxisGap", function() { return _axis_gap_model__WEBPACK_IMPORTED_MODULE_1__["getInitialAxisGap"]; });
+
+/* harmony import */ var _grid_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./grid.model */ "./src/app/models/grid.model.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getInitialGrid", function() { return _grid_model__WEBPACK_IMPORTED_MODULE_2__["getInitialGrid"]; });
+
+/* harmony import */ var _grid_item_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./grid-item.model */ "./src/app/models/grid-item.model.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getInitialGridItem", function() { return _grid_item_model__WEBPACK_IMPORTED_MODULE_3__["getInitialGridItem"]; });
+
+
 
 
 
@@ -1034,9 +1261,14 @@ class FormsService {
     }
     createGridForm(grid) {
         return this.formBuilder.group({
-            columnGap: grid.columnGap,
-            rowGap: grid.rowGap,
-            fillGrid: grid.fillGrid,
+            columnGap: this.formBuilder.group({
+                size: grid.columnGap.size,
+                unit: grid.columnGap.unit
+            }),
+            rowGap: this.formBuilder.group({
+                size: grid.rowGap.size,
+                unit: grid.rowGap.unit
+            }),
             columns: this.formBuilder.array([
                 ...grid.columns.map(column => this.createAxisForm(column))
             ]),
@@ -1083,13 +1315,17 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************!*\
   !*** ./src/app/store/app.action.ts ***!
   \*************************************/
-/*! exports provided: UPDATE_GRID, UpdateGrid */
+/*! exports provided: UPDATE_GRID, UpdateGrid, RESET_GRID, ResetGrid, ADD_GRID_ITEM, AddGridItem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_GRID", function() { return UPDATE_GRID; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateGrid", function() { return UpdateGrid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RESET_GRID", function() { return RESET_GRID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResetGrid", function() { return ResetGrid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_GRID_ITEM", function() { return ADD_GRID_ITEM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddGridItem", function() { return AddGridItem; });
 ////////////////////////////////////////////////////////////////////////////////
 // Update Grid
 ////////////////////////////////////////////////////////////////////////////////
@@ -1098,6 +1334,26 @@ class UpdateGrid {
     constructor(grid) {
         this.grid = grid;
         this.type = UPDATE_GRID;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////
+// Reset Grid
+////////////////////////////////////////////////////////////////////////////////
+const RESET_GRID = '[Builder] RESET_GRID';
+class ResetGrid {
+    constructor(grid) {
+        this.grid = grid;
+        this.type = RESET_GRID;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////
+// Add Grid Item
+////////////////////////////////////////////////////////////////////////////////
+const ADD_GRID_ITEM = '[Builder] ADD_GRID_ITEM';
+class AddGridItem {
+    constructor(gridItem) {
+        this.gridItem = gridItem;
+        this.type = ADD_GRID_ITEM;
     }
 }
 
@@ -1130,6 +1386,21 @@ function builderReducer(state = defaultBuilderState, action) {
         case _app_action__WEBPACK_IMPORTED_MODULE_0__["UPDATE_GRID"]: {
             return Object.assign(Object.assign({}, state), { grid: Object.assign(Object.assign({}, state.grid), action.grid) });
         }
+        ////////////////////////////////////////////////////////////////////////////////
+        // Reset Grid
+        ////////////////////////////////////////////////////////////////////////////////
+        case _app_action__WEBPACK_IMPORTED_MODULE_0__["RESET_GRID"]: {
+            return Object.assign(Object.assign({}, state), { grid: action.grid });
+        }
+        ////////////////////////////////////////////////////////////////////////////////
+        // Add Grid Item
+        ////////////////////////////////////////////////////////////////////////////////
+        case _app_action__WEBPACK_IMPORTED_MODULE_0__["ADD_GRID_ITEM"]: {
+            return Object.assign(Object.assign({}, state), { grid: Object.assign(Object.assign({}, state.grid), { items: [
+                        ...state.grid.items,
+                        action.gridItem
+                    ] }) });
+        }
         default: {
             return state;
         }
@@ -1146,7 +1417,7 @@ const appReducers = {
 /*!***************************************!*\
   !*** ./src/app/store/app.selector.ts ***!
   \***************************************/
-/*! exports provided: selectBuilder, selectGrid, selectGridStyle, selectHTML */
+/*! exports provided: selectBuilder, selectGrid, selectGridStyle, selectHTML, selectGridItems, selectGridItemStyles */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1155,6 +1426,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectGrid", function() { return selectGrid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectGridStyle", function() { return selectGridStyle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectHTML", function() { return selectHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectGridItems", function() { return selectGridItems; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectGridItemStyles", function() { return selectGridItemStyles; });
 /* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/ngrx-store.js");
 // ngrx
 
@@ -1175,18 +1448,29 @@ const createAxisTemplateStyle = (axis) => {
         }
     }
 };
+// TODO: make this a service/utils of some type
 const selectGridStyle = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGrid, (grid) => {
-    return {
-        display: 'grid',
-        gridTemplateColumns: grid.columns.map(column => createAxisTemplateStyle(column)).join(' '),
-        gridColumnGap: grid.columnGap + 'px',
-        gridTemplateRows: grid.rows.map(row => createAxisTemplateStyle(row)).join(' '),
-        gridRowGap: grid.rowGap + 'px'
-    };
+    return Object.assign(Object.assign(Object.assign(Object.assign({ display: 'grid' }, (grid.columns.length > 0
+        ? { gridTemplateColumns: grid.columns.map(column => createAxisTemplateStyle(column)).join(' ') }
+        : {})), (grid.columnGap.size > 0
+        ? { gridColumnGap: `${grid.columnGap.size}${grid.columnGap.unit}` }
+        : {})), (grid.rows.length > 0
+        ? { gridTemplateRows: grid.rows.map(row => createAxisTemplateStyle(row)).join(' ') }
+        : {})), (grid.rowGap.size > 0
+        ? { gridRowGap: `${grid.rowGap.size}${grid.rowGap.unit}` }
+        : {}));
 });
 const selectHTML = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGrid, (grid) => {
     return `<div class="grid-container">
 </div>`;
+});
+const selectGridItems = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGrid, (grid) => grid.items);
+const selectGridItemStyles = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGridItems, (gridItems) => {
+    return gridItems.map(item => {
+        return {
+            gridArea: `${item.rowStart} / ${item.columnStart} / ${item.rowEnd} / ${item.columnEnd}`
+        };
+    });
 });
 
 
