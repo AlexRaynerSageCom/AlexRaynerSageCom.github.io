@@ -229,7 +229,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function AppComponent_span_13_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span");
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -239,11 +239,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       if (rf & 2) {
-        var style_r1 = ctx.$implicit;
+        var style_r2 = ctx.$implicit;
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("  ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 2, style_r1.key), ": ", style_r1.value, ";\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("  ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 2, style_r2.key), ": ", style_r2.value, ";\n");
+      }
+    }
+
+    function AppComponent_span_16_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var itemStyle_r3 = ctx.$implicit;
+        var i_r4 = ctx.index;
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("\n  .item-", i_r4, " {\n    grid-area: ", itemStyle_r3.gridArea, ";\n  }\n");
       }
     }
 
@@ -254,6 +273,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.store = store;
         this.formsService = formsService;
         this.styles$ = this.store.select(_store_app_selector__WEBPACK_IMPORTED_MODULE_1__["selectGridStyle"]);
+        this.itemStyles$ = this.store.select(_store_app_selector__WEBPACK_IMPORTED_MODULE_1__["selectGridItemStyles"]);
         this.html$ = this.store.select(_store_app_selector__WEBPACK_IMPORTED_MODULE_1__["selectHTML"]);
       }
 
@@ -317,9 +337,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: AppComponent,
       selectors: [["app-root"]],
-      decls: 28,
-      vars: 9,
-      consts: [[1, "title"], [3, "gridForm", "columnAdded", "rowAdded"], [1, "content"], [1, "heading"], [1, "generated-styles"], ["class", "css-style", 4, "ngFor", "ngForOf"], [3, "clickEvent"], [1, "css-style"]],
+      decls: 30,
+      vars: 12,
+      consts: [[1, "title"], [3, "gridForm", "columnAdded", "rowAdded"], [1, "content"], [1, "heading"], [1, "generated-styles"], [4, "ngFor", "ngForOf"], [3, "clickEvent"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-sidebar");
@@ -370,43 +390,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](15, "async");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "}");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, AppComponent_span_16_Template, 2, 2, "span", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](17, "async");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "}");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "\n      ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "\n      ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "HTML:");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "pre");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "        ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](24, "async");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "HTML:");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "\n      ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "pre");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "        ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](26, "async");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "sds-button", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "\n      ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickEvent", function AppComponent_Template_sds_button_clickEvent_26_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "sds-button", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickEvent", function AppComponent_Template_sds_button_clickEvent_28_listener() {
             return ctx.resetForm();
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " Reset ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, " Reset ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -420,11 +444,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](14, 3, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](15, 5, ctx.styles$)));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](14, 4, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](15, 6, ctx.styles$)));
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](24, 7, ctx.html$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](17, 8, ctx.itemStyles$));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](26, 10, ctx.html$));
         }
       },
       directives: [_components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"], _components_grid_form_grid_form_component__WEBPACK_IMPORTED_MODULE_8__["GridFormComponent"], _components_grid_view_grid_view_component__WEBPACK_IMPORTED_MODULE_9__["GridViewComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _sage_ng_carbon_button__WEBPACK_IMPORTED_MODULE_11__["ButtonComponent"]],
@@ -438,7 +466,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
           selector: 'app-root',
-          template: "\n    <app-sidebar>\n      <div class=\"title\">\n        Grid Layout Builder\n      </div>\n\n      <app-grid-form\n        [gridForm]=\"gridForm\"\n        (columnAdded)=\"addColumn()\"\n        (rowAdded)=\"addRow()\"\n      >\n      </app-grid-form>\n    </app-sidebar>\n\n    <div class=\"content\">\n      <app-grid-view>\n      </app-grid-view>\n    </div>\n\n    <app-sidebar>\n      <div class=\"heading\">CSS:</div>\n\n      <pre>\n        <div class=\"generated-styles\">.grid-container &#123;\n<span\n  *ngFor=\"let style of (styles$ | async) | keyvalue\"\n  class=\"css-style\"\n>  {{ style.key | camelToKebab }}: {{ style.value }};\n</span>&#125;</div>\n      </pre>\n\n      <div class=\"heading\">HTML:</div>\n\n      <pre>\n        <div class=\"generated-styles\">{{ html$ | async }}</div>\n      </pre>\n\n      <sds-button (clickEvent)=\"resetForm()\">\n        Reset\n      </sds-button>\n    </app-sidebar>\n  ",
+          template: "\n    <app-sidebar>\n      <div class=\"title\">\n        Grid Layout Builder\n      </div>\n\n      <app-grid-form\n        [gridForm]=\"gridForm\"\n        (columnAdded)=\"addColumn()\"\n        (rowAdded)=\"addRow()\"\n      >\n      </app-grid-form>\n    </app-sidebar>\n\n    <div class=\"content\">\n      <app-grid-view>\n      </app-grid-view>\n    </div>\n\n    <app-sidebar>\n      <div class=\"heading\">CSS:</div>\n\n      <pre>\n        <div class=\"generated-styles\">.grid-container &#123;\n<span\n  *ngFor=\"let style of (styles$ | async) | keyvalue\"\n>  {{ style.key | camelToKebab }}: {{ style.value }};\n</span><span\n  *ngFor=\"let itemStyle of (itemStyles$ | async); let i = index\"\n>\n  .item-{{ i }} &#123;\n    grid-area: {{ itemStyle.gridArea }};\n  &#125;\n</span>&#125;</div>\n      </pre>\n\n      <div class=\"heading\">HTML:</div>\n\n      <pre>\n        <div class=\"generated-styles\">{{ html$ | async }}</div>\n      </pre>\n\n      <sds-button (clickEvent)=\"resetForm()\">\n        Reset\n      </sds-button>\n    </app-sidebar>\n  ",
           styleUrls: ['./app.component.scss']
         }]
       }], function () {
@@ -2386,7 +2414,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/store/app.selector.ts ***!
     \***************************************/
 
-  /*! exports provided: selectBuilder, selectGrid, selectGridStyle, selectHTML, selectGridItems, selectGridItemStyles */
+  /*! exports provided: selectBuilder, selectGrid, selectGridItems, selectGridStyle, selectHTML, selectGridItemStyles */
 
   /***/
   function srcAppStoreAppSelectorTs(module, __webpack_exports__, __webpack_require__) {
@@ -2408,6 +2436,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony export (binding) */
 
 
+    __webpack_require__.d(__webpack_exports__, "selectGridItems", function () {
+      return selectGridItems;
+    });
+    /* harmony export (binding) */
+
+
     __webpack_require__.d(__webpack_exports__, "selectGridStyle", function () {
       return selectGridStyle;
     });
@@ -2416,12 +2450,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     __webpack_require__.d(__webpack_exports__, "selectHTML", function () {
       return selectHTML;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "selectGridItems", function () {
-      return selectGridItems;
     });
     /* harmony export (binding) */
 
@@ -2443,6 +2471,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var selectGrid = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectBuilder, function (state) {
       return state.grid;
+    });
+    var selectGridItems = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGrid, function (grid) {
+      return grid.items;
     });
 
     var createAxisTemplateStyle = function createAxisTemplateStyle(axis) {
@@ -2484,11 +2515,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         gridRowGap: "".concat(grid.rowGap.size).concat(grid.rowGap.unit)
       } : {});
     });
-    var selectHTML = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGrid, function (grid) {
-      return "<div class=\"grid-container\">\n</div>";
-    });
-    var selectGridItems = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGrid, function (grid) {
-      return grid.items;
+    var selectHTML = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGrid, selectGridItems, function (grid, items) {
+      var html = "<div class=\"grid-container\">";
+      items.forEach(function (item, index) {
+        html += "\n  <div class=\"item-".concat(index, "\"></div>");
+      });
+      return html += "\n</div>";
     });
     var selectGridItemStyles = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_0__["createSelector"])(selectGridItems, function (gridItems) {
       return gridItems.map(function (item) {
